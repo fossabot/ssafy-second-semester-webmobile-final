@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// 아직 전부 예외 처리 달지 않은 상태.. 디테일 작업 필요 07/23
+// 아직 전부 예외 처리 달지 않은 상태.. 디테일 작업 필요 
 
 const articleUrl  = "http://localhost:8080/api/bears/articles"
 const commentUrl = "http://localhost:8080/api/bears/articles" // 이거 2개는 일단 분기...흠
@@ -10,7 +10,6 @@ export default {
 
   // Article CRUD
   getArticles(categoryName) {
-    console.log("mainServices.js 의 getArticles 들어옴")
     const url = `${articleUrl}/${categoryName}`
     return axios.get(url)
                 .then((res) => {                  

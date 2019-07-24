@@ -1,11 +1,19 @@
 <template>
   <div class="container">
-    <h1>으앙 왜 안나와 ㅠㅠ</h1>
-    {{ testArticleCategory }}
-    <div v-for="article in testArticles">
-      {{ article }}
+    <button @click="sayHello" class="btn btn-danger">안녕이라고 내게 말하지 마</button>
+    <!-- getArticles -->
+    <div>
+      <h1>포트폴리오 목록</h1>
+      Article_Category_ID : {{ testArticleCategory }}
+      <span v-for="article in testArticles">
+        {{ article.article_no }} / {{ article.article_title }} / {{ article.article_content }}
+      </span>
     </div>
-    <button class="btn btn-danger" @click="fuck">fuck</button>
+    <!-- getArticle -->
+    <div>
+      <h1>포트폴리오 1번</h1>
+      {{ testArticle }}
+    </div>
   </div>
 </template>
 
@@ -24,17 +32,18 @@ export default {
   },
   methods: {
     ...mapActions('articles', {
-      getTestArticles: 'getArticles' 
+      getTestArticles: 'getArticles',
+      getTestArticle: 'getArticle',
       }),
-    fuck() {
-      console.log("fuck")
-      console.log(this.testArticleCategory)
-      console.log(this.testArticles)
+
+    sayHello() {
+      console.log("Hello")
+      console.log(this.testArticle)
     }
   },
   mounted () { 
-    console.log('getTestArticles 실행시켜바아아아')
     this.getTestArticles('portfolios')
+    this.getTestArticle(['portfolios',1])
 
   },
 }
