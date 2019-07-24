@@ -10,7 +10,7 @@ export default {
 
   // Article CRUD
   getArticles(categoryName) {
-
+    console.log("mainServices.js 의 getArticles 들어옴")
     const url = `${articleUrl}/${categoryName}`
     return axios.get(url)
                 .then((res) => {                  

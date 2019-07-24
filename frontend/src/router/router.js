@@ -76,7 +76,7 @@ export default new Router({
       component: NaverCallBack
     },
     {
-      path: '/login',
+      path: '/test',
       name: 'testpage',
       component: TestPage
     },
