@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Built-By: LG
-Build-Jdk: 12.0.1
 Implementation-Title: webmobile-sub2
 Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: multicampus
 Implementation-Vendor-Id: com.ssafy
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/webmobile-sub2
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/webmobile-sub2
 Created-By: Maven Integration for Eclipse
 
