@@ -5,9 +5,9 @@
     <div>
       <h1>포트폴리오 목록</h1>
       Article_Category_ID : {{ testArticleCategory }}
-      <span v-for="article in testArticles">
+      <div v-for="article in testArticles">
         {{ article.article_no }} / {{ article.article_title }} / {{ article.article_content }}
-      </span>
+      </div>
     </div>
     <!-- getArticle -->
     <div>
@@ -26,7 +26,7 @@ export default {
     ...mapState('articles', {
       testArticleCategory: state => state.articleCategoryId,
       testArticles: state => state.articles,
-      testAritcle: state => state.article,
+      testArticle: state => state.article,
       testIsAuthor:  state => state.isAuthor,
     })
   },
@@ -38,12 +38,15 @@ export default {
 
     sayHello() {
       console.log("Hello")
-      console.log(this.testArticle)
+      
     }
   },
   mounted () { 
-    this.getTestArticles('portfolios')
-    this.getTestArticle(['portfolios',1])
+    this.getTestArticles('portfolios') // 단일 객체니까 이렇게만 넘겨도 됨
+    this.getTestArticle({
+      categoryName: 'portfolios',
+      articleNo: 1
+      })
 
   },
 }
