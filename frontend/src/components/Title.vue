@@ -2,7 +2,7 @@
   <div class="section mb-3">
     <div class="section__item">
       <a href="#0" class="sm-link sm-link_padding-bottom sm-link4" style="color: black;">
-        <span class="sm-link__label" style="font-size: x-large; font-weight: bold">{{ title }}</span>
+        <span class="sm-link__label text-capitalize" style="font-size: x-large; font-weight: bold">{{ title }}</span>
       </a>
     </div>
   </div>

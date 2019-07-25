@@ -2,7 +2,7 @@
   <!-- Card List -->
   <div class="scrolling-wrapper my-5">
     <!-- Card -->
-    <div v-for="article in cardData" class="card mx-3" style="width: 15rem;">
+    <div v-for="article in articles" class="card mx-3" style="width: 15rem;">
       <!-- Card Image -->
       <img :src="article.article_imgsrc" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
       <!-- Card Body -->
@@ -26,11 +26,21 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'HorizenItem',
-  props: {
-    cardData : { type : Array }
+  computed: {
+    ...mapState('articles', ['articles','categoryName']),
+
+  },
+  methods: {
+    ...mapActions('articles', ['getArticles']),
+  },
+  mounted () {
+    this.getArticles(this.categoryName)
   }
+
 }
 </script>
 
@@ -67,7 +77,4 @@ export default {
     text-overflow:ellipsis;
 
 }
-
-
-
 </style>

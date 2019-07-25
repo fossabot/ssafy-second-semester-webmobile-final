@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/router.js'
+import store from './store' // import를 할 때 js파일명을 지정하지 않으면 자동으로 index.js를 읽는 것
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'

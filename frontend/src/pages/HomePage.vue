@@ -1,6 +1,5 @@
 <template>
 <div class="container-fluid px-0">
-  <h1>반영 되냐?</h1>
   <!-- Image Banner -->
   <Carousel></Carousel>
   <!-- Introduction -->
@@ -50,9 +49,9 @@
     </div>  
   </div>
 
-  <!-- <div class="container">
-    <router-link :to="{ name: 'testpage'}" class="btn btn-sm btn-outline-danger">테스트</router-link>
-  </div> -->
+  <div class="container">
+    <router-link :to="{ name: 'testpage'}" class="btn btn-sm btn-outline-light">테스트</router-link>
+  </div>
 </div>
 </template>
 
