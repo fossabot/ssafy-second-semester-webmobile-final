@@ -2,7 +2,7 @@
 <Configuration status="info" monitorInterval="30">
     <Properties>
         <Property name="LOG_FORMAT">%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Property>
-        <Property name="BASE_DIR">../webmobile-sub2-logs</Property>
+        <Property name="BASE_DIR">../backend-logs</Property>
     </Properties>
 
     <Appenders>
@@ -10,8 +10,8 @@
             <PatternLayout pattern="${LOG_FORMAT}"/>
         </Console>
         <RollingFile name="File"
-                     fileName="${BASE_DIR}/webmobile-sub2-log.log"
-                     filePattern="${BASE_DIR}/webmobile-sub2-log.%d{yyyyMMdd}.log">
+                     fileName="${BASE_DIR}/webmobile-final-log.log"
+                     filePattern="${BASE_DIR}/webmobile-final-log.%d{yyyyMMdd}.log">
             <PatternLayout pattern="${LOG_FORMAT}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy />
