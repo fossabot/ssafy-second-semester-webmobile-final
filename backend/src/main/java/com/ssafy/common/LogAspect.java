@@ -7,12 +7,9 @@ import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
-import com.ssafy.common.security.SecurityCommon;
 
 /**
  * Logging
@@ -22,27 +19,43 @@ import com.ssafy.common.security.SecurityCommon;
 public class LogAspect {
 	private static final Logger LOGGER = LogManager.getLogger(LogAspect.class);
 
-	SecurityCommon securityCommon;
-
-	@Autowired
-	public LogAspect(SecurityCommon securityCommon) {
-		this.securityCommon = securityCommon;
-	}
-
-	@Around("within(com.ssafy.rest.*)")
+	@Around("within(com.ssafy.api.*)")
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
+		LOGGER.info(logToString(pjp,"START"));
+		Object result = pjp.proceed();
+		LOGGER.info(logToString(pjp,"END"));
+		return result;
+	}
+	
+	/**
+	 * 로그 찍는 구문 문자열 Build
+	 * */
+	private String logToString(ProceedingJoinPoint pjp, String MethodType) {
 		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
 				.getRequest();
-		LOGGER.info("[*] START  - [" + pjp.getSignature().getDeclaringTypeName() + "] [USER: "
-				+ securityCommon.getUserInfoFromSecurityContextHolder() + "]" + " / [METHOD : " + request.getMethod()
-				+ "] " + pjp.getSignature().getName());
 
-		long start = System.currentTimeMillis();
-		Object result = pjp.proceed();
-		long end = System.currentTimeMillis();
-		LOGGER.info("[*] FINISH - [" + pjp.getSignature().getDeclaringTypeName() + "] [USER: "
-				+ securityCommon.getUserInfoFromSecurityContextHolder() + "]" + " / [METHOD : " + request.getMethod()
-				+ "] " + pjp.getSignature().getName() + " [" + (end - start) + "ms] ");
-		return result;
+		String userInfo = "USER: ";
+
+		if (request.getHeaderNames() == null) {
+			userInfo += "ANONYMOUS";
+		} else {
+			userInfo +=request.getHeader("email") + ", AUTH: " + request.getHeader("authentization");
+		}
+
+		StringBuilder sb = new StringBuilder();
+
+		sb
+		.append("[*] [")
+		.append(MethodType)
+		.append("] - [")
+		.append(pjp.getSignature().getDeclaringTypeName())
+		.append("] [")
+		.append(userInfo)
+		.append("] / [METHOD: ")
+		.append(request.getMethod())
+		.append("] ")
+		.append(pjp.getSignature().getName()).append("\n");
+		
+		return sb.toString();
 	}
 }
