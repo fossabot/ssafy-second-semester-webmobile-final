@@ -100,3 +100,37 @@
 2019-07-29 16:32:30 INFO Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-29 16:32:30 INFO HikariPool-1 - Shutdown initiated...
 2019-07-29 16:32:30 INFO HikariPool-1 - Shutdown completed.
+2019-07-29 16:53:06 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 7920 (started by multicampus in C:\Users\multicampus\Desktop\2학기\3주_웹앱프로젝트\webmobile-final\backend)
+2019-07-29 16:53:06 INFO No active profile set, falling back to default profiles: default
+2019-07-29 16:53:06 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-29 16:53:06 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-29 16:53:07 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-07-29 16:53:07 INFO Tomcat initialized with port(s): 9090 (http)
+2019-07-29 16:53:07 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-07-29 16:53:07 INFO Starting service [Tomcat]
+2019-07-29 16:53:07 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-29 16:53:07 INFO Initializing Spring embedded WebApplicationContext
+2019-07-29 16:53:07 INFO Root WebApplicationContext: initialization completed in 844 ms
+2019-07-29 16:53:07 INFO Creating filter chain: Ant [pattern='/css/**'], []
+2019-07-29 16:53:07 INFO Creating filter chain: Ant [pattern='/script/**'], []
+2019-07-29 16:53:07 INFO Creating filter chain: Ant [pattern='image/**'], []
+2019-07-29 16:53:07 INFO Creating filter chain: Ant [pattern='/fonts/**'], []
+2019-07-29 16:53:07 INFO Creating filter chain: Ant [pattern='lib/**'], []
+2019-07-29 16:53:07 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c392cb9, org.springframework.security.web.context.SecurityContextPersistenceFilter@6062fa94, org.springframework.security.web.header.HeaderWriterFilter@78f47d80, org.springframework.security.web.authentication.logout.LogoutFilter@29fd3bd3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3056bd1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27b5a94a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3fc931e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@982ee49, org.springframework.security.web.session.SessionManagementFilter@2d65c5a, org.springframework.security.web.access.ExceptionTranslationFilter@2697b6e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cb70e56]
+2019-07-29 16:53:07 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-29 16:53:07 INFO Adding welcome page: class path resource [static/index.html]
+2019-07-29 16:53:08 INFO LiveReload server is running on port 35729
+2019-07-29 16:53:08 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-07-29 16:53:08 INFO Tomcat started on port(s): 9090 (http) with context path ''
+2019-07-29 16:53:08 INFO Started WebmobileSub2Application in 1.641 seconds (JVM running for 2.466)
+2019-07-29 16:53:31 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-29 16:53:31 INFO Initializing Servlet 'dispatcherServlet'
+2019-07-29 16:53:31 INFO Completed initialization in 6 ms
+2019-07-29 16:53:31 INFO [*] START  - [com.ssafy.rest.ArticleRestController] [USER: anonymousUser] / [METHOD : GET] selectAllArticles
+2019-07-29 16:53:31 INFO HikariPool-1 - Starting...
+2019-07-29 16:53:32 INFO HikariPool-1 - Start completed.
+2019-07-29 16:53:32 INFO [*] FINISH - [com.ssafy.rest.ArticleRestController] [USER: anonymousUser] / [METHOD : GET] selectAllArticles [557ms] 
+2019-07-29 16:53:35 INFO Application shutdown requested.
+2019-07-29 16:53:35 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-29 16:53:35 INFO HikariPool-1 - Shutdown initiated...
+2019-07-29 16:53:35 INFO HikariPool-1 - Shutdown completed.
