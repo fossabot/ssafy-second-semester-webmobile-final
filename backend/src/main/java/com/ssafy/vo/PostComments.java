@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "post_comments")
@@ -22,33 +23,27 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class PostComments {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "post_comment_id")
-	private int postCommentId;
+	private int post_comment_id;
 
 	@Column(name = "account_email")
-	private String accountEmail;
+	private String account_email;
 
 	@Column(name = "account_name")
-	private String accountName;
+	private String account_name;
 
 	@Column(name = "post_comment_content")
-	private String postCommentContent;
+	private String post_comment_content;
 
 	@Column(name = "post_comment_create_at")
-	private LocalDateTime postCommentCreateAt;
+	private LocalDateTime post_comment_create_at;
 
-	@ManyToOne
-	@JoinColumn(name = "post_id", nullable = false, updatable = false)
-	private Posts posts;
-
-	public void setPortfolios(Posts posts) {
-		posts.getPostComments().remove(this);
-		this.posts = posts;
-		posts.getPostComments().add(this);
-	}
+	@Column(name = "post_id")
+	private int post_id;
 
 }
