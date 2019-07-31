@@ -41,14 +41,17 @@ public class PortfoliosServiceImpl implements PortfoliosService {
 
 	@Override
 	public Portfolios savePortfolio(Portfolios portfolios) {
-		// TODO Auto-generated method stub
-		return null;
+		return portfoliosRepository.save(portfolios);
 	}
 
 	@Override
-	public boolean deletePortfolioById(int portfolio_id) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean deletePortfolioById(int portfolioId) {
+		Optional<Portfolios> optional = portfoliosRepository.findById(portfolioId);
+		if (!optional.isPresent()) {
+			return false;
+		}
+		portfoliosRepository.deleteById(portfolioId);
+		return true;
 	}
 
 }
