@@ -19,7 +19,7 @@ public class PostsServiceImpl implements PostsService {
 	PostsRespository postsRespository;
 
 	@Override
-	public int count() {
+	public int countPosts() {
 		return (int) postsRespository.count();
 	}
 

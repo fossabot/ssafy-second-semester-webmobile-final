@@ -29,8 +29,6 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 		HandlerMethod handlerMethod = (HandlerMethod) handler;
 		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
 
-		System.out.println("===============" + request.getAttribute("post_content"));
-
 		if (auth == null) { // 해당 메소드는 권한이 필요 없음
 			return true;
 		} else { // 권한이 필요한 메소드 (1:SUPERVISOR, 2:MEMBER, 3:VISITOR)

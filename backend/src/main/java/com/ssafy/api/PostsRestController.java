@@ -30,7 +30,7 @@ public class PostsRestController {
 
 	@GetMapping(value = "/page/{page_no}")
 	public Page<Posts> findAllPosts(@PathVariable int page_no) {
-		Pageable pageable = PageRequest.of(page_no - 1, 6, Sort.by("postCreateAt"));
+		Pageable pageable = PageRequest.of(page_no - 1, 6, Sort.by("post_create_at"));
 		return postsService.findAllPosts(pageable);
 	}
 
