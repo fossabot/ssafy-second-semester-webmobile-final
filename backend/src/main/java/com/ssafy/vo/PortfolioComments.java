@@ -38,8 +38,8 @@ public class PortfolioComments {
 	@Column(name = "portfolio_comment_content")
 	private String portfolio_comment_content;
 
-	@Column(name = "portfolio_comment_create_at")
-	private LocalDateTime portfolio_comment_create_at;
+	@Column(name = "portfolio_comment_created_at")
+	private LocalDateTime portfolio_comment_created_at;
 
 	@Column(name = "portfolio_id")
 	private int portfolio_id;

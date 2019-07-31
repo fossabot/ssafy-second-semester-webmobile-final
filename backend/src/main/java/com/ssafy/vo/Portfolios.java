@@ -50,8 +50,8 @@ public class Portfolios {
 	private String portfolio_content;
 
 	@CreationTimestamp
-	@Column(name = "portfolio_create_at")
-	private LocalDateTime portfolio_create_at;
+	@Column(name = "portfolio_created_at")
+	private LocalDateTime portfolio_created_at;
 
 	@Column(name = "portfolio_giturl")
 	private String portfolio_giturl;

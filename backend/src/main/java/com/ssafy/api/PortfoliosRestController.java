@@ -7,7 +7,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
+import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ssafy.respository.PortfoliosRespository;
+import com.ssafy.service.PortfoliosService;
 import com.ssafy.vo.Portfolios;
 import com.ssafy.vo.PortfoliosResource;
 
@@ -29,22 +36,31 @@ public class PortfoliosRestController {
 	
 	@Autowired
 	PortfoliosRespository portfoliosRespository;
-;
+	
+	@Autowired
+	PortfoliosService portfoliosService;
+	
 	@GetMapping
 	public ResponseEntity<Resources<PortfoliosResource>> findAll() {
-		System.out.println("hello1");
 		List<PortfoliosResource> portfolios = portfoliosRespository.findAll().stream().map(PortfoliosResource::new).collect(Collectors.toList());
-		System.out.println("hello2");
 		Resources<PortfoliosResource> resources = new Resources<>(portfolios);
-		System.out.println("hello3");
 		//HATEOAS
 		//ControllerLinkBuilder selfLinkBuilder = linkTo(PortfoliosRestController.class); // http://localhost:9090/api/bears/portfolios
 		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
-		System.out.println("hello4");
 		//resources.add(linkTo(selfLinkBuilder).withSelfRel());
 		resources.add(new Link(uriString, "self"));
-		System.out.println("hello5");
 		return ResponseEntity.ok(resources);
+		
+	}
+	
+	@GetMapping(value = "/page/{page_no}")
+	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int page_no, PagedResourcesAssembler<Portfolios> assembler) {
+//		Pageable pageable = PageRequest.of(page_no - 1, 6, Sort.by("portfolio_created_at"));
+		Pageable pageable = PageRequest.of(page_no - 1, 6);
+		Page<Portfolios> portfolios = portfoliosService.findAllPortfolios(pageable);
+		PagedResources<PortfoliosResource> pagedPortfoliosResources = assembler.toResource(portfolios, e -> new PortfoliosResource(e));
+		
+		return ResponseEntity.ok(pagedPortfoliosResources);
 	}
 	
 	@GetMapping("/{portfolio_id}")
@@ -62,6 +78,7 @@ public class PortfoliosRestController {
 		
 		return ResponseEntity.ok(portfoliosResource);
 	}
+	
 	
 
 }
