@@ -29,8 +29,8 @@ public class PostsRestController {
 	PostsService postsService;
 
 	@GetMapping(value = "/page/{page_no}")
-	public Page<Posts> findAllPosts(@PathVariable int page_no) {
-		Pageable pageable = PageRequest.of(page_no - 1, 6, Sort.by("post_create_at"));
+	public Page<Posts> findAllPosts(@PathVariable int pageNo) {
+		Pageable pageable = PageRequest.of(pageNo - 1, 6, Sort.by("postCreatedAt"));
 		return postsService.findAllPosts(pageable);
 	}
 
@@ -39,18 +39,17 @@ public class PostsRestController {
 	public Posts createPost(@RequestBody Posts post) {
 		// boolean으로 바뀔 예정?? 어떻게 하지?? // 그냥 만들어진 post 던지기
 		Posts createdPost = postsService.savePost(post);
-
+		
 		if (createdPost == null) {
-			// 임시 반환
 			return null;
 		}
 
 		return createdPost;
 	}
 
-	@GetMapping(value = "/{post_id}")
-	public Posts findPostById(@PathVariable int post_id) {
-		Optional<Posts> optional = postsService.findPostById(post_id);
+	@GetMapping(value = "/{postId}")
+	public Posts findPostById(@PathVariable int postId) {
+		Optional<Posts> optional = postsService.findPostById(postId);
 		if (!optional.isPresent()) {
 			// 임시 반환
 			return null;
@@ -60,15 +59,15 @@ public class PostsRestController {
 	}
 
 	// -- 수정
-	@PutMapping(value = "/{post_id}")
-	public Posts updatePost(@PathVariable int post_id, @RequestBody Posts post) {
+	@PutMapping(value = "/{postId}")
+	public Posts updatePost(@PathVariable int postId, @RequestBody Posts post) {
 
 		// 수정을 요청하는 아이디와 post의 아이디가 다른 경우
-		if (post_id != post.getPost_id()) {
+		if (postId != post.getPostId()) {
 			return null;
 		}
 
-		Optional<Posts> optional = postsService.findPostById(post_id);
+		Optional<Posts> optional = postsService.findPostById(postId);
 		if (!optional.isPresent()) {
 			// 수정하려는 데이터가 존재하지 않음
 			// 우선 null이지만, 에러 핸들링 해야함
@@ -86,11 +85,11 @@ public class PostsRestController {
 		return updatedPost;
 	}
 
-	@DeleteMapping(value = "/{post_id}")
-	public boolean deletePostById(@PathVariable int post_id) {
-		boolean isDeleted = postsService.deletePostById(post_id); // 성공하면 true
+	@DeleteMapping(value = "/{postId}")
+	public boolean deletePostById(@PathVariable int postId) {
+		boolean isDelected = postsService.deletePostById(postId); // 성공하면 true
 
-		if (isDeleted) {
+		if (isDelected) {
 			return true;
 		} else {
 			return false;

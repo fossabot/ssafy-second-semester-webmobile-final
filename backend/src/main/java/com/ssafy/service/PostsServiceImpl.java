@@ -9,14 +9,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.ssafy.respository.PostsRespository;
+import com.ssafy.respository.PostsRepository;
 import com.ssafy.vo.Posts;
 
 @Service
 public class PostsServiceImpl implements PostsService {
 
 	@Autowired
-	PostsRespository postsRespository;
+	PostsRepository postsRespository;
 
 	@Override
 	public int countPosts() {
@@ -33,9 +33,9 @@ public class PostsServiceImpl implements PostsService {
 	 */
 	@Override
 	@Transactional
-	public Optional<Posts> findPostById(int post_id) {
-		postsRespository.updatePostViewsByPostId(post_id);
-		return postsRespository.findById(post_id);
+	public Optional<Posts> findPostById(int postId) {
+		postsRespository.updatePostViewsByPostId(postId);
+		return postsRespository.findById(postId);
 	}
 
 	/**
@@ -50,12 +50,12 @@ public class PostsServiceImpl implements PostsService {
 	 * Delete
 	 */
 	@Override
-	public boolean deletePostById(int post_id) {
-		Optional<Posts> optional = postsRespository.findById(post_id);
+	public boolean deletePostById(int postId) {
+		Optional<Posts> optional = postsRespository.findById(postId);
 		if (!optional.isPresent()) {
 			return false;
 		}
-		postsRespository.deleteById(post_id);
+		postsRespository.deleteById(postId);
 		return true;
 	}
 }

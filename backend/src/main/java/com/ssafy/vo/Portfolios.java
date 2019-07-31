@@ -24,18 +24,18 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "posts")
+@Table(name = "portfolios")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Posts {
+public class Portfolios {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "post_id")
-	private int postId;
+	@Column(name = "portfolio_id")
+	private int portfolioId;
 
 	@Column(name = "account_email")
 	private String accountEmail;
@@ -43,26 +43,32 @@ public class Posts {
 	@Column(name = "account_name")
 	private String accountName;
 
-	@Column(name = "post_title")
-	private String postTitle;
+	@Column(name = "portfolio_title")
+	private String portfolioTitle;
 
-	@Column(name = "post_content")
-	private String postContent;
+	@Column(name = "portfolio_content")
+	private String portfolioContent;
 
 	@CreationTimestamp
-	@Column(name = "post_created_at")
-	private LocalDateTime postCreatedAt;
+	@Column(name = "portfolio_created_at")
+	private LocalDateTime portfolioCreatedAt;
 
-	@ColumnDefault("0")
-	@Column(name = "post_views")
-	private int postViews;
+	@Column(name = "portfolio_giturl")
+	private String portfolioGiturl;
 
-	@Column(name = "post_image_url")
-	private String postImageUrl;
+	@ColumnDefault(value = "0")
+	@Column(name = "portfolio_views")
+	private String portfolioViews;
 
-	
-	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name="post_id")
-	private List<PostComments> postComments;
+	@Column(name = "portfolio_thumbnail")
+	private String portfolioThumbnail;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "portfolio_id")
+	List<PortfolioComments> portfolioComments;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "portfolio_id")
+	List<PortfolioImages> portfolioImages;
 
 }

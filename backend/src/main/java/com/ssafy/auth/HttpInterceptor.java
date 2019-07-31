@@ -11,7 +11,7 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.ssafy.respository.PostsRespository;
+import com.ssafy.respository.PostsRepository;
 import com.ssafy.service.PostsService;
 
 /**
