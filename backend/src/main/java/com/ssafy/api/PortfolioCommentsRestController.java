@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ssafy.respository.PortfoliosCommentsRespository;
 import com.ssafy.vo.PortfolioComments;
 import com.ssafy.vo.PortfolioCommentsResource;
-import com.ssafy.vo.PortfoliosResource;
 
 @CrossOrigin
 @RestController

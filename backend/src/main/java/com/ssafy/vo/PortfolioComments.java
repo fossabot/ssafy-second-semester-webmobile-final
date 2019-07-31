@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -41,8 +39,7 @@ public class PortfolioComments {
 	@Column(name = "portfolio_comment_create_at")
 	private LocalDateTime portfolio_comment_create_at;
 
-	@ManyToOne
-	@JoinColumn(name = "portfolio_id", nullable = false, updatable = false)
-	private Portfolios portfolios;
+	@Column(name = "portfolio_id")
+	private int portfolio_id;
 
 }
