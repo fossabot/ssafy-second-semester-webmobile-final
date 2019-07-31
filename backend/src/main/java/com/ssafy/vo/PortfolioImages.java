@@ -25,19 +25,13 @@ public class PortfolioImages {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_image_id")
-	private int portfolioImageId;
+	private int portfolio_image_id;
 
 	@Column(name = "portfolio_image_url")
-	private String portfolioImageUrl;
+	private String portfolio_image_url;
 
 	@ManyToOne
 	@JoinColumn(name = "portfolio_id", nullable = false, updatable = false)
 	private Portfolios portfolios;
-
-	public void setPortfolios(Portfolios portfolios) {
-		portfolios.getPortfolioImages().remove(this);
-		this.portfolios = portfolios;
-		portfolios.getPortfolioImages().add(this);
-	}
 
 }

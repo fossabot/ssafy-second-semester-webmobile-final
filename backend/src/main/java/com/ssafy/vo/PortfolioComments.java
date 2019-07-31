@@ -27,28 +27,22 @@ public class PortfolioComments {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_comment_id")
-	private int portfolioCommentId;
+	private int portfolio_comment_id;
 
 	@Column(name = "account_email")
-	private String accountEmail;
+	private String account_email;
 
 	@Column(name = "account_name")
-	private String accountName;
+	private String account_name;
 
 	@Column(name = "portfolio_comment_content")
-	private String portfolioCommentContent;
+	private String portfolio_comment_content;
 
 	@Column(name = "portfolio_comment_create_at")
-	private LocalDateTime portfolioCommentCreateAt;
+	private LocalDateTime portfolio_comment_create_at;
 
 	@ManyToOne
 	@JoinColumn(name = "portfolio_id", nullable = false, updatable = false)
 	private Portfolios portfolios;
-
-	public void setPortfolios(Portfolios portfolios) {
-		portfolios.getPortfolioComments().remove(this);
-		this.portfolios = portfolios;
-		portfolios.getPortfolioComments().add(this);
-	}
 
 }

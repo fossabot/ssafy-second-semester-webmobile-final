@@ -1,7 +1,6 @@
 package com.ssafy.vo;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -12,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,30 +31,37 @@ public class Portfolios {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_id")
-	private int portfolioId;
+	private int portfolio_id;
 
 	@Column(name = "account_email")
-	private String accountEmail;
+	private String account_email;
 
 	@Column(name = "account_name")
-	private String accountName;
+	private String account_name;
 
 	@Column(name = "portfolio_title")
-	private String portfolioTitle;
+	private String portfolio_title;
 
 	@Column(name = "portfolio_content")
-	private String portfolioContent;
+	private String portfolio_content;
 
+	@CreationTimestamp
 	@Column(name = "portfolio_create_at")
-	private LocalDateTime portfolioCreateAt;
+	private LocalDateTime portfolio_create_at;
 
 	@Column(name = "portfolio_giturl")
-	private String portfolioGitUrl;
-
-	@OneToMany(mappedBy = "portfolios", cascade = CascadeType.ALL)
-	private List<PortfolioComments> portfolioComments = new ArrayList<PortfolioComments>();
-
-	@OneToMany(mappedBy = "portfolios", cascade = CascadeType.ALL)
-	private List<PortfolioImages> portfolioImages = new ArrayList<PortfolioImages>();
+	private String portfolio_giturl;
+	
+	@ColumnDefault(value = "0")
+	@Column(name = "portfolio_views")
+	private String portfolio_views;
+	
+	@Column(name = "portfolio_thumbnail")
+	private String portfolio_thumbnail;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	List<PortfolioComments> portfolio_comments;
+	
+	
 
 }

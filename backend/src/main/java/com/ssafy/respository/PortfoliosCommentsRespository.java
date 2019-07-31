@@ -6,11 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.ssafy.vo.Posts;
+import com.ssafy.vo.PortfolioComments;
 
 @Repository
-public interface PortfoliosCommentsRespository extends JpaRepository<Posts, Integer> {
+public interface PortfoliosCommentsRespository extends JpaRepository<PortfolioComments, Integer> {
+
+	@Query(value = "select * from portfolio_comments where portfolio_id = ?1", nativeQuery = true)
+	List<PortfolioComments> findByPortfolioId(int portfolio_id);
 	
-	@Query("SELECT p FROM Post p" + " WHERE p.post_title LIKE %?1%" + " OR p.post_content LIKE %?1%")
-	public List<Posts> searchByQuery(String query);
 }
