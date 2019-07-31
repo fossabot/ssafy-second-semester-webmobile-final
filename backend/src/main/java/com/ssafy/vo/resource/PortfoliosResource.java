@@ -1,11 +1,12 @@
-package com.ssafy.vo;
+package com.ssafy.vo.resource;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 
 import com.ssafy.api.PortfoliosRestController;
-
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import com.ssafy.vo.Portfolios;
 
 
 public class PortfoliosResource extends Resource<Portfolios> {
