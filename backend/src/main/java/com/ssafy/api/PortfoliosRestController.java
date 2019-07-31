@@ -7,6 +7,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -31,14 +32,18 @@ public class PortfoliosRestController {
 ;
 	@GetMapping
 	public ResponseEntity<Resources<PortfoliosResource>> findAll() {
+		System.out.println("hello1");
 		List<PortfoliosResource> portfolios = portfoliosRespository.findAll().stream().map(PortfoliosResource::new).collect(Collectors.toList());
-
+		System.out.println("hello2");
 		Resources<PortfoliosResource> resources = new Resources<>(portfolios);
-		
+		System.out.println("hello3");
 		//HATEOAS
 		//ControllerLinkBuilder selfLinkBuilder = linkTo(PortfoliosRestController.class); // http://localhost:9090/api/bears/portfolios
 		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
-		resources.add(linkTo(uriString).withSelfRel());
+		System.out.println("hello4");
+		//resources.add(linkTo(selfLinkBuilder).withSelfRel());
+		resources.add(new Link(uriString, "self"));
+		System.out.println("hello5");
 		return ResponseEntity.ok(resources);
 	}
 	

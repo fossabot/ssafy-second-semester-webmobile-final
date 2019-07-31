@@ -10,6 +10,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -20,6 +21,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "portfolios")
@@ -27,6 +29,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Portfolios {
 
 	@Id
@@ -60,7 +63,12 @@ public class Portfolios {
 	@Column(name = "portfolio_thumbnail")
 	private String portfolio_thumbnail;
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "portfolio_id")
 	List<PortfolioComments> portfolio_comments;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "portfolio_id")
+	List<PortfolioImages> portfolio_images;
 	
 }
