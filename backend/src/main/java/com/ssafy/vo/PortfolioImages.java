@@ -25,12 +25,12 @@ public class PortfolioImages {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_image_id")
-	private int portfolio_image_id;
+	private int portfolioImageId;
 
 	@Column(name = "portfolio_image_url")
-	private String portfolio_image_url;
+	private String portfolioImageUrl;
 
 	@Column(name = "portfolio_id")
-	private int portfolio_id;
+	private int portfolioId;
 
 }

@@ -27,21 +27,21 @@ public class PortfolioComments {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_comment_id")
-	private int portfolio_comment_id;
+	private int portfolioCommentId;
 
 	@Column(name = "account_email")
-	private String account_email;
+	private String accountEmail;
 
 	@Column(name = "account_name")
-	private String account_name;
+	private String accountName;
 
 	@Column(name = "portfolio_comment_content")
-	private String portfolio_comment_content;
+	private String portfolioCommentContent;
 
 	@Column(name = "portfolio_comment_created_at")
-	private LocalDateTime portfolio_comment_created_at;
+	private LocalDateTime portfolioCommentCreatedAt;
 
 	@Column(name = "portfolio_id")
-	private int portfolio_id;
+	private int portfolioId;
 
 }

@@ -12,7 +12,7 @@ public class PortfoliosResource extends Resource<Portfolios> {
 
 	public PortfoliosResource(Portfolios portfolios, Link... links) {
 		super(portfolios, links);
-		add(linkTo(PortfoliosRestController.class).slash(portfolios.getPortfolio_id()).withSelfRel());
+		add(linkTo(PortfoliosRestController.class).slash(portfolios.getPortfolioId()).withSelfRel());
 	}
 	
 }

@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.ssafy.respository.PortfoliosRespository;
+import com.ssafy.respository.PortfoliosRepository;
 import com.ssafy.service.PortfoliosService;
 import com.ssafy.vo.Portfolios;
 import com.ssafy.vo.PortfoliosResource;
@@ -35,14 +35,14 @@ import com.ssafy.vo.PortfoliosResource;
 public class PortfoliosRestController {
 	
 	@Autowired
-	PortfoliosRespository portfoliosRespository;
+	PortfoliosRepository portfoliosRepository;
 	
 	@Autowired
 	PortfoliosService portfoliosService;
 	
 	@GetMapping
 	public ResponseEntity<Resources<PortfoliosResource>> findAll() {
-		List<PortfoliosResource> portfolios = portfoliosRespository.findAll().stream().map(PortfoliosResource::new).collect(Collectors.toList());
+		List<PortfoliosResource> portfolios = portfoliosRepository.findAll().stream().map(PortfoliosResource::new).collect(Collectors.toList());
 		Resources<PortfoliosResource> resources = new Resources<>(portfolios);
 		//HATEOAS
 		//ControllerLinkBuilder selfLinkBuilder = linkTo(PortfoliosRestController.class); // http://localhost:9090/api/bears/portfolios
@@ -53,10 +53,10 @@ public class PortfoliosRestController {
 		
 	}
 	
-	@GetMapping(value = "/page/{page_no}")
-	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int page_no, PagedResourcesAssembler<Portfolios> assembler) {
+	@GetMapping(value = "/page/{pageNo}")
+	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int pageNo, PagedResourcesAssembler<Portfolios> assembler) {
 //		Pageable pageable = PageRequest.of(page_no - 1, 6, Sort.by("portfolio_created_at"));
-		Pageable pageable = PageRequest.of(page_no - 1, 6);
+		Pageable pageable = PageRequest.of(pageNo - 1, 6);
 		Page<Portfolios> portfolios = portfoliosService.findAllPortfolios(pageable);
 		PagedResources<PortfoliosResource> pagedPortfoliosResources = assembler.toResource(portfolios, e -> new PortfoliosResource(e));
 		
@@ -64,9 +64,9 @@ public class PortfoliosRestController {
 	}
 	
 	@GetMapping("/{portfolio_id}")
-	public ResponseEntity<?> findAll(@PathVariable int portfolio_id) {
+	public ResponseEntity<?> findAll(@PathVariable int portfolioId) {
 		
-		Optional<Portfolios> portfolioOpt = portfoliosRespository.findById(portfolio_id);
+		Optional<Portfolios> portfolioOpt = portfoliosRepository.findById(portfolioId);
 		
 		Portfolios portfolios = portfolioOpt.get();
 

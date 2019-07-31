@@ -11,7 +11,7 @@ public class PortfolioImagesResource extends Resource<PortfolioImages> {
 
 	public PortfolioImagesResource(PortfolioImages portfolioImages, Link... links) {
 		super(portfolioImages, links);
-		add(linkTo(PortfolioImagesRestController.class).slash(portfolioImages.getPortfolio_image_id()).withSelfRel());
+		add(linkTo(PortfolioImagesRestController.class).slash(portfolioImages.getPortfolioImageId()).withSelfRel());
 	}
 
 }

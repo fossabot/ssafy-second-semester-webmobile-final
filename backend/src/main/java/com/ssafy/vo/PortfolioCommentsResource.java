@@ -10,6 +10,6 @@ import com.ssafy.api.PortfolioCommentsRestController;
 public class PortfolioCommentsResource extends Resource<PortfolioComments> {
 	public PortfolioCommentsResource(PortfolioComments portfolioComments, Link... links) {
 		super(portfolioComments, links);
-		add(linkTo(PortfolioCommentsRestController.class).slash(portfolioComments.getPortfolio_comment_id()).withSelfRel());
+		add(linkTo(PortfolioCommentsRestController.class).slash(portfolioComments.getPortfolioCommentId()).withSelfRel());
 	}
 }

@@ -35,40 +35,40 @@ public class Portfolios {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_id")
-	private int portfolio_id;
+	private int portfolioId;
 
 	@Column(name = "account_email")
-	private String account_email;
+	private String accountEmail;
 
 	@Column(name = "account_name")
-	private String account_name;
+	private String accountName;
 
 	@Column(name = "portfolio_title")
-	private String portfolio_title;
+	private String portfolioTitle;
 
 	@Column(name = "portfolio_content")
-	private String portfolio_content;
+	private String portfolioContent;
 
 	@CreationTimestamp
 	@Column(name = "portfolio_created_at")
-	private LocalDateTime portfolio_created_at;
+	private LocalDateTime portfolioCreatedAt;
 
 	@Column(name = "portfolio_giturl")
-	private String portfolio_giturl;
+	private String portfolioGiturl;
 	
 	@ColumnDefault(value = "0")
 	@Column(name = "portfolio_views")
-	private String portfolio_views;
+	private String portfolioViews;
 	
 	@Column(name = "portfolio_thumbnail")
-	private String portfolio_thumbnail;
+	private String portfolioThumbnail;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "portfolio_id")
-	List<PortfolioComments> portfolio_comments;
+	List<PortfolioComments> portfolioComments;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "portfolio_id")
-	List<PortfolioImages> portfolio_images;
+	List<PortfolioImages> portfolioImages;
 	
 }

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @CrossOrigin
 @Controller
-@RequestMapping("/portfolios/{portfolio_id}/images")
+@RequestMapping("/portfolios/{portfolioId}/images")
 public class PortfolioImagesRestController {
 
 }

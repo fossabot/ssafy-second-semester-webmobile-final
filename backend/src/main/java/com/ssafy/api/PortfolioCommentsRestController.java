@@ -15,21 +15,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ssafy.respository.PortfoliosCommentsRespository;
+import com.ssafy.respository.PortfoliosCommentsRepository;
 import com.ssafy.vo.PortfolioComments;
 import com.ssafy.vo.PortfolioCommentsResource;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/portfolios/{portfolio_id}/comments")
+@RequestMapping(value = "/portfolios/{portfolioId}/comments")
 public class PortfolioCommentsRestController {
 	
 	@Autowired
-	PortfoliosCommentsRespository portfolioCommentsRepository;
+	PortfoliosCommentsRepository portfolioCommentsRepository;
 	
 	@GetMapping
-	public ResponseEntity<?> findAll(@PathVariable int portfolio_id) {
-		List<PortfolioComments> portfolios = portfolioCommentsRepository.findByPortfolioId(portfolio_id);
+	public ResponseEntity<?> findAll(@PathVariable int portfolioId) {
+		List<PortfolioComments> portfolios = portfolioCommentsRepository.findByPortfolioId(portfolioId);
 		List<PortfolioCommentsResource> portfolioCommentsResources = new ArrayList<>();
 		
 		for(int i = 0; i < portfolios.size(); i++) {
