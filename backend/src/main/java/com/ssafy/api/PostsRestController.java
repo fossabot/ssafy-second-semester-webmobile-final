@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.PagedResources;
@@ -61,7 +62,7 @@ public class PostsRestController {
 	@GetMapping(value = "/page/{pageNo}")
 	public ResponseEntity<PagedResources<PostsResource>> findAllPosts(@PathVariable int pageNo,
 			PagedResourcesAssembler<Posts> assembler) {
-		Pageable pageable = PageRequest.of(pageNo - 1, 6, Sort.by("postCreatedAt"));
+		Pageable pageable = PageRequest.of(pageNo - 1, 6, new Sort(Direction.DESC, "postCreatedAt"));
 		Page<Posts> posts = postsService.findAllPosts(pageable);
 		if (posts == null) {
 			return ResponseEntity.badRequest().build();

@@ -408,3 +408,297 @@
 2019-08-01 10:36:58 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
 2019-08-01 10:36:58 INFO HikariPool-11 - Shutdown initiated...
 2019-08-01 10:36:58 INFO HikariPool-11 - Shutdown completed.
+2019-08-01 11:00:34 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 11:00:34 INFO No active profile set, falling back to default profiles: default
+2019-08-01 11:00:34 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-01 11:00:34 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-01 11:00:35 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 11:00:35 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 11:00:35 INFO Finished Spring Data repository scanning in 47ms. Found 5 repository interfaces.
+2019-08-01 11:00:35 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$594c10d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 11:00:35 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 11:00:35 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:00:35 INFO Starting service [Tomcat]
+2019-08-01 11:00:35 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 11:00:35 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 11:00:35 INFO Root WebApplicationContext: initialization completed in 955 ms
+2019-08-01 11:00:35 INFO HikariPool-1 - Starting...
+2019-08-01 11:00:36 INFO HikariPool-1 - Start completed.
+2019-08-01 11:00:36 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-01 11:00:36 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-01 11:00:36 INFO HHH000206: hibernate.properties not found
+2019-08-01 11:00:36 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-01 11:00:36 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 11:00:37 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:00:37 INFO LiveReload server is running on port 35729
+2019-08-01 11:00:37 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:00:37 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 11:00:38 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 11:00:38 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:00:38 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 11:00:38 INFO Started WebmobileSub2Application in 3.854 seconds (JVM running for 4.646)
+2019-08-01 11:00:46 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 11:00:46 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 11:00:46 INFO Completed initialization in 5 ms
+2019-08-01 11:00:46 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 11:00:46 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 11:01:36 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:01:36 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:01:36 INFO HikariPool-1 - Shutdown initiated...
+2019-08-01 11:01:36 INFO HikariPool-1 - Shutdown completed.
+2019-08-01 11:01:37 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 11:01:37 INFO No active profile set, falling back to default profiles: default
+2019-08-01 11:01:37 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 11:01:37 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 11:01:37 INFO Finished Spring Data repository scanning in 18ms. Found 5 repository interfaces.
+2019-08-01 11:01:37 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$594c10d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 11:01:37 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 11:01:37 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:01:37 INFO Starting service [Tomcat]
+2019-08-01 11:01:37 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 11:01:37 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 11:01:37 INFO Root WebApplicationContext: initialization completed in 293 ms
+2019-08-01 11:01:37 INFO HikariPool-2 - Starting...
+2019-08-01 11:01:37 INFO HikariPool-2 - Start completed.
+2019-08-01 11:01:37 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-01 11:01:37 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 11:01:37 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:01:37 INFO LiveReload server is running on port 35729
+2019-08-01 11:01:37 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:01:37 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 11:01:37 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 11:01:37 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:01:37 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 11:01:37 INFO Started WebmobileSub2Application in 0.698 seconds (JVM running for 64.04)
+2019-08-01 11:01:37 INFO Condition evaluation unchanged
+2019-08-01 11:01:43 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 11:01:43 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 11:01:43 INFO Completed initialization in 6 ms
+2019-08-01 11:01:43 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 11:01:43 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 11:02:28 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:28 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:30 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:30 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:31 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:31 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:33 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:33 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:34 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:34 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:34 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:34 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:35 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:35 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:35 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:35 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:35 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:35 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:36 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:36 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:36 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:36 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:37 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:37 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:37 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:37 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:37 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:37 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:38 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:38 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:38 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:38 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: POST] createPortfolio
+
+2019-08-01 11:02:46 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAll
+
+2019-08-01 11:02:46 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-01 11:02:46 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAll
+
+2019-08-01 11:02:50 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:02:50 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:03:08 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+
+2019-08-01 11:03:08 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+
+2019-08-01 11:03:32 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+
+2019-08-01 11:03:32 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+
+2019-08-01 11:04:00 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:04:00 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:04:06 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:04:06 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:04:20 INFO Application shutdown requested.
+2019-08-01 11:04:20 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:04:20 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:04:20 INFO HikariPool-2 - Shutdown initiated...
+2019-08-01 11:04:20 INFO HikariPool-2 - Shutdown completed.
+2019-08-01 11:06:10 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 6260 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 11:06:10 INFO No active profile set, falling back to default profiles: default
+2019-08-01 11:06:10 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-01 11:06:10 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-01 11:06:10 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 11:06:10 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 11:06:10 INFO Finished Spring Data repository scanning in 46ms. Found 5 repository interfaces.
+2019-08-01 11:06:11 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$341a3d59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 11:06:11 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 11:06:11 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:06:11 INFO Starting service [Tomcat]
+2019-08-01 11:06:11 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 11:06:11 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 11:06:11 INFO Root WebApplicationContext: initialization completed in 947 ms
+2019-08-01 11:06:11 INFO HikariPool-1 - Starting...
+2019-08-01 11:06:11 INFO HikariPool-1 - Start completed.
+2019-08-01 11:06:11 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-01 11:06:12 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-01 11:06:12 INFO HHH000206: hibernate.properties not found
+2019-08-01 11:06:12 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-01 11:06:12 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 11:06:12 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:06:12 INFO LiveReload server is running on port 35729
+2019-08-01 11:06:13 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:06:13 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 11:06:13 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 11:06:13 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:06:13 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 11:06:13 INFO Started WebmobileSub2Application in 3.161 seconds (JVM running for 4.513)
+2019-08-01 11:06:15 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 11:06:15 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 11:06:15 INFO Completed initialization in 5 ms
+2019-08-01 11:06:15 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:06:15 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property portfolioCreateAt found for type Portfolios! Did you mean 'portfolioCreatedAt'?]
+2019-08-01 11:06:53 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:06:53 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:06:53 INFO HikariPool-1 - Shutdown initiated...
+2019-08-01 11:06:53 INFO HikariPool-1 - Shutdown completed.
+2019-08-01 11:06:54 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 6260 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 11:06:54 INFO No active profile set, falling back to default profiles: default
+2019-08-01 11:06:54 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 11:06:54 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 11:06:54 INFO Finished Spring Data repository scanning in 18ms. Found 5 repository interfaces.
+2019-08-01 11:06:54 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$341a3d59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 11:06:54 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 11:06:54 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:06:54 INFO Starting service [Tomcat]
+2019-08-01 11:06:54 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 11:06:54 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 11:06:54 INFO Root WebApplicationContext: initialization completed in 289 ms
+2019-08-01 11:06:54 INFO HikariPool-2 - Starting...
+2019-08-01 11:06:54 INFO HikariPool-2 - Start completed.
+2019-08-01 11:06:54 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-01 11:06:54 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 11:06:54 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:06:54 INFO LiveReload server is running on port 35729
+2019-08-01 11:06:54 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:06:54 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 11:06:54 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 11:06:54 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:06:54 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 11:06:54 INFO Started WebmobileSub2Application in 0.751 seconds (JVM running for 46.108)
+2019-08-01 11:06:54 INFO Condition evaluation unchanged
+2019-08-01 11:06:57 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 11:06:57 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 11:06:57 INFO Completed initialization in 7 ms
+2019-08-01 11:06:57 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:06:57 WARN Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Direction cannot be resolved to a variable
+]
+2019-08-01 11:07:03 INFO Application shutdown requested.
+2019-08-01 11:07:03 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:07:03 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:07:03 INFO HikariPool-2 - Shutdown initiated...
+2019-08-01 11:07:03 INFO HikariPool-2 - Shutdown completed.
+2019-08-01 11:07:07 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 6712 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 11:07:07 INFO No active profile set, falling back to default profiles: default
+2019-08-01 11:07:07 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-01 11:07:07 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-01 11:07:08 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 11:07:08 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 11:07:08 INFO Finished Spring Data repository scanning in 47ms. Found 5 repository interfaces.
+2019-08-01 11:07:08 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc5c7b5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 11:07:08 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 11:07:08 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:07:08 INFO Starting service [Tomcat]
+2019-08-01 11:07:08 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 11:07:08 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 11:07:08 INFO Root WebApplicationContext: initialization completed in 945 ms
+2019-08-01 11:07:08 INFO HikariPool-1 - Starting...
+2019-08-01 11:07:09 INFO HikariPool-1 - Start completed.
+2019-08-01 11:07:09 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-01 11:07:09 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-01 11:07:09 INFO HHH000206: hibernate.properties not found
+2019-08-01 11:07:09 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-01 11:07:09 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 11:07:10 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:07:10 INFO LiveReload server is running on port 35729
+2019-08-01 11:07:10 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:07:10 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 11:07:10 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 11:07:10 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 11:07:10 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 11:07:10 INFO Started WebmobileSub2Application in 3.165 seconds (JVM running for 3.966)
+2019-08-01 11:07:11 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 11:07:11 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 11:07:11 INFO Completed initialization in 5 ms
+2019-08-01 11:07:11 INFO [*] [START] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:07:11 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-01 11:07:11 INFO [*] [END] - [com.ssafy.api.PortfoliosRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPortfolios
+
+2019-08-01 11:07:30 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 11:07:30 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 11:07:30 INFO HikariPool-1 - Shutdown initiated...
+2019-08-01 11:07:30 INFO HikariPool-1 - Shutdown completed.

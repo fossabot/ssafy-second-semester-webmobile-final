@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.PagedResources;
@@ -36,37 +37,41 @@ import com.ssafy.vo.resource.PortfoliosResource;
 @RestController
 @RequestMapping(value = "/portfolios", produces = "application/hal+json")
 public class PortfoliosRestController {
-	
+
 	@Autowired
 	PortfoliosRepository portfoliosRepository;
-	
+
 	@Autowired
 	PortfoliosService portfoliosService;
-	
+
 	@GetMapping
 	public ResponseEntity<Resources<PortfoliosResource>> findAll() {
-		List<PortfoliosResource> portfolios = portfoliosRepository.findAll().stream().map(PortfoliosResource::new).collect(Collectors.toList());
+		List<PortfoliosResource> portfolios = portfoliosRepository.findAll().stream().map(PortfoliosResource::new)
+				.collect(Collectors.toList());
 		Resources<PortfoliosResource> resources = new Resources<>(portfolios);
-		//HATEOAS
+		// HATEOAS
 		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
 		resources.add(new Link(uriString, "self"));
 		return ResponseEntity.ok(resources);
-		
+
 	}
-	
+
 	@GetMapping(value = "/page/{pageNo}")
-	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int pageNo, PagedResourcesAssembler<Portfolios> assembler) {
-		Pageable pageable = PageRequest.of(pageNo - 1, 6, Sort.by("portfolioCreatedAt"));
+	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int pageNo,
+			PagedResourcesAssembler<Portfolios> assembler) {
+		Pageable pageable = PageRequest.of(pageNo - 1, 6, new Sort(Direction.DESC, "portfolioCreatedAt"));
+
 		Page<Portfolios> portfolios = portfoliosService.findAllPortfolios(pageable);
-		if(portfolios == null) {
+		if (portfolios == null) {
 			return ResponseEntity.badRequest().build();
 		}
-		
-		PagedResources<PortfoliosResource> pagedPortfoliosResources = assembler.toResource(portfolios, e -> new PortfoliosResource(e));
-		
+
+		PagedResources<PortfoliosResource> pagedPortfoliosResources = assembler.toResource(portfolios,
+				e -> new PortfoliosResource(e));
+
 		return ResponseEntity.ok(pagedPortfoliosResources);
 	}
-	
+
 	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<HashMap<String, Integer>> countPortfolios() {
 		HashMap<String, Integer> countPortfolios = new HashMap<>();
@@ -74,39 +79,40 @@ public class PortfoliosRestController {
 		countPortfolios.put("countPortfolios", count);
 		return ResponseEntity.ok(countPortfolios);
 	}
-	
+
 	@GetMapping("/{portfolioId}")
 	public ResponseEntity<PortfoliosResource> findAll(@PathVariable int portfolioId) {
 		Optional<Portfolios> portfolioOpt = portfoliosService.findPortfolioById(portfolioId);
-		
-		if(!portfolioOpt.isPresent()) {
+
+		if (!portfolioOpt.isPresent()) {
 			return ResponseEntity.badRequest().build();
 		}
-		
+
 		Portfolios portfolios = portfolioOpt.get();
-		
-		//HATEOAS
+
+		// HATEOAS
 		PortfoliosResource portfoliosResource = new PortfoliosResource(portfolios);
-		
+
 		return ResponseEntity.ok(portfoliosResource);
 	}
-	
+
 	// -- 삽입
 	@PostMapping
 	public ResponseEntity<PortfoliosResource> createPortfolio(@RequestBody Portfolios portfolio) {
 		Portfolios createdPortfolio = portfoliosService.savePortfolio(portfolio);
-		
+
 		if (createdPortfolio == null) {
 			return ResponseEntity.badRequest().build();
 		}
-		
+
 		PortfoliosResource portfoliosResource = new PortfoliosResource(createdPortfolio);
 		return ResponseEntity.ok(portfoliosResource);
 	}
-	
+
 	// -- 수정
 	@PutMapping(value = "/{portfolioId}")
-	public ResponseEntity<PortfoliosResource> updatePortfolio(@PathVariable int portfolioId, @RequestBody Portfolios portfolio) {
+	public ResponseEntity<PortfoliosResource> updatePortfolio(@PathVariable int portfolioId,
+			@RequestBody Portfolios portfolio) {
 		// 수정을 요청하는 아이디와 portfolio의 아이디가 다른 경우
 		if (portfolioId != portfolio.getPortfolioId()) {
 			return ResponseEntity.badRequest().build();
@@ -125,9 +131,9 @@ public class PortfoliosRestController {
 			// 수정에 실패함
 			return ResponseEntity.badRequest().build();
 		}
-		
+
 		PortfoliosResource portfoliosResource = new PortfoliosResource(updatedPortfolio);
-		
+
 		// 성공시 뱉어줌
 		return ResponseEntity.ok(portfoliosResource);
 	}
