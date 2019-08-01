@@ -67,7 +67,8 @@ public class PostCommentsRestController {
 
 	// -- 수정
 	@PutMapping(value = "/{postCommentId}")
-	public ResponseEntity<PostComments> updatePost(@PathVariable int postCommentId, @RequestBody PostComments postComment) {
+	public ResponseEntity<PostComments> updatePost(@PathVariable int postCommentId,
+			@RequestBody PostComments postComment) {
 
 		// 수정을 요청하는 아이디와 post의 아이디가 다른 경우
 		if (postCommentId != postComment.getPostCommentId()) {

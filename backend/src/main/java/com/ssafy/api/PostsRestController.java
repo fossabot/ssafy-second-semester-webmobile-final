@@ -27,8 +27,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.ssafy.auth.Auth;
-import com.ssafy.common.RoleType;
 import com.ssafy.service.PostsService;
 import com.ssafy.vo.Posts;
 import com.ssafy.vo.resource.PostsResource;
@@ -40,7 +38,7 @@ public class PostsRestController {
 
 	@Autowired
 	PostsService postsService;
-	
+
 	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<HashMap<String, Integer>> countPosts() {
 		HashMap<String, Integer> map = new HashMap<>();
