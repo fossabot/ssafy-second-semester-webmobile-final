@@ -1,5 +1,6 @@
 package com.ssafy.api;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -13,6 +14,7 @@ import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resources;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,6 +27,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.service.PostsService;
 import com.ssafy.vo.Posts;
 import com.ssafy.vo.resource.PostsResource;
@@ -36,8 +40,16 @@ public class PostsRestController {
 
 	@Autowired
 	PostsService postsService;
+	
+	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<HashMap<String, Integer>> countPosts() {
+		HashMap<String, Integer> map = new HashMap<>();
+		int countPosts = postsService.countPosts();
+		map.put("countPosts", countPosts);
+		return ResponseEntity.ok(map);
+	}
 
-	@GetMapping
+	@GetMapping(value = "")
 	public ResponseEntity<Resources<PostsResource>> findAll() {
 		List<PostsResource> posts = postsService.findAll().stream().map(PostsResource::new)
 				.collect(Collectors.toList());

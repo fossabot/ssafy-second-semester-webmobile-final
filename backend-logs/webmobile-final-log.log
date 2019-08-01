@@ -1,659 +1,410 @@
-2019-07-31 11:29:00 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 5916 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 11:29:00 INFO No active profile set, falling back to default profiles: default
-2019-07-31 11:29:00 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-07-31 11:29:00 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-07-31 11:29:00 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 11:29:00 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 11:29:00 INFO Finished Spring Data repository scanning in 44ms. Found 2 repository interfaces.
-2019-07-31 11:29:01 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a5cbc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 11:29:01 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 11:29:01 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:29:01 INFO Starting service [Tomcat]
-2019-07-31 11:29:01 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 11:29:01 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 11:29:01 INFO Root WebApplicationContext: initialization completed in 994 ms
-2019-07-31 11:29:01 INFO HikariPool-1 - Starting...
-2019-07-31 11:29:02 INFO HikariPool-1 - Start completed.
-2019-07-31 11:29:02 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:14:39 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:14:39 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:14:39 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-01 10:14:39 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-01 10:14:40 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:14:40 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:14:40 INFO Finished Spring Data repository scanning in 48ms. Found 5 repository interfaces.
+2019-08-01 10:14:40 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:14:40 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:14:40 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:14:40 INFO Starting service [Tomcat]
+2019-08-01 10:14:40 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:14:40 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:14:40 INFO Root WebApplicationContext: initialization completed in 982 ms
+2019-08-01 10:14:41 INFO HikariPool-1 - Starting...
+2019-08-01 10:14:41 INFO HikariPool-1 - Start completed.
+2019-08-01 10:14:41 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 11:29:02 INFO HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-31 11:29:02 INFO HHH000206: hibernate.properties not found
-2019-07-31 11:29:02 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-31 11:29:02 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 11:29:02 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:29:02 INFO LiveReload server is running on port 35729
-2019-07-31 11:29:03 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:29:03 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 11:29:03 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 11:29:03 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:29:03 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 11:29:03 INFO Started WebmobileSub2Application in 3.351 seconds (JVM running for 4.154)
-2019-07-31 11:29:25 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 11:29:25 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 11:29:25 INFO Completed initialization in 5 ms
-2019-07-31 11:29:25 WARN Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2019-07-31 11:29:33 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:14:41 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-01 10:14:41 INFO HHH000206: hibernate.properties not found
+2019-08-01 10:14:41 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-01 10:14:41 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:14:42 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:14:42 INFO LiveReload server is running on port 35729
+2019-08-01 10:14:42 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:14:42 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:14:42 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:14:42 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:14:42 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:14:42 INFO Started WebmobileSub2Application in 3.244 seconds (JVM running for 4.063)
+2019-08-01 10:14:48 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:14:48 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:14:48 INFO Completed initialization in 5 ms
+2019-08-01 10:14:48 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 11:29:33 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property postCreateAt found for type Posts!]
-2019-07-31 11:29:46 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:29:46 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:29:46 INFO HikariPool-1 - Shutdown initiated...
-2019-07-31 11:29:46 INFO HikariPool-1 - Shutdown completed.
-2019-07-31 11:29:46 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 5916 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 11:29:46 INFO No active profile set, falling back to default profiles: default
-2019-07-31 11:29:46 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 11:29:46 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 11:29:46 INFO Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
-2019-07-31 11:29:46 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a5cbc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 11:29:47 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 11:29:47 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:29:47 INFO Starting service [Tomcat]
-2019-07-31 11:29:47 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 11:29:47 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 11:29:47 INFO Root WebApplicationContext: initialization completed in 271 ms
-2019-07-31 11:29:47 INFO HikariPool-2 - Starting...
-2019-07-31 11:29:47 INFO HikariPool-2 - Start completed.
-2019-07-31 11:29:47 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:14:48 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:17:59 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:17:59 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:17:59 INFO HikariPool-1 - Shutdown initiated...
+2019-08-01 10:17:59 INFO HikariPool-1 - Shutdown completed.
+2019-08-01 10:17:59 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:17:59 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:17:59 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:17:59 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:17:59 INFO Finished Spring Data repository scanning in 17ms. Found 5 repository interfaces.
+2019-08-01 10:17:59 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:18:00 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:18:00 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:18:00 INFO Starting service [Tomcat]
+2019-08-01 10:18:00 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:18:00 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:18:00 INFO Root WebApplicationContext: initialization completed in 288 ms
+2019-08-01 10:18:00 INFO HikariPool-2 - Starting...
+2019-08-01 10:18:00 INFO HikariPool-2 - Start completed.
+2019-08-01 10:18:00 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 11:29:47 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 11:29:47 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:29:47 INFO LiveReload server is running on port 35729
-2019-07-31 11:29:47 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:29:47 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 11:29:47 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 11:29:47 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:29:47 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 11:29:47 INFO Started WebmobileSub2Application in 0.576 seconds (JVM running for 47.997)
-2019-07-31 11:29:47 INFO Condition evaluation unchanged
-2019-07-31 11:29:48 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 11:29:48 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 11:29:48 INFO Completed initialization in 9 ms
-2019-07-31 11:29:48 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:18:00 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:18:00 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:18:00 INFO LiveReload server is running on port 35729
+2019-08-01 10:18:00 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:18:00 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:18:00 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:18:00 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:18:00 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:18:00 INFO Started WebmobileSub2Application in 0.673 seconds (JVM running for 201.546)
+2019-08-01 10:18:00 INFO Condition evaluation unchanged
+2019-08-01 10:18:03 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:18:03 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:18:03 INFO Completed initialization in 8 ms
+2019-08-01 10:18:03 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 11:29:48 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 11:31:00 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:18:03 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 11:31:00 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 11:31:13 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:31:13 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:31:13 INFO HikariPool-2 - Shutdown initiated...
-2019-07-31 11:31:13 INFO HikariPool-2 - Shutdown completed.
-2019-07-31 11:31:14 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 5916 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 11:31:14 INFO No active profile set, falling back to default profiles: default
-2019-07-31 11:31:14 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 11:31:14 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 11:31:14 INFO Finished Spring Data repository scanning in 10ms. Found 2 repository interfaces.
-2019-07-31 11:31:14 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a5cbc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 11:31:14 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 11:31:14 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:31:14 INFO Starting service [Tomcat]
-2019-07-31 11:31:14 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 11:31:14 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 11:31:14 INFO Root WebApplicationContext: initialization completed in 262 ms
-2019-07-31 11:31:14 INFO HikariPool-3 - Starting...
-2019-07-31 11:31:14 INFO HikariPool-3 - Start completed.
-2019-07-31 11:31:14 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:18:45 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:18:45 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:18:45 INFO HikariPool-2 - Shutdown initiated...
+2019-08-01 10:18:45 INFO HikariPool-2 - Shutdown completed.
+2019-08-01 10:18:45 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:18:45 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:18:46 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:18:46 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:18:46 INFO Finished Spring Data repository scanning in 16ms. Found 5 repository interfaces.
+2019-08-01 10:18:46 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:18:46 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:18:46 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:18:46 INFO Starting service [Tomcat]
+2019-08-01 10:18:46 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:18:46 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:18:46 INFO Root WebApplicationContext: initialization completed in 273 ms
+2019-08-01 10:18:46 INFO HikariPool-3 - Starting...
+2019-08-01 10:18:46 INFO HikariPool-3 - Start completed.
+2019-08-01 10:18:46 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 11:31:14 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 11:31:14 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:31:14 INFO LiveReload server is running on port 35729
-2019-07-31 11:31:14 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:31:14 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 11:31:14 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 11:31:14 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:31:14 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 11:31:14 INFO Started WebmobileSub2Application in 0.549 seconds (JVM running for 135.269)
-2019-07-31 11:31:14 INFO Condition evaluation unchanged
-2019-07-31 11:31:16 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 11:31:16 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 11:31:16 INFO Completed initialization in 6 ms
-2019-07-31 11:31:16 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:18:46 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:18:46 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:18:46 INFO LiveReload server is running on port 35729
+2019-08-01 10:18:46 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:18:46 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:18:46 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:18:46 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:18:46 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:18:46 INFO Started WebmobileSub2Application in 0.654 seconds (JVM running for 247.656)
+2019-08-01 10:18:46 INFO Condition evaluation unchanged
+2019-08-01 10:18:47 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:18:47 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:18:47 INFO Completed initialization in 5 ms
+2019-08-01 10:18:47 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 11:31:16 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 11:31:50 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:18:47 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 11:31:50 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 11:31:55 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findPostById
-
-2019-07-31 11:31:55 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findPostById
-
-2019-07-31 11:32:10 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 11:32:10 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 11:32:19 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 11:32:19 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 11:34:47 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:34:47 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:34:47 INFO HikariPool-3 - Shutdown initiated...
-2019-07-31 11:34:47 INFO HikariPool-3 - Shutdown completed.
-2019-07-31 11:34:48 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 5916 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 11:34:48 INFO No active profile set, falling back to default profiles: default
-2019-07-31 11:34:48 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 11:34:48 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 11:34:48 INFO Finished Spring Data repository scanning in 8ms. Found 2 repository interfaces.
-2019-07-31 11:34:48 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a5cbc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 11:34:48 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 11:34:48 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:34:48 INFO Starting service [Tomcat]
-2019-07-31 11:34:48 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 11:34:48 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 11:34:48 INFO Root WebApplicationContext: initialization completed in 245 ms
-2019-07-31 11:34:48 INFO HikariPool-4 - Starting...
-2019-07-31 11:34:48 INFO HikariPool-4 - Start completed.
-2019-07-31 11:34:48 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:19:07 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:19:07 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:19:07 INFO HikariPool-3 - Shutdown initiated...
+2019-08-01 10:19:07 INFO HikariPool-3 - Shutdown completed.
+2019-08-01 10:19:07 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:19:07 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:19:07 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:19:07 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:19:07 INFO Finished Spring Data repository scanning in 15ms. Found 5 repository interfaces.
+2019-08-01 10:19:07 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:19:07 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:19:07 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:19:07 INFO Starting service [Tomcat]
+2019-08-01 10:19:07 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:19:07 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:19:07 INFO Root WebApplicationContext: initialization completed in 258 ms
+2019-08-01 10:19:07 INFO HikariPool-4 - Starting...
+2019-08-01 10:19:07 INFO HikariPool-4 - Start completed.
+2019-08-01 10:19:07 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 11:34:48 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 11:34:48 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:34:48 INFO LiveReload server is running on port 35729
-2019-07-31 11:34:48 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:34:48 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 11:34:48 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 11:34:48 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:34:48 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 11:34:48 INFO Started WebmobileSub2Application in 0.534 seconds (JVM running for 349.386)
-2019-07-31 11:34:48 INFO Condition evaluation unchanged
-2019-07-31 11:38:32 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:38:32 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:38:32 INFO HikariPool-4 - Shutdown initiated...
-2019-07-31 11:38:32 INFO HikariPool-4 - Shutdown completed.
-2019-07-31 11:38:32 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 5916 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 11:38:32 INFO No active profile set, falling back to default profiles: default
-2019-07-31 11:38:33 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 11:38:33 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 11:38:33 INFO Finished Spring Data repository scanning in 8ms. Found 2 repository interfaces.
-2019-07-31 11:38:33 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a5cbc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 11:38:33 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 11:38:33 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:38:33 INFO Starting service [Tomcat]
-2019-07-31 11:38:33 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 11:38:33 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 11:38:33 INFO Root WebApplicationContext: initialization completed in 247 ms
-2019-07-31 11:38:33 INFO HikariPool-5 - Starting...
-2019-07-31 11:38:33 INFO HikariPool-5 - Start completed.
-2019-07-31 11:38:33 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:19:07 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:19:08 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:19:08 INFO LiveReload server is running on port 35729
+2019-08-01 10:19:08 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:19:08 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:19:08 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:19:08 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:19:08 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:19:08 INFO Started WebmobileSub2Application in 0.638 seconds (JVM running for 269.426)
+2019-08-01 10:19:08 INFO Condition evaluation unchanged
+2019-08-01 10:19:09 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:19:09 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:19:09 INFO Completed initialization in 5 ms
+2019-08-01 10:19:09 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:19:09 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:22:01 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:22:01 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:22:01 INFO HikariPool-4 - Shutdown initiated...
+2019-08-01 10:22:01 INFO HikariPool-4 - Shutdown completed.
+2019-08-01 10:22:01 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:22:01 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:22:01 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:22:01 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:22:01 INFO Finished Spring Data repository scanning in 16ms. Found 5 repository interfaces.
+2019-08-01 10:22:02 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:22:02 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:22:02 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:22:02 INFO Starting service [Tomcat]
+2019-08-01 10:22:02 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:22:02 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:22:02 INFO Root WebApplicationContext: initialization completed in 263 ms
+2019-08-01 10:22:02 INFO HikariPool-5 - Starting...
+2019-08-01 10:22:02 INFO HikariPool-5 - Start completed.
+2019-08-01 10:22:02 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 11:38:33 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 11:38:33 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:38:33 INFO LiveReload server is running on port 35729
-2019-07-31 11:38:33 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:38:33 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 11:38:33 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 11:38:33 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 11:38:33 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 11:38:33 INFO Started WebmobileSub2Application in 0.526 seconds (JVM running for 574.147)
-2019-07-31 11:38:33 INFO Condition evaluation unchanged
-2019-07-31 11:56:40 INFO Application shutdown requested.
-2019-07-31 11:56:40 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 11:56:40 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 11:56:40 INFO HikariPool-5 - Shutdown initiated...
-2019-07-31 11:56:40 INFO HikariPool-5 - Shutdown completed.
-2019-07-31 14:42:34 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 14:42:34 INFO No active profile set, falling back to default profiles: default
-2019-07-31 14:42:34 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-07-31 14:42:34 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-07-31 14:42:34 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 14:42:34 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 14:42:34 INFO Finished Spring Data repository scanning in 36ms. Found 2 repository interfaces.
-2019-07-31 14:42:34 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 14:42:35 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 14:42:35 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:42:35 INFO Starting service [Tomcat]
-2019-07-31 14:42:35 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 14:42:35 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 14:42:35 INFO Root WebApplicationContext: initialization completed in 942 ms
-2019-07-31 14:42:35 INFO HikariPool-1 - Starting...
-2019-07-31 14:42:35 INFO HikariPool-1 - Start completed.
-2019-07-31 14:42:35 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:22:02 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:22:02 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:22:02 INFO LiveReload server is running on port 35729
+2019-08-01 10:22:02 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:22:02 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:22:02 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:22:02 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:22:02 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:22:02 INFO Started WebmobileSub2Application in 0.616 seconds (JVM running for 443.554)
+2019-08-01 10:22:02 INFO Condition evaluation unchanged
+2019-08-01 10:22:03 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:22:03 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:22:03 INFO Completed initialization in 3 ms
+2019-08-01 10:22:03 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:22:03 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:22:59 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:22:59 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:22:59 INFO HikariPool-5 - Shutdown initiated...
+2019-08-01 10:22:59 INFO HikariPool-5 - Shutdown completed.
+2019-08-01 10:22:59 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:22:59 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:22:59 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:22:59 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:22:59 INFO Finished Spring Data repository scanning in 15ms. Found 5 repository interfaces.
+2019-08-01 10:22:59 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:22:59 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:22:59 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:22:59 INFO Starting service [Tomcat]
+2019-08-01 10:22:59 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:22:59 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:22:59 INFO Root WebApplicationContext: initialization completed in 258 ms
+2019-08-01 10:22:59 INFO HikariPool-6 - Starting...
+2019-08-01 10:22:59 INFO HikariPool-6 - Start completed.
+2019-08-01 10:22:59 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 14:42:35 INFO HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-31 14:42:35 INFO HHH000206: hibernate.properties not found
-2019-07-31 14:42:35 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-31 14:42:35 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 14:42:36 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:42:36 INFO LiveReload server is running on port 35729
-2019-07-31 14:42:36 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:42:36 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 14:42:36 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 14:42:36 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:42:36 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 14:42:36 INFO Started WebmobileSub2Application in 2.929 seconds (JVM running for 3.742)
-2019-07-31 14:42:40 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 14:42:40 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 14:42:40 INFO Completed initialization in 5 ms
-2019-07-31 14:42:40 WARN Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
-2019-07-31 14:42:48 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:22:59 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:22:59 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:22:59 INFO LiveReload server is running on port 35729
+2019-08-01 10:22:59 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:22:59 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:23:00 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:23:00 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:23:00 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:23:00 INFO Started WebmobileSub2Application in 0.603 seconds (JVM running for 501.209)
+2019-08-01 10:23:00 INFO Condition evaluation unchanged
+2019-08-01 10:23:02 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:23:02 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:23:02 INFO Completed initialization in 5 ms
+2019-08-01 10:23:02 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 14:42:48 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property create found for type Posts!]
-2019-07-31 14:43:48 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:43:48 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:43:48 INFO HikariPool-1 - Shutdown initiated...
-2019-07-31 14:43:48 INFO HikariPool-1 - Shutdown completed.
-2019-07-31 14:43:48 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 14:43:48 INFO No active profile set, falling back to default profiles: default
-2019-07-31 14:43:48 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 14:43:48 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 14:43:48 INFO Finished Spring Data repository scanning in 10ms. Found 2 repository interfaces.
-2019-07-31 14:43:48 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 14:43:48 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 14:43:48 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:43:48 INFO Starting service [Tomcat]
-2019-07-31 14:43:48 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 14:43:48 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 14:43:48 INFO Root WebApplicationContext: initialization completed in 272 ms
-2019-07-31 14:43:49 INFO HikariPool-2 - Starting...
-2019-07-31 14:43:49 INFO HikariPool-2 - Start completed.
-2019-07-31 14:43:49 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:23:02 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:30:29 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:30:29 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:30:29 INFO HikariPool-6 - Shutdown initiated...
+2019-08-01 10:30:29 INFO HikariPool-6 - Shutdown completed.
+2019-08-01 10:30:29 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:30:29 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:30:29 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:30:29 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:30:29 INFO Finished Spring Data repository scanning in 16ms. Found 5 repository interfaces.
+2019-08-01 10:30:29 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:30:30 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:30:30 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:30:30 INFO Starting service [Tomcat]
+2019-08-01 10:30:30 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:30:30 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:30:30 INFO Root WebApplicationContext: initialization completed in 267 ms
+2019-08-01 10:30:30 INFO HikariPool-7 - Starting...
+2019-08-01 10:30:30 INFO HikariPool-7 - Start completed.
+2019-08-01 10:30:30 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 14:43:49 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 14:43:49 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:43:49 INFO LiveReload server is running on port 35729
-2019-07-31 14:43:49 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:43:49 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 14:43:49 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 14:43:49 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:43:49 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 14:43:49 INFO Started WebmobileSub2Application in 0.632 seconds (JVM running for 76.135)
-2019-07-31 14:43:49 INFO Condition evaluation unchanged
-2019-07-31 14:43:59 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:43:59 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:43:59 INFO HikariPool-2 - Shutdown initiated...
-2019-07-31 14:43:59 INFO HikariPool-2 - Shutdown completed.
-2019-07-31 14:44:00 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 14:44:00 INFO No active profile set, falling back to default profiles: default
-2019-07-31 14:44:00 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 14:44:00 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 14:44:00 INFO Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
-2019-07-31 14:44:00 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 14:44:00 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 14:44:00 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:44:00 INFO Starting service [Tomcat]
-2019-07-31 14:44:00 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 14:44:00 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 14:44:00 INFO Root WebApplicationContext: initialization completed in 264 ms
-2019-07-31 14:44:00 INFO HikariPool-3 - Starting...
-2019-07-31 14:44:00 INFO HikariPool-3 - Start completed.
-2019-07-31 14:44:00 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:30:30 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:30:30 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:30:30 INFO LiveReload server is running on port 35729
+2019-08-01 10:30:30 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:30:30 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:30:30 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:30:30 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:30:30 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:30:30 INFO Started WebmobileSub2Application in 0.611 seconds (JVM running for 951.498)
+2019-08-01 10:30:30 INFO Condition evaluation unchanged
+2019-08-01 10:30:30 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:30:30 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:30:30 INFO Completed initialization in 4 ms
+2019-08-01 10:30:30 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:30:30 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:30:39 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:30:39 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:30:39 INFO HikariPool-7 - Shutdown initiated...
+2019-08-01 10:30:39 INFO HikariPool-7 - Shutdown completed.
+2019-08-01 10:30:40 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:30:40 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:30:40 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:30:40 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:30:40 INFO Finished Spring Data repository scanning in 14ms. Found 5 repository interfaces.
+2019-08-01 10:30:40 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:30:40 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:30:40 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:30:40 INFO Starting service [Tomcat]
+2019-08-01 10:30:40 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:30:40 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:30:40 INFO Root WebApplicationContext: initialization completed in 262 ms
+2019-08-01 10:30:40 INFO HikariPool-8 - Starting...
+2019-08-01 10:30:40 INFO HikariPool-8 - Start completed.
+2019-08-01 10:30:40 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 14:44:00 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 14:44:00 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:44:00 INFO LiveReload server is running on port 35729
-2019-07-31 14:44:00 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:44:00 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 14:44:00 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 14:44:00 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:44:00 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 14:44:00 INFO Started WebmobileSub2Application in 0.583 seconds (JVM running for 87.639)
-2019-07-31 14:44:00 INFO Condition evaluation unchanged
-2019-07-31 14:44:03 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:44:03 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:44:03 INFO HikariPool-3 - Shutdown initiated...
-2019-07-31 14:44:03 INFO HikariPool-3 - Shutdown completed.
-2019-07-31 14:44:03 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 14:44:03 INFO No active profile set, falling back to default profiles: default
-2019-07-31 14:44:03 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 14:44:03 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 14:44:03 INFO Finished Spring Data repository scanning in 8ms. Found 2 repository interfaces.
-2019-07-31 14:44:03 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 14:44:03 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 14:44:03 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:44:03 INFO Starting service [Tomcat]
-2019-07-31 14:44:03 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 14:44:03 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 14:44:03 INFO Root WebApplicationContext: initialization completed in 260 ms
-2019-07-31 14:44:03 INFO HikariPool-4 - Starting...
-2019-07-31 14:44:03 INFO HikariPool-4 - Start completed.
-2019-07-31 14:44:03 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:30:40 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:30:40 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:30:40 INFO LiveReload server is running on port 35729
+2019-08-01 10:30:40 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:30:40 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:30:40 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:30:40 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:30:40 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:30:40 INFO Started WebmobileSub2Application in 0.602 seconds (JVM running for 962.004)
+2019-08-01 10:30:40 INFO Condition evaluation unchanged
+2019-08-01 10:30:48 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:30:48 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:30:48 INFO Completed initialization in 5 ms
+2019-08-01 10:30:48 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:30:48 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
+
+2019-08-01 10:32:40 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:32:40 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:32:40 INFO HikariPool-8 - Shutdown initiated...
+2019-08-01 10:32:40 INFO HikariPool-8 - Shutdown completed.
+2019-08-01 10:32:41 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:32:41 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:32:41 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:32:41 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:32:41 INFO Finished Spring Data repository scanning in 16ms. Found 5 repository interfaces.
+2019-08-01 10:32:41 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:32:41 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:32:41 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:32:41 INFO Starting service [Tomcat]
+2019-08-01 10:32:41 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:32:41 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:32:41 INFO Root WebApplicationContext: initialization completed in 265 ms
+2019-08-01 10:32:41 INFO HikariPool-9 - Starting...
+2019-08-01 10:32:41 INFO HikariPool-9 - Start completed.
+2019-08-01 10:32:41 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 14:44:03 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 14:44:04 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:44:04 INFO LiveReload server is running on port 35729
-2019-07-31 14:44:04 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:44:04 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 14:44:04 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 14:44:04 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:44:04 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 14:44:04 INFO Started WebmobileSub2Application in 0.558 seconds (JVM running for 91.019)
-2019-07-31 14:44:04 INFO Condition evaluation unchanged
-2019-07-31 14:44:17 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 14:44:17 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 14:44:17 INFO Completed initialization in 7 ms
-2019-07-31 14:44:17 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
-
-2019-07-31 14:44:17 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 14:45:09 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:45:09 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:45:09 INFO HikariPool-4 - Shutdown initiated...
-2019-07-31 14:45:09 INFO HikariPool-4 - Shutdown completed.
-2019-07-31 14:45:09 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 14:45:09 INFO No active profile set, falling back to default profiles: default
-2019-07-31 14:45:09 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 14:45:09 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 14:45:09 INFO Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
-2019-07-31 14:45:09 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 14:45:09 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 14:45:09 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:45:09 INFO Starting service [Tomcat]
-2019-07-31 14:45:09 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 14:45:09 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 14:45:09 INFO Root WebApplicationContext: initialization completed in 242 ms
-2019-07-31 14:45:10 INFO HikariPool-5 - Starting...
-2019-07-31 14:45:10 INFO HikariPool-5 - Start completed.
-2019-07-31 14:45:10 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:32:41 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:32:41 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:32:41 INFO LiveReload server is running on port 35729
+2019-08-01 10:32:41 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:32:41 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:32:41 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:32:41 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:32:41 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:32:41 INFO Started WebmobileSub2Application in 0.596 seconds (JVM running for 1083.098)
+2019-08-01 10:32:41 INFO Condition evaluation unchanged
+2019-08-01 10:32:58 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:32:58 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:32:58 INFO HikariPool-9 - Shutdown initiated...
+2019-08-01 10:32:58 INFO HikariPool-9 - Shutdown completed.
+2019-08-01 10:32:58 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:32:58 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:32:59 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:32:59 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:32:59 INFO Finished Spring Data repository scanning in 15ms. Found 5 repository interfaces.
+2019-08-01 10:32:59 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:32:59 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:32:59 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:32:59 INFO Starting service [Tomcat]
+2019-08-01 10:32:59 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:32:59 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:32:59 INFO Root WebApplicationContext: initialization completed in 256 ms
+2019-08-01 10:32:59 INFO HikariPool-10 - Starting...
+2019-08-01 10:32:59 INFO HikariPool-10 - Start completed.
+2019-08-01 10:32:59 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 14:45:10 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 14:45:10 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:45:10 INFO LiveReload server is running on port 35729
-2019-07-31 14:45:10 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:45:10 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 14:45:10 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 14:45:10 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:45:10 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 14:45:10 INFO Started WebmobileSub2Application in 0.516 seconds (JVM running for 157.039)
-2019-07-31 14:45:10 INFO Condition evaluation unchanged
-2019-07-31 14:45:11 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 14:45:11 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 14:45:11 INFO Completed initialization in 5 ms
-2019-07-31 14:45:11 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
-
-2019-07-31 14:45:11 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 14:45:14 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
-
-2019-07-31 14:45:14 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 14:45:14 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
-
-2019-07-31 14:45:14 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property post found for type Posts!]
-2019-07-31 14:45:21 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:45:21 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:45:21 INFO HikariPool-5 - Shutdown initiated...
-2019-07-31 14:45:21 INFO HikariPool-5 - Shutdown completed.
-2019-07-31 14:45:21 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 14:45:21 INFO No active profile set, falling back to default profiles: default
-2019-07-31 14:45:21 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 14:45:21 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 14:45:21 INFO Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
-2019-07-31 14:45:21 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 14:45:21 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 14:45:21 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:45:21 INFO Starting service [Tomcat]
-2019-07-31 14:45:21 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 14:45:21 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 14:45:21 INFO Root WebApplicationContext: initialization completed in 244 ms
-2019-07-31 14:45:21 INFO HikariPool-6 - Starting...
-2019-07-31 14:45:21 INFO HikariPool-6 - Start completed.
-2019-07-31 14:45:21 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-01 10:32:59 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:32:59 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:32:59 INFO LiveReload server is running on port 35729
+2019-08-01 10:32:59 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:32:59 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:32:59 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:32:59 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:32:59 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:32:59 INFO Started WebmobileSub2Application in 0.587 seconds (JVM running for 1100.687)
+2019-08-01 10:32:59 INFO Condition evaluation unchanged
+2019-08-01 10:33:02 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:33:02 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:33:02 INFO HikariPool-10 - Shutdown initiated...
+2019-08-01 10:33:03 INFO HikariPool-10 - Shutdown completed.
+2019-08-01 10:33:03 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2560 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-01 10:33:03 INFO No active profile set, falling back to default profiles: default
+2019-08-01 10:33:03 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-01 10:33:03 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-01 10:33:03 INFO Finished Spring Data repository scanning in 15ms. Found 5 repository interfaces.
+2019-08-01 10:33:03 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$89049a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-01 10:33:03 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-01 10:33:03 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:33:03 INFO Starting service [Tomcat]
+2019-08-01 10:33:03 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-01 10:33:03 INFO Initializing Spring embedded WebApplicationContext
+2019-08-01 10:33:03 INFO Root WebApplicationContext: initialization completed in 271 ms
+2019-08-01 10:33:03 INFO HikariPool-11 - Starting...
+2019-08-01 10:33:03 INFO HikariPool-11 - Start completed.
+2019-08-01 10:33:03 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-31 14:45:21 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 14:45:21 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 14:45:21 INFO LiveReload server is running on port 35729
-2019-07-31 14:45:21 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 14:45:21 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 14:45:21 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 14:45:21 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 14:45:22 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 14:45:22 INFO Started WebmobileSub2Application in 0.515 seconds (JVM running for 168.814)
-2019-07-31 14:45:22 INFO Condition evaluation unchanged
-2019-07-31 14:45:26 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 14:45:26 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 14:45:26 INFO Completed initialization in 5 ms
-2019-07-31 14:45:26 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:33:03 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-01 10:33:03 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:33:03 INFO LiveReload server is running on port 35729
+2019-08-01 10:33:03 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:33:03 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-01 10:33:03 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-01 10:33:03 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-01 10:33:03 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-01 10:33:03 INFO Started WebmobileSub2Application in 0.608 seconds (JVM running for 1105.105)
+2019-08-01 10:33:03 INFO Condition evaluation unchanged
+2019-08-01 10:33:04 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-01 10:33:04 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-01 10:33:04 INFO Completed initialization in 4 ms
+2019-08-01 10:33:04 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 14:45:26 WARN Resolved [org.springframework.data.mapping.PropertyReferenceException: No property created found for type Posts!]
-2019-07-31 15:07:11 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 15:07:11 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 15:07:11 INFO HikariPool-6 - Shutdown initiated...
-2019-07-31 15:07:11 INFO HikariPool-6 - Shutdown completed.
-2019-07-31 15:07:11 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 16716 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 15:07:11 INFO No active profile set, falling back to default profiles: default
-2019-07-31 15:07:12 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 15:07:12 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 15:07:12 INFO Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
-2019-07-31 15:07:12 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd525698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 15:07:12 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 15:07:12 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 15:07:12 INFO Starting service [Tomcat]
-2019-07-31 15:07:12 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 15:07:12 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 15:07:12 INFO Root WebApplicationContext: initialization completed in 246 ms
-2019-07-31 15:07:12 INFO HikariPool-7 - Starting...
-2019-07-31 15:07:12 INFO HikariPool-7 - Start completed.
-2019-07-31 15:07:12 INFO HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-07-31 15:07:12 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 15:07:12 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 15:07:12 INFO LiveReload server is running on port 35729
-2019-07-31 15:07:12 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 15:07:12 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 15:07:12 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 15:07:12 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 15:07:12 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 15:07:12 INFO Started WebmobileSub2Application in 0.514 seconds (JVM running for 1479.241)
-2019-07-31 15:07:12 INFO Condition evaluation unchanged
-2019-07-31 15:07:12 INFO Application shutdown requested.
-2019-07-31 15:07:12 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 15:07:12 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 15:07:12 INFO HikariPool-7 - Shutdown initiated...
-2019-07-31 15:07:12 INFO HikariPool-7 - Shutdown completed.
-2019-07-31 17:04:13 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 7428 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 17:04:13 INFO No active profile set, falling back to default profiles: default
-2019-07-31 17:04:13 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-07-31 17:04:13 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-07-31 17:04:14 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 17:04:14 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 17:04:14 INFO Finished Spring Data repository scanning in 43ms. Found 5 repository interfaces.
-2019-07-31 17:04:14 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22f850b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 17:04:14 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 17:04:14 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:04:14 INFO Starting service [Tomcat]
-2019-07-31 17:04:14 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 17:04:14 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 17:04:14 INFO Root WebApplicationContext: initialization completed in 1008 ms
-2019-07-31 17:04:14 INFO HikariPool-1 - Starting...
-2019-07-31 17:04:15 INFO HikariPool-1 - Start completed.
-2019-07-31 17:04:15 INFO HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-07-31 17:04:15 INFO HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-31 17:04:15 INFO HHH000206: hibernate.properties not found
-2019-07-31 17:04:15 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-31 17:04:15 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 17:04:16 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:04:16 INFO LiveReload server is running on port 35729
-2019-07-31 17:04:16 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:04:16 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 17:04:16 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 17:04:16 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:04:16 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 17:04:16 INFO Started WebmobileSub2Application in 3.425 seconds (JVM running for 4.802)
-2019-07-31 17:04:17 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 17:04:17 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 17:04:17 INFO Completed initialization in 5 ms
-2019-07-31 17:04:17 WARN Resolved [org.springframework.web.bind.MissingPathVariableException: Missing URI template variable 'pageNo' for method parameter of type int]
-2019-07-31 17:04:23 WARN Resolved [org.springframework.web.bind.MissingPathVariableException: Missing URI template variable 'pageNo' for method parameter of type int]
-2019-07-31 17:04:32 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:04:32 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:04:32 INFO HikariPool-1 - Shutdown initiated...
-2019-07-31 17:04:32 INFO HikariPool-1 - Shutdown completed.
-2019-07-31 17:04:33 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 7428 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 17:04:33 INFO No active profile set, falling back to default profiles: default
-2019-07-31 17:04:33 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 17:04:33 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 17:04:33 INFO Finished Spring Data repository scanning in 15ms. Found 5 repository interfaces.
-2019-07-31 17:04:33 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22f850b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 17:04:33 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 17:04:33 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:04:33 INFO Starting service [Tomcat]
-2019-07-31 17:04:33 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 17:04:33 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 17:04:33 INFO Root WebApplicationContext: initialization completed in 275 ms
-2019-07-31 17:04:33 INFO HikariPool-2 - Starting...
-2019-07-31 17:04:33 INFO HikariPool-2 - Start completed.
-2019-07-31 17:04:33 INFO HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-07-31 17:04:33 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 17:04:33 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:04:33 INFO LiveReload server is running on port 35729
-2019-07-31 17:04:33 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:04:33 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 17:04:33 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 17:04:33 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:04:33 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 17:04:33 INFO Started WebmobileSub2Application in 0.659 seconds (JVM running for 21.895)
-2019-07-31 17:04:33 INFO Condition evaluation unchanged
-2019-07-31 17:04:36 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 17:04:36 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 17:04:36 INFO Completed initialization in 5 ms
-2019-07-31 17:04:36 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
+2019-08-01 10:33:04 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
 
-2019-07-31 17:04:36 INFO HHH000397: Using ASTQueryTranslatorFactory
-2019-07-31 17:04:36 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: GET] findAllPosts
-
-2019-07-31 17:05:37 WARN Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
-2019-07-31 17:06:17 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:06:17 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:06:17 INFO HikariPool-2 - Shutdown initiated...
-2019-07-31 17:06:17 INFO HikariPool-2 - Shutdown completed.
-2019-07-31 17:06:18 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 7428 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 17:06:18 INFO No active profile set, falling back to default profiles: default
-2019-07-31 17:06:18 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 17:06:18 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 17:06:18 INFO Finished Spring Data repository scanning in 16ms. Found 5 repository interfaces.
-2019-07-31 17:06:18 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22f850b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 17:06:18 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 17:06:18 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:06:18 INFO Starting service [Tomcat]
-2019-07-31 17:06:18 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 17:06:18 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 17:06:18 INFO Root WebApplicationContext: initialization completed in 271 ms
-2019-07-31 17:06:18 INFO HikariPool-3 - Starting...
-2019-07-31 17:06:18 INFO HikariPool-3 - Start completed.
-2019-07-31 17:06:18 INFO HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-07-31 17:06:18 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 17:06:18 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:06:18 INFO LiveReload server is running on port 35729
-2019-07-31 17:06:18 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:06:18 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 17:06:18 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 17:06:18 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:06:18 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 17:06:18 INFO Started WebmobileSub2Application in 0.65 seconds (JVM running for 126.881)
-2019-07-31 17:06:18 INFO Condition evaluation unchanged
-2019-07-31 17:06:19 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 17:06:19 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 17:06:19 INFO Completed initialization in 3 ms
-2019-07-31 17:06:19 WARN Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported]
-2019-07-31 17:08:39 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
-
-2019-07-31 17:08:39 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: POST] createPost
-
-2019-07-31 17:09:10 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: PUT] updatePost
-
-2019-07-31 17:09:10 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: PUT] updatePost
-
-2019-07-31 17:09:17 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: PUT] updatePost
-
-2019-07-31 17:09:17 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: PUT] updatePost
-
-2019-07-31 17:20:56 INFO Application shutdown requested.
-2019-07-31 17:20:56 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:20:56 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:20:56 INFO HikariPool-3 - Shutdown initiated...
-2019-07-31 17:20:56 INFO HikariPool-3 - Shutdown completed.
-2019-07-31 17:21:02 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 13324 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 17:21:02 INFO No active profile set, falling back to default profiles: default
-2019-07-31 17:21:02 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-07-31 17:21:02 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-07-31 17:21:03 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 17:21:03 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 17:21:03 INFO Finished Spring Data repository scanning in 43ms. Found 5 repository interfaces.
-2019-07-31 17:21:03 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f8673ffa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 17:21:03 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 17:21:03 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:21:03 INFO Starting service [Tomcat]
-2019-07-31 17:21:03 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 17:21:03 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 17:21:03 INFO Root WebApplicationContext: initialization completed in 976 ms
-2019-07-31 17:21:04 INFO HikariPool-1 - Starting...
-2019-07-31 17:21:04 INFO HikariPool-1 - Start completed.
-2019-07-31 17:21:04 INFO HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-07-31 17:21:04 INFO HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-31 17:21:04 INFO HHH000206: hibernate.properties not found
-2019-07-31 17:21:04 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-31 17:21:04 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 17:21:05 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:21:05 INFO LiveReload server is running on port 35729
-2019-07-31 17:21:05 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:21:05 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 17:21:05 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 17:21:05 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:21:05 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 17:21:05 INFO Started WebmobileSub2Application in 3.187 seconds (JVM running for 4.017)
-2019-07-31 17:21:29 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 17:21:29 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 17:21:29 INFO Completed initialization in 5 ms
-2019-07-31 17:21:29 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 17:21:29 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 17:22:11 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:22:11 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:22:11 INFO HikariPool-1 - Shutdown initiated...
-2019-07-31 17:22:11 INFO HikariPool-1 - Shutdown completed.
-2019-07-31 17:22:11 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 13324 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-07-31 17:22:11 INFO No active profile set, falling back to default profiles: default
-2019-07-31 17:22:11 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-07-31 17:22:11 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-31 17:22:11 INFO Finished Spring Data repository scanning in 16ms. Found 5 repository interfaces.
-2019-07-31 17:22:11 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f8673ffa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-31 17:22:11 INFO Tomcat initialized with port(s): 9090 (http)
-2019-07-31 17:22:11 INFO Initializing ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:22:11 INFO Starting service [Tomcat]
-2019-07-31 17:22:11 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-31 17:22:12 INFO Initializing Spring embedded WebApplicationContext
-2019-07-31 17:22:12 INFO Root WebApplicationContext: initialization completed in 293 ms
-2019-07-31 17:22:12 INFO HikariPool-2 - Starting...
-2019-07-31 17:22:12 INFO HikariPool-2 - Start completed.
-2019-07-31 17:22:12 INFO HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-07-31 17:22:12 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-07-31 17:22:12 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 17:22:12 INFO LiveReload server is running on port 35729
-2019-07-31 17:22:12 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-31 17:22:12 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-31 17:22:12 INFO Adding welcome page: class path resource [static/index.html]
-2019-07-31 17:22:12 INFO Starting ProtocolHandler ["http-nio-9090"]
-2019-07-31 17:22:12 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
-2019-07-31 17:22:12 INFO Started WebmobileSub2Application in 0.675 seconds (JVM running for 70.452)
-2019-07-31 17:22:12 INFO Condition evaluation unchanged
-2019-07-31 17:22:12 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-31 17:22:12 INFO Initializing Servlet 'dispatcherServlet'
-2019-07-31 17:22:12 INFO Completed initialization in 9 ms
-2019-07-31 17:22:12 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 17:22:12 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: null, AUTH: null] / [METHOD: DELETE] deletePostById
-
-2019-07-31 18:34:23 INFO Application shutdown requested.
-2019-07-31 18:34:23 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-07-31 18:34:23 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-07-31 18:34:23 INFO HikariPool-2 - Shutdown initiated...
-2019-07-31 18:34:23 INFO HikariPool-2 - Shutdown completed.
+2019-08-01 10:36:58 INFO Application shutdown requested.
+2019-08-01 10:36:58 INFO Application shutdown requested.
+2019-08-01 10:36:58 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-01 10:36:58 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-01 10:36:58 INFO HikariPool-11 - Shutdown initiated...
+2019-08-01 10:36:58 INFO HikariPool-11 - Shutdown completed.
