@@ -35,34 +35,34 @@ public class Posts {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "post_id")
-	private int post_id;
+	private int postId;
 
 	@Column(name = "account_email")
-	private String account_email;
+	private String accountEmail;
 
 	@Column(name = "account_name")
-	private String account_name;
+	private String accountName;
 
 	@Column(name = "post_title")
-	private String post_title;
+	private String postTitle;
 
 	@Column(name = "post_content")
-	private String post_content;
+	private String postContent;
 
 	@CreationTimestamp
-	@Column(name = "post_create_at")
-	private LocalDateTime post_create_at;
+	@Column(name = "post_created_at")
+	private LocalDateTime postCreatedAt;
 
 	@ColumnDefault("0")
 	@Column(name = "post_views")
-	private int post_views;
+	private int postViews;
 
 	@Column(name = "post_image_url")
-	private String post_image_url;
+	private String postImageUrl;
 
 	
 	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name="post_id")
-	private List<PostComments> post_comments;
+	private List<PostComments> postComments;
 
 }

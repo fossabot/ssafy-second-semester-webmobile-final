@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.ssafy.vo.Posts;
 
 @Repository
-public interface PostsRespository extends JpaRepository<Posts, Integer> {
+public interface PostsRepository extends JpaRepository<Posts, Integer> {
 
 	@Modifying
 	@Transactional

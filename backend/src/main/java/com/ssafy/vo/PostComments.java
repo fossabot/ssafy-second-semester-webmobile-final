@@ -29,21 +29,22 @@ public class PostComments {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "post_comment_id")
-	private int post_comment_id;
+	private int postCommentId;
 
 	@Column(name = "account_email")
-	private String account_email;
+	private String accountEmail;
 
 	@Column(name = "account_name")
-	private String account_name;
+	private String accountName;
 
 	@Column(name = "post_comment_content")
-	private String post_comment_content;
+	private String postCommentContent;
 
 	@Column(name = "post_comment_create_at")
-	private LocalDateTime post_comment_create_at;
+	private LocalDateTime postCommentCreatedAt;
 
+	/** 외래키 설정*/
 	@Column(name = "post_id")
-	private int post_id;
+	private int postId;
 
 }

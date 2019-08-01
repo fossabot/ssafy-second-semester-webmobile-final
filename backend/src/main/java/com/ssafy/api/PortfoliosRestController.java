@@ -7,6 +7,15 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
+=======
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.PagedResources;
+>>>>>>> 5603c1c04cb2b75e2d870b8c999a75acd8a98bf8
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +26,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+<<<<<<< HEAD
 import com.ssafy.respository.PortfoliosRespository;
 import com.ssafy.vo.Portfolios;
 import com.ssafy.vo.PortfoliosResource;
+=======
+import com.ssafy.respository.PortfoliosRepository;
+import com.ssafy.service.PortfoliosService;
+import com.ssafy.vo.Portfolios;
+import com.ssafy.vo.resource.PortfoliosResource;
+>>>>>>> 5603c1c04cb2b75e2d870b8c999a75acd8a98bf8
 
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/portfolios")
 public class PortfoliosRestController {
+<<<<<<< HEAD
 	
 	@Autowired
 	PortfoliosRespository portfoliosRespository;
@@ -58,5 +75,56 @@ public class PortfoliosRestController {
 		return ResponseEntity.ok(portfoliosResource);
 	}
 	
+=======
+
+	@Autowired
+	PortfoliosRepository portfoliosRepository;
+
+	@Autowired
+	PortfoliosService portfoliosService;
+
+	@GetMapping
+	public ResponseEntity<Resources<PortfoliosResource>> findAll() {
+		List<PortfoliosResource> portfolios = portfoliosRepository.findAll().stream().map(PortfoliosResource::new)
+				.collect(Collectors.toList());
+		Resources<PortfoliosResource> resources = new Resources<>(portfolios);
+		// HATEOAS
+		// ControllerLinkBuilder selfLinkBuilder =
+		// linkTo(PortfoliosRestController.class); //
+		// http://localhost:9090/api/bears/portfolios
+		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
+		// resources.add(linkTo(selfLinkBuilder).withSelfRel());
+		resources.add(new Link(uriString, "self"));
+		return ResponseEntity.ok(resources);
+
+	}
+
+	@GetMapping(value = "/page/{pageNo}")
+	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int pageNo,
+			PagedResourcesAssembler<Portfolios> assembler) {
+//		Pageable pageable = PageRequest.of(page_no - 1, 6, Sort.by("portfolio_created_at"));
+		Pageable pageable = PageRequest.of(pageNo - 1, 6);
+		Page<Portfolios> portfolios = portfoliosService.findAllPortfolios(pageable);
+		PagedResources<PortfoliosResource> pagedPortfoliosResources = assembler.toResource(portfolios,
+				e -> new PortfoliosResource(e));
+
+		return ResponseEntity.ok(pagedPortfoliosResources);
+	}
+
+	@GetMapping("/{portfolio_id}")
+	public ResponseEntity<?> findAll(@PathVariable int portfolioId) {
+
+		Optional<Portfolios> portfolioOpt = portfoliosRepository.findById(portfolioId);
+
+		Portfolios portfolios = portfolioOpt.get();
+
+		// HATEOAS
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfoliosRestController.class); // http://localhost:9090/api/bears/portfolios
+		PortfoliosResource portfoliosResource = new PortfoliosResource(portfolios);
+		// portfoliosResource.add(selfLinkBuilder.withRel("update").withType("PUT"));
+
+		return ResponseEntity.ok(portfoliosResource);
+	}
+>>>>>>> 5603c1c04cb2b75e2d870b8c999a75acd8a98bf8
 
 }
