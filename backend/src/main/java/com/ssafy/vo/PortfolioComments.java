@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.ssafy.vo;
 
 import java.time.LocalDateTime;
@@ -46,5 +45,3 @@ public class PortfolioComments {
 	private int portfolioId;
 
 }
-=======
->>>>>>> 8a3de75931c45a64ec92a7cdbde092beedbc0532

@@ -41,7 +41,7 @@ public class LogAspect {
 		} else {
 			userInfo +=request.getHeader("email") + ", AUTH: " + request.getHeader("authentization");
 		}
-		
+
 		StringBuilder sb = new StringBuilder();
 
 		sb

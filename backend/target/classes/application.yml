@@ -1,7 +1,8 @@
 server: 
   port: 9090
-  servlet: 
-    context-path: /api/bears
+  servlet:    context-path: /api/bears
+
+database: mysql
 
 spring:
   ## MULTIPART (MultipartProperties)
@@ -16,9 +17,11 @@ spring:
  
   # MySQL 서버 데이터베이스 지정
   datasource: 
-    url: jdbc:mysql://127.0.0.1:3306/ssafy?serverTimezone=UTC
+    #url: jdbc:mysql://70.12.246.106:3306/ssafy?serverTimezone=UTC
+    url: jdbc:mysql://70.12.246.64:3306/ssafy?serverTimezone=UTC
     username: root
-    password: manager
+    #password: manager
+    password: ssafy
     initialization-mode: always
   
   # JPA
