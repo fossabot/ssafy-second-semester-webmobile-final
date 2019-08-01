@@ -26,10 +26,10 @@ public class LogAspect {
 		LOGGER.info(logToString(pjp,"END"));
 		return result;
 	}
-	
+
 	/**
 	 * 로그 찍는 구문 문자열 Build
-	 * */
+	 */
 	private String logToString(ProceedingJoinPoint pjp, String MethodType) {
 		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
 				.getRequest();
@@ -39,23 +39,15 @@ public class LogAspect {
 		if (request.getHeaderNames() == null) {
 			userInfo += "ANONYMOUS";
 		} else {
-			userInfo +=request.getHeader("email") + ", AUTH: " + request.getHeader("authentization");
+			userInfo += request.getHeader("accountEmail") + ", AUTH: " + request.getHeader("accountAuth");
 		}
 
 		StringBuilder sb = new StringBuilder();
 
-		sb
-		.append("[*] [")
-		.append(MethodType)
-		.append("] - [")
-		.append(pjp.getSignature().getDeclaringTypeName())
-		.append("] [")
-		.append(userInfo)
-		.append("] / [METHOD: ")
-		.append(request.getMethod())
-		.append("] ")
-		.append(pjp.getSignature().getName()).append("\n");
-		
+		sb.append("[*] [").append(MethodType).append("] - [").append(pjp.getSignature().getDeclaringTypeName())
+				.append("] [").append(userInfo).append("] / [METHOD: ").append(request.getMethod()).append("] ")
+				.append(pjp.getSignature().getName()).append("\n");
+
 		return sb.toString();
 	}
 }

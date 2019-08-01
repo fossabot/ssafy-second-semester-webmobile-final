@@ -24,13 +24,13 @@ import com.ssafy.vo.resource.PostCommentsResource;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/posts/{postId}/comments", produces = "application/hal+json")
+@RequestMapping(value = "/posts", produces = "application/hal+json")
 public class PostCommentsRestController {
 
 	@Autowired
 	PostCommentsService postCommentsService;
 
-	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@GetMapping(value = "/{postId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<HashMap<String, Integer>> countPostComments() {
 		HashMap<String, Integer> map = new HashMap<>();
 		int countPostComments = postCommentsService.countPostComments();
@@ -38,7 +38,7 @@ public class PostCommentsRestController {
 		return ResponseEntity.ok(map);
 	}
 
-	@GetMapping(value = "/{postCommentId}")
+	@GetMapping(value = "/{postId}/comments/{postCommentId}")
 	public ResponseEntity<?> findPostCommentById(@PathVariable int postCommentId) {
 		Optional<PostComments> postCommentOpt = postCommentsService.findPostCommentById(postCommentId);
 		if (!postCommentOpt.isPresent()) {
@@ -54,11 +54,11 @@ public class PostCommentsRestController {
 	}
 
 	// -- 삽입
-	@PostMapping(value = "")
-	public ResponseEntity<PostCommentsResource> createPostComment(@RequestBody PostComments postComment) {
+	@PostMapping(value = "/{postId}/comments")
+	public ResponseEntity<PostCommentsResource> createPostComment(@PathVariable int postId, @RequestBody PostComments postComment) {
 		PostComments createdPostComment = postCommentsService.savePostComment(postComment);
-
-		if (createdPostComment == null) {
+ 		
+		if (createdPostComment == null) {  
 			return ResponseEntity.badRequest().build();
 		}
 		PostCommentsResource postCommetsResource = new PostCommentsResource(createdPostComment);
@@ -66,7 +66,7 @@ public class PostCommentsRestController {
 	}
 
 	// -- 수정
-	@PutMapping(value = "/{postCommentId}")
+	@PutMapping(value = "/{postId}/comments/{postCommentId}")
 	public ResponseEntity<PostComments> updatePost(@PathVariable int postCommentId,
 			@RequestBody PostComments postComment) {
 
@@ -87,7 +87,7 @@ public class PostCommentsRestController {
 		return ResponseEntity.ok(updatedPostComment);
 	}
 
-	@DeleteMapping(value = "/{postCommentId}")
+	@DeleteMapping(value = "/{postId}/comments/{postCommentId}")
 	public ResponseEntity<?> deletePostById(@PathVariable int postCommentId) {
 		boolean isDelected = postCommentsService.deletePostCommentById(postCommentId);
 

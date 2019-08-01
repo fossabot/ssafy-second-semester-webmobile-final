@@ -15,21 +15,36 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class HttpInterceptor extends HandlerInterceptorAdapter {
 
 	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+		
+		// 브라우저 요청이랑 포스트맨 요청 맞추기
 		HandlerMethod handlerMethod = (HandlerMethod) handler;
 		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
+		System.out.println("현재 메소드에 설정된 권한 :  " + auth.minimum().getRoleType());
+		return true;
 
-		if (auth == null) { // 해당 메소드는 권한이 필요 없음
-			return true;
-		} else { // 권한이 필요한 메소드 (1:SUPERVISOR, 2:MEMBER, 3:VISITOR)
-			int minimumAuth = auth.minimum().getRoleType(); // 요청한 Method의 최소 권한
-			int requestAuth = requestAuthToInt(request); // 요청하는 사용자의 권한
-
-			if (requestAuth > minimumAuth) { // 권한을 갖지 못하는 경우
-				return false;
-			}
-			return true;
-		}
+//		HandlerMethod handlerMethod = null;
+//		try {
+//			handlerMethod = (HandlerMethod) handler;
+//		} catch (Exception ex) {
+//			throw new Exception("유효하지 않은 URI 입니다.");
+//		}
+//
+//		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
+//
+//		if (auth == null) { // 해당 메소드는 권한이 필요 없음
+//			return true;
+//		} else { // 권한이 필요한 메소드 (1:SUPERVISOR, 2:MEMBER, 3:VISITOR)
+//			int minimumAuth = auth.minimum().getRoleType(); // 요청한 Method의 최소 권한
+//			int requestAuth = requestAuthToInt(request); // 요청하는 사용자의 권한
+//			
+//			
+//			if (requestAuth > minimumAuth) { // 권한을 갖지 못하는 경우
+//				return false;
+//			}
+//			return true;
+//		}
 	}
 
 	@Override
@@ -46,7 +61,7 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 		if (request.getHeader("authentization") == null) {
 			return Integer.MAX_VALUE;
 		} else {
-			return Integer.parseInt(request.getHeader("authentization"));
+			return Integer.parseInt(request.getHeader("accountAuth"));
 		}
 	}
 }

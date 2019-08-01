@@ -14,16 +14,4 @@ public class HomeController {
 	public String index() {
 		return "index";
 	}
-
-	// post랑 다 추가함
-	@RequestMapping(value = {"/articles/portfolios/**","/articles/posts/**"})
-	public String redirect() {
-		return "forward:/";
-	}
-	
-	@RequestMapping(value = "/callback")
-	public String callback() {
-		return "forward:/";
-	}
-
 }

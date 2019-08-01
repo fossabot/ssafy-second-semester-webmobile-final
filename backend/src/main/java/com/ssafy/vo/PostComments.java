@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -40,7 +42,8 @@ public class PostComments {
 	@Column(name = "post_comment_content")
 	private String postCommentContent;
 
-	@Column(name = "post_comment_create_at")
+	@CreationTimestamp
+	@Column(name = "post_comment_created_at")
 	private LocalDateTime postCommentCreatedAt;
 
 	/** 외래키 설정*/

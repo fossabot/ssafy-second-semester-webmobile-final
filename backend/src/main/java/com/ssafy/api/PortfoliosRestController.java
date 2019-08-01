@@ -28,6 +28,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.respository.PortfoliosRepository;
 import com.ssafy.service.PortfoliosService;
 import com.ssafy.vo.Portfolios;
@@ -44,6 +46,7 @@ public class PortfoliosRestController {
 	@Autowired
 	PortfoliosService portfoliosService;
 
+	@Auth(minimum = RoleType.VISITOR)
 	@GetMapping
 	public ResponseEntity<Resources<PortfoliosResource>> findAll() {
 		List<PortfoliosResource> portfolios = portfoliosRepository.findAll().stream().map(PortfoliosResource::new)
@@ -80,8 +83,9 @@ public class PortfoliosRestController {
 		return ResponseEntity.ok(countPortfolios);
 	}
 
+	@Auth(minimum = RoleType.VISITOR)
 	@GetMapping("/{portfolioId}")
-	public ResponseEntity<PortfoliosResource> findAll(@PathVariable int portfolioId) {
+	public ResponseEntity<PortfoliosResource> findPortfolioById(@PathVariable int portfolioId) {
 		Optional<Portfolios> portfolioOpt = portfoliosService.findPortfolioById(portfolioId);
 
 		if (!portfolioOpt.isPresent()) {

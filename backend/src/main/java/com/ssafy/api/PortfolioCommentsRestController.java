@@ -13,63 +13,75 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.service.PortfolioCommentsService;
 import com.ssafy.vo.PortfolioComments;
 import com.ssafy.vo.resource.PortfolioCommentsResource;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/portfolios/{portfolioId}/comments", produces = "application/hal+json")
+@RequestMapping(value = "/portfolios", produces = "application/hal+json")
 public class PortfolioCommentsRestController {
-	
+
 	@Autowired
 	PortfolioCommentsService portfolioCommentsService;
-	
-	@GetMapping("/{portfolioCommentId}")
+
+	@GetMapping("/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<PortfolioCommentsResource> findPortfolioCommentById(@PathVariable int portfolioCommentId) {
-		Optional<PortfolioComments> portfolioCommentsOpt = portfolioCommentsService.findPortfolioCommentById(portfolioCommentId);
-		if(!portfolioCommentsOpt.isPresent()) {
+		Optional<PortfolioComments> portfolioCommentsOpt = portfolioCommentsService
+				.findPortfolioCommentById(portfolioCommentId);
+		if (!portfolioCommentsOpt.isPresent()) {
 			return ResponseEntity.badRequest().build();
 		}
 		PortfolioComments portfolioComments = portfolioCommentsOpt.get();
 
-		//HATEOAS
+		// HATEOAS
 		PortfolioCommentsResource portfolioCommentsResource = new PortfolioCommentsResource(portfolioComments);
 		return ResponseEntity.ok(portfolioCommentsResource);
 	}
-	
-	//댓글 총 개수
-	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+
+	// 댓글 총 개수
+	@GetMapping(value = "/{portfolioId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<HashMap<String, Integer>> countPortfolioComments() {
 		HashMap<String, Integer> countPortfolioComments = new HashMap<>();
 		int count = portfolioCommentsService.countPortfolioComments();
 		countPortfolioComments.put("countPortfolios", count);
 		return ResponseEntity.ok(countPortfolioComments);
 	}
-	
+
 	// -- 삽입
-	@PostMapping("")
-	public ResponseEntity<PortfolioCommentsResource> createPortfolioComment(@RequestBody PortfolioComments portfolioComments) {
+	@Auth(minimum = RoleType.VISITOR)
+	@PostMapping(value = "/{portfolioId}/comments")
+	public ResponseEntity<PortfolioCommentsResource> createPortfolioComment(
+			@RequestHeader(value = "accountEmail") String email, @RequestBody PortfolioComments portfolioComments) {
+		
+		System.out.println("[*] createPortfolioComment Header Email : " + email);
+		System.out.println("[*] createPortfolioComment 댓글 객체 : " + portfolioComments);
+		
 		PortfolioComments createdPortfolioComment = portfolioCommentsService.savePortfolioComments(portfolioComments);
 		if (createdPortfolioComment == null) {
 			return ResponseEntity.badRequest().build();
 		}
-		
+
 		PortfolioCommentsResource portfolioCommentsResource = new PortfolioCommentsResource(createdPortfolioComment);
 		return ResponseEntity.ok(portfolioCommentsResource);
 	}
-	
-	@PutMapping("")
-	public ResponseEntity<PortfolioCommentsResource> updatePortfolioComment(@PathVariable int portfolioCommentId, @RequestBody PortfolioComments portfolioComment) {
+
+	@PutMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
+	public ResponseEntity<PortfolioCommentsResource> updatePortfolioComment(@PathVariable int portfolioCommentId,
+			@RequestBody PortfolioComments portfolioComment) {
 		// 수정을 요청하는 아이디와 portfolioComment의 아이디가 다른 경우
 		if (portfolioCommentId != portfolioComment.getPortfolioCommentId()) {
 			return ResponseEntity.badRequest().build();
 		}
 
-		Optional<PortfolioComments> portfolioCommentOpt = portfolioCommentsService.findPortfolioCommentById(portfolioCommentId);
+		Optional<PortfolioComments> portfolioCommentOpt = portfolioCommentsService
+				.findPortfolioCommentById(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
 			// 수정하려는 데이터가 존재하지 않음
 			return ResponseEntity.badRequest().build();
@@ -85,8 +97,8 @@ public class PortfolioCommentsRestController {
 		// 성공시 뱉어줌
 		return ResponseEntity.ok(portfolioCommentsResource);
 	}
-	
-	@DeleteMapping(value = "/{portfolioCommentId}")
+
+	@DeleteMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<?> deletePortfolioCommentById(@PathVariable int portfolioCommentId) {
 		boolean isDelected = portfolioCommentsService.deletePortfolioCommentById(portfolioCommentId); // 성공하면 true
 
