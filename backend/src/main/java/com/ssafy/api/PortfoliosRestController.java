@@ -14,6 +14,7 @@ import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resources;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -53,20 +54,6 @@ public class PortfoliosRestController {
 		
 	}
 	
-	// -- 삽입
-	@PostMapping(value = "")
-	public ResponseEntity<PortfoliosResource> createPortfolio(@RequestBody Portfolios portfolio) {
-		Portfolios createdPortfolio = portfoliosService.savePortfolio(portfolio);
-		
-		if (createdPortfolio == null) {
-			return ResponseEntity.badRequest().build();
-		}
-		
-		PortfoliosResource portfoliosResource = new PortfoliosResource(createdPortfolio);
-		return ResponseEntity.ok(portfoliosResource);
-	}
-
-	
 	@GetMapping(value = "/page/{pageNo}")
 	public ResponseEntity<PagedResources<PortfoliosResource>> findAllPortfolios(@PathVariable int pageNo, PagedResourcesAssembler<Portfolios> assembler) {
 		Pageable pageable = PageRequest.of(pageNo - 1, 6, Sort.by("portfolioCreatedAt"));
@@ -80,8 +67,8 @@ public class PortfoliosRestController {
 		return ResponseEntity.ok(pagedPortfoliosResources);
 	}
 	
-	@GetMapping("/count")
-	public ResponseEntity<HashMap> countPortfolios() {
+	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<HashMap<String, Integer>> countPortfolios() {
 		HashMap<String, Integer> countPortfolios = new HashMap<>();
 		int count = portfoliosService.countPortfolios();
 		countPortfolios.put("countPortfolios", count);
@@ -90,7 +77,6 @@ public class PortfoliosRestController {
 	
 	@GetMapping("/{portfolioId}")
 	public ResponseEntity<PortfoliosResource> findAll(@PathVariable int portfolioId) {
-		
 		Optional<Portfolios> portfolioOpt = portfoliosService.findPortfolioById(portfolioId);
 		
 		if(!portfolioOpt.isPresent()) {
@@ -98,18 +84,30 @@ public class PortfoliosRestController {
 		}
 		
 		Portfolios portfolios = portfolioOpt.get();
-
+		
 		//HATEOAS
 		PortfoliosResource portfoliosResource = new PortfoliosResource(portfolios);
 		
 		return ResponseEntity.ok(portfoliosResource);
 	}
 	
+	// -- 삽입
+	@PostMapping
+	public ResponseEntity<PortfoliosResource> createPortfolio(@RequestBody Portfolios portfolio) {
+		Portfolios createdPortfolio = portfoliosService.savePortfolio(portfolio);
+		
+		if (createdPortfolio == null) {
+			return ResponseEntity.badRequest().build();
+		}
+		
+		PortfoliosResource portfoliosResource = new PortfoliosResource(createdPortfolio);
+		return ResponseEntity.ok(portfoliosResource);
+	}
+	
 	// -- 수정
 	@PutMapping(value = "/{portfolioId}")
 	public ResponseEntity<PortfoliosResource> updatePortfolio(@PathVariable int portfolioId, @RequestBody Portfolios portfolio) {
-		
-		// 수정을 요청하는 아이디와 post의 아이디가 다른 경우
+		// 수정을 요청하는 아이디와 portfolio의 아이디가 다른 경우
 		if (portfolioId != portfolio.getPortfolioId()) {
 			return ResponseEntity.badRequest().build();
 		}
@@ -117,7 +115,6 @@ public class PortfoliosRestController {
 		Optional<Portfolios> optional = portfoliosService.findPortfolioById(portfolioId);
 		if (!optional.isPresent()) {
 			// 수정하려는 데이터가 존재하지 않음
-			// 우선 null이지만, 에러 핸들링 해야함
 			return ResponseEntity.badRequest().build();
 		}
 
@@ -136,7 +133,7 @@ public class PortfoliosRestController {
 	}
 
 	@DeleteMapping(value = "/{portfolioId}")
-	public ResponseEntity<?> deletePostById(@PathVariable int portfolioId) {
+	public ResponseEntity<?> deletePortfolioById(@PathVariable int portfolioId) {
 		boolean isDelected = portfoliosService.deletePortfolioById(portfolioId); // 성공하면 true
 
 		if (isDelected) {
