@@ -111,7 +111,8 @@ public class PortfolioRestController {
 			throw new Exception();// 업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(portfolio.getPortfolioId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(portfolio.getPortfolioId());
 		URI createdUri = selfLinkBuilder.toUri();
 
 		PortfolioResource portfolioResource = new PortfolioResource(createdPortfolio);
@@ -149,7 +150,8 @@ public class PortfolioRestController {
 			throw new Exception(); // 업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(portfolio.getPortfolioId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(portfolio.getPortfolioId());
 
 		PortfolioResource portfolioResource = new PortfolioResource(updatedPortfolio);
 		portfolioResource.add(selfLinkBuilder.withRel("delete"));

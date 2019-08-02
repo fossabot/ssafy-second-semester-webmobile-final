@@ -58,7 +58,8 @@ public class PortfolioImageRestController {
 			throw new Exception(); // 업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(createdPortfolioImage.getPortfolioImageId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(createdPortfolioImage.getPortfolioImageId());
         URI createdUri = selfLinkBuilder.toUri();
 		
 		PortfolioImageResource portfolioImageResource = new PortfolioImageResource(createdPortfolioImage);
@@ -87,7 +88,8 @@ public class PortfolioImageRestController {
 			throw new Exception();//업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(updatedPortfolioImage.getPortfolioImageId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(updatedPortfolioImage.getPortfolioImageId());
 		
 		PortfolioImageResource portfolioImageResource = new PortfolioImageResource(updatedPortfolioImage);
 		portfolioImageResource.add(selfLinkBuilder.withRel("delete"));

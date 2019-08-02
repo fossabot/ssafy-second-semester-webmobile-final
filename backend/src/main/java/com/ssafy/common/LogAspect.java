@@ -20,7 +20,7 @@ public class LogAspect {
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
 		LOGGER.info(buildString(pjp,"START"));
 		Object result = pjp.proceed();
-		LOGGER.info(buildString(pjp,"END"));
+		LOGGER.info(buildString(pjp," END "));
 		return result;
 	}
 

@@ -43,7 +43,7 @@ public class PortfolioCommentRestController {
 		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
-			throw new Exception(); //NotFound Exception
+			throw new Exception(); //NotFoundException
 		}
 
 		PortfolioComment portfolioComment = portfolioCommentOpt.get();
@@ -70,7 +70,8 @@ public class PortfolioCommentRestController {
 			throw new Exception(); // 업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(createdPortfolioComment.getPortfolioCommentId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(createdPortfolioComment.getPortfolioCommentId());
         URI createdUri = selfLinkBuilder.toUri();
 
 		PortfolioCommentResource portfolioCommentResource = new PortfolioCommentResource(createdPortfolioComment);
@@ -108,7 +109,8 @@ public class PortfolioCommentRestController {
 			throw new Exception(); // 업데이트 실패 Exception 
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(updatedPortfolioComment.getPortfolioCommentId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(updatedPortfolioComment.getPortfolioCommentId());
 
 		PortfolioCommentResource portfolioCommentResource = new PortfolioCommentResource(updatedPortfolioComment);
 		portfolioCommentResource.add(selfLinkBuilder.withRel("delete"));
