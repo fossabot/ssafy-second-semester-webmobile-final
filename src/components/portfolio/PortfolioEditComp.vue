@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import {mapState,mapActions} from 'vuex'
 import mainServices from '../../apis/mainservice/mainServices'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
@@ -55,10 +55,12 @@ export default {
       return marked(this.newPortfolio.portfolioContent, { sanitize: true })
     }
   },
-  created() {
+  async created() {
     this.newPortfolio = this.portfolio // 복사 
+    console.log(this.portfolio)        
   },
   methods: {
+    ...mapActions('portfolio',['getPortfolio']),
     portfolioContentUpdate: _.debounce(function (e) {
       this.newPortfolio.portfolioContent = e.target.value
     }, 300),

@@ -17,8 +17,6 @@ export default {
     ...mapActions('portfolio',['getPortfolio'])
   },
   async created() {
-    console.log("왜 안뜨니")
-    console.log(this.$route.params.portfolioId)
     await this.getPortfolio(this.$route.params.portfolioId)
   }
 

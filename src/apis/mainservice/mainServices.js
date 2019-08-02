@@ -1,10 +1,9 @@
 import axios from 'axios'
 import store from '../../store/store.js'
 
-// 아직 전부 예외 처리 달지 않은 상태.. 디테일 작업 필요 
+// TODO : 예외 처리 달지 않은 상태  
 
-let loginUser = store.state.account // 현재 로그인 유저, 권한체크 및 기타 등등
-// 이거 왜안되는지 나중에 알아보자.
+let loginUser = store.state.account 
 const portfolioUrl = "http://70.12.246.106:9090/api/bears/portfolios"  
 
 
