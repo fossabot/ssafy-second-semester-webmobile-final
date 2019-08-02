@@ -45,8 +45,7 @@ public class LogAspect {
 		.append(" / [LOCATION : ").append(pjp.getSignature().getDeclaringTypeName())
 		.append(" | [METHOD (").append(request.getMethod()).append(") : ")
 		.append(pjp.getSignature().getName()).append("()")
-		.append("]")
-		.append("\n");
+		.append("]");
 		
 		return logMessage.toString();
 	}
