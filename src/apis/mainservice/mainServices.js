@@ -5,11 +5,6 @@ import store from '../../store/store.js'
 
 let loginUser = store.state.account // 현재 로그인 유저, 권한체크 및 기타 등등
 // 이거 왜안되는지 나중에 알아보자.
-// let loginUserHeaders = {  
-//   "Content-Type": "application/json",
-//   "accountEmail": loginUser.accountEmail,
-//   "accountAuth": loginUser.accountAuth
-// }
 const portfolioUrl = "http://70.12.246.106:9090/api/bears/portfolios"  
 
 
@@ -74,8 +69,6 @@ export default {
     }
     portfolio.accountEmail = loginUser.accountEmail
     portfolio.accountName = loginUser.accountName
-    console.log(headers)
-    console.log(portfolio)
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
                 .then((res) => {                  
                   return res.data
@@ -90,7 +83,12 @@ export default {
   },
 
   deletePortfolio(portfolioId) {
-    return axios.delete(`${portfolioUrl}/${portfolioId}`)
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.delete(`${portfolioUrl}/${portfolioId}`,{ "headers": headers })
                 .then((res) => {                  
                   return res.data
               })

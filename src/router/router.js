@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '../pages/home/HomePage.vue'
+import PortfolioCreatePage from '../pages/portfolio/PortfolioCreatePage.vue'
 import PortfolioListPage from '../pages/portfolio/PortfolioListPage.vue'
 import PortfolioDetailPage from '../pages/portfolio/PortfolioDetailPage.vue'
-import PortfolioCreatePage from '../pages/portfolio/PortfolioCreatePage.vue'
+import PortfolioUpdatePage from '../pages/portfolio/PortfolioUpdatePage.vue'
 
 import PostListPage from '@/pages/post/PostListPage.vue'
 
@@ -25,19 +26,24 @@ export default new Router({
       component: HomePage
     },
     {
+      path : '/portfolios/create',
+      name : 'PortfolioCreatePage',
+      component : PortfolioCreatePage
+    },
+    {
       path: '/portfolios',
       name: 'PortfolioListPage',
       component: PortfolioListPage
     },
     {
-      path : '/portfolios/new',
-      name : 'PortfolioCreatePage',
-      component : PortfolioCreatePage
-    },
-    {
       path: '/portfolios/:portfolioId',
       name: 'PortfolioDetailPage',
       component: PortfolioDetailPage
+    },
+    {
+      path: '/portfolios/:portfolioId/update',
+      name: 'PortfolioUpdatePage',
+      component: PortfolioUpdatePage
     },
     {
       path : '/posts',
@@ -64,17 +70,5 @@ export default new Router({
       name : 'BackOfficeMainPage',
       component : BackOfficeMainPage
     },
-    /*{
-      path: '/portfolios/create',
-      name: 'PortfolioCreatePage',
-      component: PortfolioCreatePage
-    },*/
-    /*{
-      path: '/portfolios/:portfolio_id/update',
-      name: 'PortfolioUpdatePage',
-      component: PortfolioUpdatePage
-    },*/
-    
-
   ]
 })

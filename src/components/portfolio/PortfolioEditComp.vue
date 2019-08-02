@@ -70,7 +70,7 @@ export default {
     async postPutPortfolio () { 
       if ( !this.$route.params.portfolioId ) { // 새로 만드는 경우
         await mainServices.postPortfolio(this.newPortfolio)
-        console.log(this.portfolio)
+        this.$router.push({ name: 'PortfolioListPage'})
       } else { // 업데이트의 경우
         /*axios.put(`${this.url}${this.$route.params.article_no}`,this.article)
             .then((res) => {

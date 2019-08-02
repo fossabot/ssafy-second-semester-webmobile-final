@@ -1,8 +1,7 @@
 <template>
   <div class="containter mt-5 pt-5">
     <Title title="portfolios"></Title>
-    <!-- TODO : 권한 체크도 해야함 -->
-    <router-link v-if="loginCheck" :to="{ name: 'PortfolioCreatePage'}" class="btn btn-sm btn-outline-info border-0">
+    <router-link v-if="loginCheck && accountAuth != 3" :to="{ name: 'PortfolioCreatePage'}" class="btn btn-sm btn-outline-info border-0">
       새 포트폴리오 작성&nbsp; <i class="fas fa-pen"></i>
     </router-link>
     <PortfolioListComp class="container"></PortfolioListComp>
@@ -21,7 +20,7 @@ export default {
     PortfolioListComp,
   },
   computed: {
-    ...mapState('account',['loginCheck'])
+    ...mapState('account',['loginCheck','accountAuth'])
   },
   methods: {
     ...mapActions('portfolio', ['getPortfolios'])

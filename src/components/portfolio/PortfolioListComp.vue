@@ -4,7 +4,7 @@
     <!-- Card -->
     <div v-for="portfolio in portfolios" class="card mx-3" style="width: 15rem;">
       <!-- Card Image -->
-      <img :src="portfolio.portfolioThumbnail ? portfolio.portfolioThumbnail : 'https://source.unsplash.com/random/500x500'" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
+      <img :src="portfolio.portfolioThumbnailUrl ? portfolio.portfolioThumbnailUrl : 'https://source.unsplash.com/random/500x500'" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
       <!-- Card Body -->
       <div class="card-body">
         <h5 class="card-title">{{ portfolio.portfolioTitle }}</h5>
@@ -12,12 +12,8 @@
         <!-- Buttons -->
         <div class="row justify-content-end">
           <!-- 더 보기 -->
-          <router-link :to="{ name: 'PortfolioDetailPage', params: { portfolioId: portfolio.portfolioId }}" class="btn btn-sm btn-outline-secondary mx-1">
+          <router-link :to="{ name: 'PortfolioDetailPage', params: { portfolioId: portfolio.portfolioId }}" class="btn btn-sm btn-outline-info mx-1">
             <i class="fas fa-plus"></i>
-          </router-link>
-          <!-- 수정 -->
-          <router-link :to="{ name: '', params: {} }" class="btn btn-sm btn-outline-info mx-1 mr-3">
-            <i class="far fa-edit"></i>
           </router-link>
         </div>        
       </div>

@@ -41,7 +41,7 @@ const mutations = {
       portfolioTitle: "",
       portfolioContent: "",
       portfolioGiturl: "",
-      portfolioThumbnail: "",
+      portfolioThumbnailUrl: "",
       portfolioImages: [],
     }
   },

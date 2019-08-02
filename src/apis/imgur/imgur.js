@@ -18,7 +18,6 @@ export default {
       mimeType: 'multipart/form-data'
       })
       .then(res => {
-        console.log(res)
         return res.data.data.link
       })
       .catch(e => {
