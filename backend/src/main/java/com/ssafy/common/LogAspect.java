@@ -20,7 +20,7 @@ public class LogAspect {
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
 		LOGGER.info(buildString(pjp,"START"));
 		Object result = pjp.proceed();
-		LOGGER.info(buildString(pjp,"END"));
+		LOGGER.info(buildString(pjp," END "));
 		return result;
 	}
 
@@ -32,7 +32,7 @@ public class LogAspect {
 		String accountInfo = "";
 
 		if (request.getHeaderNames() == null || request.getHeader("accountEmail") == null || request.getHeader("accountAuth") == null) {
-			accountInfo += "ANONYMOUS";
+			accountInfo += "********* ANONYMOUS ********";
 		} else {
 			accountInfo += request.getHeader("accountEmail") + " | AUTH : " + request.getHeader("accountAuth");
 		}

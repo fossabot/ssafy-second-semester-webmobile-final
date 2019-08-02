@@ -1,5 +1,7 @@
 package com.ssafy.api;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
@@ -25,7 +27,6 @@ import com.ssafy.common.RoleType;
 import com.ssafy.service.PortfolioCommentService;
 import com.ssafy.vo.PortfolioComment;
 import com.ssafy.vo.resource.PortfolioCommentResource;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 @CrossOrigin()
 @RestController
@@ -37,12 +38,12 @@ public class PortfolioCommentRestController {
 
 	@GetMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<PortfolioCommentResource> findPortfolioCommentByPortfolioCommentId(
-			@PathVariable final int portfolioCommentId) {
+			@PathVariable final int portfolioCommentId) throws Exception {
 
 		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); // NotFoundException
 		}
 
 		PortfolioComment portfolioComment = portfolioCommentOpt.get();
@@ -80,7 +81,8 @@ public class PortfolioCommentRestController {
 	@PutMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<PortfolioCommentResource> updatePortfolioComment(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
-			@RequestHeader(value = "accountAuth") final int accountAuth, @PathVariable final int portfolioCommentId,
+			@RequestHeader(value = "accountAuth") final int accountAuth,
+			@PathVariable final int portfolioCommentId,
 			@RequestBody final PortfolioComment portfolioComment) throws Exception {
 
 		if (accountAuth > 1) { // 관리자가 아니라면,

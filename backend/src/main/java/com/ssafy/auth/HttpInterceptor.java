@@ -25,7 +25,6 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 				int requestAuth = requestAuthToInteger(request); // 사용자의 권한
 				
 				if(requestAuth > minimumAuth) {					 // 권한이 충족되지 않으면,
-					System.out.println("여긴가?");
 					return false;
 				}
 				

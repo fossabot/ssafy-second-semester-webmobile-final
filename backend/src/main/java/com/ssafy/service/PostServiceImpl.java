@@ -36,13 +36,9 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
-	public boolean deletePostByPostId(final int postId) {
-		Optional<Post> optional = postRespository.findById(postId);
-		if (!optional.isPresent()) {
-			return false;
-		}
+	public void deletePostByPostId(final int postId) {
 		postRespository.deleteById(postId);
-		return true;
+		return;
 	}
 	
 	@Override
