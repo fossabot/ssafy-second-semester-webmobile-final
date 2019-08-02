@@ -72,12 +72,8 @@ export default {
         await mainServices.postPortfolio(this.newPortfolio)
         this.$router.push({ name: 'PortfolioListPage'})
       } else { // 업데이트의 경우
-        /*axios.put(`${this.url}${this.$route.params.article_no}`,this.article)
-            .then((res) => {
-              console.log(res.data)
-              this.$router.push({ name: 'portfoliolistpage', params: {}} )
-            })
-        */
+        await mainServices.putPortfolio(this.newPortfolio)
+        this.$router.push({ name: 'PortfolioListPage'})
       }
     }
   }

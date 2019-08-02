@@ -76,7 +76,14 @@ export default {
   },
 
   putPortfolio(portfolio) {
-    return axios.put(portfolioUrl,portfolio)
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    portfolio.accountEmail = loginUser.accountEmail
+    portfolio.accountName = loginUser.accountName
+    return axios.put(`${portfolioUrl}/${portfolio.portfolioId}`,portfolio,{ "headers": headers })
                 .then((res) => {                  
                   return res.data
               })
