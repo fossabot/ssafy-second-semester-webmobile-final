@@ -20,6 +20,7 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,6 +31,7 @@ import lombok.ToString;
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
 @Getter @Setter @ToString
+@Builder
 public class Portfolio {
 
 	@Id
@@ -64,8 +66,8 @@ public class Portfolio {
 	@Column(name = "portfolio_views")
 	private int portfolioViews;
 
-	@Column(name = "portfolio_thumbnail")
-	private String portfolioThumbnail;
+	@Column(name = "portfolio_thumbnail_url")
+	private String portfolioThumbnailUrl;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "portfolio_id")

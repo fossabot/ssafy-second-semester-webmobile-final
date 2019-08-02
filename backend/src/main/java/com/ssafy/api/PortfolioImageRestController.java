@@ -1,9 +1,14 @@
 package com.ssafy.api;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+
+import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.MediaTypes;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -22,7 +27,7 @@ import com.ssafy.vo.resource.PortfolioImageResource;
 
 @CrossOrigin
 @Controller
-@RequestMapping(value = "/portfolios", produces = "application/hal+json")
+@RequestMapping(value = "/portfolios", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
 public class PortfolioImageRestController {
 
 	@Autowired
@@ -30,12 +35,12 @@ public class PortfolioImageRestController {
 	
 	@GetMapping(value = "/{portfolioId}/images/{portfolioImageId}")
 	public ResponseEntity<PortfolioImageResource> findPortfolioImageByPortfolioImageId(
-			@PathVariable final int portfolioImageId) {
+			@PathVariable final int portfolioImageId) throws Exception {
 		
 		Optional<PortfolioImage> portfolioImageOpt = portfolioImageService
 				.findPortfolioImageByPortfolioImageId(portfolioImageId);
 		if(!portfolioImageOpt.isPresent()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); //NotFound Exception
 		}
 		
 		PortfolioImage portfolioImage = portfolioImageOpt.get();
@@ -45,54 +50,63 @@ public class PortfolioImageRestController {
 
 	@PostMapping(value = "/{portfolioId}/images")
 	public ResponseEntity<PortfolioImageResource> createPortfolioImage(
-			@RequestBody final PortfolioImage portfolioImage) {
+			@RequestBody final PortfolioImage portfolioImage) throws Exception {
 		
 		PortfolioImage createdPortfolioImage = portfolioImageService
 				.savePortfolioImage(portfolioImage);
 		if (createdPortfolioImage == null) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); // 업데이트 실패 Exception
 		}
 		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(createdPortfolioImage.getPortfolioImageId());
+        URI createdUri = selfLinkBuilder.toUri();
+		
 		PortfolioImageResource portfolioImageResource = new PortfolioImageResource(createdPortfolioImage);
-		return ResponseEntity.ok(portfolioImageResource);
+		portfolioImageResource.add(selfLinkBuilder.withRel("update"));
+		portfolioImageResource.add(selfLinkBuilder.withRel("delete"));
+		return ResponseEntity.created(createdUri).body(portfolioImageResource);
 	}
 	
 	@PutMapping(value = "/{portfolioId}/images")
 	public ResponseEntity<PortfolioImageResource> updatePortfolioImage(
 			@PathVariable final int portfolioImageId,
-			@RequestBody final PortfolioImage portfolioImage) {
+			@RequestBody final PortfolioImage portfolioImage) throws Exception {
 		
 		if (portfolioImageId != portfolioImage.getPortfolioImageId()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception();//BadRequest Exception
 		}
 
 		Optional<PortfolioImage> portfolioImageOpt = portfolioImageService
 				.findPortfolioImageByPortfolioImageId(portfolioImageId);
 		if (!portfolioImageOpt.isPresent()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception();//NotFound Exception
 		}
 
 		PortfolioImage updatedPortfolioImage = portfolioImageService.savePortfolioImage(portfolioImage);
 		if (updatedPortfolioImage == null) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception();//업데이트 실패 Exception
 		}
 		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(updatedPortfolioImage.getPortfolioImageId());
+		
 		PortfolioImageResource portfolioImageResource = new PortfolioImageResource(updatedPortfolioImage);
+		portfolioImageResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.ok(portfolioImageResource);
 	}
 	
 	@DeleteMapping(value = "/{portfolioId}/images/{portfolioImageId}")
 	public ResponseEntity<?> deletePortfolioImageByPortfolioImageId(
-			@PathVariable final int portfolioImageId) {
+			@PathVariable final int portfolioImageId) throws Exception {
 		
-		boolean isDelected = portfolioImageService
-				.deletePortfolioImageByPortfolioImageId(portfolioImageId); // 성공하면 true
-
-		if (isDelected) {
-			return ResponseEntity.noContent().build();
-		} else {
-			return ResponseEntity.badRequest().build();
+		Optional<PortfolioImage> portfolioImageOpt = portfolioImageService
+				.findPortfolioImageByPortfolioImageId(portfolioImageId);
+		if(!portfolioImageOpt.isPresent()) {
+			throw new Exception(); // NotFoundException
 		}
+		
+		portfolioImageService
+				.deletePortfolioImageByPortfolioImageId(portfolioImageId); // 성공하면 true
+		return ResponseEntity.ok().build();
 	}
 	
 	@GetMapping(value = "/{portfolioId}/images/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
