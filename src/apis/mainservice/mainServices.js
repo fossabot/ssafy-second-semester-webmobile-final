@@ -72,6 +72,8 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
+    portfolio.accountEmail = loginUser.accountEmail
+    portfolio.accountName = loginUser.accountName
     console.log(headers)
     console.log(portfolio)
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          

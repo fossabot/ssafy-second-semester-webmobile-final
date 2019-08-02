@@ -1,7 +1,4 @@
 import mainServices from '@/apis/mainservice/mainServices.js'
-import account from './account'
-
-let loginUser = account.state
 
 const state = {
   portfolios: [],
@@ -39,15 +36,14 @@ const mutations = {
 
   setNewPortfolio(state) { // 새 글 작성은 작성자 구분 없이 로그인 되어있는 계정으로 바로 쓰고, portfolioEditor를 새 글과 수정에 공유할 거라서 따로 만든다.
     state.portfolio = {
-      accountEmail: account.state.accountEmail,
-      accountName: account.state.accountName,
+      accountEmail: "",
+      accountName: "",
       portfolioTitle: "",
       portfolioContent: "",
       portfolioGiturl: "",
       portfolioThumbnail: "",
       portfolioImages: [],
     }
-    console.log(state.portfolio)
   },
 
 }

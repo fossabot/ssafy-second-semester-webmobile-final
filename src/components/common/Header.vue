@@ -61,7 +61,7 @@ export default {
   computed : {
     ...mapState('account',['accountEmail','accountName','accountAuth','loginCheck'])
   },
-  mounted() {
+  created() {
     this.getUser({key:sessionStorage.getItem('key')})
     this.isLogin()
     console.log(this.loginCheck); // 이거 왜 다르져
