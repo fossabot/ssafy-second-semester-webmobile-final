@@ -1,0 +1,93 @@
+2019-08-02 09:31:44 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 9148 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-02 09:31:44 INFO No active profile set, falling back to default profiles: default
+2019-08-02 09:31:44 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-02 09:31:44 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-02 09:31:45 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-02 09:31:45 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-02 09:31:45 INFO Finished Spring Data repository scanning in 46ms. Found 5 repository interfaces.
+2019-08-02 09:31:45 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb3ff827] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:31:45 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-02 09:31:45 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-02 09:31:45 INFO Starting service [Tomcat]
+2019-08-02 09:31:45 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 09:31:45 INFO Initializing Spring embedded WebApplicationContext
+2019-08-02 09:31:45 INFO Root WebApplicationContext: initialization completed in 942 ms
+2019-08-02 09:31:45 INFO HikariPool-1 - Starting...
+2019-08-02 09:31:46 INFO HikariPool-1 - Start completed.
+2019-08-02 09:31:46 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-02 09:31:46 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-02 09:31:46 INFO HHH000206: hibernate.properties not found
+2019-08-02 09:31:46 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-02 09:31:46 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-02 09:31:47 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-02 09:31:47 INFO LiveReload server is running on port 35729
+2019-08-02 09:31:47 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:31:47 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-02 09:31:48 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-02 09:31:48 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-02 09:31:48 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-02 09:31:48 INFO Started WebmobileSub2Application in 3.544 seconds (JVM running for 4.319)
+2019-08-02 09:32:12 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-02 09:32:12 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-02 09:32:12 INFO Completed initialization in 5 ms
+2019-08-02 09:32:12 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: gimoon0226@naver.com, AUTH: 2] / [METHOD: POST] createPost
+
+2019-08-02 09:32:12 WARN Resolved [javax.validation.ConstraintViolationException: Validation failed for classes [com.ssafy.vo.Post] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='반드시 값이 있어야 합니다.', propertyPath=postCreatedAt, rootBeanClass=class com.ssafy.vo.Post, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2019-08-02 09:32:29 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:32:29 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-02 09:32:29 INFO HikariPool-1 - Shutdown initiated...
+2019-08-02 09:32:29 INFO HikariPool-1 - Shutdown completed.
+2019-08-02 09:32:29 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 9148 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-02 09:32:29 INFO No active profile set, falling back to default profiles: default
+2019-08-02 09:32:29 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-02 09:32:29 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-02 09:32:29 INFO Finished Spring Data repository scanning in 18ms. Found 5 repository interfaces.
+2019-08-02 09:32:29 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb3ff827] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-02 09:32:29 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-02 09:32:29 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-02 09:32:29 INFO Starting service [Tomcat]
+2019-08-02 09:32:29 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-02 09:32:29 INFO Initializing Spring embedded WebApplicationContext
+2019-08-02 09:32:29 INFO Root WebApplicationContext: initialization completed in 293 ms
+2019-08-02 09:32:30 INFO HikariPool-2 - Starting...
+2019-08-02 09:32:30 INFO HikariPool-2 - Start completed.
+2019-08-02 09:32:30 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-02 09:32:30 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-02 09:32:30 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-02 09:32:30 INFO LiveReload server is running on port 35729
+2019-08-02 09:32:30 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:32:30 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-02 09:32:30 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-02 09:32:30 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-02 09:32:30 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-02 09:32:30 INFO Started WebmobileSub2Application in 0.747 seconds (JVM running for 46.517)
+2019-08-02 09:32:30 INFO Condition evaluation unchanged
+2019-08-02 09:32:30 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-02 09:32:30 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-02 09:32:30 INFO Completed initialization in 8 ms
+2019-08-02 09:32:30 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: gimoon0226@naver.com, AUTH: 2] / [METHOD: POST] createPost
+
+2019-08-02 09:32:31 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: gimoon0226@naver.com, AUTH: 2] / [METHOD: POST] createPost
+
+2019-08-02 09:32:39 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: gimoon0226@naver.com, AUTH: 2] / [METHOD: POST] createPost
+
+2019-08-02 09:32:39 INFO [*] [END] - [com.ssafy.api.PostsRestController] [USER: gimoon0226@naver.com, AUTH: 2] / [METHOD: POST] createPost
+
+2019-08-02 09:32:49 INFO [*] [START] - [com.ssafy.api.PostsRestController] [USER: gimoon0226@naver.com, AUTH: 2] / [METHOD: POST] createPost
+
+2019-08-02 09:32:49 WARN Resolved [javax.validation.ConstraintViolationException: Validation failed for classes [com.ssafy.vo.Post] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='반드시 값이 있어야 합니다.', propertyPath=postTitle, rootBeanClass=class com.ssafy.vo.Post, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2019-08-02 09:33:03 INFO Application shutdown requested.
+2019-08-02 09:33:03 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-02 09:33:03 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-02 09:33:03 INFO HikariPool-2 - Shutdown initiated...
+2019-08-02 09:33:03 INFO HikariPool-2 - Shutdown completed.
