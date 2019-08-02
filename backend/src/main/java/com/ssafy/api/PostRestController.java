@@ -28,6 +28,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.respository.PostRepository;
 import com.ssafy.service.PostService;
 import com.ssafy.vo.Post;
@@ -72,6 +74,7 @@ public class PostRestController {
 		return ResponseEntity.ok(pagedPostResources);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@GetMapping(value = "/{postId}")
 	public ResponseEntity<PostResource> findPostByPostId(
 			@PathVariable final int postId) {
@@ -86,6 +89,7 @@ public class PostRestController {
 		return ResponseEntity.ok(postResource);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@PostMapping(value = "")
 	public ResponseEntity<PostResource> createPost(
 			@RequestBody final Post post) {
@@ -99,6 +103,7 @@ public class PostRestController {
 		return ResponseEntity.ok(postResource);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@PutMapping(value = "/{postId}")
 	public ResponseEntity<PostResource> updatePost(
 			@PathVariable final int postId,

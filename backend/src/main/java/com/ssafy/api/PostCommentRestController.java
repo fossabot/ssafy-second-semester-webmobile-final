@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.service.PostCommentService;
 import com.ssafy.vo.PostComment;
 import com.ssafy.vo.resource.PostCommentResource;
@@ -43,6 +45,7 @@ public class PostCommentRestController {
 		return ResponseEntity.ok(postCommentResource);
 	}
 
+	@Auth(minimum = RoleType.VISITOR)
 	@PostMapping(value = "/{postId}/comments")
 	public ResponseEntity<PostCommentResource> createPostComment(
 			@PathVariable final int postId,
@@ -57,6 +60,7 @@ public class PostCommentRestController {
 		return ResponseEntity.ok(postCommetResource);
 	}
 
+	@Auth(minimum = RoleType.VISITOR)
 	@PutMapping(value = "/{postId}/comments/{postCommentId}")
 	public ResponseEntity<PostCommentResource> updatePostComment(
 			@PathVariable final int postCommentId,
@@ -82,6 +86,7 @@ public class PostCommentRestController {
 		return ResponseEntity.ok(postCommentResource);
 	}
 
+	@Auth(minimum = RoleType.VISITOR)
 	@DeleteMapping(value = "/{postId}/comments/{postCommentId}")
 	public ResponseEntity<?> deletePostCommentByPostCommentId(
 			@PathVariable final int postCommentId) {

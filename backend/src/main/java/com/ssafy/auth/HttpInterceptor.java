@@ -8,44 +8,31 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-/**
- * 권한 체크 후 URI에 대한 접근이 가능한지만 판별하는 Class
- */
 @Component
 public class HttpInterceptor extends HandlerInterceptorAdapter {
 
 	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-			throws Exception {
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		
-		// 브라우저 요청이랑 포스트맨 요청 맞추기
-		HandlerMethod handlerMethod = (HandlerMethod) handler;
-		System.out.println("123123123123123123"+handler);
-//		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
-//		System.out.println("현재 메소드에 설정된 권한 :  " + auth.minimum().getRoleType());
+		if(handler instanceof HandlerMethod) { // OPTHIONS Method가 아니면,
+			HandlerMethod handlerMethod = (HandlerMethod) handler;
+			Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
+			
+			if(auth == null) { // Method에 설정된 권한이 없으므로 사용가능
+				return true;
+			}else{ 			   // Method에 설정된 최소 권한이 있으면 (1:SUPERVISOR, 2:MEMBER, 3:VISITOR),
+				int minimumAuth = auth.minimum().getRoleType();  // Method의 최소 권한
+				int requestAuth = requestAuthToInteger(request); // 사용자의 권한
+				
+				if(requestAuth > minimumAuth) {					 // 권한이 충족되지 않으면,
+					System.out.println("여긴가?");
+					return false;
+				}
+				
+				return true;
+			}
+		}
 		return true;
-
-//		HandlerMethod handlerMethod = null;
-//		try {
-//			handlerMethod = (HandlerMethod) handler;
-//		} catch (Exception ex) {
-//			throw new Exception("유효하지 않은 URI 입니다.");
-//		}
-//
-//		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
-//
-//		if (auth == null) { // 해당 메소드는 권한이 필요 없음
-//			return true;
-//		} else { // 권한이 필요한 메소드 (1:SUPERVISOR, 2:MEMBER, 3:VISITOR)
-//			int minimumAuth = auth.minimum().getRoleType(); // 요청한 Method의 최소 권한
-//			int requestAuth = requestAuthToInt(request); // 요청하는 사용자의 권한
-//			
-//			
-//			if (requestAuth > minimumAuth) { // 권한을 갖지 못하는 경우
-//				return false;
-//			}
-//			return true;
-//		}
 	}
 
 	@Override
@@ -58,8 +45,8 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 			Exception ex) {
 	}
 
-	private int requestAuthToInt(HttpServletRequest request) {
-		if (request.getHeader("authentization") == null) {
+	private int requestAuthToInteger(HttpServletRequest request) {
+		if (request.getHeader("accountAuth") == null) {
 			return Integer.MAX_VALUE;
 		} else {
 			return Integer.parseInt(request.getHeader("accountAuth"));

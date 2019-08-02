@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.service.PortfolioImageService;
 import com.ssafy.vo.PortfolioImage;
 import com.ssafy.vo.resource.PortfolioImageResource;
@@ -43,6 +45,7 @@ public class PortfolioImageRestController {
 		return ResponseEntity.ok(portfolioImageResource);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@PostMapping(value = "/{portfolioId}/images")
 	public ResponseEntity<PortfolioImageResource> createPortfolioImage(
 			@RequestBody final PortfolioImage portfolioImage) {
@@ -57,6 +60,7 @@ public class PortfolioImageRestController {
 		return ResponseEntity.ok(portfolioImageResource);
 	}
 	
+	@Auth(minimum = RoleType.MEMBER)
 	@PutMapping(value = "/{portfolioId}/images")
 	public ResponseEntity<PortfolioImageResource> updatePortfolioImage(
 			@PathVariable final int portfolioImageId,
@@ -81,6 +85,7 @@ public class PortfolioImageRestController {
 		return ResponseEntity.ok(portfolioImageResource);
 	}
 	
+	@Auth(minimum = RoleType.MEMBER)
 	@DeleteMapping(value = "/{portfolioId}/images/{portfolioImageId}")
 	public ResponseEntity<?> deletePortfolioImageByPortfolioImageId(
 			@PathVariable final int portfolioImageId) {

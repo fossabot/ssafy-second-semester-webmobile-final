@@ -31,7 +31,7 @@ public class LogAspect {
 
 		String accountInfo = "";
 
-		if (request.getHeaderNames() == null) {
+		if (request.getHeaderNames() == null || request.getHeader("accountEmail") == null || request.getHeader("accountAuth") == null) {
 			accountInfo += "ANONYMOUS";
 		} else {
 			accountInfo += request.getHeader("accountEmail") + " | AUTH : " + request.getHeader("accountAuth");
@@ -45,8 +45,7 @@ public class LogAspect {
 		.append(" / [LOCATION : ").append(pjp.getSignature().getDeclaringTypeName())
 		.append(" | [METHOD (").append(request.getMethod()).append(") : ")
 		.append(pjp.getSignature().getName()).append("()")
-		.append("]")
-		.append("\n");
+		.append("]");
 		
 		return logMessage.toString();
 	}

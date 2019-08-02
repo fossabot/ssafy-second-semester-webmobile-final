@@ -64,8 +64,8 @@ public class Portfolio {
 	@Column(name = "portfolio_views")
 	private int portfolioViews;
 
-	@Column(name = "portfolio_thumbnail")
-	private String portfolioThumbnail;
+	@Column(name = "portfolio_thumbnail_url")
+	private String portfolioThumbnailUrl;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "portfolio_id")

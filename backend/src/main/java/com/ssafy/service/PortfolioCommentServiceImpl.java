@@ -25,13 +25,9 @@ public class PortfolioCommentServiceImpl implements PortfolioCommentService {
 	}
 
 	@Override
-	public boolean deletePortfolioCommentByPortfolioCommentId(final int portfolioCommentId) {
-		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentRepository.findById(portfolioCommentId);
-		if (!portfolioCommentOpt.isPresent()) {
-			return false;
-		}
+	public void deletePortfolioCommentByPortfolioCommentId(final int portfolioCommentId) {
 		portfolioCommentRepository.deleteById(portfolioCommentId);
-		return true;
+		return;
 	}
 	
 	@Override

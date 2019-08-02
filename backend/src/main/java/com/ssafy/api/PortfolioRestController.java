@@ -28,6 +28,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.ssafy.auth.Auth;
+import com.ssafy.common.RoleType;
 import com.ssafy.respository.PortfolioRepository;
 import com.ssafy.service.PortfolioService;
 import com.ssafy.vo.Portfolio;
@@ -88,6 +90,7 @@ public class PortfolioRestController {
 		return ResponseEntity.ok(portfoliosResource);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@PostMapping(value = "")
 	public ResponseEntity<PortfolioResource> createPortfolio(
 			@RequestBody final Portfolio portfolio) {
@@ -101,6 +104,7 @@ public class PortfolioRestController {
 		return ResponseEntity.ok(portfolioResource);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@PutMapping(value = "/{portfolioId}")
 	public ResponseEntity<PortfolioResource> updatePortfolio(
 			@PathVariable final int portfolioId,
@@ -124,6 +128,7 @@ public class PortfolioRestController {
 		return ResponseEntity.ok(portfolioResource);
 	}
 
+	@Auth(minimum = RoleType.MEMBER)
 	@DeleteMapping(value = "/{portfolioId}")
 	public ResponseEntity<?> deletePortfolioById(
 			@PathVariable final int portfolioId) {
