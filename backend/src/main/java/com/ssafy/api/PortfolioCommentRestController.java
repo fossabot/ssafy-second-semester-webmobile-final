@@ -1,5 +1,10 @@
 package com.ssafy.api;
 
+<<<<<<< HEAD
+=======
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+
+>>>>>>> 8ef7e0a3333c6417a1a4c9b8dbf3d7e21f1a2ea8
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
@@ -37,12 +42,12 @@ public class PortfolioCommentRestController {
 
 	@GetMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<PortfolioCommentResource> findPortfolioCommentByPortfolioCommentId(
-			@PathVariable final int portfolioCommentId) {
+			@PathVariable final int portfolioCommentId) throws Exception {
 
 		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); //NotFoundException
 		}
 
 		PortfolioComment portfolioComment = portfolioCommentOpt.get();
@@ -69,10 +74,13 @@ public class PortfolioCommentRestController {
 			throw new Exception(); // 업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(createdPortfolioComment.getPortfolioCommentId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(createdPortfolioComment.getPortfolioCommentId());
         URI createdUri = selfLinkBuilder.toUri();
 
 		PortfolioCommentResource portfolioCommentResource = new PortfolioCommentResource(createdPortfolioComment);
+		portfolioCommentResource.add(selfLinkBuilder.withRel("update"));
+		portfolioCommentResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.created(createdUri).body(portfolioCommentResource);
 	}
 
@@ -80,7 +88,8 @@ public class PortfolioCommentRestController {
 	@PutMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<PortfolioCommentResource> updatePortfolioComment(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
-			@RequestHeader(value = "accountAuth") final int accountAuth, @PathVariable final int portfolioCommentId,
+			@RequestHeader(value = "accountAuth") final int accountAuth,
+			@PathVariable final int portfolioCommentId,
 			@RequestBody final PortfolioComment portfolioComment) throws Exception {
 
 		if (accountAuth > 1) { // 관리자가 아니라면,
@@ -103,8 +112,12 @@ public class PortfolioCommentRestController {
 		if (updatedPortfolioComment == null) {
 			throw new Exception(); // 업데이트 실패 Exception 
 		}
+		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(updatedPortfolioComment.getPortfolioCommentId());
 
 		PortfolioCommentResource portfolioCommentResource = new PortfolioCommentResource(updatedPortfolioComment);
+		portfolioCommentResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.ok(portfolioCommentResource);
 	}
 
@@ -129,7 +142,6 @@ public class PortfolioCommentRestController {
 		
 		portfolioCommentService.deletePortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		return ResponseEntity.ok().build();
-		
 	}
 
 	@GetMapping(value = "/{portfolioId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

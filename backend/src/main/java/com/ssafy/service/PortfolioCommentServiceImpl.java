@@ -27,7 +27,6 @@ public class PortfolioCommentServiceImpl implements PortfolioCommentService {
 	@Override
 	public void deletePortfolioCommentByPortfolioCommentId(final int portfolioCommentId) {
 		portfolioCommentRepository.deleteById(portfolioCommentId);
-		return;
 	}
 	
 	@Override

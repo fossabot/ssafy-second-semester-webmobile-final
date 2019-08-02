@@ -11,6 +11,6 @@ public interface PortfolioService {
 	public Page<Portfolio> findAllPortfolios(final Pageable pageable); 
 	public Optional<Portfolio> findPortfolioByPortfolioId(final int portfolioId);
 	public Portfolio savePortfolio(final Portfolio portfolios);
-	public boolean deletePortfolioByPortfolioId(final int portfolioId);
+	public void deletePortfolioByPortfolioId(final int portfolioId);
 	public int countPortfolios();
 }
