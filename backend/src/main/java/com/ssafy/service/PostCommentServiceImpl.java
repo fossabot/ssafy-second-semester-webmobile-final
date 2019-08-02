@@ -25,13 +25,9 @@ public class PostCommentServiceImpl implements PostCommentService {
 	}
 
 	@Override
-	public boolean deletePostCommentByPostCommentId(final int postCommentId) {
-		Optional<PostComment> optional = postCommentRespository.findById(postCommentId);
-		if (!optional.isPresent()) {
-			return false;
-		}
+	public void deletePostCommentByPostCommentId(final int postCommentId) {
 		postCommentRespository.deleteById(postCommentId);
-		return true;
+		return;
 	}
 	
 	@Override

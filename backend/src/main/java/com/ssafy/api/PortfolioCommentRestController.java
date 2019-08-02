@@ -1,10 +1,7 @@
 package com.ssafy.api;
 
-<<<<<<< HEAD
-=======
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
->>>>>>> 8ef7e0a3333c6417a1a4c9b8dbf3d7e21f1a2ea8
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
@@ -30,7 +27,6 @@ import com.ssafy.common.RoleType;
 import com.ssafy.service.PortfolioCommentService;
 import com.ssafy.vo.PortfolioComment;
 import com.ssafy.vo.resource.PortfolioCommentResource;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 @CrossOrigin()
 @RestController

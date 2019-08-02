@@ -11,6 +11,6 @@ public interface PostService {
 	public Page<Post> findAllPosts(final Pageable pageable);
 	public Optional<Post> findPostByPostId(final int postId); 
 	public Post savePost(final Post post);
-	public boolean deletePostByPostId(final int postId); 
+	public void deletePostByPostId(final int postId); 
 	public int countPosts(); 
 }
