@@ -20,8 +20,9 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 		
 		// 브라우저 요청이랑 포스트맨 요청 맞추기
 		HandlerMethod handlerMethod = (HandlerMethod) handler;
-		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
-		System.out.println("현재 메소드에 설정된 권한 :  " + auth.minimum().getRoleType());
+		System.out.println("123123123123123123"+handler);
+//		Auth auth = handlerMethod.getMethodAnnotation(Auth.class);
+//		System.out.println("현재 메소드에 설정된 권한 :  " + auth.minimum().getRoleType());
 		return true;
 
 //		HandlerMethod handlerMethod = null;

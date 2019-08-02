@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-/**
- * Logging
- */
 @Aspect
 @Component
 public class LogAspect {
@@ -21,33 +18,37 @@ public class LogAspect {
 
 	@Around("within(com.ssafy.api.*)")
 	public Object logging(ProceedingJoinPoint pjp) throws Throwable {
-		LOGGER.info(logToString(pjp,"START"));
+		LOGGER.info(buildString(pjp,"START"));
 		Object result = pjp.proceed();
-		LOGGER.info(logToString(pjp,"END"));
+		LOGGER.info(buildString(pjp,"END"));
 		return result;
 	}
 
-	/**
-	 * 로그 찍는 구문 문자열 Build
-	 */
-	private String logToString(ProceedingJoinPoint pjp, String MethodType) {
-		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+	private String buildString(ProceedingJoinPoint pjp, String logPrefix) {
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder
+				.currentRequestAttributes())
 				.getRequest();
 
-		String userInfo = "USER: ";
+		String accountInfo = "";
 
 		if (request.getHeaderNames() == null) {
-			userInfo += "ANONYMOUS";
+			accountInfo += "ANONYMOUS";
 		} else {
-			userInfo += request.getHeader("accountEmail") + ", AUTH: " + request.getHeader("accountAuth");
+			accountInfo += request.getHeader("accountEmail") + " | AUTH : " + request.getHeader("accountAuth");
 		}
 
-		StringBuilder sb = new StringBuilder();
+		StringBuilder logMessage = new StringBuilder();
 
-		sb.append("[*] [").append(MethodType).append("] - [").append(pjp.getSignature().getDeclaringTypeName())
-				.append("] [").append(userInfo).append("] / [METHOD: ").append(request.getMethod()).append("] ")
-				.append(pjp.getSignature().getName()).append("\n");
-
-		return sb.toString();
+		logMessage
+		.append("[#] [").append(logPrefix).append("]")
+		.append(" - [ACCOUNT : ").append(accountInfo).append("]")
+		.append(" / [LOCATION : ").append(pjp.getSignature().getDeclaringTypeName())
+		.append(" | [METHOD (").append(request.getMethod()).append(") : ")
+		.append(pjp.getSignature().getName()).append("()")
+		.append("]")
+		.append("\n");
+		
+		return logMessage.toString();
 	}
+	
 }
