@@ -85,7 +85,7 @@ export default {
         this.isLogin()
         this.showModal=false
       }else{
-        alert("아이디 비밀번호를 확인하세요 죽기싫으면")
+        alert("아이디 비밀번호를 확인하세요.")
       }
     }
   }

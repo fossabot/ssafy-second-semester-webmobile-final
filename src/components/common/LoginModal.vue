@@ -25,7 +25,7 @@
               <div class="d-inline-flex mt-2">
               <span class="col-md-4 col-xs-12" style="width:90px">PW</span>
               <span class="col-md-8 col-xs-12 ml-auto">
-                <input type="password" name="password" v-model="password" class="validate">
+                <input type="password" name="password" v-model="password" class="validate" @keyup.enter="signIn">
               </span>
               </div>
               <div class="d-inline-flex w-100">
