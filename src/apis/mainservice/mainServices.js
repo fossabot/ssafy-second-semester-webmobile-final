@@ -67,7 +67,14 @@ export default {
   postPortfolio(portfolio) { 
     // 새 글 작성은 작성자 체크 할 필요 없이 바로 현재 로그인 유저로 작성하면 된다. 애초에 로그인한 유저에게만 포스트 버튼이 보이므로
     // but 만일을 위해 여기도 로그인 안했을시를 분기해서 에러 핸들링하자.. 나중에^^
-    return axios.post(portfolioUrl, portfolio, )          
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    console.log(headers)
+    console.log(portfolio)
+    return axios.post(portfolioUrl, portfolio, { "headers": headers })          
                 .then((res) => {                  
                   return res.data
                 })
@@ -88,6 +95,7 @@ export default {
   },
 
   // Portfolio Comment CRUD
+  
   postPortfolioComment(portfolioId, portfolioCommentContent) {
     // 새 댓글 작성은 작성자 체크 할 필요 없이 바로 현재 로그인 유저로 작성하면 된다. 애초에 로그인한 유저에게만 포스트 버튼이 보이므로
     // but 만일을 위해 여기도 로그인 안했을시를 분기해서 에러 핸들링하자.. 나중에^^
@@ -106,7 +114,7 @@ export default {
                 .then((res) => {
                   return res.data
                 })
-  },
+  }, 
   
   // 어차피 프론트 단에서 작성자 식별 및 로그인 식별하고 요청이 실행되므로 여기서 권한 담아서 보낸다.
   putPortfolioComment(portfolioId, portfolioComment) {

@@ -17,7 +17,7 @@ export default {
     ...mapMutations('portfolio',['setNewPortfolio'])
   },
   created() {
-    this.setNewPortfolio()
+    this.setNewPortfolio() // 계정도 바뀜
   }
 
 }
