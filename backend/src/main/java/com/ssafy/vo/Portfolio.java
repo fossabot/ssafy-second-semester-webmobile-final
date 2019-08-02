@@ -26,12 +26,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@Builder
 @Entity
 @Table(name = "portfolios")
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
 @Getter @Setter @ToString
-@Builder
 public class Portfolio {
 
 	@Id
