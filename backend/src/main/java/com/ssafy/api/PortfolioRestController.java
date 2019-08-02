@@ -1,5 +1,8 @@
 package com.ssafy.api;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +16,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
+import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -24,6 +29,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -37,7 +43,7 @@ import com.ssafy.vo.resource.PortfolioResource;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/portfolios", produces = "application/hal+json")
+@RequestMapping(value = "/portfolios", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
 public class PortfolioRestController {
 
 	//-- 삭제 될 값
@@ -67,9 +73,6 @@ public class PortfolioRestController {
 		
 		Pageable pageable = PageRequest.of(pageNo - 1, 6, new Sort(Direction.DESC, "portfolioCreatedAt"));
 		Page<Portfolio> portfolios = portfolioService.findAllPortfolios(pageable);
-		if (portfolios == null) {
-			return ResponseEntity.badRequest().build();
-		}
 
 		PagedResources<PortfolioResource> pagedPortfoliosResources = assembler
 				.toResource(portfolios,	e -> new PortfolioResource(e));
@@ -78,11 +81,11 @@ public class PortfolioRestController {
 
 	@GetMapping("/{portfolioId}")
 	public ResponseEntity<PortfolioResource> findPortfolioById(
-			@PathVariable final int portfolioId) {
+			@PathVariable final int portfolioId) throws Exception {
 		
 		Optional<Portfolio> portfolioOpt = portfolioService.findPortfolioByPortfolioId(portfolioId);
 		if (!portfolioOpt.isPresent()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception();//NotFound Exception
 		}
 
 		Portfolio portfolios = portfolioOpt.get();
@@ -93,52 +96,89 @@ public class PortfolioRestController {
 	@Auth(minimum = RoleType.MEMBER)
 	@PostMapping(value = "")
 	public ResponseEntity<PortfolioResource> createPortfolio(
-			@RequestBody final Portfolio portfolio) {
+			@RequestHeader(value = "accountEmail") final String accountEmail,
+			@RequestHeader(value = "accountAuth") final int accountAuth,
+			@RequestBody final Portfolio portfolio) throws Exception {
+		
+		if (accountAuth > 1) { // 관리자가 아니라면,
+			if (!portfolio.getAccountEmail().equals(accountEmail)) {
+				throw new Exception(); // 권한없음 Exception
+			}
+		}
 		
 		Portfolio createdPortfolio = portfolioService.savePortfolio(portfolio);
 		if (createdPortfolio == null) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception();// 업데이트 실패 Exception
 		}
+		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(portfolio.getPortfolioId());
+		URI createdUri = selfLinkBuilder.toUri();
 
 		PortfolioResource portfolioResource = new PortfolioResource(createdPortfolio);
-		return ResponseEntity.ok(portfolioResource);
+		portfolioResource.add(selfLinkBuilder.withRel("update"));
+		portfolioResource.add(selfLinkBuilder.withRel("delete"));
+		return ResponseEntity.created(createdUri).body(portfolioResource);
 	}
 
 	@Auth(minimum = RoleType.MEMBER)
 	@PutMapping(value = "/{portfolioId}")
 	public ResponseEntity<PortfolioResource> updatePortfolio(
+			@RequestHeader(value = "accountEmail") final String accountEmail,
+			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final int portfolioId,
-			@RequestBody final Portfolio portfolio) {
+			@RequestBody final Portfolio portfolio) throws Exception {
+		
+		if (accountAuth > 1) { // 관리자가 아니라면,
+			if (!portfolio.getAccountEmail().equals(accountEmail)) {
+				throw new Exception(); // 권한없음 Exception
+			}
+		}
 		
 		if (portfolioId != portfolio.getPortfolioId()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); // BadRequest Exception 
 		}
 
-		Optional<Portfolio> optional = portfolioService.findPortfolioByPortfolioId(portfolioId);
+		Optional<Portfolio> optional = portfolioService
+				.findPortfolioByPortfolioId(portfolioId);
 		if (!optional.isPresent()) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); // NotFound Exception 
 		}
 
 		Portfolio updatedPortfolio = portfolioService.savePortfolio(portfolio);
 		if (updatedPortfolio == null) {
-			return ResponseEntity.badRequest().build();
+			throw new Exception(); // 업데이트 실패 Exception
 		}
+		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(portfolio.getPortfolioId());
 
 		PortfolioResource portfolioResource = new PortfolioResource(updatedPortfolio);
+		portfolioResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.ok(portfolioResource);
 	}
 
 	@Auth(minimum = RoleType.MEMBER)
 	@DeleteMapping(value = "/{portfolioId}")
 	public ResponseEntity<?> deletePortfolioById(
-			@PathVariable final int portfolioId) {
-		
-		boolean isDelected = portfolioService.deletePortfolioByPortfolioId(portfolioId);
-		if (isDelected) {
-			return ResponseEntity.noContent().build();
-		} else {
-			return ResponseEntity.badRequest().build();
+			@RequestHeader(value = "accountEmail") final String accountEmail,
+			@RequestHeader(value = "accountAuth") final int accountAuth,
+			@PathVariable final int portfolioId) throws Exception {
+	
+		if (accountAuth > 1) { // 관리자가 아니라면,
+			Optional<Portfolio> portfolioOpt = portfolioService
+					.findPortfolioByPortfolioId(portfolioId);
+			if(!portfolioOpt.isPresent()) {
+				throw new Exception(); // NotFoundException
+			}
+			
+			if(!portfolioOpt.get().getAccountEmail().equals(accountEmail)) {
+				throw new Exception(); // 권한없음 Exception
+			}
 		}
+		
+		portfolioService.deletePortfolioByPortfolioId(portfolioId);
+		return ResponseEntity.ok().build();
 	}
 	
 	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

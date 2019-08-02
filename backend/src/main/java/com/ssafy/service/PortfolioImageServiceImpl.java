@@ -25,13 +25,8 @@ public class PortfolioImageServiceImpl implements PortfolioImageService {
 	}
 
 	@Override
-	public boolean deletePortfolioImageByPortfolioImageId(final int portfolioImageId) {
-		Optional<PortfolioImage> portfolioImageOpt = portfolioImageRepository.findById(portfolioImageId);
-		if (!portfolioImageOpt.isPresent()) {
-			return false;
-		}
+	public void deletePortfolioImageByPortfolioImageId(final int portfolioImageId) {
 		portfolioImageRepository.deleteById(portfolioImageId);
-		return true;
 	}
 	
 	@Override

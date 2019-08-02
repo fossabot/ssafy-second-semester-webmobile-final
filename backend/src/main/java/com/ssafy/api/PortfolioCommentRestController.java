@@ -43,7 +43,7 @@ public class PortfolioCommentRestController {
 		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
-			throw new Exception(); // NotFoundException
+			throw new Exception(); //NotFoundException
 		}
 
 		PortfolioComment portfolioComment = portfolioCommentOpt.get();
@@ -70,10 +70,13 @@ public class PortfolioCommentRestController {
 			throw new Exception(); // 업데이트 실패 Exception
 		}
 		
-		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(createdPortfolioComment.getPortfolioCommentId());
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(createdPortfolioComment.getPortfolioCommentId());
         URI createdUri = selfLinkBuilder.toUri();
 
 		PortfolioCommentResource portfolioCommentResource = new PortfolioCommentResource(createdPortfolioComment);
+		portfolioCommentResource.add(selfLinkBuilder.withRel("update"));
+		portfolioCommentResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.created(createdUri).body(portfolioCommentResource);
 	}
 
@@ -105,8 +108,12 @@ public class PortfolioCommentRestController {
 		if (updatedPortfolioComment == null) {
 			throw new Exception(); // 업데이트 실패 Exception 
 		}
+		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
+				.slash(updatedPortfolioComment.getPortfolioCommentId());
 
 		PortfolioCommentResource portfolioCommentResource = new PortfolioCommentResource(updatedPortfolioComment);
+		portfolioCommentResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.ok(portfolioCommentResource);
 	}
 
@@ -131,7 +138,6 @@ public class PortfolioCommentRestController {
 		
 		portfolioCommentService.deletePortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		return ResponseEntity.ok().build();
-		
 	}
 
 	@GetMapping(value = "/{portfolioId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

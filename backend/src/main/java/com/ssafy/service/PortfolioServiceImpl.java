@@ -37,13 +37,8 @@ public class PortfolioServiceImpl implements PortfolioService {
 	}
 
 	@Override
-	public boolean deletePortfolioByPortfolioId(final int portfolioId) {
-		Optional<Portfolio> optional = portfolioRepository.findById(portfolioId);
-		if (!optional.isPresent()) {
-			return false;
-		}
+	public void deletePortfolioByPortfolioId(final int portfolioId) {
 		portfolioRepository.deleteById(portfolioId);
-		return true;
 	}
 	
 	@Override

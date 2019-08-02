@@ -26,7 +26,7 @@ import lombok.ToString;
 @Table(name = "portfolio_comments")
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
-@Getter @Setter @ToString 
+@Getter @Setter @ToString
 public class PortfolioComment {
 
 	@Id
