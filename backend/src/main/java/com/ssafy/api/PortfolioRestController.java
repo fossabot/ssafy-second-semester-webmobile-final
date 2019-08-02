@@ -164,7 +164,7 @@ public class PortfolioRestController {
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final int portfolioId) throws Exception {
-		
+	
 		if (accountAuth > 1) { // 관리자가 아니라면,
 			Optional<Portfolio> portfolioOpt = portfolioService
 					.findPortfolioByPortfolioId(portfolioId);
