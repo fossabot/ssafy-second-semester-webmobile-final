@@ -7,9 +7,6 @@
             :placeholder="newPortfolio.portfolioTitle ? newPortfolio.portfolioTitle : 'Enter Title'"> 
     </div>
     <!-- Image Upload compo -->    
-    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalCenter">
-      Upload Image
-    </button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -36,6 +33,9 @@
     <!-- Content Markdown compo -->
     <div class="form-group">
       <label for="content">Content</label>
+      <button type="button" class="mx-3 btn btn-outline-info border-0" data-toggle="modal" data-target="#exampleModalCenter">
+        Upload Image
+      </button>
       <textarea id="content" :value="newPortfolio.portfolioContent" @input="portfolioContentUpdate" class="form-control" style="height: 20vw;" ></textarea>
       <label for="preview">Preview</label>
       <div id="preview" v-html="compiledMarkdown" ></div>

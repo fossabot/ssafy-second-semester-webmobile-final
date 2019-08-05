@@ -20,10 +20,6 @@ export default {
       return marked(this.portfolio.portfolioContent, { sanitize: true })
     },
   },
-  methods: {
-
-  },
-  
 }
 </script>
 

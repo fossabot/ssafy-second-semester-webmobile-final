@@ -2,7 +2,7 @@
   <div class="containter mt-5 pt-5">
     <Title title="posts"></Title>
     <router-link v-if="loginCheck && accountAuth != 3" :to="{ name: 'PostCreatePage'}" class="btn btn-sm btn-outline-info border-0">
-      새 포트폴리오 작성&nbsp; <i class="fas fa-pen"></i>
+      새 포스트 작성&nbsp; <i class="fas fa-pen"></i>
     </router-link>
     <PostList class="container"></PostList>
   </div>
