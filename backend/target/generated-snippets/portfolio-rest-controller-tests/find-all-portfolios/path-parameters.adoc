@@ -1,0 +1,8 @@
+.+/portfolios/pages/{pageNo}+
+|===
+|Parameter|Description
+
+|`+pageNo+`
+|Page Number of portfolio list
+
+|===

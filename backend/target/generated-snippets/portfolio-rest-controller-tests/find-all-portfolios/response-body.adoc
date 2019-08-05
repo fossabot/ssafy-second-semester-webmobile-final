@@ -1,0 +1,21 @@
+[source,options="nowrap"]
+----
+{
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/pages/1?page=0&size=6&sort=portfolioCreatedAt,desc",
+    "hreflang" : null,
+    "media" : null,
+    "title" : null,
+    "type" : null,
+    "deprecation" : null
+  } ],
+  "content" : [ ],
+  "page" : {
+    "size" : 6,
+    "totalElements" : 0,
+    "totalPages" : 0,
+    "number" : 0
+  }
+}
+----

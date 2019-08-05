@@ -1,0 +1,8 @@
+|===
+|Path|Type|Description
+
+|`+countPortfolios+`
+|`+Number+`
+|count of portfolios
+
+|===
