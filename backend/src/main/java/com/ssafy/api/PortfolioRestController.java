@@ -80,7 +80,7 @@ public class PortfolioRestController {
 	}
 
 	@GetMapping("/{portfolioId}")
-	public ResponseEntity<PortfolioResource> findPortfolioById(
+	public ResponseEntity<PortfolioResource> findPortfolioByPortfolioId(
 			@PathVariable final int portfolioId) throws Exception {
 		
 		Optional<Portfolio> portfolioOpt = portfolioService.findPortfolioByPortfolioId(portfolioId);
@@ -160,7 +160,7 @@ public class PortfolioRestController {
 
 	@Auth(minimum = RoleType.MEMBER)
 	@DeleteMapping(value = "/{portfolioId}")
-	public ResponseEntity<?> deletePortfolioById(
+	public ResponseEntity<?> deletePortfolioByPortfolioId(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final int portfolioId) throws Exception {
