@@ -142,7 +142,7 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
-    return axios.delete(`${portfolioUrl}/${portfolioId}/comments/${portfolioCommentId}`, {}, { "headers": headers })
+    return axios.delete(`${portfolioUrl}/${portfolioId}/comments/${portfolioCommentId}`, { "headers": headers })
                 .then((res) => {
                   return res.data
                 })

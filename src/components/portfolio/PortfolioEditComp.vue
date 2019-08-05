@@ -46,18 +46,28 @@ export default {
   },
   data() {
     return {
-      newPortfolio: {}
+      // newPortfolio: {}
     }
   },
   computed: {
+    newPortfolio: {
+      get: function () {
+        return this.$store.state.portfolio.portfolio;
+      },
+      // setter
+      set: function (newValue) {
+      }
+    },
+
     ...mapState('portfolio',['portfolio']),
     compiledMarkdown: function () {
       return marked(this.newPortfolio.portfolioContent, { sanitize: true })
     }
   },
   async created() {
-    this.newPortfolio = this.portfolio // 복사 
-    console.log(this.portfolio)        
+    await this.getPortfolio(this.$route.params.portfolioId)
+    // this.newPortfolio = this.portfolio // 복사 
+    console.log("Edit")        
   },
   methods: {
     ...mapActions('portfolio',['getPortfolio']),

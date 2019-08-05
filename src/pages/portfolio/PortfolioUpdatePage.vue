@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import {mapState,mapActions} from 'vuex'
 import PortfolioEditComp from '../../components/portfolio/PortfolioEditComp'
 
 export default {
@@ -13,11 +13,17 @@ export default {
   components: {
     PortfolioEditComp,
   },
+  computed: {
+    ...mapState('portfolio',['portfolio'])
+  },
   methods: {
     ...mapActions('portfolio',['getPortfolio'])
   },
   async created() {
-    await this.getPortfolio(this.$route.params.portfolioId)
+    // await this.getPortfolio(this.$route.params.portfolioId)
+    
+    console.log("Update")        
+    console.log(this.portfolio)
   }
 
 }
