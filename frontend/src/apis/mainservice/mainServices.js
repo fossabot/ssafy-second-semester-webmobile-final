@@ -45,11 +45,18 @@ export default {
   },
 
   // Portfolios CRUD
-  getPortfolios() {
+  getPortfolios() { // 전체 리스트
     return axios.get(portfolioUrl)
                 .then((res) => {                  
                   return res.data.content 
               })
+  },
+
+  loadPortfolios(pageNo) { // 6개씩
+    return axios.get(`${portfolioUrl}/pages/${pageNo}`)
+                .then((res) => {
+                  return res.data.content
+                })
   },
 
   getPortfolio(portfolioId) {
