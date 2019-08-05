@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,7 +33,7 @@ public class PortfolioComment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_comment_id")
-	private int portfolioCommentId;
+	private long portfolioCommentId;
 
 	@NotNull
 	@Column(name = "account_email")
@@ -46,12 +47,12 @@ public class PortfolioComment {
 	@Column(name = "portfolio_comment_content")
 	private String portfolioCommentContent;
 
-	@CreationTimestamp
+	@UpdateTimestamp
 	@Column(name = "portfolio_comment_created_at")
 	private LocalDateTime portfolioCommentCreatedAt;
 
 	@NotNull
 	@Column(name = "portfolio_id")
-	private int portfolioId;
+	private long portfolioId;
 	
 }

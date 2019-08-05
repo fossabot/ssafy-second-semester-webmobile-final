@@ -9,8 +9,8 @@ import com.ssafy.vo.Post;
 
 public interface PostService {
 	public Page<Post> findAllPosts(final Pageable pageable);
-	public Optional<Post> findPostByPostId(final int postId); 
+	public Optional<Post> findPostByPostId(final long postId); 
 	public Post savePost(final Post post);
-	public void deletePostByPostId(final int postId); 
-	public int countPosts(); 
+	public void deletePostByPostId(final long postId); 
+	public long countPosts(); 
 }

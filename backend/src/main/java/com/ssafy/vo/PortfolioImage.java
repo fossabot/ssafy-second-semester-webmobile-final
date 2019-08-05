@@ -29,7 +29,7 @@ public class PortfolioImage {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_image_id")
-	private int portfolioImageId;
+	private long portfolioImageId;
 
 	@NotNull
 	@Column(name = "portfolio_image_url")
@@ -37,6 +37,6 @@ public class PortfolioImage {
 
 	@NotNull
 	@Column(name = "portfolio_id")
-	private int portfolioId;
+	private long portfolioId;
 
 }

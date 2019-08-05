@@ -25,7 +25,7 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	@Transactional
-	public Optional<Post> findPostByPostId(final int postId) {
+	public Optional<Post> findPostByPostId(final long postId) {
 		postRespository.updatePostViewsByPostId(postId);
 		return postRespository.findById(postId);
 	}
@@ -36,14 +36,14 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
-	public void deletePostByPostId(final int postId) {
+	public void deletePostByPostId(final long postId) {
 		postRespository.deleteById(postId);
 		return;
 	}
 	
 	@Override
-	public int countPosts() {
-		return (int) postRespository.count();
+	public long countPosts() {
+		return postRespository.count();
 	}
 	
 }

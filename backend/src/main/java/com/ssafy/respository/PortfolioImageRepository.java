@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ssafy.vo.PortfolioImage;
 
 @Repository
-public interface PortfolioImageRepository extends JpaRepository<PortfolioImage, Integer> {
+public interface PortfolioImageRepository extends JpaRepository<PortfolioImage, Long> {
 	
 }

@@ -15,7 +15,7 @@ public class PortfolioImageServiceImpl implements PortfolioImageService {
 	PortfolioImageRepository portfolioImageRepository;
 
 	@Override
-	public Optional<PortfolioImage> findPortfolioImageByPortfolioImageId(final int portfolioImageId) {
+	public Optional<PortfolioImage> findPortfolioImageByPortfolioImageId(final long portfolioImageId) {
 		return portfolioImageRepository.findById(portfolioImageId);
 	}
 
@@ -25,13 +25,13 @@ public class PortfolioImageServiceImpl implements PortfolioImageService {
 	}
 
 	@Override
-	public void deletePortfolioImageByPortfolioImageId(final int portfolioImageId) {
+	public void deletePortfolioImageByPortfolioImageId(final long portfolioImageId) {
 		portfolioImageRepository.deleteById(portfolioImageId);
 	}
 	
 	@Override
-	public int countPortfolioImages() {
-		return (int) portfolioImageRepository.count();
+	public long countPortfolioImages() {
+		return portfolioImageRepository.count();
 	}
-
+	
 }

@@ -5,6 +5,10 @@ server:
 database: mysql
 
 spring:
+  
+  banner:
+    location: classpath:/banner.txt
+      
   ## MULTIPART (MultipartProperties)
   # Enable multipart uploads
   servlet: 
@@ -49,6 +53,5 @@ spring:
   thymeleaf: 
     prefix: classpath:/static/
   
-
 # logback Setting
 # logging.config=classpath:logback/logback-spring.xml

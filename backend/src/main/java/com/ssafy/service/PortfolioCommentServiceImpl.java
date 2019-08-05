@@ -15,7 +15,7 @@ public class PortfolioCommentServiceImpl implements PortfolioCommentService {
 	PortfolioCommentRepository portfolioCommentRepository;
 
 	@Override
-	public Optional<PortfolioComment> findPortfolioCommentByPortfolioCommentId(final int portfolioCommentId) {
+	public Optional<PortfolioComment> findPortfolioCommentByPortfolioCommentId(final long portfolioCommentId) {
 		return portfolioCommentRepository.findById(portfolioCommentId);
 	}
 
@@ -25,13 +25,13 @@ public class PortfolioCommentServiceImpl implements PortfolioCommentService {
 	}
 
 	@Override
-	public void deletePortfolioCommentByPortfolioCommentId(final int portfolioCommentId) {
+	public void deletePortfolioCommentByPortfolioCommentId(final long portfolioCommentId) {
 		portfolioCommentRepository.deleteById(portfolioCommentId);
 	}
 	
 	@Override
-	public int countPortfolioComments() {
-		return (int) portfolioCommentRepository.count();
+	public long countPortfolioComments() {
+		return portfolioCommentRepository.count();
 	}
 
 }

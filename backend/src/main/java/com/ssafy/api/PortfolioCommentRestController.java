@@ -24,6 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ssafy.auth.Auth;
 import com.ssafy.common.RoleType;
+import com.ssafy.exception.DataCreateException;
+import com.ssafy.exception.DataNotFoundException;
+import com.ssafy.exception.NoAuthenticationException;
+import com.ssafy.exception.ParameterException;
 import com.ssafy.service.PortfolioCommentService;
 import com.ssafy.vo.PortfolioComment;
 import com.ssafy.vo.resource.PortfolioCommentResource;
@@ -38,12 +42,12 @@ public class PortfolioCommentRestController {
 
 	@GetMapping(value = "/{portfolioId}/comments/{portfolioCommentId}")
 	public ResponseEntity<PortfolioCommentResource> findPortfolioCommentByPortfolioCommentId(
-			@PathVariable final int portfolioCommentId) throws Exception {
+			@PathVariable final long portfolioCommentId) throws Exception {
 
 		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
-			throw new Exception(); //NotFoundException
+			throw new DataNotFoundException(portfolioCommentId);
 		}
 
 		PortfolioComment portfolioComment = portfolioCommentOpt.get();
@@ -59,15 +63,17 @@ public class PortfolioCommentRestController {
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@RequestBody final PortfolioComment portfolioComment) throws Exception {
 
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		portfolioComment.setPortfolioCommentId(0);
+		
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!portfolioComment.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 
 		PortfolioComment createdPortfolioComment = portfolioCommentService.savePortfolioComment(portfolioComment);
 		if (createdPortfolioComment == null) {
-			throw new Exception(); // 업데이트 실패 Exception
+			throw new DataCreateException(portfolioComment);
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
@@ -85,28 +91,28 @@ public class PortfolioCommentRestController {
 	public ResponseEntity<PortfolioCommentResource> updatePortfolioComment(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int portfolioCommentId,
+			@PathVariable final long portfolioCommentId,
 			@RequestBody final PortfolioComment portfolioComment) throws Exception {
 
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!portfolioComment.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail); // 권한없음 Exception
 			}
 		}
 
 		if (portfolioCommentId != portfolioComment.getPortfolioCommentId()) {
-			throw new Exception(); // BadRequest Exception 
+			throw new ParameterException(portfolioCommentId, portfolioComment.getPortfolioCommentId()); 
 		}
 
 		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
-			throw new Exception(); // NotFoundException
+			throw new DataNotFoundException(portfolioCommentId);
 		}
 
 		PortfolioComment updatedPortfolioComment = portfolioCommentService.savePortfolioComment(portfolioComment);
 		if (updatedPortfolioComment == null) {
-			throw new Exception(); // 업데이트 실패 Exception 
+			throw new DataCreateException(portfolioComment); 
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
@@ -122,17 +128,16 @@ public class PortfolioCommentRestController {
 	public ResponseEntity<?> deletePortfolioCommentByPortfolioCommentId(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int portfolioCommentId) throws Exception {
+			@PathVariable final long portfolioCommentId) throws Exception {
 		
-		if (accountAuth > 1) { // 관리자가 아니라면,
-			Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
-					.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
-			if(!portfolioCommentOpt.isPresent()) {
-				throw new Exception(); // NotFoundException
-			}
-			
+		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
+				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
+		if(!portfolioCommentOpt.isPresent()) {
+			throw new DataNotFoundException(portfolioCommentId);
+		}
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if(!portfolioCommentOpt.get().getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 		
@@ -141,10 +146,10 @@ public class PortfolioCommentRestController {
 	}
 
 	@GetMapping(value = "/{portfolioId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<HashMap<String, Integer>> countPortfolioComments() {
+	public ResponseEntity<HashMap<String, Long>> countPortfolioComments() {
 
-		HashMap<String, Integer> countPortfolioCommentsMap = new HashMap<>();
-		int countPortfolioComments = portfolioCommentService.countPortfolioComments();
+		HashMap<String, Long> countPortfolioCommentsMap = new HashMap<>();
+		long countPortfolioComments = portfolioCommentService.countPortfolioComments();
 		countPortfolioCommentsMap.put("countPortfolioComments", countPortfolioComments);
 		return ResponseEntity.ok(countPortfolioCommentsMap);
 	}

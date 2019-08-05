@@ -18,6 +18,7 @@ import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,7 +38,7 @@ public class Portfolio {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "portfolio_id")
-	private int portfolioId;
+	private long portfolioId;
 
 	@NotNull
 	@Column(name = "account_email")
@@ -55,7 +56,7 @@ public class Portfolio {
 	@Column(name = "portfolio_content")
 	private String portfolioContent;
 
-	@CreationTimestamp
+	@UpdateTimestamp
 	@Column(name = "portfolio_created_at")
 	private LocalDateTime portfolioCreatedAt;
 
@@ -64,7 +65,7 @@ public class Portfolio {
 
 	@ColumnDefault(value = "0")
 	@Column(name = "portfolio_views")
-	private int portfolioViews;
+	private long portfolioViews;
 
 	@Column(name = "portfolio_thumbnail_url")
 	private String portfolioThumbnailUrl;

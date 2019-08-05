@@ -5,8 +5,8 @@ import java.util.Optional;
 import com.ssafy.vo.PortfolioComment;
 
 public interface PortfolioCommentService {
-	public Optional<PortfolioComment> findPortfolioCommentByPortfolioCommentId(final int portfolioCommentId);
+	public Optional<PortfolioComment> findPortfolioCommentByPortfolioCommentId(final long portfolioCommentId);
 	public PortfolioComment savePortfolioComment(final PortfolioComment portfolioComment);
-	public void deletePortfolioCommentByPortfolioCommentId(final int portfolioCommentId); 
-	public int countPortfolioComments();
+	public void deletePortfolioCommentByPortfolioCommentId(final long portfolioCommentId); 
+	public long countPortfolioComments();
 }

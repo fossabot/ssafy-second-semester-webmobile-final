@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -36,6 +38,10 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ssafy.auth.Auth;
 import com.ssafy.common.RoleType;
+import com.ssafy.exception.DataCreateException;
+import com.ssafy.exception.DataNotFoundException;
+import com.ssafy.exception.NoAuthenticationException;
+import com.ssafy.exception.ParameterException;
 import com.ssafy.respository.PortfolioRepository;
 import com.ssafy.service.PortfolioService;
 import com.ssafy.vo.Portfolio;
@@ -81,11 +87,11 @@ public class PortfolioRestController {
 
 	@GetMapping("/{portfolioId}")
 	public ResponseEntity<PortfolioResource> findPortfolioByPortfolioId(
-			@PathVariable final int portfolioId) throws Exception {
+			@PathVariable final long portfolioId) throws Exception {
 		
 		Optional<Portfolio> portfolioOpt = portfolioService.findPortfolioByPortfolioId(portfolioId);
 		if (!portfolioOpt.isPresent()) {
-			throw new Exception();//NotFound Exception
+			throw new DataNotFoundException(portfolioId);
 		}
 
 		Portfolio portfolios = portfolioOpt.get();
@@ -100,15 +106,17 @@ public class PortfolioRestController {
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@RequestBody final Portfolio portfolio) throws Exception {
 		
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		portfolio.setPortfolioId(0);
+		
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!portfolio.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 		
 		Portfolio createdPortfolio = portfolioService.savePortfolio(portfolio);
 		if (createdPortfolio == null) {
-			throw new Exception();// 업데이트 실패 Exception
+			throw new DataCreateException(portfolio);
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
@@ -126,28 +134,28 @@ public class PortfolioRestController {
 	public ResponseEntity<PortfolioResource> updatePortfolio(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int portfolioId,
+			@PathVariable final long portfolioId,
 			@RequestBody final Portfolio portfolio) throws Exception {
 		
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) { // 관리자가 아니라면,
 			if (!portfolio.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 		
 		if (portfolioId != portfolio.getPortfolioId()) {
-			throw new Exception(); // BadRequest Exception 
+			throw new ParameterException(portfolioId, portfolio.getPortfolioId()); 
 		}
 
 		Optional<Portfolio> optional = portfolioService
 				.findPortfolioByPortfolioId(portfolioId);
 		if (!optional.isPresent()) {
-			throw new Exception(); // NotFound Exception 
+			throw new DataNotFoundException(portfolioId);
 		}
 
 		Portfolio updatedPortfolio = portfolioService.savePortfolio(portfolio);
 		if (updatedPortfolio == null) {
-			throw new Exception(); // 업데이트 실패 Exception
+			throw new DataCreateException(portfolio); 
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class)
@@ -163,17 +171,15 @@ public class PortfolioRestController {
 	public ResponseEntity<?> deletePortfolioByPortfolioId(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int portfolioId) throws Exception {
+			@PathVariable final long portfolioId) throws Exception {
 	
-		if (accountAuth > 1) { // 관리자가 아니라면,
-			Optional<Portfolio> portfolioOpt = portfolioService
-					.findPortfolioByPortfolioId(portfolioId);
-			if(!portfolioOpt.isPresent()) {
-				throw new Exception(); // NotFoundException
-			}
-			
+		Optional<Portfolio> portfolioOpt = portfolioService.findPortfolioByPortfolioId(portfolioId);
+		if(!portfolioOpt.isPresent()) {
+			throw new DataNotFoundException(portfolioId);
+		}
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if(!portfolioOpt.get().getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail); // 권한없음 Exception
 			}
 		}
 		
@@ -182,10 +188,10 @@ public class PortfolioRestController {
 	}
 	
 	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<HashMap<String, Integer>> countPortfolios() {
+	public ResponseEntity<HashMap<String, Long>> countPortfolios() {
 		
-		HashMap<String, Integer> countPortfoliosMap = new HashMap<>();
-		int countPortfolios = portfolioService.countPortfolios();
+		HashMap<String, Long> countPortfoliosMap = new HashMap<>();
+		long countPortfolios = portfolioService.countPortfolios();
 		countPortfoliosMap.put("countPortfolios", countPortfolios);
 		return ResponseEntity.ok(countPortfoliosMap);
 	}
