@@ -7,7 +7,7 @@
       <img :src="portfolio.portfolioThumbnailUrl ? portfolio.portfolioThumbnailUrl : 'https://source.unsplash.com/random/500x500'" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
       <!-- Card Body -->
       <div class="card-body">
-        <h5 class="card-title">{{ portfolio.portfolioTitle }}</h5>
+        <h5 class="card-title card-text-ellipsis">{{ portfolio.portfolioTitle }}</h5>
         <p class="card-text card-text-ellipsis" style="color: gray">{{ portfolio.portfolioContent }}</p>
         <!-- Buttons -->
         <div class="row justify-content-end">
