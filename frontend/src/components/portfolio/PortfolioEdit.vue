@@ -6,12 +6,32 @@
       <input v-model="newPortfolio.portfolioTitle" type="text" class="form-control" id="title" 
             :placeholder="newPortfolio.portfolioTitle ? newPortfolio.portfolioTitle : 'Enter Title'"> 
     </div>
-    <!-- Image Upload compo -->
-    <div class="form-group">
-      <label for="image">Image</label>
-      <Imgur id="image" 
-              :imageUrl="(newPortfolio.portfolioThumbnailUrl) ? newPortfolio.portfolioThumbnailUrl : 'http://dy.gnch.or.kr/img/no-image.jpg' "
-              @uploadImageUrl="uploadPortfolioThumbnailUrl"></Imgur>
+    <!-- Image Upload compo -->    
+    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalCenter">
+      Upload Image
+    </button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Images</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <Imgur id="image" 
+                      :imageUrl="(newPortfolio.portfolioThumbnailUrl) ? newPortfolio.portfolioThumbnailUrl : 'http://dy.gnch.or.kr/img/no-image.jpg' "
+                      @uploadImageUrl="uploadPortfolioThumbnailUrl"></Imgur>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button @click="insertImage" data-dismiss="modal" type="button" class="btn btn-primary">Upload</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Content Markdown compo -->
     <div class="form-group">
@@ -74,6 +94,10 @@ export default {
         await mainServices.putPortfolio(this.newPortfolio)
         this.$router.push({ name: 'PortfolioListPage'})
       }
+    },
+
+    insertImage() {
+      this.newPortfolio.portfolioContent = this.newPortfolio.portfolioContent + `![img](${this.newPortfolio.portfolioThumbnailUrl})` 
     }
   }
 }

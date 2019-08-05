@@ -7,7 +7,7 @@
             :placeholder="newPost.postTitle ? newPost.postTitle : 'Enter Title'"> 
     </div>
     <!-- Image Upload compo -->
-    <div class="form-group">
+    <div class="form-group" style="width: 30%">
       <label for="image">Image</label>
       <Imgur id="image" 
               :imageUrl="(newPost.postThumbnailUrl) ? newPost.postThumbnailUrl : 'http://dy.gnch.or.kr/img/no-image.jpg' "

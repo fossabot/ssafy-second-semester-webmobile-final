@@ -3,11 +3,8 @@
     <div class="jumbotron bg-white">
       <h1 class="display-4">{{ portfolio.portfolioTitle }}</h1>
       <p class="lead">by {{ portfolio.accountName }} at {{ portfolio.portfolioCreatedAt }} </p>
-      <hr class="my-4">
-      <div class="row justify-content-around">
-        <img :src="portfolio.portfolioThumbnailUrl ? portfolio.portfolioThumbnailUrl : 'https://source.unsplash.com/random/1000x1000' " class="col-5"/>
-        <div class="col-5" v-html="compiledMarkdown" ></div>       
-      </div>
+      <hr class="my-4">  
+      <div v-html="compiledMarkdown" ></div>       
     </div>
   </div>
 </template>

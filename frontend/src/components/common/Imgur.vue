@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <!-- Image Preview -->
-    <img :src="imageUrl" style="width: 30%; height: auto;" class="rounded">
+    <img :src="imageUrl" style="width: 100%; height: auto;" class="rounded">
     <br>
     <!-- Image File Input -->
-    <div class="custom-file" style="width: 30%;">
+    <div class="custom-file" style="width: 100%;">
       <input class="custom-file-input" @change="uploadImageUrl" type="file" id="file" ref="file" width="50%">
       <label class="custom-file-label imgur-text-ellipsis" for="file">{{ (imageFile) ? imageFile.name : "Choose File"}}</label>
     </div>
