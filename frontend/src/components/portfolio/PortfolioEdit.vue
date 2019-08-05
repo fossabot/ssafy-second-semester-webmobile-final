@@ -33,44 +33,31 @@
 </template>
 
 <script>
-import {mapState,mapActions} from 'vuex'
 import mainServices from '../../apis/mainservice/mainServices'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
 
 export default {
-  name: 'PortfolioEditComp',
+  name: 'PortfolioEdit',
   components: {
     Imgur,
     Title,
-  },
-  data() {
-    return {
-      // newPortfolio: {}
-    }
   },
   computed: {
     newPortfolio: {
       get: function () {
         return this.$store.state.portfolio.portfolio;
       },
-      // setter
       set: function (newValue) {
       }
-    },
-
-    ...mapState('portfolio',['portfolio']),
+    },    
     compiledMarkdown: function () {
       return marked(this.newPortfolio.portfolioContent, { sanitize: true })
     }
   },
-  async created() {
-    await this.getPortfolio(this.$route.params.portfolioId)
-    // this.newPortfolio = this.portfolio // 복사 
-    console.log("Edit")        
-  },
+
   methods: {
-    ...mapActions('portfolio',['getPortfolio']),
+    
     portfolioContentUpdate: _.debounce(function (e) {
       this.newPortfolio.portfolioContent = e.target.value
     }, 300),

@@ -16,7 +16,7 @@
 import {mapState} from 'vuex'
 
 export default {
-  name: 'PortfolioDetailComp',
+  name: 'PortfolioDetail',
   computed: {
     ...mapState('portfolio',['portfolio']),
     compiledMarkdown() {

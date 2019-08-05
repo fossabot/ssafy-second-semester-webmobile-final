@@ -20,7 +20,7 @@ import {mapState, mapActions} from 'vuex'
 import mainServices from '@/apis/mainservice/mainServices.js'
 
 export default {
-  name: 'PortfolioCommentComp',
+  name: 'PortfolioComment',
   data () {
     return {
       isEdit: false,

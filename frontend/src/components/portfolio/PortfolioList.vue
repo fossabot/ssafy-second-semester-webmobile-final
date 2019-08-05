@@ -25,7 +25,7 @@
 import { mapState } from 'vuex'
 
 export default {
-  name: 'PortfolioListComp',
+  name: 'PortfolioList',
   computed: {
     ...mapState('portfolio', ['portfolios']),
   },
