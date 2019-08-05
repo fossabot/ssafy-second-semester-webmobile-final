@@ -6,7 +6,10 @@ import PortfolioListPage from '../pages/portfolio/PortfolioListPage.vue'
 import PortfolioDetailPage from '../pages/portfolio/PortfolioDetailPage.vue'
 import PortfolioUpdatePage from '../pages/portfolio/PortfolioUpdatePage.vue'
 
-import PostListPage from '@/pages/post/PostListPage.vue'
+import PostCreatePage from '../pages/post/PostCreatePage'
+import PostListPage from '../pages/post/PostListPage'
+import PostDetailPage from '../pages/post/PostDetailPage'
+import PostUpdatePage from '../pages/post/PostUpdatePage'
 
 import SignUpPage from '../pages/signup/SignUpPage.vue'
 import NaverCallBack from '../components/widget/NaverCallBack.vue'
@@ -46,9 +49,24 @@ export default new Router({
       component: PortfolioUpdatePage
     },
     {
-      path : '/posts',
-      name : 'PostListPage',
-      component : PostListPage
+      path : '/posts/create',
+      name : 'PostCreatePage',
+      component : PostCreatePage
+    },
+    {
+      path: '/posts',
+      name: 'PostListPage',
+      component: PostListPage
+    },
+    {
+      path: '/posts/:postId',
+      name: 'PostDetailPage',
+      component: PostDetailPage
+    },
+    {
+      path: '/posts/:postId/update',
+      name: 'PostUpdatePage',
+      component: PostUpdatePage
     },
     {
       path: '/signuppage',
