@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ssafy</groupId>
-	<artifactId>webmobile-sub2</artifactId>
+	<artifactId>webmobile-final</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>webmobile-sub2</name>
+	<name>webmobile-final</name>
 	<description>[Blog] Vue.js + Spring Boot </description>
 
 	<properties>
