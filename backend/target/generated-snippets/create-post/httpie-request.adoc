@@ -1,0 +1,15 @@
+[source,bash]
+----
+$ echo '{
+  "postId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}' | http POST 'http://localhost:8080/posts' \
+    'accountAuth:2' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'accountEmail:test@email.com'
+----

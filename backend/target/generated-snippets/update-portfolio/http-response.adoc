@@ -1,0 +1,25 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Length: 527
+Content-Type: application/hal+json;charset=UTF-8
+
+{
+  "portfolioId" : 4,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioTitle" : "update title",
+  "portfolioContent" : "update content",
+  "portfolioCreatedAt" : "2019-08-06T16:43:10.979",
+  "portfolioGiturl" : "www.github.com/repository",
+  "portfolioViews" : 0,
+  "portfolioThumbnailUrl" : "/image.png",
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/4"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/4"
+  } ]
+}
+----

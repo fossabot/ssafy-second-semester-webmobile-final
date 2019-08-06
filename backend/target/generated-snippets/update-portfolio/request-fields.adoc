@@ -1,0 +1,40 @@
+|===
+|Path|Type|Description
+
+|`+portfolioId+`
+|`+Number+`
+|수정할 포트폴리오 Id
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+portfolioTitle+`
+|`+String+`
+|제목
+
+|`+portfolioContent+`
+|`+String+`
+|내용
+
+|`+portfolioCreatedAt+`
+|`+String+`
+|생성 시간
+
+|`+portfolioGiturl+`
+|`+String+`
+|Git repository 주소
+
+|`+portfolioViews+`
+|`+Number+`
+|조회수
+
+|`+portfolioThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|===

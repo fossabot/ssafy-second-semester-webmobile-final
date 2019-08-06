@@ -1,0 +1,21 @@
+[source,options="nowrap"]
+----
+{
+  "postCommentId" : 1,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용",
+  "postCommentCreatedAt" : "2019-08-06T16:44:17.482",
+  "postId" : 1,
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/1"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/posts/1"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/posts/1"
+  } ]
+}
+----

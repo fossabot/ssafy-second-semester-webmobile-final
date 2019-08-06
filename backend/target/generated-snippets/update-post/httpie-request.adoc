@@ -1,0 +1,16 @@
+[source,bash]
+----
+$ echo '{
+  "postId" : 5,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "update title",
+  "postContent" : "update content",
+  "postCreatedAt" : "2019-08-06T16:44:17.806",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}' | http PUT 'http://localhost:8080/posts/5' \
+    'accountAuth:2' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'accountEmail:test@email.com'
+----

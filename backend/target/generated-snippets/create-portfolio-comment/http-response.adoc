@@ -1,0 +1,26 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 491
+Location: http://localhost:8080/portfolios/3
+
+{
+  "portfolioCommentId" : 3,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용",
+  "portfolioCommentCreatedAt" : "2019-08-06T16:44:17.4",
+  "portfolioId" : 1,
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/3"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/portfolios/3"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/3"
+  } ]
+}
+----

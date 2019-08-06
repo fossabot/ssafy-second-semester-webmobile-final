@@ -184,7 +184,7 @@ public class PortfolioRestController {
 		}
 		
 		portfolioService.deletePortfolioByPortfolioId(portfolioId);
-		return ResponseEntity.ok().build();
+		return ResponseEntity.noContent().build();
 	}
 	
 	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

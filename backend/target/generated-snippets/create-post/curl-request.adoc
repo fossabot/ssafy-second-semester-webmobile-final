@@ -1,0 +1,16 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/posts' -i -X POST \
+    -H 'accountAuth: 2' \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'accountEmail: test@email.com' \
+    -d '{
+  "postId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}'
+----

@@ -1,0 +1,8 @@
+.+/posts/{postId}+
+|===
+|Parameter|Description
+
+|`+postId+`
+|수정할 포스트 Id
+
+|===
