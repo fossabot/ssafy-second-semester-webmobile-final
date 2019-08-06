@@ -1,6 +1,6 @@
 /*
 메세지 푸시를 위한 node.js 서버
-http://localhost:8080/sendpush로 메세지 푸시 가능.
+http://localhost:8080/send로 메세지 푸시 가능.
 서버구동은 터미널에서 지금 경로에서 node PushServer.js 로 run
 */
 
