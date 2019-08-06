@@ -137,7 +137,7 @@ public class PortfolioCommentRestController {
 		}
 		
 		portfolioCommentService.deletePortfolioCommentByPortfolioCommentId(portfolioCommentId);
-		return ResponseEntity.ok().build();
+		return ResponseEntity.noContent().build();
 	}
 
 	@GetMapping(value = "/{portfolioId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

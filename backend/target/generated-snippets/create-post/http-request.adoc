@@ -1,0 +1,19 @@
+[source,http,options="nowrap"]
+----
+POST /posts HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
+Content-Length: 224
+
+{
+  "postId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}
+----

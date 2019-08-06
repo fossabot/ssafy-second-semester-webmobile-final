@@ -1,0 +1,18 @@
+[source,options="nowrap"]
+----
+{
+  "postId" : 6,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postCreatedAt" : "2019-08-06T16:44:17.928",
+  "postViews" : 1,
+  "postThumbnailUrl" : "/image.png",
+  "postComments" : [ ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/6"
+  } ]
+}
+----

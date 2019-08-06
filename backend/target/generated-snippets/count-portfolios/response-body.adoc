@@ -1,6 +1,6 @@
 [source,options="nowrap"]
 ----
 {
-  "countPortfolios" : 1
+  "countPortfolios" : 8
 }
 ----

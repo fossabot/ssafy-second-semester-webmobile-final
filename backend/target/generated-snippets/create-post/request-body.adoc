@@ -1,0 +1,12 @@
+[source,options="nowrap"]
+----
+{
+  "postId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}
+----

@@ -1,0 +1,13 @@
+[source,options="nowrap"]
+----
+{
+  "postId" : 5,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "update title",
+  "postContent" : "update content",
+  "postCreatedAt" : "2019-08-06T16:44:17.806",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}
+----

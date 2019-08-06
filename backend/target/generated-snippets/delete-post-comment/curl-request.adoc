@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/posts/3/comments/3' -i -X DELETE \
+    -H 'accountAuth: 2' \
+    -H 'accountEmail: test@email.com'
+----

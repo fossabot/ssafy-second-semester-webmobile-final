@@ -3,6 +3,6 @@
 
 |`+countPortfolios+`
 |`+Number+`
-|count of portfolios
+|포트폴리오 총 개수
 
 |===

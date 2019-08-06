@@ -1,16 +1,16 @@
 [source,bash]
 ----
 $ echo '{
-  "portfolioId" : 1,
+  "portfolioId" : 4,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-06T14:27:13.896",
+  "portfolioCreatedAt" : "2019-08-06T16:43:10.979",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png"
-}' | http PUT 'http://localhost:8080/portfolios/1' \
+}' | http PUT 'http://localhost:8080/portfolios/4' \
     'accountAuth:2' \
     'Content-Type:application/json;charset=UTF-8' \
     'accountEmail:test@email.com'

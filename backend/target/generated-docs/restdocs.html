@@ -649,29 +649,29 @@ accountEmail: test@email.com
 <div class="listingblock">
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created
+Location: http://localhost:8080/portfolios/7
 Content-Type: application/hal+json;charset=UTF-8
 Content-Length: 627
-Location: http://localhost:8080/portfolios/4
 
 {
-  "portfolioId" : 4,
+  "portfolioId" : 7,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioTitle" : "포트폴리오 제목",
   "portfolioContent" : "포트폴리오 내용",
-  "portfolioCreatedAt" : "2019-08-06T14:27:14.269",
+  "portfolioCreatedAt" : "2019-08-06T16:43:11.316",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png",
   "links" : [ {
     "rel" : "self",
-    "href" : "http://localhost:8080/portfolios/4"
+    "href" : "http://localhost:8080/portfolios/7"
   }, {
     "rel" : "update",
-    "href" : "http://localhost:8080/portfolios/4"
+    "href" : "http://localhost:8080/portfolios/7"
   }, {
     "rel" : "delete",
-    "href" : "http://localhost:8080/portfolios/4"
+    "href" : "http://localhost:8080/portfolios/7"
   } ]
 }</code></pre>
 </div>
@@ -758,7 +758,7 @@ Location: http://localhost:8080/portfolios/4
 <h4 id="_수정_http_request"><a class="link" href="#_수정_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /portfolios/1 HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /portfolios/4 HTTP/1.1
 accountAuth: 2
 Content-Length: 348
 Content-Type: application/json;charset=UTF-8
@@ -766,12 +766,12 @@ Host: localhost:8080
 accountEmail: test@email.com
 
 {
-  "portfolioId" : 1,
+  "portfolioId" : 4,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-06T14:27:13.896",
+  "portfolioCreatedAt" : "2019-08-06T16:43:10.979",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png"
@@ -874,21 +874,21 @@ Content-Length: 527
 Content-Type: application/hal+json;charset=UTF-8
 
 {
-  "portfolioId" : 1,
+  "portfolioId" : 4,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-06T14:27:13.896",
+  "portfolioCreatedAt" : "2019-08-06T16:43:10.979",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png",
   "links" : [ {
     "rel" : "self",
-    "href" : "http://localhost:8080/portfolios/1"
+    "href" : "http://localhost:8080/portfolios/4"
   }, {
     "rel" : "delete",
-    "href" : "http://localhost:8080/portfolios/1"
+    "href" : "http://localhost:8080/portfolios/4"
   } ]
 }</code></pre>
 </div>
@@ -1007,7 +1007,7 @@ Host: localhost:8080</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
-Content-Length: 827
+Content-Length: 3551
 Content-Type: application/hal+json;charset=UTF-8
 
 {
@@ -1016,12 +1016,12 @@ Content-Type: application/hal+json;charset=UTF-8
     "href" : "http://localhost:8080/portfolios/pages/1?page=0&amp;size=6&amp;sort=portfolioCreatedAt,desc"
   } ],
   "content" : [ {
-    "portfolioId" : 2,
+    "portfolioId" : 5,
     "accountEmail" : "test@email.com",
     "accountName" : "test name",
     "portfolioTitle" : "포트폴리오 제목",
     "portfolioContent" : "포트폴리오 내용",
-    "portfolioCreatedAt" : "2019-08-06T14:27:14.182",
+    "portfolioCreatedAt" : "2019-08-06T16:43:11.104",
     "portfolioGiturl" : "www.github.com/repository",
     "portfolioViews" : 0,
     "portfolioThumbnailUrl" : "/image.png",
@@ -1029,12 +1029,90 @@ Content-Type: application/hal+json;charset=UTF-8
     "portfolioImages" : [ ],
     "links" : [ {
       "rel" : "self",
+      "href" : "http://localhost:8080/portfolios/5"
+    } ]
+  }, {
+    "portfolioId" : 4,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "portfolioTitle" : "update title",
+    "portfolioContent" : "update content",
+    "portfolioCreatedAt" : "2019-08-06T16:43:10.979",
+    "portfolioGiturl" : "www.github.com/repository",
+    "portfolioViews" : 0,
+    "portfolioThumbnailUrl" : "/image.png",
+    "portfolioComments" : [ ],
+    "portfolioImages" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/portfolios/4"
+    } ]
+  }, {
+    "portfolioId" : 3,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "portfolioTitle" : "포트폴리오 제목",
+    "portfolioContent" : "포트폴리오 내용",
+    "portfolioCreatedAt" : "2019-08-06T16:43:10.901",
+    "portfolioGiturl" : "www.github.com/repository",
+    "portfolioViews" : 0,
+    "portfolioThumbnailUrl" : "/image.png",
+    "portfolioComments" : [ ],
+    "portfolioImages" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/portfolios/3"
+    } ]
+  }, {
+    "portfolioId" : 2,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "portfolioTitle" : "포트폴리오 제목",
+    "portfolioContent" : "포트폴리오 내용",
+    "portfolioCreatedAt" : "2019-08-06T16:43:10.728",
+    "portfolioGiturl" : "www.github.com/repository",
+    "portfolioViews" : 0,
+    "portfolioThumbnailUrl" : "/image.png",
+    "portfolioComments" : [ {
+      "portfolioCommentId" : 2,
+      "accountEmail" : "test@email.com",
+      "accountName" : "test name",
+      "portfolioCommentContent" : "내용 수정",
+      "portfolioCommentCreatedAt" : "2019-08-06T16:43:10.728",
+      "portfolioId" : 2
+    } ],
+    "portfolioImages" : [ ],
+    "links" : [ {
+      "rel" : "self",
       "href" : "http://localhost:8080/portfolios/2"
+    } ]
+  }, {
+    "portfolioId" : 1,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "portfolioTitle" : "포트폴리오 제목",
+    "portfolioContent" : "포트폴리오 내용",
+    "portfolioCreatedAt" : "2019-08-06T16:43:10.576",
+    "portfolioGiturl" : "www.github.com/repository",
+    "portfolioViews" : 0,
+    "portfolioThumbnailUrl" : "/image.png",
+    "portfolioComments" : [ {
+      "portfolioCommentId" : 3,
+      "accountEmail" : "test@email.com",
+      "accountName" : "test name",
+      "portfolioCommentContent" : "댓글 내용",
+      "portfolioCommentCreatedAt" : "2019-08-06T16:43:10.901",
+      "portfolioId" : 1
+    } ],
+    "portfolioImages" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/portfolios/1"
     } ]
   } ],
   "page" : {
     "size" : 6,
-    "totalElements" : 1,
+    "totalElements" : 5,
     "totalPages" : 1,
     "number" : 0
   }
@@ -1044,117 +1122,7 @@ Content-Type: application/hal+json;charset=UTF-8
 </div>
 <div class="sect3">
 <h4 id="_페이지_단위_조회_response_fields"><a class="link" href="#_페이지_단위_조회_response_fields">Response fields</a></h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 페이지 HATEOAS 관계명</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 페이지 HATEOAS URI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioId</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 Id</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].accountEmail</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].accountName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioTitle</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioContent</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioCreatedAt</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioGiturl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Git repository 주소</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioViews</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">조회수</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioThumbnailUrl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioComments</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 정보</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].portfolioImages</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">이미지 정보</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].links[0].rel</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">각 포트폴리오의 HATEOAS 관계명</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].links[0].href</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">각 포트폴리오의 HATEOAS URI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.size</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">한 페이지 내에 들어가는 포트폴리오 수</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.totalElements</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">총 포트폴리오 수</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.totalPages</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">총 페이지 수</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">현재 페이지</p></td>
-</tr>
-</tbody>
-</table>
+
 </div>
 </div>
 <div class="sect2">
@@ -1163,7 +1131,7 @@ Content-Type: application/hal+json;charset=UTF-8
 <h4 id="_개별_조회_http_request"><a class="link" href="#_개별_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /portfolios/3 HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /portfolios/6 HTTP/1.1
 Host: localhost:8080</code></pre>
 </div>
 </div>
@@ -1199,12 +1167,12 @@ Content-Type: application/hal+json;charset=UTF-8
 Content-Length: 521
 
 {
-  "portfolioId" : 3,
+  "portfolioId" : 6,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioTitle" : "포트폴리오 제목",
   "portfolioContent" : "포트폴리오 내용",
-  "portfolioCreatedAt" : "2019-08-06T14:27:14.248",
+  "portfolioCreatedAt" : "2019-08-06T16:43:11.285",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 1,
   "portfolioThumbnailUrl" : "/image.png",
@@ -1212,7 +1180,7 @@ Content-Length: 521
   "portfolioImages" : [ ],
   "links" : [ {
     "rel" : "self",
-    "href" : "http://localhost:8080/portfolios/3"
+    "href" : "http://localhost:8080/portfolios/6"
   } ]
 }</code></pre>
 </div>
@@ -1309,7 +1277,7 @@ Content-Length: 521
 <h4 id="_삭제_http_request"><a class="link" href="#_삭제_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /portfolios/6 HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /portfolios/9 HTTP/1.1
 accountAuth: 1
 Host: localhost:8080
 accountEmail: test@email.com</code></pre>
@@ -1367,7 +1335,7 @@ Content-Length: 29
 Content-Type: application/json;charset=UTF-8
 
 {
-  "countPortfolios" : 1
+  "countPortfolios" : 8
 }</code></pre>
 </div>
 </div>
@@ -1391,7 +1359,7 @@ Content-Type: application/json;charset=UTF-8
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>countPortfolios</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">count of portfolios</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 총 개수</p></td>
 </tr>
 </tbody>
 </table>
@@ -1404,15 +1372,415 @@ Content-Type: application/json;charset=UTF-8
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_생성_2"><a class="link" href="#_생성_2">생성</a></h3>
+<div class="sect3">
+<h4 id="_생성_2_http_request"><a class="link" href="#_생성_2_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /portfolios/3/comments HTTP/1.1
+accountAuth: 2
+Content-Length: 172
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
 
+{
+  "portfolioCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용",
+  "portfolioId" : 1
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_생성_2_path_parameters"><a class="link" href="#_생성_2_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /portfolios/{portfolioId}/comments</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓸 포트폴리오 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_생성_2_request_fields"><a class="link" href="#_생성_2_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 Id (Auto increase)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓸 포트폴리오 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_생성_2_http_response"><a class="link" href="#_생성_2_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 491
+Location: http://localhost:8080/portfolios/3
+
+{
+  "portfolioCommentId" : 3,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용",
+  "portfolioCommentCreatedAt" : "2019-08-06T16:44:17.4",
+  "portfolioId" : 1,
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/3"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/portfolios/3"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/3"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_생성_2_response_fields"><a class="link" href="#_생성_2_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포트폴리오 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_수정_2"><a class="link" href="#_수정_2">수정</a></h3>
+<div class="sect3">
+<h4 id="_수정_2_http_request"><a class="link" href="#_수정_2_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /portfolios/2/comments/2 HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Content-Length: 232
+Host: localhost:8080
+accountEmail: test@email.com
 
+{
+  "portfolioCommentId" : 2,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "내용 수정",
+  "portfolioCommentCreatedAt" : "2019-08-06T16:44:17.208",
+  "portfolioId" : 2
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_수정_2_path_parameters"><a class="link" href="#_수정_2_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /portfolios/{portfolioId}/comments/{portfolioCommentId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포트폴리오 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 포트폴리오 댓글 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_수정_2_request_fields"><a class="link" href="#_수정_2_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포트폴리오 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_수정_2_http_response"><a class="link" href="#_수정_2_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 411
+
+{
+  "portfolioCommentId" : 2,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "내용 수정",
+  "portfolioCommentCreatedAt" : "2019-08-06T16:44:17.208",
+  "portfolioId" : 2,
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/2"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/2"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_수정_2_response_fields"><a class="link" href="#_수정_2_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트폴리오 댓글 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포트폴리오 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_삭제_2"><a class="link" href="#_삭제_2">삭제</a></h3>
-
+<div class="sect3">
+<h4 id="_삭제_2_http_request"><a class="link" href="#_삭제_2_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /portfolios/1/comments/1 HTTP/1.1
+accountAuth: 2
+Host: localhost:8080
+accountEmail: test@email.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_삭제_2_path_parameters"><a class="link" href="#_삭제_2_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /portfolios/{portfolioId}/comments/{portfolioCommentId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포트폴리오 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>portfolioCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삭제할 포트폴리오 댓글 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_삭제_2_http_response"><a class="link" href="#_삭제_2_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 204 No Content</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1421,27 +1789,863 @@ Content-Type: application/json;charset=UTF-8
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_생성_3"><a class="link" href="#_생성_3">생성</a></h3>
+<div class="sect3">
+<h4 id="_생성_3_http_request"><a class="link" href="#_생성_3_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /posts HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
+Content-Length: 224
 
+{
+  "postId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_생성_3_request_fields"><a class="link" href="#_생성_3_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 Id (Auto increase)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회수 (0으로 자동 초기화)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postThumbnailUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_생성_3_http_response"><a class="link" href="#_생성_3_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created
+Location: http://localhost:8080/portfolios/7
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 364
+
+{
+  "postId" : 7,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postCreatedAt" : "2019-08-06T16:44:17.966",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png",
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/7"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_생성_3_response_fields"><a class="link" href="#_생성_3_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postThumbnailUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_수정_3"><a class="link" href="#_수정_3">수정</a></h3>
+<div class="sect3">
+<h4 id="_수정_3_http_request"><a class="link" href="#_수정_3_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /posts/5 HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Content-Length: 266
+Host: localhost:8080
+accountEmail: test@email.com
 
+{
+  "postId" : 5,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "update title",
+  "postContent" : "update content",
+  "postCreatedAt" : "2019-08-06T16:44:17.806",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_수정_3_path_parameters"><a class="link" href="#_수정_3_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/{postId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_수정_3_request_fields"><a class="link" href="#_수정_3_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postThumbnailUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_수정_3_http_response"><a class="link" href="#_수정_3_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 358
+
+{
+  "postId" : 5,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "update title",
+  "postContent" : "update content",
+  "postCreatedAt" : "2019-08-06T16:44:17.806",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png",
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/5"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_수정_3_response_fields"><a class="link" href="#_수정_3_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postThumbnailUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_페이지_단위_조회_2"><a class="link" href="#_페이지_단위_조회_2">페이지 단위 조회</a></h3>
+<div class="sect3">
+<h4 id="_페이지_단위_조회_2_http_request"><a class="link" href="#_페이지_단위_조회_2_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /posts/pages/1 HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_페이지_단위_조회_2_path_parameters"><a class="link" href="#_페이지_단위_조회_2_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/pages/{pageNo}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageNo</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청할 페이지 숫자</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_페이지_단위_조회_2_http_response"><a class="link" href="#_페이지_단위_조회_2_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 3128
 
+{
+  "links" : [ {
+    "rel" : "first",
+    "href" : "http://localhost:8080/posts/pages/1?page=0&amp;size=6&amp;sort=postCreatedAt,desc"
+  }, {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/pages/1?page=0&amp;size=6&amp;sort=postCreatedAt,desc"
+  }, {
+    "rel" : "next",
+    "href" : "http://localhost:8080/posts/pages/1?page=1&amp;size=6&amp;sort=postCreatedAt,desc"
+  }, {
+    "rel" : "last",
+    "href" : "http://localhost:8080/posts/pages/1?page=1&amp;size=6&amp;sort=postCreatedAt,desc"
+  } ],
+  "content" : [ {
+    "postId" : 9,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "postTitle" : "포스트 제목",
+    "postContent" : "포스트 내용",
+    "postCreatedAt" : "2019-08-06T16:44:18.033",
+    "postViews" : 0,
+    "postThumbnailUrl" : "/image.png",
+    "postComments" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/posts/9"
+    } ]
+  }, {
+    "postId" : 7,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "postTitle" : "포스트 제목",
+    "postContent" : "포스트 내용",
+    "postCreatedAt" : "2019-08-06T16:44:17.966",
+    "postViews" : 0,
+    "postThumbnailUrl" : "/image.png",
+    "postComments" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/posts/7"
+    } ]
+  }, {
+    "postId" : 6,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "postTitle" : "포스트 제목",
+    "postContent" : "포스트 내용",
+    "postCreatedAt" : "2019-08-06T16:44:17.928",
+    "postViews" : 1,
+    "postThumbnailUrl" : "/image.png",
+    "postComments" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/posts/6"
+    } ]
+  }, {
+    "postId" : 5,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "postTitle" : "update title",
+    "postContent" : "update content",
+    "postCreatedAt" : "2019-08-06T16:44:17.806",
+    "postViews" : 0,
+    "postThumbnailUrl" : "/image.png",
+    "postComments" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/posts/5"
+    } ]
+  }, {
+    "postId" : 4,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "postTitle" : "포스트 제목",
+    "postContent" : "포스트 내용",
+    "postCreatedAt" : "2019-08-06T16:44:17.612",
+    "postViews" : 0,
+    "postThumbnailUrl" : "/image.png",
+    "postComments" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/posts/4"
+    } ]
+  }, {
+    "postId" : 3,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "postTitle" : "포스트 제목",
+    "postContent" : "포스트 내용",
+    "postCreatedAt" : "2019-08-06T16:44:17.574",
+    "postViews" : 0,
+    "postThumbnailUrl" : "/image.png",
+    "postComments" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/posts/3"
+    } ]
+  } ],
+  "page" : {
+    "size" : 6,
+    "totalElements" : 8,
+    "totalPages" : 2,
+    "number" : 0
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_페이지_단위_조회_2_response_fields"><a class="link" href="#_페이지_단위_조회_2_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 페이지 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 페이지 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postThumbnailUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].postComments</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">각 포스트의 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content[0].links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">각 포스트의 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">한 페이지 내에 들어가는 포스트 수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.totalElements</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">총 포스트 수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.totalPages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">총 페이지 수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page.number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">현재 페이지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_개별_조회_2"><a class="link" href="#_개별_조회_2">개별 조회</a></h3>
+<div class="sect3">
+<h4 id="_개별_조회_2_http_request"><a class="link" href="#_개별_조회_2_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /posts/6 HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_개별_조회_2_path_parameters"><a class="link" href="#_개별_조회_2_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/{postId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청할 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_개별_조회_2_http_response"><a class="link" href="#_개별_조회_2_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 389
 
+{
+  "postId" : 6,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postCreatedAt" : "2019-08-06T16:44:17.928",
+  "postViews" : 1,
+  "postThumbnailUrl" : "/image.png",
+  "postComments" : [ ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/6"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_개별_조회_2_response_fields"><a class="link" href="#_개별_조회_2_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postTitle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postThumbnailUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">썸네일 이미지 경로</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postComments</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 정보</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_삭제_3"><a class="link" href="#_삭제_3">삭제</a></h3>
-
+<div class="sect3">
+<h4 id="_삭제_3_http_request"><a class="link" href="#_삭제_3_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /posts/8 HTTP/1.1
+accountAuth: 1
+Host: localhost:8080
+accountEmail: test@email.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_삭제_3_path_parameters"><a class="link" href="#_삭제_3_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/{postId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삭제할 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_삭제_3_http_response"><a class="link" href="#_삭제_3_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 204 No Content</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_개수_2"><a class="link" href="#_개수_2">개수</a></h3>
+<div class="sect3">
+<h4 id="_개수_2_http_request"><a class="link" href="#_개수_2_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /posts/count HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_개수_2_http_response"><a class="link" href="#_개수_2_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 24
 
+{
+  "countPosts" : 4
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_개수_2_response_fields"><a class="link" href="#_개수_2_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>countPosts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 총 개수</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1450,22 +2654,422 @@ Content-Type: application/json;charset=UTF-8
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_생성_4"><a class="link" href="#_생성_4">생성</a></h3>
+<div class="sect3">
+<h4 id="_생성_4_http_request"><a class="link" href="#_생성_4_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /posts/1/comments HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
+Content-Length: 157
 
+{
+  "postCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용",
+  "postId" : 1
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_생성_4_path_parameters"><a class="link" href="#_생성_4_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/{postId}/comments</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓸 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_생성_4_request_fields"><a class="link" href="#_생성_4_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 Id (Auto increase)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓸 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_생성_4_http_response"><a class="link" href="#_생성_4_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created
+Content-Type: application/hal+json;charset=UTF-8
+Location: http://localhost:8080/posts/1
+Content-Length: 458
+
+{
+  "postCommentId" : 1,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용",
+  "postCommentCreatedAt" : "2019-08-06T16:44:17.482",
+  "postId" : 1,
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/1"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/posts/1"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/posts/1"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_생성_4_response_fields"><a class="link" href="#_생성_4_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_수정_4"><a class="link" href="#_수정_4">수정</a></h3>
+<div class="sect3">
+<h4 id="_수정_4_http_request"><a class="link" href="#_수정_4_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /posts/2/comments/2 HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+Content-Length: 212
+accountEmail: test@email.com
 
+{
+  "postCommentId" : 2,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "내용 수정",
+  "postCommentCreatedAt" : "2019-08-06T16:44:17.528",
+  "postId" : 2
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_수정_4_path_parameters"><a class="link" href="#_수정_4_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/{postId}/comments/{postCommentId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정할 포스트 댓글 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_수정_4_request_fields"><a class="link" href="#_수정_4_request_fields">Request fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_수정_4_http_response"><a class="link" href="#_수정_4_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/hal+json;charset=UTF-8
+Content-Length: 381
+
+{
+  "postCommentId" : 2,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "내용 수정",
+  "postCommentCreatedAt" : "2019-08-06T16:44:17.528",
+  "postId" : 2,
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/2"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/posts/2"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_수정_4_response_fields"><a class="link" href="#_수정_4_response_fields">Response fields</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].rel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 HATEOAS 관계명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>links[0].href</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 HATEOAS URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포스트 댓글 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 Email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작성자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentContent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentCreatedAt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포스트 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_삭제_4"><a class="link" href="#_삭제_4">삭제</a></h3>
-
+<div class="sect3">
+<h4 id="_삭제_4_http_request"><a class="link" href="#_삭제_4_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /posts/3/comments/3 HTTP/1.1
+accountAuth: 2
+Host: localhost:8080
+accountEmail: test@email.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_삭제_4_path_parameters"><a class="link" href="#_삭제_4_path_parameters">Path parameters</a></h4>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /posts/{postId}/comments/{postCommentId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">댓글을 쓴 포스트 Id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postCommentId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">삭제할 포스트 댓글 Id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_삭제_4_http_response"><a class="link" href="#_삭제_4_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 204 No Content</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-08-06 02:52:09 KST
+Last updated 2019-08-06 05:08:59 KST
 </div>
 </div>
 </body>

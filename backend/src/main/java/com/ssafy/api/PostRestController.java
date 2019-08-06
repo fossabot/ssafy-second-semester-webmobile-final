@@ -64,7 +64,7 @@ public class PostRestController {
 	@Autowired
 	PostService postService;
 
-	@GetMapping(value = "/page/{pageNo}")
+	@GetMapping(value = "/pages/{pageNo}")
 	public ResponseEntity<PagedResources<PostResource>> findAllPosts(
 			@PathVariable final int pageNo,
 			PagedResourcesAssembler<Post> assembler) {

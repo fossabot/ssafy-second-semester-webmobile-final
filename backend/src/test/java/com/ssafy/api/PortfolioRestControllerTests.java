@@ -2,41 +2,33 @@ package com.ssafy.api;
 
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
-import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields;
+import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
 import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
 
 import com.ssafy.common.BaseControllerTests;
-import com.ssafy.respository.PortfolioRepository;
 import com.ssafy.vo.Portfolio;
 
 public class PortfolioRestControllerTests extends BaseControllerTests {
 	
-	@Autowired
-	PortfolioRepository portfolioRepository;
-	
 	@Before
 	public void setUp() {
-		portfolioRepository.deleteAll();
 	}
 	
 	@Test
 	public void createPortfolio() throws Exception {
 		//given
-		Portfolio testData = this.createTestPortfolio();
+		Portfolio testData = createTestPortfolio();
 		
 		//when & then
 		mockMvc.perform(post("/portfolios")
@@ -73,13 +65,13 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 							fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로")
 					)
 			))
-		;	
+		;
 	}
 	
 	@Test
 	public void updatePortfolio() throws Exception {
 		//given
-		Portfolio testData = this.createTestPortfolio();
+		Portfolio testData = createTestPortfolio();
 		testData = portfolioRepository.save(testData);
 		testData.setPortfolioTitle("update title");
 		testData.setPortfolioContent("update content");
@@ -127,44 +119,10 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 	}
 	
 	@Test
-	public void findPortfolioByPortfolioId() throws Exception {
-		//given
-		Portfolio testData = this.createTestPortfolio();
-		testData = portfolioRepository.save(testData);
-		
-		//when & then
-		mockMvc.perform(RestDocumentationRequestBuilders.get("/portfolios/{portfolioId}", testData.getPortfolioId()))
-				.andDo(print())
-				.andExpect(status().isOk())
-				.andDo(document(
-						"find-portfolio-by-portfolio-id",
-						pathParameters(
-								parameterWithName("portfolioId").description("요청할 포트폴리오 Id")
-						),
-						responseFields(
-								fieldWithPath("links[0].rel").description("포트폴리오 HATEOAS 관계명"),
-								fieldWithPath("links[0].href").description("포트폴리오 HATEOAS URI"),
-								fieldWithPath("portfolioId").description("포트폴리오 Id"),
-								fieldWithPath("accountEmail").description("작성자 Email"),
-								fieldWithPath("accountName").description("작성자 이름"),
-								fieldWithPath("portfolioTitle").description("제목"),
-								fieldWithPath("portfolioContent").description("내용"),
-								fieldWithPath("portfolioCreatedAt").description("생성 시간"),
-								fieldWithPath("portfolioGiturl").description("Git repository 주소"),
-								fieldWithPath("portfolioViews").description("조회수"),
-								fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로"),
-								fieldWithPath("portfolioComments").description("댓글 정보"),
-								fieldWithPath("portfolioImages").description("이미지 정보")
-						)
-				))
-		;
-	}
-	
-	@Test
 	public void findAllPortfolios() throws Exception {
 		//given
-		Portfolio testData = this.createTestPortfolio();
-		portfolioRepository.save(testData);
+		Portfolio testData = createTestPortfolio();
+		testData = portfolioRepository.save(testData);
 		
 		//when & then
 		mockMvc.perform(RestDocumentationRequestBuilders.get("/portfolios/pages/{pageNo}", 1L))
@@ -198,13 +156,46 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 						)
 				))
 		;
-				
+	}
+	
+	@Test
+	public void findPortfolioByPortfolioId() throws Exception {
+		//given
+		Portfolio testData = createTestPortfolio();
+		testData = portfolioRepository.save(testData);
+		
+		//when & then
+		mockMvc.perform(RestDocumentationRequestBuilders.get("/portfolios/{portfolioId}", testData.getPortfolioId()))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andDo(document(
+						"find-portfolio-by-portfolio-id",
+						pathParameters(
+								parameterWithName("portfolioId").description("요청할 포트폴리오 Id")
+						),
+						responseFields(
+								fieldWithPath("links[0].rel").description("포트폴리오 HATEOAS 관계명"),
+								fieldWithPath("links[0].href").description("포트폴리오 HATEOAS URI"),
+								fieldWithPath("portfolioId").description("포트폴리오 Id"),
+								fieldWithPath("accountEmail").description("작성자 Email"),
+								fieldWithPath("accountName").description("작성자 이름"),
+								fieldWithPath("portfolioTitle").description("제목"),
+								fieldWithPath("portfolioContent").description("내용"),
+								fieldWithPath("portfolioCreatedAt").description("생성 시간"),
+								fieldWithPath("portfolioGiturl").description("Git repository 주소"),
+								fieldWithPath("portfolioViews").description("조회수"),
+								fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로"),
+								fieldWithPath("portfolioComments").description("댓글 정보"),
+								fieldWithPath("portfolioImages").description("이미지 정보")
+						)
+				))
+		;
 	}
 	
 	@Test
 	public void deletePortfolio() throws Exception {
 		//given
-		Portfolio testData = this.createTestPortfolio();
+		Portfolio testData = createTestPortfolio();
 		testData = portfolioRepository.save(testData);
 		
 		//when & then
@@ -221,13 +212,12 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 						)
 				))
 		;
-		
 	}
 	
 	@Test
 	public void countPortfolios() throws Exception {
 		//given
-		Portfolio testData = this.createTestPortfolio();
+		Portfolio testData = createTestPortfolio();
 		portfolioRepository.save(testData);
 		
 		//when & then
@@ -237,21 +227,10 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 			.andDo(document(
 					"count-portfolios",
 					responseFields(
-							fieldWithPath("countPortfolios").description("count of portfolios")
+							fieldWithPath("countPortfolios").description("포트폴리오 총 개수")
 					)
 			))
 		;
 	}
 	
-	private Portfolio createTestPortfolio() {
-        return Portfolio.builder()
-                .accountEmail("test@email.com")
-                .accountName("test name")
-                .portfolioTitle("포트폴리오 제목")
-                .portfolioContent("포트폴리오 내용")
-                .portfolioGiturl("www.github.com/repository")
-                .portfolioThumbnailUrl("/image.png")
-        		.build();
-    }
-
 }
