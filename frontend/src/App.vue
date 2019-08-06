@@ -6,19 +6,12 @@
 </template>
 <script>
 import Header from '@/components/common/Header.vue'
+import firebase from 'firebase'
 export default{
   name : 'App',
   components : {
     Header
-  },
-  mounted() {
-    /* 사용자로부터 권한 여부를 물음 */
-    Notification.requestPermission()
-    .then(function(status) {
-        //status 를 어디에 저장하지 ? 쿠키? 디비?
-      console.log('Status ', status);
-      });
-    }
+  }
 }
 </script>
 <style>

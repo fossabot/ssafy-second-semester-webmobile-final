@@ -1,4 +1,5 @@
-import firebase from 'firebase/app'
+/*import firebase from 'firebase/app'
+import 'firebase/messaging'
 import 'firebase/firestore'
 import 'firebase/auth'
 
@@ -122,3 +123,4 @@ export default {
     })
   }
 }
+*/
