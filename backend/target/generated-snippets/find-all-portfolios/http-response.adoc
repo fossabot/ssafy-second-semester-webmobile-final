@@ -1,0 +1,36 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Length: 827
+Content-Type: application/hal+json;charset=UTF-8
+
+{
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/pages/1?page=0&size=6&sort=portfolioCreatedAt,desc"
+  } ],
+  "content" : [ {
+    "portfolioId" : 2,
+    "accountEmail" : "test@email.com",
+    "accountName" : "test name",
+    "portfolioTitle" : "포트폴리오 제목",
+    "portfolioContent" : "포트폴리오 내용",
+    "portfolioCreatedAt" : "2019-08-06T14:27:14.182",
+    "portfolioGiturl" : "www.github.com/repository",
+    "portfolioViews" : 0,
+    "portfolioThumbnailUrl" : "/image.png",
+    "portfolioComments" : [ ],
+    "portfolioImages" : [ ],
+    "links" : [ {
+      "rel" : "self",
+      "href" : "http://localhost:8080/portfolios/2"
+    } ]
+  } ],
+  "page" : {
+    "size" : 6,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}
+----

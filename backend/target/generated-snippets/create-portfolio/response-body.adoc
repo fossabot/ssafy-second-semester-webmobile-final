@@ -1,0 +1,24 @@
+[source,options="nowrap"]
+----
+{
+  "portfolioId" : 4,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioTitle" : "포트폴리오 제목",
+  "portfolioContent" : "포트폴리오 내용",
+  "portfolioCreatedAt" : "2019-08-06T14:27:14.269",
+  "portfolioGiturl" : "www.github.com/repository",
+  "portfolioViews" : 0,
+  "portfolioThumbnailUrl" : "/image.png",
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/4"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/portfolios/4"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/4"
+  } ]
+}
+----

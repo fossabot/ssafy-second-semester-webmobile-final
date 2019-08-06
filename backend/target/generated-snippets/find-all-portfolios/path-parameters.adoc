@@ -3,6 +3,6 @@
 |Parameter|Description
 
 |`+pageNo+`
-|Page Number of portfolio list
+|요청할 페이지 숫자
 
 |===

@@ -1,0 +1,18 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/portfolios/1' -i -X PUT \
+    -H 'accountAuth: 2' \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'accountEmail: test@email.com' \
+    -d '{
+  "portfolioId" : 1,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioTitle" : "update title",
+  "portfolioContent" : "update content",
+  "portfolioCreatedAt" : "2019-08-06T14:27:13.896",
+  "portfolioGiturl" : "www.github.com/repository",
+  "portfolioViews" : 0,
+  "portfolioThumbnailUrl" : "/image.png"
+}'
+----
