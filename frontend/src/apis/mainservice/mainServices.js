@@ -4,8 +4,8 @@ import store from '../../store/store.js'
 // TODO : 예외 처리 달지 않은 상태  
 
 let loginUser = store.state.account 
-const portfolioUrl = "http://70.12.246.106:9090/api/bears/portfolios"  
-
+const portfolioUrl = 'https://70.12.246.106:9090/api/bears/portfolios' 
+const postUrl = 'https://70.12.246.106:9090/api/bears/posts' 
 
 export default {
   // 이 함수는 근데 이미 account.js에 변수화 되어 있어서 vue 특성상 변수화 된 애를 쓰는게 편함 버리는 함수
