@@ -2,6 +2,7 @@
   <div class ="container">
     <div class="jumbotron bg-white">
       <h1 class="display-4">{{ portfolio.portfolioTitle }}</h1>
+      <i class="far fa-eye"></i> {{ portfolio.portfolioViews}}
       <p class="lead">by {{ portfolio.accountName }} at {{ portfolio.portfolioCreatedAt }} </p>
       <hr class="my-4">  
       <div v-html="compiledMarkdown" ></div>       
