@@ -6,6 +6,8 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
@@ -62,7 +64,7 @@ public class PostCommentRestController {
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final long postId,
-			@RequestBody final PostComment postComment) throws Exception {
+			@Valid @RequestBody final PostComment postComment) throws Exception {
 		
 		postComment.setPostCommentId(0);
 		
@@ -93,7 +95,7 @@ public class PostCommentRestController {
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final long postCommentId,
-			@RequestBody final PostComment postComment) throws Exception {
+			@Valid @RequestBody final PostComment postComment) throws Exception {
 
 		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!postComment.getAccountEmail().equals(accountEmail)) {
@@ -111,8 +113,9 @@ public class PostCommentRestController {
 			throw new DataNotFoundException(postCommentId);
 		}
 		
+		Post post = postCommentOpt.get().getPost();
 		PostComment updatedPostComment = postCommentService
-				.savePostComment(postComment.getPost().getPostId(),postComment);
+				.savePostComment(post.getPostId(),postComment);
 		if (updatedPostComment == null) {
 			throw new DataCreateException(postComment); 
 		}
@@ -134,11 +137,11 @@ public class PostCommentRestController {
 
 		Optional<PostComment> postCommentOpt = postCommentService.findPostCommentByPostCommentId(postCommentId);
 		if(!postCommentOpt.get().getAccountEmail().equals(accountEmail)) {
-			throw new DataNotFoundException(postCommentId);
+			throw new NoAuthenticationException(accountEmail);
 		}
 		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if(!postCommentOpt.isPresent()) {
-				throw new NoAuthenticationException(accountEmail);
+				throw new DataNotFoundException(postCommentId);
 			}
 		}
 		

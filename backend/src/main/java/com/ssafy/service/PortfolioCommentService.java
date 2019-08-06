@@ -6,7 +6,7 @@ import com.ssafy.vo.PortfolioComment;
 
 public interface PortfolioCommentService {
 	public Optional<PortfolioComment> findPortfolioCommentByPortfolioCommentId(final long portfolioCommentId);
-	public PortfolioComment savePortfolioComment(final PortfolioComment portfolioComment);
+	public PortfolioComment savePortfolioComment(long portfolioId, PortfolioComment portfolioComment);
 	public void deletePortfolioCommentByPortfolioCommentId(final long portfolioCommentId); 
 	public long countPortfolioComments();
 }

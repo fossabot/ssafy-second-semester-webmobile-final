@@ -10,5 +10,8 @@ import com.ssafy.common.RoleType;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Auth {
+	
 	RoleType minimum() default RoleType.VISITOR;
+
 }
+

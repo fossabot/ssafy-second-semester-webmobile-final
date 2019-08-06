@@ -6,6 +6,8 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
@@ -29,10 +31,11 @@ import com.ssafy.exception.DataNotFoundException;
 import com.ssafy.exception.NoAuthenticationException;
 import com.ssafy.exception.ParameterException;
 import com.ssafy.service.PortfolioCommentService;
+import com.ssafy.vo.Portfolio;
 import com.ssafy.vo.PortfolioComment;
 import com.ssafy.vo.resource.PortfolioCommentResource;
 
-@CrossOrigin()
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/portfolios", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
 public class PortfolioCommentRestController {
@@ -61,7 +64,8 @@ public class PortfolioCommentRestController {
 	public ResponseEntity<PortfolioCommentResource> createPortfolioComment(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@RequestBody final PortfolioComment portfolioComment) throws Exception {
+			@PathVariable final long portfolioId,
+			@Valid @RequestBody final PortfolioComment portfolioComment) throws Exception {
 
 		portfolioComment.setPortfolioCommentId(0);
 		
@@ -71,7 +75,7 @@ public class PortfolioCommentRestController {
 			}
 		}
 
-		PortfolioComment createdPortfolioComment = portfolioCommentService.savePortfolioComment(portfolioComment);
+		PortfolioComment createdPortfolioComment = portfolioCommentService.savePortfolioComment(portfolioId,portfolioComment);
 		if (createdPortfolioComment == null) {
 			throw new DataCreateException(portfolioComment);
 		}
@@ -92,7 +96,7 @@ public class PortfolioCommentRestController {
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final long portfolioCommentId,
-			@RequestBody final PortfolioComment portfolioComment) throws Exception {
+			@Valid @RequestBody final PortfolioComment portfolioComment) throws Exception {
 
 		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!portfolioComment.getAccountEmail().equals(accountEmail)) {
@@ -110,7 +114,9 @@ public class PortfolioCommentRestController {
 			throw new DataNotFoundException(portfolioCommentId);
 		}
 
-		PortfolioComment updatedPortfolioComment = portfolioCommentService.savePortfolioComment(portfolioComment);
+		Portfolio portfolio = portfolioCommentOpt.get().getPortfolio();
+		PortfolioComment updatedPortfolioComment = portfolioCommentService
+				.savePortfolioComment(portfolio.getPortfolioId(),portfolioComment);
 		if (updatedPortfolioComment == null) {
 			throw new DataCreateException(portfolioComment); 
 		}

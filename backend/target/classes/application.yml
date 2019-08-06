@@ -6,7 +6,7 @@ database: mysql
 
 spring:
   
-  banner:
+  banner: 
     location: classpath:/banner.txt
       
   ## MULTIPART (MultipartProperties)
@@ -19,8 +19,12 @@ spring:
       max-file-size: 200MB
       max-request-size: 215MB
       
+  resources: 
+    add-mappings: false
   mvc: 
     dispatch-options-request: true
+    throw-exception-if-no-handler-found: true
+    
  
   # MySQL 서버 데이터베이스 지정
   datasource: 
@@ -31,6 +35,9 @@ spring:
     #password: ssafy
     initialization-mode: always
   
+  jackson:
+    default-property-inclusion: NON_NULL
+   
   # JPA
   jpa: 
     hibernate:

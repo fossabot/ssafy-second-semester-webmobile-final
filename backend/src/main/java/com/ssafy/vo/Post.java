@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -20,7 +19,7 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,13 +31,9 @@ import lombok.ToString;
 @Builder
 @Entity
 @Table(name = "posts")
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
-@DynamicInsert
-@DynamicUpdate
+@NoArgsConstructor @AllArgsConstructor
+@DynamicInsert @DynamicUpdate
+@Getter @Setter @ToString(exclude = "postComments")
 public class Post {
 
 	@Id
@@ -75,17 +70,13 @@ public class Post {
 
 	@OneToMany(
 			mappedBy = "post",
-			cascade = CascadeType.ALL,
+			cascade = {CascadeType.MERGE, CascadeType.REMOVE},
 			orphanRemoval = true
 			)
-	@JsonIgnore
-	private List<PostComment> postComments;
+	@JsonManagedReference
+	private List<PostComment> postComments = new ArrayList<PostComment>();
 
-	public void addPostComments(PostComment postComment) {
-		if (postComments == null) {
-			postComments = new ArrayList<>();
-		}
-
+	public void addPostComment(PostComment postComment) {
 		postComments.add(postComment);
 		postComment.setPost(this);
 	}
@@ -95,4 +86,8 @@ public class Post {
 		postComment.setPost(null);
 	}
 
+	public void setPostComments(List<PostComment> newPostComments) {
+		this.postComments.clear();
+		this.postComments.addAll(newPostComments);
+	}
 }

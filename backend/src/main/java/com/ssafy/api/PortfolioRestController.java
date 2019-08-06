@@ -104,7 +104,7 @@ public class PortfolioRestController {
 	public ResponseEntity<PortfolioResource> createPortfolio(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@RequestBody final Portfolio portfolio) throws Exception {
+			@Valid @RequestBody final Portfolio portfolio) throws Exception {
 		
 		portfolio.setPortfolioId(0);
 		
@@ -135,7 +135,7 @@ public class PortfolioRestController {
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final long portfolioId,
-			@RequestBody final Portfolio portfolio) throws Exception {
+			@Valid @RequestBody final Portfolio portfolio) throws Exception {
 		
 		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) { // 관리자가 아니라면,
 			if (!portfolio.getAccountEmail().equals(accountEmail)) {

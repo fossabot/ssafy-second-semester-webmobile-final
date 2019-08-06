@@ -15,7 +15,11 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.LazyToOne;
+import org.hibernate.annotations.LazyToOneOption;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,7 +33,7 @@ import lombok.ToString;
 @Table(name = "post_comments")
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
-@Getter @Setter @ToString
+@Getter @Setter @ToString(exclude = "post")
 public class PostComment {
 
 	@Id
@@ -53,8 +57,10 @@ public class PostComment {
 	@Column(name = "post_comment_created_at")
 	private LocalDateTime postCommentCreatedAt;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@JsonBackReference
 	@JoinColumn(name="post_id")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@LazyToOne(value = LazyToOneOption.NO_PROXY)
 	private Post post;
 	
 }

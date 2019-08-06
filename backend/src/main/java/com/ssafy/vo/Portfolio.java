@@ -1,6 +1,7 @@
 package com.ssafy.vo;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -9,16 +10,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,7 +33,7 @@ import lombok.ToString;
 @Table(name = "portfolios")
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
-@Getter @Setter @ToString
+@Getter @Setter @ToString(exclude = "portfolioComments")
 public class Portfolio {
 
 	@Id
@@ -70,12 +71,26 @@ public class Portfolio {
 	@Column(name = "portfolio_thumbnail_url")
 	private String portfolioThumbnailUrl;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "portfolio_id")
-	List<PortfolioComment> portfolioComments;
+	@OneToMany(
+			mappedBy = "portfolio",
+			cascade = {CascadeType.MERGE, CascadeType.REMOVE},
+			orphanRemoval = true
+			)
+	@JsonManagedReference
+	private List<PortfolioComment> portfolioComments = new ArrayList<PortfolioComment>();
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "portfolio_id")
-	List<PortfolioImage> portfolioImages;
-	
+	public void addPortfolioComment(PortfolioComment portfolioComment) {
+		portfolioComments.add(portfolioComment);
+		portfolioComment.setPortfolio(this);
+	}
+
+	public void removePortfolioComment(PortfolioComment portfolioComment) {
+		portfolioComments.remove(portfolioComment);
+		portfolioComment.setPortfolio(null);
+	}
+
+	public void setPortfolioComments(List<PortfolioComment> newPortfolioComments) {
+		this.portfolioComments.clear();
+		this.portfolioComments.addAll(newPortfolioComments);
+	}
 }

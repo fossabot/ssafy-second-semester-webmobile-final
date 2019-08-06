@@ -40,10 +40,10 @@ public class PostServiceImpl implements PostService {
 		postRespository.deleteById(postId);
 		return;
 	}
-	
+
 	@Override
 	public long countPosts() {
 		return postRespository.count();
 	}
-	
+
 }

@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -99,7 +101,7 @@ public class PostRestController {
 	public ResponseEntity<PostResource> createPost(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@RequestBody final Post post) throws Exception {
+			@Valid @RequestBody final Post post) throws Exception {
 		
 		post.setPostId(0);
 		
@@ -118,6 +120,8 @@ public class PostRestController {
         URI createdUri = selfLinkBuilder.toUri();
 		
 		PostResource postResource = new PostResource(createdPost);
+		postResource.add(selfLinkBuilder.withRel("update"));
+		postResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.created(createdUri).body(postResource);
 	}
 
@@ -127,8 +131,9 @@ public class PostRestController {
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
 			@PathVariable final long postId,
-			@RequestBody final Post post) throws Exception {
+			@Valid @RequestBody final Post post) throws Exception {
 
+		
 		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) { 
 			if (!post.getAccountEmail().equals(accountEmail)) {
 				throw new NoAuthenticationException(accountEmail); 
@@ -149,7 +154,11 @@ public class PostRestController {
 			throw new DataCreateException(post); 
 		}
 		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PostRestController.class)
+				.slash(post.getPostId());
+		
 		PostResource postResource = new PostResource(updatedPost);
+		postResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.ok(postResource);
 	}
 
