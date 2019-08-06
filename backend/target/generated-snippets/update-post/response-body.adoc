@@ -6,11 +6,15 @@
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-06T16:44:17.806",
+  "postCreatedAt" : "2019-08-06T17:27:38.99",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png",
+  "postComments" : [ ],
   "links" : [ {
     "rel" : "self",
+    "href" : "http://localhost:8080/posts/5"
+  }, {
+    "rel" : "delete",
     "href" : "http://localhost:8080/posts/5"
   } ]
 }

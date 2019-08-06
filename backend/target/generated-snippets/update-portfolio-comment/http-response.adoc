@@ -2,15 +2,14 @@
 ----
 HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 411
+Content-Length: 389
 
 {
   "portfolioCommentId" : 2,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "내용 수정",
-  "portfolioCommentCreatedAt" : "2019-08-06T16:44:17.208",
-  "portfolioId" : 2,
+  "portfolioCommentCreatedAt" : "2019-08-06T17:27:38.091",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/portfolios/2"

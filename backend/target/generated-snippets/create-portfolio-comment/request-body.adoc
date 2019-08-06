@@ -4,7 +4,6 @@
   "portfolioCommentId" : 0,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
-  "portfolioCommentContent" : "댓글 내용",
-  "portfolioId" : 1
+  "portfolioCommentContent" : "댓글 내용"
 }
 ----

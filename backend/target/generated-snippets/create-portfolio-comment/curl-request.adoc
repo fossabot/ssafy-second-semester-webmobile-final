@@ -8,7 +8,6 @@ $ curl 'http://localhost:8080/portfolios/3/comments' -i -X POST \
   "portfolioCommentId" : 0,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
-  "portfolioCommentContent" : "댓글 내용",
-  "portfolioId" : 1
+  "portfolioCommentContent" : "댓글 내용"
 }'
 ----

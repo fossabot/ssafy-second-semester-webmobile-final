@@ -77,7 +77,7 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 		Portfolio testPortfolio = createTestPortfolio();
 		testPortfolio = portfolioRepository.save(testPortfolio);
 		PortfolioComment testData = createTestPortfolioComment();
-		testData.setPortfolioId(testPortfolio.getPortfolioId());
+		testData.setPortfolio(testPortfolio);
 		testData.setPortfolioCommentContent("내용 수정");
 		testData = portfolioCommentRepository.save(testData);
 		
@@ -150,7 +150,6 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
                 .accountEmail("test@email.com")
                 .accountName("test name")
                 .portfolioCommentContent("댓글 내용")
-                .portfolioId(1)
         		.build();
     }
 	

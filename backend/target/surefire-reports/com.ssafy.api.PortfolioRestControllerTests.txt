@@ -1,30 +1,49 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PortfolioRestControllerTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.416 s <<< FAILURE! - in com.ssafy.api.PortfolioRestControllerTests
-findAllPortfolios(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.181 s  <<< ERROR!
+Tests run: 6, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.469 s <<< FAILURE! - in com.ssafy.api.PortfolioRestControllerTests
+updatePortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.135 s  <<< ERROR!
+org.springframework.restdocs.snippet.SnippetException: 
+The following parts of the payload were not documented:
+{
+  "portfolioComments" : [ ]
+}
+	at com.ssafy.api.PortfolioRestControllerTests.updatePortfolio(PortfolioRestControllerTests.java:88)
+
+findAllPortfolios(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.195 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
 The following parts of the payload were not documented:
 {
   "content" : [ {
     "portfolioComments" : [ {
-      "portfolioCommentId" : 2,
-      "accountEmail" : "test@email.com",
-      "accountName" : "test name",
-      "portfolioCommentContent" : "내용 수정",
-      "portfolioCommentCreatedAt" : "2019-08-06T16:43:10.728",
-      "portfolioId" : 2
-    } ]
-  }, {
-    "portfolioComments" : [ {
       "portfolioCommentId" : 3,
       "accountEmail" : "test@email.com",
       "accountName" : "test name",
       "portfolioCommentContent" : "댓글 내용",
-      "portfolioCommentCreatedAt" : "2019-08-06T16:43:10.901",
-      "portfolioId" : 1
+      "portfolioCommentCreatedAt" : "2019-08-06T17:27:38.307"
+    } ]
+  }, {
+    "portfolioComments" : [ {
+      "portfolioCommentId" : 2,
+      "accountEmail" : "test@email.com",
+      "accountName" : "test name",
+      "portfolioCommentContent" : "내용 수정",
+      "portfolioCommentCreatedAt" : "2019-08-06T17:27:38.091"
     } ]
   } ]
 }
+Fields with the following paths were not found in the payload: [content[0].portfolioImages]
 	at com.ssafy.api.PortfolioRestControllerTests.findAllPortfolios(PortfolioRestControllerTests.java:131)
+
+findPortfolioByPortfolioId(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.027 s  <<< ERROR!
+org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [portfolioImages]
+	at com.ssafy.api.PortfolioRestControllerTests.findPortfolioByPortfolioId(PortfolioRestControllerTests.java:171)
+
+createPortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.034 s  <<< ERROR!
+org.springframework.restdocs.snippet.SnippetException: 
+The following parts of the payload were not documented:
+{
+  "portfolioComments" : [ ]
+}
+	at com.ssafy.api.PortfolioRestControllerTests.createPortfolio(PortfolioRestControllerTests.java:42)
 

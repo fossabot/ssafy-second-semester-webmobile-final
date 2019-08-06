@@ -77,7 +77,7 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 		Post testPost = createTestPost();
 		testPost = postRepository.save(testPost);
 		PostComment testData = createTestPostComment();
-		testData.setPostId(testPost.getPostId());
+		testData.setPost(testPost);
 		testData.setPostCommentContent("내용 수정");
 		testData = postCommentRepository.save(testData);
 		
@@ -150,7 +150,6 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
                 .accountEmail("test@email.com")
                 .accountName("test name")
                 .postCommentContent("댓글 내용")
-                .postId(1)
         		.build();
     }
 	
