@@ -20,7 +20,8 @@ var server = app.listen(3000, function(){
 
 app.get('/send', function(req, res){
 	// This registration token comes from the client FCM SDKs.
-	var registrationToken = 'ex1MUpNqD-Q:APA91bH88b0Um46BATs2iFdMCPdQ8rhDztc9ARs_1xN1V_j3LE5VElqPgrCLrIq8hoT4yWKnQijXVUkyDIAkost1dtX3lMeHcyiFwwZpYOHXbYHo1OV_n-wvaj394nuCRcpxc6UstiyS';
+	/*sessionStorage*/
+	var registrationToken = 'ctRVRrRiWIc:APA91bF-U6cLJowm4luaSOuCiBLBNorR1FaA5VdRKzb3hFNqqzrrFEIkwZBwoZAPomB9Lox9YJ3kX-kVah4RkugDhYci2naxuSBE6bJmPZSS59Vgj09PNawjjF5g3Nu8Hkpn-zvmabik';
 	/*var registrationToken = req.body.token;*/
 
 	var message = {
