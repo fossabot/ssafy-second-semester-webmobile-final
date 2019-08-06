@@ -259,4 +259,36 @@ export default {
                 })
   },
   
+  // 기타
+  parsePortfolio(portfolioContent) {
+    let contents_start = []
+    let contents_end = []
+    let contents = []
+    let images_start = []
+    let images_end = []
+    let images = []
+    
+    let i = 0
+    while (i<portfolioContent.length) {
+      if (portfolioContent.slice(i,i+5) === "![img") {
+        contents_end.push(i)
+        images_start.push(i+7)  
+        i += 5
+        while (portfolioContent[i] != ')') {
+          i++
+        }
+        images_end.push(i)
+        contents_start.push(i+1)
+      }
+      i++
+    }
+    contents_end.push(portfolioContent.length -1)
+  
+    for (var j=0;j<contents_start.length;j++) {
+      contents.push(portfolioContent.slice(contents_start[j],contents_end[j+1]))
+      images.push(portfolioContent.slice([images_start[j]],images_end[j]))
+    }
+    return {contents,images}
+  } 
+  
 }

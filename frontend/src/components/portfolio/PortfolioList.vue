@@ -50,10 +50,10 @@ export default {
   display: inline-block;
   margin-right: 10px;
 }
-.portfoliolist-enter-active, .portfoliolist-leave-active {
+.portfoliolist-enter-active {
   transition: all 1s;
 }
-.portfoliolist-enter, .portfoliolist-leave-to /* .list-leave-active below version 2.1.8 */ {
+.portfoliolist-enter  {
   opacity: 0;
   transform: translateY(30px);
 }

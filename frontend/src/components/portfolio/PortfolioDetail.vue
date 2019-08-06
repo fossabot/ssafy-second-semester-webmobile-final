@@ -16,7 +16,7 @@ export default {
   name: 'PortfolioDetail',
   computed: {
     ...mapState('portfolio',['portfolio']),
-    compiledMarkdown() {
+    compiledMarkdown() {      
       return marked(this.portfolio.portfolioContent, { sanitize: true })
     },
   },
