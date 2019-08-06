@@ -1,16 +1,28 @@
 <template>
   <div id="app">
+    <template v-if= "accountAuth!=4">
     <Header></Header>
     <router-view/>
+    </template>
+    <template v-else>
+      <Game />
+    </template>
   </div>
 </template>
 <script>
 import Header from '@/components/common/Header.vue'
+import Game from '@/components/ee/Game.vue'
+import { mapState, mapActions,mapMutations } from 'vuex'
 export default{
   name : 'App',
   components : {
+    Game,
     Header
   },
+  computed:{
+    ...mapState('account',['accountEmail','accountName','accountAuth'])
+  }
+  ,
   mounted() {
     /* 사용자로부터 권한 여부를 물음 */
     Notification.requestPermission()
