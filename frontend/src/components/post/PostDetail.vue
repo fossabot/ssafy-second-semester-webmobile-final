@@ -1,7 +1,8 @@
 <template>
   <div class ="container">
     <div class="jumbotron bg-white">
-      <h1 class="display-4">{{ post.postTitle }}</h1>
+      <h1 class="display-4">{{ post.postTitle }}</h1> 
+      <i class="far fa-eye"></i> {{ post.postViews}}
       <p class="lead">by {{ post.accountName }} at {{ post.postCreatedAt }} </p>
       <hr class="my-4">
       <div class="row justify-content-around">
