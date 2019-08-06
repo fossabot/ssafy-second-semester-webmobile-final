@@ -55,6 +55,7 @@ export default {
   loadPortfolios(pageNo) { // 6개씩
     return axios.get(`${portfolioUrl}/pages/${pageNo}`)
                 .then((res) => {
+                  this.setCookie("portfolios",res.data.content,1)
                   return res.data.content
                 })
   },
@@ -161,7 +162,8 @@ export default {
   
   getPosts() {
     return axios.get(postUrl)
-                .then((res) => {                  
+                .then((res) => {           
+                  this.setCookie("posts",res.data.content,1)       
                   return res.data.content 
               })
   },
@@ -289,6 +291,11 @@ export default {
       images.push(portfolioContent.slice([images_start[j]],images_end[j]))
     }
     return {contents,images}
-  } 
+  },
   
+  setCookie(name, value, exp) {
+    var date = new Date()
+    date.setTime(date.getTime() + exp*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+  }
 }
