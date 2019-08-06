@@ -6,16 +6,36 @@
       <input v-model="newPortfolio.portfolioTitle" type="text" class="form-control" id="title" 
             :placeholder="newPortfolio.portfolioTitle ? newPortfolio.portfolioTitle : 'Enter Title'"> 
     </div>
-    <!-- Image Upload compo -->
-    <div class="form-group">
-      <label for="image">Image</label>
-      <Imgur id="image" 
-              :imageUrl="(newPortfolio.portfolioThumbnailUrl) ? newPortfolio.portfolioThumbnailUrl : 'http://dy.gnch.or.kr/img/no-image.jpg' "
-              @uploadImageUrl="uploadPortfolioThumbnailUrl"></Imgur>
+    <!-- Image Upload compo -->    
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Images</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <Imgur id="image" 
+                      :imageUrl="(newPortfolio.portfolioThumbnailUrl) ? newPortfolio.portfolioThumbnailUrl : 'http://dy.gnch.or.kr/img/no-image.jpg' "
+                      @uploadImageUrl="uploadPortfolioThumbnailUrl"></Imgur>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button @click="insertImage" data-dismiss="modal" type="button" class="btn btn-primary">Upload</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Content Markdown compo -->
     <div class="form-group">
       <label for="content">Content</label>
+      <button type="button" class="mx-3 btn btn-outline-info border-0" data-toggle="modal" data-target="#exampleModalCenter">
+        Upload Image
+      </button>
       <textarea id="content" :value="newPortfolio.portfolioContent" @input="portfolioContentUpdate" class="form-control" style="height: 20vw;" ></textarea>
       <label for="preview">Preview</label>
       <div id="preview" v-html="compiledMarkdown" ></div>
@@ -33,44 +53,31 @@
 </template>
 
 <script>
-import {mapState,mapActions} from 'vuex'
 import mainServices from '../../apis/mainservice/mainServices'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
 
 export default {
-  name: 'PortfolioEditComp',
+  name: 'PortfolioEdit',
   components: {
     Imgur,
     Title,
-  },
-  data() {
-    return {
-      // newPortfolio: {}
-    }
   },
   computed: {
     newPortfolio: {
       get: function () {
         return this.$store.state.portfolio.portfolio;
       },
-      // setter
       set: function (newValue) {
       }
-    },
-
-    ...mapState('portfolio',['portfolio']),
+    },    
     compiledMarkdown: function () {
       return marked(this.newPortfolio.portfolioContent, { sanitize: true })
     }
   },
-  async created() {
-    await this.getPortfolio(this.$route.params.portfolioId)
-    // this.newPortfolio = this.portfolio // 복사 
-    console.log("Edit")        
-  },
+
   methods: {
-    ...mapActions('portfolio',['getPortfolio']),
+    
     portfolioContentUpdate: _.debounce(function (e) {
       this.newPortfolio.portfolioContent = e.target.value
     }, 300),
@@ -87,6 +94,10 @@ export default {
         await mainServices.putPortfolio(this.newPortfolio)
         this.$router.push({ name: 'PortfolioListPage'})
       }
+    },
+
+    insertImage() {
+      this.newPortfolio.portfolioContent = this.newPortfolio.portfolioContent + `![img](${this.newPortfolio.portfolioThumbnailUrl})` 
     }
   }
 }

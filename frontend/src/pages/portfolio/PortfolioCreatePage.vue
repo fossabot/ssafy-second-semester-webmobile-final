@@ -1,17 +1,17 @@
 <template>
   <div class="container mt-5 pt-5">
-    <PortfolioEditComp></PortfolioEditComp>
+    <PortfolioEdit></PortfolioEdit>
   </div>
 </template>
 
 <script>
 import {mapMutations} from 'vuex'
-import PortfolioEditComp from '../../components/portfolio/PortfolioEditComp'
+import PortfolioEdit from '../../components/portfolio/PortfolioEdit'
 
 export default {
   name: 'PortfolioCreatePage',
   components: {
-    PortfolioEditComp,
+    PortfolioEdit,
   },
   methods: {
     ...mapMutations('portfolio',['setNewPortfolio'])
