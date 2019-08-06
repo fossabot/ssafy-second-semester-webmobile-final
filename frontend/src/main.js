@@ -17,22 +17,9 @@ new Vue({
   store,
   render: h => h(App),
   created(){
-  	// 온라인 상태일땐, 웹브라우져로 푸시 메세지를 받을 수 있음
-		var firebaseConfig = {
-			apiKey: "AIzaSyBUl8_AGThzw07WWeWQHnHlH509Rdev2j8",
-		    authDomain: "icebear-3649e.firebaseapp.com",
-		    databaseURL: "https://icebear-3649e.firebaseio.com",
-		    projectId: "icebear-3649e",
-		    storageBucket: "icebear-3649e.appspot.com",
-		    messagingSenderId: "587823756968",
-		    appId: "1:587823756968:web:f77edfc46b26c329"
-		}
-
-		firebase.initializeApp(firebaseConfig);
-
 		const messaging = firebase.messaging();
 
-		messaging.usePublicVapidKey("BLvhScc_Oi6mtvrxUhV4xUDWJwvCNZzuzoLMUPt0_wo3o_pnPc1t1ANeKJq38CljwU-ghUJanm21WRB1RAP9L1Q");
+		messaging.usePublicVapidKey("BDhO-XBNdHNDOrb2HRPcpGWZT2BUubsKqwckfoqbWyABdj2osj5_5DHxS1tiyFQ0lUVzKomeuwdxPMm3agLJZJ0");
 
 		Notification.requestPermission()
 		.then((permission) => {

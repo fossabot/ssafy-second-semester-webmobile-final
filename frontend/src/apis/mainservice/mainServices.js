@@ -51,6 +51,15 @@ export default {
               })
   },
 
+  loadPortfolios(pageNo) { // 6개씩
+    return axios.get(`${portfolioUrl}/pages/${pageNo}`)
+                .then((res) => {
+                  this.setCookie("portfolios",res.data.content,1)
+                  return res.data.content
+                })
+  },
+
+
   getPortfolio(portfolioId) {
     return axios.get(`${portfolioUrl}/${portfolioId}`)
                 .then((res) => {                

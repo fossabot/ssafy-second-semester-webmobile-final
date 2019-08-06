@@ -8,11 +8,11 @@ const express = require('express');
 const {google} = require('googleapis');
 const admin = require('firebase-admin');
 const app = express();
-const serviceAccount = require('../icebear-3649e-firebase-adminsdk-ksrm4-c7a437eb8d.json');
+const serviceAccount = require('../ssafy-barebears-firebase-adminsdk-toal3-509eeb50b7.json');
 admin.initializeApp({
-	credential: admin.credential.cert(serviceAccount),
-  	databaseURL: "https://icebear-3649e.firebaseio.com"
-})
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://ssafy-barebears.firebaseio.com"
+});
 
 var server = app.listen(3000, function(){
     console.log("Express server has started on port 3000")
@@ -21,7 +21,7 @@ var server = app.listen(3000, function(){
 app.get('/send', function(req, res){
 	// This registration token comes from the client FCM SDKs.
 	/*sessionStorage*/
-	var registrationToken = 'ctRVRrRiWIc:APA91bF-U6cLJowm4luaSOuCiBLBNorR1FaA5VdRKzb3hFNqqzrrFEIkwZBwoZAPomB9Lox9YJ3kX-kVah4RkugDhYci2naxuSBE6bJmPZSS59Vgj09PNawjjF5g3Nu8Hkpn-zvmabik';
+	var registrationToken = 'fGUBT47H2No:APA91bHuwoiZEiKq2SJKN4gyKMb-FsrVJzeZtUIUEHFFaKOxeny8q28TRoGCe-UuXI0uoCTv-puBQsP6fysPbvsatDl47BvmVpcFErG8WKbs0R1oy6EclpNHZN2LGd-DVXIlv1SDgsmy';
 	/*var registrationToken = req.body.token;*/
 
 	var message = {

@@ -7,15 +7,15 @@ importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
 
 // Retrieve an instance of Firebase Messaging so that it can handle background
-var firebaseConfig = { // 테스트계정, 나중에 바꿀거임.
-		apiKey: "AIzaSyBUl8_AGThzw07WWeWQHnHlH509Rdev2j8",
-	    authDomain: "icebear-3649e.firebaseapp.com",
-	    databaseURL: "https://icebear-3649e.firebaseio.com",
-	    projectId: "icebear-3649e",
-	    storageBucket: "icebear-3649e.appspot.com",
-	    messagingSenderId: "587823756968",
-	    appId: "1:587823756968:web:f77edfc46b26c329"
-	}
+var firebaseConfig = {
+	apiKey: "AIzaSyDb1Lugdea1Bol0aNkYETqB4W-OKw8CCNI",
+  authDomain: "ssafy-barebears.firebaseapp.com",
+  databaseURL: "https://ssafy-barebears.firebaseio.com",
+  projectId: "ssafy-barebears",
+  storageBucket: "",
+  messagingSenderId: "380624918537",
+  appId: "1:380624918537:web:6d65b693b9cd1fa4"
+}
 
 	firebase.initializeApp(firebaseConfig);
 
