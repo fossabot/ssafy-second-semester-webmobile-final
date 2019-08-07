@@ -86,7 +86,11 @@ export default new Router({
     {
       path : '/admin/main',
       name : 'BackOfficeMainPage',
-      component : BackOfficeMainPage
+      component : BackOfficeMainPage,
+      beforeEnter(to,from,next) {
+        console.log(this.$store.state.account.accountAuth)
+        next()
+      }
     },
   ]
 })

@@ -20,34 +20,6 @@ firebase.firestore().settings({
   cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED
 });
 
-firebase.firestore().enablePersistence()
-  .catch(function(err) {
-    if (err.code == 'failed-precondition') {
-      // Multiple tabs open, persistence can only be enabled
-      // in one tab at a a time.
-      // ...
-    } else if (err.code == 'unimplemented') {
-      // The current browser does not support all of the
-      // features required to enable persistence
-      // ...
-    }
-  });
-
-firebase.firestore().disableNetwork()
-  .then(function() {
-    // Do offline actions
-    // ...
-    console.log("offline test");    
-  });
-
-firebase.firestore().enableNetwork()
-  .then(function() {
-    // Do online actions
-    // ...
-    console.log("online test");
-  });
-
-
 export default {
   getAccounts(){
     const accounts = firebase.firestore(app).collection("accounts")
@@ -120,6 +92,19 @@ export default {
       gitlab_email : gitlabemail,
       name : name,
       password : password
+    })
+  },
+
+  //권한 수정
+  updateAuth(token,auth){
+    const accounts = firebase.firestore(app).collection("accounts")
+    return  accounts.doc(token).update({
+      auth : auth
+    }).then(function(){
+      console.log("success")
+    }).catch(function(){
+      console.log("error");
+      
     })
   }
 }

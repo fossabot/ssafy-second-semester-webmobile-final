@@ -79,7 +79,7 @@ export default {
       this.setInit()
       this.$router.push("/")
     },
-    check() {
+    async check() {
       if(escape(this.account.account_password).length>14 || escape(this.account.account_password).length<8){
         alert("패스워드의 길이가 적절하지 않습니다.")
         return false
@@ -94,11 +94,17 @@ export default {
         return false
       }
       console.log('유효성 검사 완료');
-      
+      let data = await firebase.getAccounts()
+      for(let i=0;i<data.length;i++){
+        if(data[i].email==this.account.account_email){
+          alert("이미 사용중인 아이디 입니다.\n새로운 아이디를 사용해 주세요.")
+          return false
+        }
+      }
       return true
     },
    async regist() {
-      if(this.check()){
+      if(await this.check()){
         console.log("서버 연동 회원가입 요청");
         
         // 해당 데이터 (input)을 가지고 서버단에 post 메세지를 보냄
