@@ -2,15 +2,19 @@
 	<div id = "BackOfficeContainer">
 		<div id = "BackOfficeLoginFormWrapper">
 			<h3>Admin Page Login</h3>
-			<form>
+			
 				<input type = "email" v-model = "adminEmail" placeholder="Admin Account ID(email)" class = "adminInput"/><br>
 				<input type = "password" v-model = "adminPassword" placeholder = "Admin Account Password" class = "adminInput"/><br>
+				<button id = "goHome" @click = "goHome">홈</button>
 				<button id = "adminLoginButton" @click = "adminLoginProcess()">Login</button>
-			</form>
+			
 		</div>
 	</div>
 </template>
 <script>
+import firebase from '../../apis/firebase/firebase'
+import {mapState,mapActions,mapMutations} from 'vuex'
+
 export default {
 	name : 'BackOfficeLoginPage',
 	data() {
@@ -21,16 +25,53 @@ export default {
 		}
 		
 	},
+	computed: {
+		...mapState('account',['accountAuth'])
+	},
 	mounted() {
 		if(this.backOfficeIsOpen){
 			document.getElementById("header").style.display = 'none'
 		}
 	},
 	methods : {
-		adminLoginProcess() {
+		async adminLoginProcess() {
 			console.log(this.adminEmail);
 			console.log(this.adminPassword);
-		}
+			await this.logout()
+			console.log("로그아웃")
+
+			const res = await firebase.getLogin(this.adminEmail,this.adminPassword)
+
+			if(res!=null || res != undefined) {
+				console.log('로그인됐냐')
+				let token = await firebase.getToken(this.adminEmail)
+				sessionStorage.setItem('key',token)
+				this.setUser({data:res})
+				this.isLogin()
+				
+				if (this.accountAuth != "1") {
+					alert("당신은....멤버지...관리지가...아닙니다!!!!")
+					document.getElementById("header").style.removeProperty("display")
+					this.$router.push({name: 'HomePage'})
+				} else {
+					this.$router.push({name: 'BackOfficeMainPage'})
+				}
+
+			} else{
+				alert("당신은....멤버가...아닙니다!!!!")
+				document.getElementById("header").style.removeProperty("display")
+				this.$router.push({name: 'HomePage'})
+			}
+		
+
+		},
+		goHome() {
+			document.getElementById("header").style.removeProperty("display")
+			this.$router.push({name: "HomePage"})
+		},
+
+		...mapActions('account', ['isLogin','logout','getUser']),
+		...mapMutations('account',['setUser'])
 	}
 }
 </script>
@@ -57,7 +98,8 @@ input:focus {
 	outline : none;
 }
 
-button#adminLoginButton{
+button#adminLoginButton,
+button#goHome {
 	width : 70px;
 	border : 1px solid black;
 	background : blue;

@@ -7,6 +7,16 @@ const state = {
   loginCheck : false
 }
 
+const getters = {
+  getLoginUserAuth(state) {
+    return state.accountAuth ? state.accountAuth : "NoUserAuth"
+  },
+
+  getLoginUserName(state) {
+    return state.accountName ? state.accountName : "NoUserName"
+  }
+}
+
 const actions = {
   isLogin({state}) {
     if(state.accountEmail!=null && state.accountName !=null &&state.accountEmail!="" &&state.accountName!="") {
@@ -50,6 +60,7 @@ const mutations = {
 export default {
   namespaced: true,
   state,
+  getters,
   actions,
   mutations
 }
