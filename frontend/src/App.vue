@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <template v-if= "accountAuth!=4">
-    <Header></Header>
-    <router-view/>
+      <Header></Header>
+      <router-view/>
     </template>
     <template v-else>
       <Game />
