@@ -237,29 +237,6 @@ export default {
                 })
   }, 
   
-  putPostComment(postId, postComment) {
-    const headers = {
-      "Content-Type": "application/json",
-      "accountEmail": loginUser.accountEmail,
-      "accountAuth": loginUser.accountAuth
-    }
-    return axios.put(`${postUrl}/${postId}/comments/${postComment.postCommentId}`, postComment, { "headers": headers })
-                .then((res) => {
-                  return res.data
-                })
-  },
-
-  deletePostComment(postId, postCommentId) {
-    const headers = {
-      "Content-Type": "application/json",
-      "accountEmail": loginUser.accountEmail,
-      "accountAuth": loginUser.accountAuth
-    }
-    return axios.delete(`${postUrl}/${postId}/comments/${postCommentId}`, { "headers": headers })
-                .then((res) => {
-                  return res.data
-                })
-  },
   
   // 기타
   parsePortfolio(portfolioContent) {
@@ -298,6 +275,29 @@ export default {
     date.setTime(date.getTime() + exp*24*60*60*1000);
     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
   }
-}
+},
+  putPostComment(postId, postComment) {
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.put(`${postUrl}/${postId}/comments/${postComment.postCommentId}`, postComment, { "headers": headers })
+                .then((res) => {
+                  return res.data
+                })
+  },
+
+  deletePostComment(postId, postCommentId) {
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.delete(`${postUrl}/${postId}/comments/${postCommentId}`, { "headers": headers })
+                .then((res) => {
+                  return res.data
+                })
+  },
 
 // 노가다
