@@ -1,0 +1,48 @@
+|===
+|Path|Type|Description
+
+|`+links[0].rel+`
+|`+String+`
+|포스트 HATEOAS 관계명
+
+|`+links[0].href+`
+|`+String+`
+|포스트 HATEOAS URI
+
+|`+postId+`
+|`+Number+`
+|포스트 Id
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+postTitle+`
+|`+String+`
+|제목
+
+|`+postContent+`
+|`+String+`
+|내용
+
+|`+postCreatedAt+`
+|`+String+`
+|생성 시간
+
+|`+postViews+`
+|`+Number+`
+|조회수
+
+|`+postThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|`+postComments+`
+|`+Array+`
+|포스트 댓글 정보
+
+|===

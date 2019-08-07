@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PortfolioCommentRestControllerTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.791 s <<< FAILURE! - in com.ssafy.api.PortfolioCommentRestControllerTests
-deletePortfolioComment(com.ssafy.api.PortfolioCommentRestControllerTests)  Time elapsed: 0.193 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<204> but was:<400>
-	at com.ssafy.api.PortfolioCommentRestControllerTests.deletePortfolioComment(PortfolioCommentRestControllerTests.java:137)
-
-updatePortfolioComment(com.ssafy.api.PortfolioCommentRestControllerTests)  Time elapsed: 0.209 s  <<< ERROR!
-org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [portfolioId]
-	at com.ssafy.api.PortfolioCommentRestControllerTests.updatePortfolioComment(PortfolioCommentRestControllerTests.java:94)
-
-createPortfolioComment(com.ssafy.api.PortfolioCommentRestControllerTests)  Time elapsed: 0.031 s  <<< ERROR!
-org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [portfolioId]
-	at com.ssafy.api.PortfolioCommentRestControllerTests.createPortfolioComment(PortfolioCommentRestControllerTests.java:48)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.848 s - in com.ssafy.api.PortfolioCommentRestControllerTests

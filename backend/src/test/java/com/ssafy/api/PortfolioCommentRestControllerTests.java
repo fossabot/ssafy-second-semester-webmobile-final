@@ -27,6 +27,8 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 	
 	@Before
 	public void setUp() {
+		portfolioRepository.deleteAll();
+		portfolioCommentRepository.deleteAll();
 	}
 	
 	@Test
@@ -54,8 +56,7 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("portfolioCommentId").description("포트폴리오 댓글 Id (Auto increase)"),
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
-							fieldWithPath("portfolioCommentContent").description("댓글 내용"),
-							fieldWithPath("portfolioId").description("댓글을 쓸 포트폴리오 Id")
+							fieldWithPath("portfolioCommentContent").description("댓글 내용")
 					),
 					responseFields(
 							fieldWithPath("links[0].rel").description("포트폴리오 댓글 HATEOAS 관계명"),
@@ -64,8 +65,7 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
 							fieldWithPath("portfolioCommentContent").description("댓글 내용"),
-							fieldWithPath("portfolioCommentCreatedAt").description("생성 시간"),
-							fieldWithPath("portfolioId").description("댓글을 쓴 포트폴리오 Id")
+							fieldWithPath("portfolioCommentCreatedAt").description("생성 시간")
 					)
 			))
 		;
@@ -102,8 +102,7 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
 							fieldWithPath("portfolioCommentContent").description("댓글 내용"),
-							fieldWithPath("portfolioCommentCreatedAt").description("생성 시간"),
-							fieldWithPath("portfolioId").description("댓글을 쓴 포트폴리오 Id")
+							fieldWithPath("portfolioCommentCreatedAt").description("생성 시간")
 					),
 					responseFields(
 							fieldWithPath("links[0].rel").description("포트폴리오 댓글 HATEOAS 관계명"),
@@ -112,8 +111,7 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
 							fieldWithPath("portfolioCommentContent").description("댓글 내용"),
-							fieldWithPath("portfolioCommentCreatedAt").description("생성 시간"),
-							fieldWithPath("portfolioId").description("댓글을 쓴 포트폴리오 Id")
+							fieldWithPath("portfolioCommentCreatedAt").description("생성 시간")
 					)
 			))
 		;
@@ -125,13 +123,14 @@ public class PortfolioCommentRestControllerTests extends BaseControllerTests {
 		Portfolio testPortfolio = createTestPortfolio();
 		testPortfolio = portfolioRepository.save(testPortfolio);
 		PortfolioComment testData = createTestPortfolioComment();
+		testData.setPortfolio(testPortfolio);
 		testData = portfolioCommentRepository.save(testData);
 		
 		//when & then
 		mockMvc.perform(RestDocumentationRequestBuilders.delete("/portfolios/{portfolioId}/comments/{portfolioCommentId}",
 				testPortfolio.getPortfolioId(), testData.getPortfolioCommentId())
 					.header("accountEmail", "test@email.com")
-					.header("accountAuth", 2)
+					.header("accountAuth", 1)
 				)
 			.andDo(print())
 			.andExpect(status().isNoContent())

@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PostRestControllerTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.209 s <<< FAILURE! - in com.ssafy.api.PostRestControllerTests
-updatePost(com.ssafy.api.PostRestControllerTests)  Time elapsed: 0.045 s  <<< ERROR!
-org.springframework.restdocs.snippet.SnippetException: 
-The following parts of the payload were not documented:
-{
-  "postComments" : [ ]
-}
-	at com.ssafy.api.PostRestControllerTests.updatePost(PostRestControllerTests.java:86)
-
-createPost(com.ssafy.api.PostRestControllerTests)  Time elapsed: 0.028 s  <<< ERROR!
-org.springframework.restdocs.snippet.SnippetException: 
-The following parts of the payload were not documented:
-{
-  "postComments" : [ ]
-}
-	at com.ssafy.api.PostRestControllerTests.createPost(PostRestControllerTests.java:42)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 s - in com.ssafy.api.PostRestControllerTests

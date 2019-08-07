@@ -1,0 +1,8 @@
+.+/portfolios/{portfolioId}+
+|===
+|Parameter|Description
+
+|`+portfolioId+`
+|요청할 포트폴리오 Id
+
+|===

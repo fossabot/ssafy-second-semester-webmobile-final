@@ -1,0 +1,24 @@
+|===
+|Path|Type|Description
+
+|`+portfolioCommentId+`
+|`+Number+`
+|포트폴리오 댓글 Id
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+portfolioCommentContent+`
+|`+String+`
+|댓글 내용
+
+|`+portfolioCommentCreatedAt+`
+|`+String+`
+|생성 시간
+
+|===

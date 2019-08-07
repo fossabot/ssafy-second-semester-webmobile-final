@@ -1,0 +1,13 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 400 Bad Request
+Content-Type: application/json;charset=UTF-8
+Content-Length: 177
+
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "com.ssafy.exception.NoAuthenticationException",
+  "error message" : " 'null' does not have permission. "
+}
+----

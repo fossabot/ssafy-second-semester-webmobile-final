@@ -1,0 +1,13 @@
+[source,options="nowrap"]
+----
+{
+  "portfolioId" : 3,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioTitle" : "포트폴리오 제목",
+  "portfolioContent" : "포트폴리오 내용",
+  "portfolioGiturl" : "www.github.com/repository",
+  "portfolioViews" : 0,
+  "portfolioThumbnailUrl" : "/image.png"
+}
+----

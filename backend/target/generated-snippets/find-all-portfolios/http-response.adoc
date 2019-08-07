@@ -2,7 +2,7 @@
 ----
 HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 3348
+Content-Length: 797
 
 {
   "links" : [ {
@@ -15,7 +15,7 @@ Content-Length: 3348
     "accountName" : "test name",
     "portfolioTitle" : "포트폴리오 제목",
     "portfolioContent" : "포트폴리오 내용",
-    "portfolioCreatedAt" : "2019-08-06T17:27:38.495",
+    "portfolioCreatedAt" : "2019-08-07T11:17:56.314",
     "portfolioGiturl" : "www.github.com/repository",
     "portfolioViews" : 0,
     "portfolioThumbnailUrl" : "/image.png",
@@ -24,82 +24,10 @@ Content-Length: 3348
       "rel" : "self",
       "href" : "http://localhost:8080/portfolios/5"
     } ]
-  }, {
-    "portfolioId" : 4,
-    "accountEmail" : "test@email.com",
-    "accountName" : "test name",
-    "portfolioTitle" : "update title",
-    "portfolioContent" : "update content",
-    "portfolioCreatedAt" : "2019-08-06T17:27:38.444",
-    "portfolioGiturl" : "www.github.com/repository",
-    "portfolioViews" : 0,
-    "portfolioThumbnailUrl" : "/image.png",
-    "portfolioComments" : [ ],
-    "links" : [ {
-      "rel" : "self",
-      "href" : "http://localhost:8080/portfolios/4"
-    } ]
-  }, {
-    "portfolioId" : 3,
-    "accountEmail" : "test@email.com",
-    "accountName" : "test name",
-    "portfolioTitle" : "포트폴리오 제목",
-    "portfolioContent" : "포트폴리오 내용",
-    "portfolioCreatedAt" : "2019-08-06T17:27:38.299",
-    "portfolioGiturl" : "www.github.com/repository",
-    "portfolioViews" : 0,
-    "portfolioThumbnailUrl" : "/image.png",
-    "portfolioComments" : [ {
-      "portfolioCommentId" : 3,
-      "accountEmail" : "test@email.com",
-      "accountName" : "test name",
-      "portfolioCommentContent" : "댓글 내용",
-      "portfolioCommentCreatedAt" : "2019-08-06T17:27:38.307"
-    } ],
-    "links" : [ {
-      "rel" : "self",
-      "href" : "http://localhost:8080/portfolios/3"
-    } ]
-  }, {
-    "portfolioId" : 2,
-    "accountEmail" : "test@email.com",
-    "accountName" : "test name",
-    "portfolioTitle" : "포트폴리오 제목",
-    "portfolioContent" : "포트폴리오 내용",
-    "portfolioCreatedAt" : "2019-08-06T17:27:38.09",
-    "portfolioGiturl" : "www.github.com/repository",
-    "portfolioViews" : 0,
-    "portfolioThumbnailUrl" : "/image.png",
-    "portfolioComments" : [ {
-      "portfolioCommentId" : 2,
-      "accountEmail" : "test@email.com",
-      "accountName" : "test name",
-      "portfolioCommentContent" : "내용 수정",
-      "portfolioCommentCreatedAt" : "2019-08-06T17:27:38.091"
-    } ],
-    "links" : [ {
-      "rel" : "self",
-      "href" : "http://localhost:8080/portfolios/2"
-    } ]
-  }, {
-    "portfolioId" : 1,
-    "accountEmail" : "test@email.com",
-    "accountName" : "test name",
-    "portfolioTitle" : "포트폴리오 제목",
-    "portfolioContent" : "포트폴리오 내용",
-    "portfolioCreatedAt" : "2019-08-06T17:27:37.975",
-    "portfolioGiturl" : "www.github.com/repository",
-    "portfolioViews" : 0,
-    "portfolioThumbnailUrl" : "/image.png",
-    "portfolioComments" : [ ],
-    "links" : [ {
-      "rel" : "self",
-      "href" : "http://localhost:8080/portfolios/1"
-    } ]
   } ],
   "page" : {
     "size" : 6,
-    "totalElements" : 5,
+    "totalElements" : 1,
     "totalPages" : 1,
     "number" : 0
   }

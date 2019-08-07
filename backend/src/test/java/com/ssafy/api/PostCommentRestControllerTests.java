@@ -27,6 +27,8 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 	
 	@Before
 	public void setUp() {
+		postRepository.deleteAll();
+		postCommentRepository.deleteAll();
 	}
 	
 	@Test
@@ -54,8 +56,7 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("postCommentId").description("포스트 댓글 Id (Auto increase)"),
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
-							fieldWithPath("postCommentContent").description("댓글 내용"),
-							fieldWithPath("postId").description("댓글을 쓸 포스트 Id")
+							fieldWithPath("postCommentContent").description("댓글 내용")
 					),
 					responseFields(
 							fieldWithPath("links[0].rel").description("포스트 댓글 HATEOAS 관계명"),
@@ -64,8 +65,7 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
 							fieldWithPath("postCommentContent").description("댓글 내용"),
-							fieldWithPath("postCommentCreatedAt").description("생성 시간"),
-							fieldWithPath("postId").description("댓글을 쓴 포스트 Id")
+							fieldWithPath("postCommentCreatedAt").description("생성 시간")
 					)
 			))
 		;
@@ -102,8 +102,7 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
 							fieldWithPath("postCommentContent").description("댓글 내용"),
-							fieldWithPath("postCommentCreatedAt").description("생성 시간"),
-							fieldWithPath("postId").description("댓글을 쓴 포스트 Id")
+							fieldWithPath("postCommentCreatedAt").description("생성 시간")
 					),
 					responseFields(
 							fieldWithPath("links[0].rel").description("포스트 댓글 HATEOAS 관계명"),
@@ -112,8 +111,7 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 							fieldWithPath("accountEmail").description("작성자 Email"),
 							fieldWithPath("accountName").description("작성자 이름"),
 							fieldWithPath("postCommentContent").description("댓글 내용"),
-							fieldWithPath("postCommentCreatedAt").description("생성 시간"),
-							fieldWithPath("postId").description("댓글을 쓴 포스트 Id")
+							fieldWithPath("postCommentCreatedAt").description("생성 시간")
 					)
 			))
 		;
@@ -125,6 +123,7 @@ public class PostCommentRestControllerTests extends BaseControllerTests {
 		Post testPost = createTestPost();
 		testPost = postRepository.save(testPost);
 		PostComment testData = createTestPostComment();
+		testData.setPost(testPost);
 		testData = postCommentRepository.save(testData);
 		
 		//when & then

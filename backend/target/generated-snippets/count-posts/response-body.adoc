@@ -1,6 +1,6 @@
 [source,options="nowrap"]
 ----
 {
-  "countPosts" : 4
+  "countPosts" : 1
 }
 ----

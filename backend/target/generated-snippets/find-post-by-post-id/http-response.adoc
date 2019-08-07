@@ -2,7 +2,7 @@
 ----
 HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 389
+Content-Length: 388
 
 {
   "postId" : 6,
@@ -10,7 +10,7 @@ Content-Length: 389
   "accountName" : "test name",
   "postTitle" : "포스트 제목",
   "postContent" : "포스트 내용",
-  "postCreatedAt" : "2019-08-06T17:27:39.023",
+  "postCreatedAt" : "2019-08-07T11:17:56.83",
   "postViews" : 1,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],

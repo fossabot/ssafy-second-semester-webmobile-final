@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PostCommentRestControllerTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.089 s <<< FAILURE! - in com.ssafy.api.PostCommentRestControllerTests
-createPostComment(com.ssafy.api.PostCommentRestControllerTests)  Time elapsed: 0.043 s  <<< ERROR!
-org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [postId]
-	at com.ssafy.api.PostCommentRestControllerTests.createPostComment(PostCommentRestControllerTests.java:48)
-
-updatePostComment(com.ssafy.api.PostCommentRestControllerTests)  Time elapsed: 0.027 s  <<< ERROR!
-org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [postId]
-	at com.ssafy.api.PostCommentRestControllerTests.updatePostComment(PostCommentRestControllerTests.java:94)
-
-deletePostComment(com.ssafy.api.PostCommentRestControllerTests)  Time elapsed: 0.016 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<204> but was:<400>
-	at com.ssafy.api.PostCommentRestControllerTests.deletePostComment(PostCommentRestControllerTests.java:137)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 s - in com.ssafy.api.PostCommentRestControllerTests

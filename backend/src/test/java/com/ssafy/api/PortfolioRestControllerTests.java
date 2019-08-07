@@ -23,6 +23,7 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 	
 	@Before
 	public void setUp() {
+		portfolioRepository.deleteAll();
 	}
 	
 	@Test
@@ -62,7 +63,8 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 							fieldWithPath("portfolioCreatedAt").description("생성 시간"),
 							fieldWithPath("portfolioGiturl").description("Git repository 주소"),
 							fieldWithPath("portfolioViews").description("조회수"),
-							fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로")
+							fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로"),
+							fieldWithPath("portfolioComments").description("포트폴리오 댓글 정보")
 					)
 			))
 		;
@@ -112,7 +114,8 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 						fieldWithPath("portfolioCreatedAt").description("생성 시간"),
 						fieldWithPath("portfolioGiturl").description("Git repository 주소"),
 						fieldWithPath("portfolioViews").description("조회수"),
-						fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로")
+						fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로"),
+						fieldWithPath("portfolioComments").description("포트폴리오 댓글 정보")
 				)
 			))
 		;
@@ -146,7 +149,6 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 								fieldWithPath("content[0].portfolioViews").description("조회수"),
 								fieldWithPath("content[0].portfolioThumbnailUrl").description("썸네일 이미지 경로"),
 								fieldWithPath("content[0].portfolioComments").description("댓글 정보"),
-								fieldWithPath("content[0].portfolioImages").description("이미지 정보"),
 								fieldWithPath("content[0].links[0].rel").description("각 포트폴리오의 HATEOAS 관계명"),
 								fieldWithPath("content[0].links[0].href").description("각 포트폴리오의 HATEOAS URI"),
 								fieldWithPath("page.size").description("한 페이지 내에 들어가는 포트폴리오 수"),
@@ -185,8 +187,7 @@ public class PortfolioRestControllerTests extends BaseControllerTests {
 								fieldWithPath("portfolioGiturl").description("Git repository 주소"),
 								fieldWithPath("portfolioViews").description("조회수"),
 								fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로"),
-								fieldWithPath("portfolioComments").description("댓글 정보"),
-								fieldWithPath("portfolioImages").description("이미지 정보")
+								fieldWithPath("portfolioComments").description("댓글 정보")
 						)
 				))
 		;

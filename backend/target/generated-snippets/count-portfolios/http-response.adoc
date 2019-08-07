@@ -5,6 +5,6 @@ Content-Length: 29
 Content-Type: application/json;charset=UTF-8
 
 {
-  "countPortfolios" : 8
+  "countPortfolios" : 1
 }
 ----

@@ -12,6 +12,6 @@ accountEmail: test@email.com
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-06T17:27:38.885"
+  "postCommentCreatedAt" : "2019-08-07T11:17:56.629"
 }
 ----
