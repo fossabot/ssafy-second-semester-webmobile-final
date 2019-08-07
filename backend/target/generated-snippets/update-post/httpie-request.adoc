@@ -6,7 +6,7 @@ $ echo '{
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-07T11:17:56.775",
+  "postCreatedAt" : "2019-08-07T16:46:28.423",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png"
 }' | http PUT 'http://localhost:8080/posts/5' \

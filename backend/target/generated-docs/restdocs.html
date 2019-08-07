@@ -470,6 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_exception">Exception</a>
 <ul class="sectlevel2">
+<li><a href="#_exception_response_fields">Response fields</a></li>
 <li><a href="#_datacreateexception">DataCreateException</a></li>
 <li><a href="#_datanotfoundexception">DataNotFoundException</a></li>
 <li><a href="#_noauthenticationexception">NoAuthenticationException</a></li>
@@ -668,7 +669,7 @@ Content-Length: 657
   "accountName" : "test name",
   "portfolioTitle" : "포트폴리오 제목",
   "portfolioContent" : "포트폴리오 내용",
-  "portfolioCreatedAt" : "2019-08-07T11:17:56.433",
+  "portfolioCreatedAt" : "2019-08-07T16:46:28.098",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png",
@@ -775,7 +776,7 @@ Content-Length: 657
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /portfolios/4 HTTP/1.1
 accountAuth: 2
-Content-Length: 347
+Content-Length: 348
 Content-Type: application/json;charset=UTF-8
 Host: localhost:8080
 accountEmail: test@email.com
@@ -786,7 +787,7 @@ accountEmail: test@email.com
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-07T11:17:56.16",
+  "portfolioCreatedAt" : "2019-08-07T16:46:27.838",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png"
@@ -894,7 +895,7 @@ Content-Length: 557
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-07T11:17:56.248",
+  "portfolioCreatedAt" : "2019-08-07T16:46:27.927",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png",
@@ -1042,7 +1043,7 @@ Content-Length: 797
     "accountName" : "test name",
     "portfolioTitle" : "포트폴리오 제목",
     "portfolioContent" : "포트폴리오 내용",
-    "portfolioCreatedAt" : "2019-08-07T11:17:56.314",
+    "portfolioCreatedAt" : "2019-08-07T16:46:27.981",
     "portfolioGiturl" : "www.github.com/repository",
     "portfolioViews" : 0,
     "portfolioThumbnailUrl" : "/image.png",
@@ -1219,7 +1220,7 @@ Content-Type: application/hal+json;charset=UTF-8
   "accountName" : "test name",
   "portfolioTitle" : "포트폴리오 제목",
   "portfolioContent" : "포트폴리오 내용",
-  "portfolioCreatedAt" : "2019-08-07T11:17:56.389",
+  "portfolioCreatedAt" : "2019-08-07T16:46:28.054",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 1,
   "portfolioThumbnailUrl" : "/image.png",
@@ -1508,7 +1509,7 @@ Location: http://localhost:8080/portfolios/3
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "댓글 내용",
-  "portfolioCommentCreatedAt" : "2019-08-07T11:17:56.105",
+  "portfolioCommentCreatedAt" : "2019-08-07T16:46:27.775",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/portfolios/3"
@@ -1586,8 +1587,8 @@ Location: http://localhost:8080/portfolios/3
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">PUT /portfolios/2/comments/2 HTTP/1.1
 accountAuth: 2
-Content-Length: 209
 Content-Type: application/json;charset=UTF-8
+Content-Length: 210
 Host: localhost:8080
 accountEmail: test@email.com
 
@@ -1596,7 +1597,7 @@ accountEmail: test@email.com
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "내용 수정",
-  "portfolioCommentCreatedAt" : "2019-08-07T11:17:55.87"
+  "portfolioCommentCreatedAt" : "2019-08-07T16:46:27.538"
 }</code></pre>
 </div>
 </div>
@@ -1677,14 +1678,14 @@ accountEmail: test@email.com
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 388
+Content-Length: 389
 
 {
   "portfolioCommentId" : 2,
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "내용 수정",
-  "portfolioCommentCreatedAt" : "2019-08-07T11:17:55.87",
+  "portfolioCommentCreatedAt" : "2019-08-07T16:46:27.538",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/portfolios/2"
@@ -1898,7 +1899,7 @@ Content-Length: 553
   "accountName" : "test name",
   "postTitle" : "포스트 제목",
   "postContent" : "포스트 내용",
-  "postCreatedAt" : "2019-08-07T11:17:56.862",
+  "postCreatedAt" : "2019-08-07T16:46:28.517",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],
@@ -2010,7 +2011,7 @@ accountEmail: test@email.com
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-07T11:17:56.775",
+  "postCreatedAt" : "2019-08-07T16:46:28.423",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png"
 }</code></pre>
@@ -2112,7 +2113,7 @@ Content-Type: application/hal+json;charset=UTF-8
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-07T11:17:56.788",
+  "postCreatedAt" : "2019-08-07T16:46:28.438",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],
@@ -2254,7 +2255,7 @@ Content-Type: application/hal+json;charset=UTF-8
     "accountName" : "test name",
     "postTitle" : "포스트 제목",
     "postContent" : "포스트 내용",
-    "postCreatedAt" : "2019-08-07T11:17:56.918",
+    "postCreatedAt" : "2019-08-07T16:46:28.576",
     "postViews" : 0,
     "postThumbnailUrl" : "/image.png",
     "postComments" : [ ],
@@ -2417,7 +2418,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 388
+Content-Length: 389
 
 {
   "postId" : 6,
@@ -2425,7 +2426,7 @@ Content-Length: 388
   "accountName" : "test name",
   "postTitle" : "포스트 제목",
   "postContent" : "포스트 내용",
-  "postCreatedAt" : "2019-08-07T11:17:56.83",
+  "postCreatedAt" : "2019-08-07T16:46:28.482",
   "postViews" : 1,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],
@@ -2708,7 +2709,7 @@ Content-Length: 441
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "댓글 내용",
-  "postCommentCreatedAt" : "2019-08-07T11:17:56.574",
+  "postCommentCreatedAt" : "2019-08-07T16:46:28.255",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/posts/1"
@@ -2796,7 +2797,7 @@ accountEmail: test@email.com
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-07T11:17:56.629"
+  "postCommentCreatedAt" : "2019-08-07T16:46:28.294"
 }</code></pre>
 </div>
 </div>
@@ -2884,7 +2885,7 @@ Content-Length: 364
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-07T11:17:56.629",
+  "postCommentCreatedAt" : "2019-08-07T16:46:28.294",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/posts/2"
@@ -3005,6 +3006,45 @@ accountEmail: test@email.com</code></pre>
 <h2 id="_exception"><a class="link" href="#_exception">Exception</a></h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="_exception_response_fields"><a class="link" href="#_exception_response_fields">Response fields</a></h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Http status code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exception 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">에러 메시지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
 <h3 id="_datacreateexception"><a class="link" href="#_datacreateexception">DataCreateException</a></h3>
 <div class="ulist">
 <ul>
@@ -3015,14 +3055,19 @@ accountEmail: test@email.com</code></pre>
 </div>
 <div class="sect3">
 <h4 id="_datacreateexception_http_response"><a class="link" href="#_datacreateexception_http_response">HTTP response</a></h4>
-<div class="paragraph">
-<p>Snippet http-response not found for operation::data-create-exception</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 400 Bad Request
+Content-Length: 461
+Content-Type: application/json;charset=UTF-8
+
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "com.ssafy.exception.DataCreateException",
+  "error message" : "Please check the form. -&gt; 'Portfolio(portfolioId=1, accountEmail=test@email.com, accountName=test name, portfolioTitle=포트폴리오 제목, portfolioContent=포트폴리오 내용, portfolioCreatedAt=2019-08-07T16:45:20.189, portfolioGiturl=www.github.com/repository, portfolioViews=0, portfolioThumbnailUrl=/image.png)' "
+}</code></pre>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_datacreateexception_response_fields"><a class="link" href="#_datacreateexception_response_fields">Response fields</a></h4>
-<div class="paragraph">
-<p>Snippet response-fields not found for operation::data-create-exception</p>
 </div>
 </div>
 </div>
@@ -3052,45 +3097,6 @@ Content-Type: application/json;charset=UTF-8
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_datanotfoundexception_response_fields"><a class="link" href="#_datanotfoundexception_response_fields">Response fields</a></h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Http status code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exception 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error message</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">에러 메시지</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_noauthenticationexception"><a class="link" href="#_noauthenticationexception">NoAuthenticationException</a></h3>
@@ -3117,45 +3123,6 @@ Content-Length: 177
 }</code></pre>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_noauthenticationexception_response_fields"><a class="link" href="#_noauthenticationexception_response_fields">Response fields</a></h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Http status code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exception 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error message</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">에러 메시지</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect2">
@@ -3184,45 +3151,6 @@ Content-Length: 178
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_parameterexception_response_fields"><a class="link" href="#_parameterexception_response_fields">Response fields</a></h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Http status code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exception 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error message</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">에러 메시지</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_methodargumentnotvalidexception"><a class="link" href="#_methodargumentnotvalidexception">MethodArgumentNotValidException</a></h3>
@@ -3250,52 +3178,13 @@ Content-Type: application/json;charset=UTF-8
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_methodargumentnotvalidexception_response_fields"><a class="link" href="#_methodargumentnotvalidexception_response_fields">Response fields</a></h4>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Http status code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">status 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exception 이름</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error message</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">에러 메시지</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-08-06 23:40:37 KST
+Last updated 2019-08-07 04:48:46 KST
 </div>
 </div>
 </body>

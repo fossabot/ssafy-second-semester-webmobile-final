@@ -2,7 +2,7 @@
 ----
 PUT /portfolios/4 HTTP/1.1
 accountAuth: 2
-Content-Length: 347
+Content-Length: 348
 Content-Type: application/json;charset=UTF-8
 Host: localhost:8080
 accountEmail: test@email.com
@@ -13,7 +13,7 @@ accountEmail: test@email.com
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-07T11:17:56.16",
+  "portfolioCreatedAt" : "2019-08-07T16:46:27.838",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png"

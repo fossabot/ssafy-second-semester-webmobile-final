@@ -10,7 +10,7 @@ Content-Type: application/hal+json;charset=UTF-8
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-07T11:17:56.788",
+  "postCreatedAt" : "2019-08-07T16:46:28.438",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],

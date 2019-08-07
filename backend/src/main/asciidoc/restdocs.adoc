@@ -122,28 +122,29 @@ operation::update-post-comment[snippets='http-request,path-parameters,request-fi
 operation::delete-post-comment[snippets='http-request,path-parameters,http-response']
 
 == Exception
+operation::data-not-found-exception[snippets='response-fields']
 
 === DataCreateException
 * 데이터를 생성하지 못했을 때 발생하는 exception +
 
-operation::data-create-exception[snippets='http-response,response-fields']
+operation::data-create-exception[snippets='http-response']
 
 === DataNotFoundException
 * 찾는 데이터가 없을 때 발생하는 exception +
 
-operation::data-not-found-exception[snippets='http-response,response-fields']
+operation::data-not-found-exception[snippets='http-response']
 
 === NoAuthenticationException
 * request header에 auth정보가 없는 경우 발생하는 exception +
 
-operation::no-authentication-exception[snippets='http-response,response-fields']
+operation::no-authentication-exception[snippets='http-response']
 
 === ParameterException
 * URI에 있는 Id와 Body에 있는 Id가 다를 때 발생하는 exception +
 
-operation::parameter-exception[snippets='http-response,response-fields']
+operation::parameter-exception[snippets='http-response']
 
 === MethodArgumentNotValidException
 * Not null 필드에 null 값이 들어있는 경우 발생하는 exception +
 
-operation::method-argument-not-valid-exception[snippets='http-response,response-fields']
+operation::method-argument-not-valid-exception[snippets='http-response']

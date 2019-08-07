@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "com.ssafy.exception.DataCreateException",
+  "error message" : "Please check the form. -> 'Portfolio(portfolioId=1, accountEmail=test@email.com, accountName=test name, portfolioTitle=포트폴리오 제목, portfolioContent=포트폴리오 내용, portfolioCreatedAt=2019-08-07T16:45:20.189, portfolioGiturl=www.github.com/repository, portfolioViews=0, portfolioThumbnailUrl=/image.png)' "
+}
+----

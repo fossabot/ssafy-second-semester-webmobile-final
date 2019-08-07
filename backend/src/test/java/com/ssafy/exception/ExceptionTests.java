@@ -26,6 +26,42 @@ public class ExceptionTests extends BaseControllerTests {
 		portfolioRepository.deleteAll();
 	}
 	
+//	@Test
+//	public void dataCreateExceptionTest() throws Exception {
+//		//given
+//		Portfolio testData = createTestPortfolio();
+//		
+//		//when & then
+//		mockMvc.perform(post("/portfolios")
+//					.header("accountEmail", "test@email.com")
+//					.header("accountAuth", 1)
+//					.contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+//					.content(objectMapper.writeValueAsString(testData))
+//				)
+//			.andDo(print())
+//			.andExpect(status().isBadRequest())
+//			.andDo(document(
+//					"data-create-exception",
+//					requestFields(
+//							fieldWithPath("portfolioId").description("포트폴리오 Id (Auto increase)"),
+//							fieldWithPath("accountEmail").description("작성자 Email"),
+//							fieldWithPath("accountName").description("작성자 이름"),
+//							fieldWithPath("portfolioTitle").description("제목"),
+//							fieldWithPath("portfolioContent").description("내용"),
+//							fieldWithPath("portfolioGiturl").description("Git repository 주소"),
+//							fieldWithPath("portfolioViews").description("조회수 (0으로 자동 초기화)"),
+//							fieldWithPath("portfolioThumbnailUrl").description("썸네일 이미지 경로")
+//					),
+//					responseFields(
+//							fieldWithPath("code").description("Http status code"),
+//							fieldWithPath("status").description("status 이름"),
+//							fieldWithPath("error type").description("Exception 이름"),
+//							fieldWithPath("error message").description("에러 메시지")
+//					)
+//			))
+//		;
+//	}
+	
 	@Test
 	public void dataNotFoundExceptionTest() throws Exception {
 		mockMvc.perform(RestDocumentationRequestBuilders.get("/portfolios/{portfolioId}", 100))
