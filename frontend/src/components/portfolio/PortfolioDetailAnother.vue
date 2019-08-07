@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     
-    <div id="example-1">
-      <button @click="show = !show">
-        Toggle render
-      </button>
-      <transition name="slide-fade">
-        <p v-if="show">hello</p>
-      </transition>
+    <div id="list-demo">
+      <button v-on:click="next">Next</button>
+      <button v-on:click="previous">Previous</button>
+      <transition-group name="page" tag="p">
+        <div v-if="isTurn">{{ items[pageIndex] }}</div>
+        <div v-if="isTurn">{{ items[pageIndex+1] }}</div>
+      </transition-group>
     </div>
 
 
@@ -44,7 +44,9 @@ export default {
   data() {
     return {
       parsedPortfolioContent: {},
-      show: true
+      isTurn: true,
+      items: ["page1","page2","page3","page4","page5","page6","page7","page8","page9"],
+      pageIndex: 0
     }
   },
   computed:{
@@ -53,23 +55,40 @@ export default {
   created() {
     mapState('portfolio',['portfolio'])
     this.parsedPortfolioContent = mainServices.parsePortfolio(this.portfolio.portfolioContent)
+  },
+  methods: {
+    next() {
+      this.isTurn = false
+      this.pageIndex++ 
+      this.isTurn = true
+    },
+    previous() {
+      this.isTurn = false
+      this.pageIndex--
+      this.isTurn = true
+    },
   }
 }
+
 </script>
 
 <style>
-.slide-fade-enter-active {
-  transition: all .3s ease;
+.page {
+  display: inline-block;
+  margin-right: 10px;
 }
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+.page-enter-active, .page-leave-active {
+  transition: all 1s;
 }
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
+.page-enter {
   opacity: 0;
+  transform: translateY(30px) rotateY(180deg);
 }
 
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-30px) rotateX(180deg);
+}
 
 
 

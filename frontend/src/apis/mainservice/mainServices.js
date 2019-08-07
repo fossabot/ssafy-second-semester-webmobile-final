@@ -4,8 +4,8 @@ import store from '../../store/store.js'
 // TODO : 예외 처리 달지 않은 상태  
 
 let loginUser = store.state.account 
-const portfolioUrl = 'https://70.12.246.106:9090/api/bears/portfolios' 
-const postUrl = 'https://70.12.246.106:9090/api/bears/posts' 
+const portfolioUrl = 'http://70.12.246.106:9090/api/bears/portfolios' 
+const postUrl = 'http://70.12.246.106:9090/api/bears/posts' 
 
 
 export default {
