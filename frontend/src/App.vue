@@ -5,18 +5,18 @@
       <router-view/>
     </template>
     <template v-else>
-      <Game />
+      <Esteregg />
     </template>
   </div>
 </template>
 <script>
 import Header from '@/components/common/Header.vue'
-import Game from '@/components/ee/Game.vue'
+import Esteregg from './pages/ee/Esteregg'
 import { mapState, mapActions,mapMutations } from 'vuex'
 export default{
   name : 'App',
   components : {
-    Game,
+    Esteregg,
     Header
   },
   computed:{
