@@ -5,6 +5,7 @@ http://localhost:8080/send로 메세지 푸시 가능.
 */
 
 const express = require('express');
+const cors = require('cors');
 const {google} = require('googleapis');
 const admin = require('firebase-admin');
 const app = express();
@@ -14,15 +15,17 @@ admin.initializeApp({
   databaseURL: "https://ssafy-barebears.firebaseio.com"
 });
 
+app.use(cors());
+
 var server = app.listen(3000, function(){
     console.log("Express server has started on port 3000")
 })
 
 app.get('/send', function(req, res){
-	// This registration token comes from the client FCM SDKs.
-	/*sessionStorage*/
-	var registrationToken = 'fGUBT47H2No:APA91bHuwoiZEiKq2SJKN4gyKMb-FsrVJzeZtUIUEHFFaKOxeny8q28TRoGCe-UuXI0uoCTv-puBQsP6fysPbvsatDl47BvmVpcFErG8WKbs0R1oy6EclpNHZN2LGd-DVXIlv1SDgsmy';
-	/*var registrationToken = req.body.token;*/
+	res.header("Access-Control-Allow-Origin", "*");
+  	res.header("Access-Control-Allow-Headers", "X-Requested-With");
+
+	var registrationToken = req.query.token;
 
 	var message = {
 		data : {

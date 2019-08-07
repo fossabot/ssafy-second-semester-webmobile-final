@@ -30,23 +30,21 @@ new Vue({
 				console.log('Unable to get permission to notify');
 			}
 		});
-		
+
 		messaging.onMessage(function(payload){
-			console.log('onMessage', payload);
-		})
+			console.log('onMessage from main.js', payload);
+			// var notification = new Notification(payload.data.title, payload.data.contents);
+			var title = payload.data.title
+			var options = {
+				body : payload.data.contents
+			}
+			var notification = new Notification(title, options);
+		});
 
 		// Get Instance ID token. Initially this makes a network call, once retrieved
 		// subsequent calls to getToken will return from cache.
-
 		messaging.getToken().then((token) => {
-			//save token to your server
-			//if users allow permission, save token to their databases
-			console.log(token);
+			window.sessionStorage.setItem('firebaseToken', token);
 		})
-
-		messaging.onMessage(function(payload){
-			console.log('onMessage, Message received', payload);
-			console.log(payload.data.status)
-		});
 	}
 }).$mount('#app')

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <template v-if= "accountAuth!=4">
-    <Header></Header>
-    <router-view/>
+      <Header></Header>
+      <router-view/>
+      <!-- div to display messages received by this app. -->
+      <div id = "messages"></div>
     </template>
     <template v-else>
       <Game />

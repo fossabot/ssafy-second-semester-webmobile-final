@@ -1,5 +1,3 @@
-// 오프라인 상태나 브라우져가 닫힌 상태에서는 서비스워커가 대신 메세지를 받게 됨.
-
 // Give the service worker access to Firebase Messaging.
 // Note that you can only use Firebase Messaging here, other Firebase libraries
 // are not available in the service worker.
@@ -17,16 +15,16 @@ var firebaseConfig = {
   appId: "1:380624918537:web:6d65b693b9cd1fa4"
 }
 
-	firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 // messages.
 const messaging = firebase.messaging();
+
 messaging.setBackgroundMessageHandler(function(payload){
 	const title = payload.data.title; //푸시 메세지 제목
 	const options = {
 		body : payload.data.contents // 푸시 메세지 내용
 	};
 
-	console.log(payload)
 	return self.registration.showNotification(title, options);
 })
