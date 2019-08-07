@@ -11,8 +11,10 @@
 </template>
 <script>
 import Header from '@/components/common/Header.vue'
+import firebase from 'firebase'
 import Game from '@/components/ee/Game.vue'
 import { mapState, mapActions,mapMutations } from 'vuex'
+
 export default{
   name : 'App',
   components : {
@@ -21,8 +23,7 @@ export default{
   },
   computed:{
     ...mapState('account',['accountEmail','accountName','accountAuth'])
-  }
-  ,
+  },
   mounted() {
     /* 사용자로부터 권한 여부를 물음 */
     Notification.requestPermission()

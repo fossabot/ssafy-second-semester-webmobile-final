@@ -10,7 +10,10 @@
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
-    "firebase": "^6.3.3",
+    "express": "^4.17.1",
+    "firebase": "^6.3.4",
+    "firebase-admin": "^8.3.0",
+    "googleapis": "^42.0.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-fullpage.js": "^0.1.4",
@@ -18,10 +21,10 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-plugin-pwa": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
+    "@vue/cli-plugin-babel": "^3.10.0",
+    "@vue/cli-plugin-eslint": "^3.10.0",
+    "@vue/cli-plugin-pwa": "^3.10.0",
+    "@vue/cli-service": "^3.10.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
