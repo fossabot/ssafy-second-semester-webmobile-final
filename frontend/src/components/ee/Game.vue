@@ -1,34 +1,122 @@
 <template>
-    <div class="row">
-        <div class="col">
-        안녕하세요 이스터에그에 오신걸 환영합니다 
+    <div class="w-100">
+        <div v-for="(data,i) in table" class="row" style="height : 10vw">
+            <div class="col p-3" v-for="(data,j) in data">
+                <img :src='table[i][j].display' :id="i*5+j" onerror="this.src='https://source.unsplash.com/random/1600x600'" @click="action(i*5+j)" width="185px" height="100%"/> 
+            </div>
         </div>
-        <div class="col">
-            <a href="#" @click="update('jae637@naver.com','3')">나가기</a>
-        </div>
-        
+        <template v-for="data in srcarray">
+            <img :src='data' width="1px" height="1px"/>
+        </template>
+
     </div>
 </template>
 
 <script>
 import { mapState, mapActions,mapMutations } from 'vuex'
 import firebase from "../../apis/firebase/firebase"
+import { functions } from 'firebase';
 
 export default{
-    name : 'EsterEgg',
+    name : 'Game',
+    data(){
+        return{
+            table :[[],[],[],[]],
+            count:0,
+            selcard:"",
+            cur : 0,
+            srcarray :[]
+        }
+    },
     components : {
     },
     computed : {
-        ...mapState('account',['accountEmail','accountName','accountAuth','loginCheck'])
     },
+    created(){
+        let srcarr = []
+        for(let i =0;i<20;i++){
+            if(i%2==1)
+            srcarr[i]="https://source.unsplash.com/random/1600x"+ (i+699)
+            else
+            srcarr[i]="https://source.unsplash.com/random/1600x"+ (i+700)
+        }
+        this.srcarray=srcarr
+        this.shuffle(srcarr)
+        console.log(srcarr);
+        
+        for(let i=0;i<4;i++){
+            for(let j=0;j<5;j++){
+                this.table[i][j]=this.initTable(srcarr[(i*5)+j],(i*5)+j)
+            }
+        }
+    }
+    ,
     mounted() {
+        let t = this.table
+        setTimeout(function(){
+            for(let i=0;i<20;i++){
+                document.getElementById(i).setAttribute("src","")
+            }
+        },4000)
     },
     methods:{
-        ...mapActions('account', ['isLogin','logout','getUser']),
-        async update(email,auth){
-            let token=await firebase.getToken(email)
-            console.log("update");
-            firebase.updateAuth(token,auth)
+        initTable(src,dif) {
+            let data = {}
+            data.display = src
+            data.imgSrc = src
+            data.index = dif
+            return data
+        },
+        shuffle(a) {
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        },
+        action(i){
+            console.log(document.getElementById(i).getAttribute("src"));
+            console.log(this.table[Math.floor(i/5)][i%5].imgSrc);
+            
+            if( document.getElementById(i).getAttribute("src")!=this.table[Math.floor(i/5)][i%5].imgSrc){
+                document.getElementById(i).setAttribute("src",this.table[Math.floor(i/5)][i%5].imgSrc)
+                if(this.selcard!==""){
+                    let slt = this.selcard
+                    this.selcard=""
+                    let before=this.table[Math.floor(slt/5)][slt%5].imgSrc
+                    let after = this.table[Math.floor(i/5)][i%5].imgSrc
+                    console.log(before + "\n" + after)
+                    if(before!=after){
+                        this.table[Math.floor(slt/5)][slt%5].display=""
+                        this.table[Math.floor(i/5)][i%5].display=""
+                        
+                        let t = this.table
+                        setTimeout(function(){
+                            document.getElementById(i).setAttribute("src",t[Math.floor(i/5)][i%5].display)
+                            document.getElementById(slt).setAttribute("src",t[Math.floor(slt/5)][slt%5].display)
+                            t[Math.floor(i/5)][i%5].display=t[Math.floor(i/5)][i%5].imgSrc
+                            t[Math.floor(slt/5)][slt%5].display=t[Math.floor(slt/5)][slt%5].imgSrc
+                        },500)
+                    }else{
+                        this.cur = this.cur+1
+                    }
+                    this.count = this.count+1
+                }
+                else 
+                    this.selcard=i
+            }
+            if(this.cur==10){
+                let c =this.count
+                firebase.postRanking(this.count).then((result)=>{
+                    firebase.getRanking().then((res)=>{
+                        for(let score in res){
+                            if(res[score]==c){
+                                alert("complete\n등수 :"+score+"\n클릭 횟수 : "+this.count)
+                            }
+                        }
+                    })
+                })
+            }
         }
     }
 }

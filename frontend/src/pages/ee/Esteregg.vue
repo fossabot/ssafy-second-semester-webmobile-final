@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-        안녕하세요 이스터에그에 오신걸 환영합니다 
+        같은 그림 찾기
         </div>
         <div class="col">
             <a href="#" @click="logout">나가기</a>
