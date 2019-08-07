@@ -3,7 +3,7 @@
   <div class="container my-5">
     <transition-group name="portfoliolist" tag="p">
       <!-- Card -->
-      <div v-for="portfolio in portfolios" v-bind:key="portfolio" class="portfoliolist-item card mx-3 my-3" style="width: 15rem;">
+      <div v-for="(portfolio,idx) in portfolios" v-bind:key="idx" class="portfoliolist-item card mx-3 my-3" style="width: 15rem;">
         <!-- Card Image -->
         <img :src="portfolio.portfolioThumbnailUrl ? portfolio.portfolioThumbnailUrl : 'https://source.unsplash.com/random/500x500'" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
         <!-- Card Body -->

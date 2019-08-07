@@ -18,9 +18,8 @@ new Vue({
   render: h => h(App),
   created(){
 		const messaging = firebase.messaging();
-
 		messaging.usePublicVapidKey("BDhO-XBNdHNDOrb2HRPcpGWZT2BUubsKqwckfoqbWyABdj2osj5_5DHxS1tiyFQ0lUVzKomeuwdxPMm3agLJZJ0");
-
+		
 		Notification.requestPermission()
 		.then((permission) => {
 			console.log(permission)
