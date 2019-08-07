@@ -300,4 +300,4 @@ export default {
     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
   },
   
-  // 노가다
+}
