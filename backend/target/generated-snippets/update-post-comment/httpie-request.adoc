@@ -5,7 +5,7 @@ $ echo '{
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-08T09:37:01.491"
+  "postCommentCreatedAt" : "2019-08-08T14:57:02.622"
 }' | http PUT 'http://localhost:8080/posts/2/comments/2' \
     'accountAuth:2' \
     'Content-Type:application/json;charset=UTF-8' \

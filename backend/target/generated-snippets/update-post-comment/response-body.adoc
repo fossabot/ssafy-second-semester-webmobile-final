@@ -5,7 +5,7 @@
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-08T09:37:01.491",
+  "postCommentCreatedAt" : "2019-08-08T14:57:02.622",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/posts/2"

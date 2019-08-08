@@ -9,6 +9,6 @@ $ curl 'http://localhost:8080/posts/2/comments/2' -i -X PUT \
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-08T09:37:01.491"
+  "postCommentCreatedAt" : "2019-08-08T14:57:02.622"
 }'
 ----
