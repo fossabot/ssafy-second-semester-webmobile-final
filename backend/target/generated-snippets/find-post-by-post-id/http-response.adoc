@@ -10,7 +10,7 @@ Content-Length: 389
   "accountName" : "test name",
   "postTitle" : "포스트 제목",
   "postContent" : "포스트 내용",
-  "postCreatedAt" : "2019-08-08T09:26:45.139",
+  "postCreatedAt" : "2019-08-08T09:28:59.858",
   "postViews" : 1,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],
