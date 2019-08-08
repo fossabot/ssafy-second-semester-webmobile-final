@@ -1,12 +1,19 @@
 <template>
-  <div class="container">
-    
+  <div class="container my-5 py-5">
+    <select v-model="selected" @change="changee">
+      <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+
+
+
     <div id="list-demo">
       <button v-on:click="next">Next</button>
       <button v-on:click="previous">Previous</button>
       <transition name="page" tag="p">
         <div v-if="isTurn">{{ items[pageIndex] }}</div>
-        <div v-if="isTurn">{{ items[pageIndex+1] }}</div>
       </transition>
     </div>
 
@@ -46,7 +53,13 @@ export default {
       parsedPortfolioContent: {},
       isTurn: true,
       items: ["page1","page2","page3","page4","page5","page6","page7","page8","page9"],
-      pageIndex: 0
+      pageIndex: 0,
+      selected: 'A',
+      options: [
+        { text: 'One', value: 'A' },
+        { text: 'Two', value: 'B' },
+        { text: 'Three', value: 'C' }
+      ]
     }
   },
   computed:{
@@ -54,7 +67,7 @@ export default {
   },
   created() {
     mapState('portfolio',['portfolio'])
-    this.parsedPortfolioContent = mainServices.parsePortfolio(this.portfolio.portfolioContent)
+    // this.parsedPortfolioContent = mainServices.parsePortfolio(this.portfolio.portfolioContent)
   },
   methods: {
     next() {
@@ -67,6 +80,10 @@ export default {
       this.pageIndex--
       this.isTurn = true
     },
+
+    changee() {
+      console.log("바ㅕㅅ다")
+    }
   }
 }
 

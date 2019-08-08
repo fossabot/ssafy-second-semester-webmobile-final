@@ -6,12 +6,12 @@
 			<th>계정</th>
 			<th>이름</th>
 			<th>등급</th>
-			<tr v-for = "(account,idx) in accounts"><!-- 첫번째 줄 시작 -->
+			<tr v-for = "(account,idx) in accounts" :key="idx"><!-- 첫번째 줄 시작 -->
 		  	<td>{{idx+1}}</td>
 		  	<td>{{account.email}}</td>
 		  	<td>{{account.name}}</td>
 		  	<td>
-			 		<select name = "auth" v-model = "account.auth">
+			 		<select name = "auth" v-model = "account.auth" @change="changeAuth(account.email,account.auth)">
 			 			<option value = "1">관리자</option>
 			 			<option value = "2">팀원</option>
 			 			<option value = "3">방문자</option>
@@ -23,14 +23,21 @@
 	</div>
 </template>
 <script>
+import firebase from '../../apis/firebase/firebase'
+
 export default {
 	name : 'ManageAccounts',
 	props: {
 		accounts: {type:Array}
 	},
 
-	mounted() {
-		
+	methods: {
+		async changeAuth(accountEmail,accountAuth) {
+			await firebase.getToken(accountEmail)
+						  .then((token) => {
+							  firebase.updateAuth(token,accountAuth)
+						  })
+		}
 	}
 }
 </script>

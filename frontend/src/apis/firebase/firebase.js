@@ -101,10 +101,9 @@ export default {
     return  accounts.doc(token).update({
       auth : auth
     }).then(function(){
-      console.log("success")
+      alert('권한이 성공적으로 수정되었습니다.')
     }).catch(function(){
-      console.log("error");
-      
+      alert('권한이 수정되지 않았습니다.')
     })
   },
 
