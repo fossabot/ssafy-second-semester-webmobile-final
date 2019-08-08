@@ -11,7 +11,7 @@
 
 		<div id = "BackOfficeMainContents">
 			<div v-if = "accounts">
-				<ManageAccounts></ManageAccounts>
+				<ManageAccounts :accounts="accounts"></ManageAccounts>
 			</div>
 
 			<div v-else-if = "postings">
@@ -30,7 +30,10 @@
 import ManageAccounts from '@/components/backoffice/ManageAccounts.vue'
 import ManagePostings from '@/components/backoffice/ManagePostings.vue'
 import ManageWeblog from '@/components/backoffice/ManageWeblog.vue'
+import firebase from '../../apis/firebase/firebase'
 import {mapActions} from 'vuex'
+import { constants } from 'crypto';
+
 export default{
 	name : 'BackOfficeMainPage',
 
@@ -50,6 +53,10 @@ export default{
 	},
 
 	mounted () {
+		firebase.getAccounts()
+					.then((res) => {
+						this.accounts = res
+					})
 		this.accounts = true;
 		this.postings = false;
 		this.weblog = false;

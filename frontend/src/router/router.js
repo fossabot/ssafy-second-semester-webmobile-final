@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import firebase from '../apis/firebase/firebase'
+
+
 import HomePage from '../pages/home/HomePage.vue'
 import PortfolioCreatePage from '../pages/portfolio/PortfolioCreatePage.vue'
 import PortfolioListPage from '../pages/portfolio/PortfolioListPage.vue'
@@ -16,6 +19,7 @@ import NaverCallBack from '../components/widget/NaverCallBack.vue'
 
 import BackOfficeLoginPage from '@/pages/backoffice/BackOfficeLoginPage.vue'
 import BackOfficeMainPage from '@/pages/backoffice/BackOfficeMainPage.vue'
+
 
 Vue.use(Router)
 
@@ -36,7 +40,7 @@ export default new Router({
     {
       path: '/portfolios',
       name: 'PortfolioListPage',
-      component: PortfolioListPage
+      component: PortfolioListPage,  
     },
     {
       path: '/portfolios/:portfolioId',
@@ -87,10 +91,20 @@ export default new Router({
       path : '/admin/main',
       name : 'BackOfficeMainPage',
       component : BackOfficeMainPage,
-      beforeEnter(to,from,next) {
-        console.log(this.$store.state.account.accountAuth)
-        next()
-      }
+      beforeEnter(from,to,next) {
+        if (!sessionStorage.getItem('key')) {
+          next({name: 'BackOfficeLoginPage'})
+        } else {
+          firebase.getInfo(sessionStorage.getItem('key'))
+            .then((res) => {
+              if (res.auth === "1") {
+                next()
+              } else {
+                next({name: 'BackOfficeLoginPage'})
+              }
+            })
+        }
+      }  
     },
   ]
 })
