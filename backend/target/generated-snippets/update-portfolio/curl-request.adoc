@@ -10,11 +10,7 @@ $ curl 'http://localhost:8080/portfolios/4' -i -X PUT \
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-<<<<<<< HEAD
-  "portfolioCreatedAt" : "2019-08-08T09:32:10.068",
-=======
-  "portfolioCreatedAt" : "2019-08-07T16:46:27.838",
->>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
+  "portfolioCreatedAt" : "2019-08-08T09:37:01.116",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png"

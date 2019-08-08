@@ -5,11 +5,7 @@
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "내용 수정",
-<<<<<<< HEAD
-  "portfolioCommentCreatedAt" : "2019-08-08T09:32:09.827",
-=======
-  "portfolioCommentCreatedAt" : "2019-08-07T16:46:27.538",
->>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
+  "portfolioCommentCreatedAt" : "2019-08-08T09:37:00.874",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/portfolios/2"

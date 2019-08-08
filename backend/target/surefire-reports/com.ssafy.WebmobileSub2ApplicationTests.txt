@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.WebmobileSub2ApplicationTests
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.556 s - in com.ssafy.WebmobileSub2ApplicationTests
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.239 s - in com.ssafy.WebmobileSub2ApplicationTests
->>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.545 s - in com.ssafy.WebmobileSub2ApplicationTests

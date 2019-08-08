@@ -5,11 +5,7 @@ $ echo '{
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-<<<<<<< HEAD
-  "postCommentCreatedAt" : "2019-08-08T09:32:10.508"
-=======
-  "postCommentCreatedAt" : "2019-08-07T16:46:28.294"
->>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
+  "postCommentCreatedAt" : "2019-08-08T09:37:01.491"
 }' | http PUT 'http://localhost:8080/posts/2/comments/2' \
     'accountAuth:2' \
     'Content-Type:application/json;charset=UTF-8' \

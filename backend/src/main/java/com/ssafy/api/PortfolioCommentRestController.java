@@ -47,7 +47,7 @@ public class PortfolioCommentRestController {
 	public ResponseEntity<PortfolioCommentResource> findPortfolioCommentByPortfolioCommentId(
 			@PathVariable final long portfolioCommentId) throws Exception {
 
-		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService
+		Optional<PortfolioComment> portfolioCommentOpt = portfolioCommentService  
 				.findPortfolioCommentByPortfolioCommentId(portfolioCommentId);
 		if (!portfolioCommentOpt.isPresent()) {
 			throw new DataNotFoundException(portfolioCommentId);

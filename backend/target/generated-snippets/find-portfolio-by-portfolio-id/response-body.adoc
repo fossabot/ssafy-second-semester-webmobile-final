@@ -6,11 +6,7 @@
   "accountName" : "test name",
   "portfolioTitle" : "포트폴리오 제목",
   "portfolioContent" : "포트폴리오 내용",
-<<<<<<< HEAD
-  "portfolioCreatedAt" : "2019-08-08T09:32:10.346",
-=======
-  "portfolioCreatedAt" : "2019-08-07T16:46:28.054",
->>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
+  "portfolioCreatedAt" : "2019-08-08T09:37:01.287",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 1,
   "portfolioThumbnailUrl" : "/image.png",

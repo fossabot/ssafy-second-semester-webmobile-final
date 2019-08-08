@@ -1,114 +1,925 @@
-2019-08-08 09:32:04 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.api.PortfolioCommentRestControllerTests], using SpringBootContextLoader
-2019-08-08 09:32:04 INFO Could not detect default resource locations for test class [com.ssafy.api.PortfolioCommentRestControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-08-08 09:32:04 INFO Could not detect default configuration classes for test class [com.ssafy.api.PortfolioCommentRestControllerTests]: PortfolioCommentRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-08-08 09:32:04 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.api.PortfolioCommentRestControllerTests
-2019-08-08 09:32:04 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-08-08 09:32:04 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e928fbf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@352ff4da, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3224a577, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2e32ccc5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@748741cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e44f2a5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@295cf707, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1130520d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5f77d0f9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@463fd068, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@895e367, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b266842]
-2019-08-08 09:32:05 INFO Starting PortfolioCommentRestControllerTests on DESKTOP-KVCQHCD with PID 5940 (started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-08-08 09:32:05 INFO The following profiles are active: test
-2019-08-08 09:32:05 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-08-08 09:32:05 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-08 09:32:05 INFO Finished Spring Data repository scanning in 70ms. Found 4 repository interfaces.
-2019-08-08 09:32:06 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$35d95b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-08 09:32:06 INFO HikariPool-1 - Starting...
-2019-08-08 09:32:06 INFO HikariPool-1 - Start completed.
-2019-08-08 09:32:06 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-08 09:38:36 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 09:38:36 INFO No active profile set, falling back to default profiles: default
+2019-08-08 09:38:36 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-08 09:38:36 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-08 09:38:37 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 09:38:37 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 09:38:37 INFO Finished Spring Data repository scanning in 46ms. Found 4 repository interfaces.
+2019-08-08 09:38:37 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 09:38:37 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-08 09:38:37 ERROR The upgrade handler [org.apache.coyote.http2.Http2Protocol] for [h2] only supports upgrade via ALPN but has been configured for the ["https-jsse-nio-9090"] connector that does not support ALPN.
+2019-08-08 09:38:37 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 09:38:37 INFO Starting service [Tomcat]
+2019-08-08 09:38:37 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 09:38:37 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 09:38:37 INFO Root WebApplicationContext: initialization completed in 1017 ms
+2019-08-08 09:38:37 INFO HikariPool-1 - Starting...
+2019-08-08 09:38:38 INFO HikariPool-1 - Start completed.
+2019-08-08 09:38:38 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-08-08 09:32:06 INFO HHH000412: Hibernate Core {5.3.10.Final}
-2019-08-08 09:32:06 INFO HHH000206: hibernate.properties not found
-2019-08-08 09:32:06 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-08-08 09:32:07 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2019-08-08 09:32:07 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-08 09:32:08 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-08 09:32:09 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-08 09:32:09 INFO Adding welcome page: class path resource [static/index.html]
-2019-08-08 09:32:09 INFO Initializing Spring TestDispatcherServlet ''
-2019-08-08 09:32:09 INFO Initializing Servlet ''
-2019-08-08 09:32:09 INFO Completed initialization in 13 ms
-2019-08-08 09:32:09 INFO Started PortfolioCommentRestControllerTests in 4.693 seconds (JVM running for 5.57)
-2019-08-08 09:32:09 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
-2019-08-08 09:32:09 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
-2019-08-08 09:32:09 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
-2019-08-08 09:32:10 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.api.PortfolioRestControllerTests], using SpringBootContextLoader
-2019-08-08 09:32:10 INFO Could not detect default resource locations for test class [com.ssafy.api.PortfolioRestControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-08-08 09:32:10 INFO Could not detect default configuration classes for test class [com.ssafy.api.PortfolioRestControllerTests]: PortfolioRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-08-08 09:32:10 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.api.PortfolioRestControllerTests
-2019-08-08 09:32:10 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-08-08 09:32:10 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6a3a56de, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2ed84be9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@400e741, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3be369fc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35744f8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6fbcc078, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6c851821, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4c0930c4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@75c0cd39, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7cf66cf9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@38f63756, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d7caf9c]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (PUT) : updatePortfolio()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (PUT) : updatePortfolio()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
-2019-08-08 09:32:10 INFO HHH000397: Using ASTQueryTranslatorFactory
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : countPortfolios()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : countPortfolios()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (DELETE) : deletePortfolioByPortfolioId()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (DELETE) : deletePortfolioByPortfolioId()]
-2019-08-08 09:32:10 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.api.PostCommentRestControllerTests], using SpringBootContextLoader
-2019-08-08 09:32:10 INFO Could not detect default resource locations for test class [com.ssafy.api.PostCommentRestControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-08-08 09:32:10 INFO Could not detect default configuration classes for test class [com.ssafy.api.PostCommentRestControllerTests]: PostCommentRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-08-08 09:32:10 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.api.PostCommentRestControllerTests
-2019-08-08 09:32:10 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-08-08 09:32:10 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c359808, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1f013047, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16361e61, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@51566ce0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1734b1a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@17e6d07b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@318511f0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@53564a4c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4866e0a7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69a294d8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@70b1028d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@11d422fd]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostCommentRestController | [METHOD (POST) : createPostComment()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostCommentRestController | [METHOD (POST) : createPostComment()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostCommentRestController | [METHOD (PUT) : updatePostComment()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostCommentRestController | [METHOD (PUT) : updatePostComment()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostCommentRestController | [METHOD (DELETE) : deletePostCommentByPostCommentId()]
-2019-08-08 09:32:10 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.api.PostRestControllerTests], using SpringBootContextLoader
-2019-08-08 09:32:10 INFO Could not detect default resource locations for test class [com.ssafy.api.PostRestControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-08-08 09:32:10 INFO Could not detect default configuration classes for test class [com.ssafy.api.PostRestControllerTests]: PostRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-08-08 09:32:10 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.api.PostRestControllerTests
-2019-08-08 09:32:10 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-08-08 09:32:10 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@520ec7a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@53551fef, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7d5d77a6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71b7e9c8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55202ba6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2ef1fc8a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@38874eb5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76b019c4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@221961af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@32ddcca, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1ddc8fc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77d58f3a]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : countPosts()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : countPosts()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (PUT) : updatePost()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (PUT) : updatePost()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findPostByPostId()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findPostByPostId()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (POST) : createPost()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (POST) : createPost()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (DELETE) : deletePostByPostId()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (DELETE) : deletePostByPostId()]
-2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAllPosts()]
-2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAllPosts()]
-2019-08-08 09:32:10 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.WebmobileSub2ApplicationTests], using SpringBootContextLoader
-2019-08-08 09:32:10 INFO Could not detect default resource locations for test class [com.ssafy.WebmobileSub2ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-08-08 09:32:10 INFO Could not detect default configuration classes for test class [com.ssafy.WebmobileSub2ApplicationTests]: WebmobileSub2ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-08-08 09:32:10 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.WebmobileSub2ApplicationTests
-2019-08-08 09:32:10 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-08-08 09:32:10 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a4ae53d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1368e2f7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4d84688f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3ee68eb2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7348e75e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27e3dc9a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49cd08f9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@43549c6c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7792e14f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4eace42b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6f87a7c7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@857f1a7]
-2019-08-08 09:32:10 INFO Starting WebmobileSub2ApplicationTests on DESKTOP-KVCQHCD with PID 5940 (started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-08-08 09:32:10 INFO No active profile set, falling back to default profiles: default
-2019-08-08 09:32:10 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-08-08 09:32:10 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-08 09:32:11 INFO Finished Spring Data repository scanning in 19ms. Found 4 repository interfaces.
-2019-08-08 09:32:11 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$35d95b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-08 09:32:11 INFO HikariPool-2 - Starting...
-2019-08-08 09:32:11 INFO HikariPool-2 - Start completed.
-2019-08-08 09:32:11 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-08 09:38:38 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-08 09:38:38 INFO HHH000206: hibernate.properties not found
+2019-08-08 09:38:38 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-08 09:38:38 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 09:38:38 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:38:38 INFO LiveReload server is running on port 35729
+2019-08-08 09:38:39 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:38:39 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 09:38:39 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 09:38:39 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 09:38:39 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-08 09:38:39 INFO Started WebmobileSub2Application in 3.279 seconds (JVM running for 4.086)
+2019-08-08 09:40:01 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:40:01 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:40:01 INFO HikariPool-1 - Shutdown initiated...
+2019-08-08 09:40:01 INFO HikariPool-1 - Shutdown completed.
+2019-08-08 09:40:02 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 09:40:02 INFO No active profile set, falling back to default profiles: default
+2019-08-08 09:40:02 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 09:40:02 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 09:40:02 INFO Finished Spring Data repository scanning in 16ms. Found 4 repository interfaces.
+2019-08-08 09:40:02 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 09:40:02 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 09:40:02 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:40:02 INFO Starting service [Tomcat]
+2019-08-08 09:40:02 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 09:40:02 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 09:40:02 INFO Root WebApplicationContext: initialization completed in 299 ms
+2019-08-08 09:40:02 INFO HikariPool-2 - Starting...
+2019-08-08 09:40:02 INFO HikariPool-2 - Start completed.
+2019-08-08 09:40:02 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-08-08 09:32:11 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
-2019-08-08 09:32:11 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-08 09:32:11 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-08 09:32:12 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-08 09:32:12 INFO Adding welcome page: class path resource [static/index.html]
-2019-08-08 09:32:12 INFO Started WebmobileSub2ApplicationTests in 1.571 seconds (JVM running for 8.275)
-2019-08-08 09:32:12 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-08 09:32:12 INFO Shutting down ExecutorService 'applicationTaskExecutor'
-2019-08-08 09:32:12 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-08-08 09:32:12 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-08-08 09:32:12 INFO HikariPool-2 - Shutdown initiated...
-2019-08-08 09:32:12 INFO Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
-2019-08-08 09:32:12 INFO HikariPool-1 - Shutdown initiated...
-2019-08-08 09:32:12 INFO HikariPool-1 - Shutdown completed.
-2019-08-08 09:32:12 INFO HikariPool-2 - Shutdown completed.
+2019-08-08 09:40:02 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 09:40:02 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:40:02 INFO LiveReload server is running on port 35729
+2019-08-08 09:40:02 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:40:02 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 09:40:02 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 09:40:02 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:40:02 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 09:40:02 INFO Started WebmobileSub2Application in 0.711 seconds (JVM running for 87.119)
+2019-08-08 09:40:02 INFO Condition evaluation unchanged
+2019-08-08 09:40:03 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 09:40:03 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 09:40:03 INFO Completed initialization in 9 ms
+2019-08-08 09:40:03 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 09:40:04 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 09:40:04 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 09:40:20 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:40:20 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:40:20 INFO HikariPool-2 - Shutdown initiated...
+2019-08-08 09:40:20 INFO HikariPool-2 - Shutdown completed.
+2019-08-08 09:40:21 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 09:40:21 INFO No active profile set, falling back to default profiles: default
+2019-08-08 09:40:21 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 09:40:21 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 09:40:21 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 09:40:21 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 09:40:21 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 09:40:21 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:40:21 INFO Starting service [Tomcat]
+2019-08-08 09:40:21 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 09:40:21 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 09:40:21 INFO Root WebApplicationContext: initialization completed in 282 ms
+2019-08-08 09:40:21 INFO HikariPool-3 - Starting...
+2019-08-08 09:40:21 INFO HikariPool-3 - Start completed.
+2019-08-08 09:40:21 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 09:40:21 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 09:40:21 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:40:21 INFO LiveReload server is running on port 35729
+2019-08-08 09:40:21 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:40:21 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 09:40:21 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 09:40:22 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:40:22 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 09:40:22 INFO Started WebmobileSub2Application in 0.668 seconds (JVM running for 106.195)
+2019-08-08 09:40:22 INFO Condition evaluation unchanged
+2019-08-08 09:40:28 INFO Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:415) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:294) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_212-1-ojdkbuild]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_212-1-ojdkbuild]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_212-1-ojdkbuild]
+2019-08-08 09:41:23 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 09:41:23 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 09:41:23 INFO Completed initialization in 8 ms
+2019-08-08 09:41:23 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 09:41:23 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 09:41:23 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 09:50:16 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:50:16 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:50:16 INFO HikariPool-3 - Shutdown initiated...
+2019-08-08 09:50:16 INFO HikariPool-3 - Shutdown completed.
+2019-08-08 09:50:17 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 09:50:17 INFO No active profile set, falling back to default profiles: default
+2019-08-08 09:50:17 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 09:50:17 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 09:50:17 INFO Finished Spring Data repository scanning in 16ms. Found 4 repository interfaces.
+2019-08-08 09:50:17 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 09:50:17 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 09:50:17 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:50:17 INFO Starting service [Tomcat]
+2019-08-08 09:50:17 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 09:50:17 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 09:50:17 INFO Root WebApplicationContext: initialization completed in 272 ms
+2019-08-08 09:50:17 INFO HikariPool-4 - Starting...
+2019-08-08 09:50:17 INFO HikariPool-4 - Start completed.
+2019-08-08 09:50:17 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 09:50:17 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 09:50:17 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:50:17 INFO LiveReload server is running on port 35729
+2019-08-08 09:50:17 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:50:17 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 09:50:17 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 09:50:17 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:50:17 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 09:50:17 INFO Started WebmobileSub2Application in 0.682 seconds (JVM running for 701.998)
+2019-08-08 09:50:17 INFO Condition evaluation unchanged
+2019-08-08 09:51:39 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 09:51:39 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 09:51:39 INFO Completed initialization in 6 ms
+2019-08-08 09:51:40 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:51:40 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 09:51:40 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:52:20 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:52:20 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:53:41 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:53:41 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:55:28 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:55:28 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:55:54 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:55:54 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:56:03 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:56:03 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:56:28 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:56:28 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:13 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:13 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:20 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:20 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:22 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:22 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:58:25 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:58:25 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:58:25 INFO HikariPool-4 - Shutdown initiated...
+2019-08-08 09:58:25 INFO HikariPool-4 - Shutdown completed.
+2019-08-08 09:58:26 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 09:58:26 INFO No active profile set, falling back to default profiles: default
+2019-08-08 09:58:26 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 09:58:26 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 09:58:26 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 09:58:26 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 09:58:26 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 09:58:26 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:58:26 INFO Starting service [Tomcat]
+2019-08-08 09:58:26 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 09:58:26 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 09:58:26 INFO Root WebApplicationContext: initialization completed in 271 ms
+2019-08-08 09:58:26 INFO HikariPool-5 - Starting...
+2019-08-08 09:58:26 INFO HikariPool-5 - Start completed.
+2019-08-08 09:58:26 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 09:58:26 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 09:58:26 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:58:26 INFO LiveReload server is running on port 35729
+2019-08-08 09:58:26 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:58:26 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 09:58:26 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 09:58:26 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 09:58:26 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 09:58:26 INFO Started WebmobileSub2Application in 0.64 seconds (JVM running for 1190.912)
+2019-08-08 09:58:26 INFO Condition evaluation unchanged
+2019-08-08 09:59:00 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 09:59:00 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 09:59:00 INFO Completed initialization in 5 ms
+2019-08-08 09:59:00 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:00 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 09:59:00 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:01 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:01 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:10 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:10 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:15 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:15 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:27 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 09:59:27 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:00:30 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:00:30 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:00:42 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:00:42 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:01:16 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:01:16 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:01:16 INFO HikariPool-5 - Shutdown initiated...
+2019-08-08 10:01:16 INFO HikariPool-5 - Shutdown completed.
+2019-08-08 10:01:17 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 10:01:17 INFO No active profile set, falling back to default profiles: default
+2019-08-08 10:01:17 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 10:01:17 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 10:01:17 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 10:01:17 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 10:01:17 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 10:01:17 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 10:01:17 INFO Starting service [Tomcat]
+2019-08-08 10:01:17 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 10:01:17 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 10:01:17 INFO Root WebApplicationContext: initialization completed in 263 ms
+2019-08-08 10:01:17 INFO HikariPool-6 - Starting...
+2019-08-08 10:01:17 INFO HikariPool-6 - Start completed.
+2019-08-08 10:01:17 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 10:01:17 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 10:01:17 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:01:17 INFO LiveReload server is running on port 35729
+2019-08-08 10:01:17 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:01:17 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 10:01:17 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 10:01:17 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 10:01:17 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 10:01:17 INFO Started WebmobileSub2Application in 0.631 seconds (JVM running for 1361.984)
+2019-08-08 10:01:17 INFO Condition evaluation unchanged
+2019-08-08 10:01:20 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 10:01:20 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 10:01:20 INFO Completed initialization in 4 ms
+2019-08-08 10:01:20 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-08 10:01:20 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-08 10:01:20 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:01:20 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 10:01:20 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:01:42 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:01:42 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:02:59 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:02:59 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:03:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:03:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:03:40 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:03:40 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:03:40 INFO HikariPool-6 - Shutdown initiated...
+2019-08-08 10:03:40 INFO HikariPool-6 - Shutdown completed.
+2019-08-08 10:03:40 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 10:03:40 INFO No active profile set, falling back to default profiles: default
+2019-08-08 10:03:40 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 10:03:40 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 10:03:40 INFO Finished Spring Data repository scanning in 16ms. Found 4 repository interfaces.
+2019-08-08 10:03:40 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 10:03:40 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 10:03:40 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 10:03:40 INFO Starting service [Tomcat]
+2019-08-08 10:03:40 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 10:03:40 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 10:03:40 INFO Root WebApplicationContext: initialization completed in 275 ms
+2019-08-08 10:03:40 INFO HikariPool-7 - Starting...
+2019-08-08 10:03:40 INFO HikariPool-7 - Start completed.
+2019-08-08 10:03:40 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 10:03:40 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 10:03:40 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:03:40 INFO LiveReload server is running on port 35729
+2019-08-08 10:03:40 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:03:40 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 10:03:41 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 10:03:41 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 10:03:41 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 10:03:41 INFO Started WebmobileSub2Application in 0.633 seconds (JVM running for 1505.278)
+2019-08-08 10:03:41 INFO Condition evaluation unchanged
+2019-08-08 10:03:51 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 10:03:51 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 10:03:51 INFO Completed initialization in 5 ms
+2019-08-08 10:03:51 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:03:51 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 10:03:51 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:08 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:08 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:24 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:04:24 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:04:24 INFO HikariPool-7 - Shutdown initiated...
+2019-08-08 10:04:24 INFO HikariPool-7 - Shutdown completed.
+2019-08-08 10:04:25 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 10:04:25 INFO No active profile set, falling back to default profiles: default
+2019-08-08 10:04:25 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 10:04:25 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 10:04:25 INFO Finished Spring Data repository scanning in 21ms. Found 4 repository interfaces.
+2019-08-08 10:04:25 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 10:04:25 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-08 10:04:25 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-08 10:04:25 INFO Starting service [Tomcat]
+2019-08-08 10:04:25 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 10:04:25 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 10:04:25 INFO Root WebApplicationContext: initialization completed in 277 ms
+2019-08-08 10:04:25 INFO HikariPool-8 - Starting...
+2019-08-08 10:04:25 INFO HikariPool-8 - Start completed.
+2019-08-08 10:04:25 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 10:04:25 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 10:04:25 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:04:25 INFO LiveReload server is running on port 35729
+2019-08-08 10:04:25 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:04:25 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 10:04:25 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 10:04:26 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-08 10:04:26 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-08 10:04:26 INFO Started WebmobileSub2Application in 0.634 seconds (JVM running for 1550.188)
+2019-08-08 10:04:26 INFO Condition evaluation unchanged
+2019-08-08 10:04:28 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 10:04:28 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 10:04:28 INFO Completed initialization in 5 ms
+2019-08-08 10:04:28 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:28 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 10:04:28 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:56 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:56 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:57 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:04:57 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:05:25 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:05:25 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:05:36 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:05:36 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:05:36 INFO HikariPool-8 - Shutdown initiated...
+2019-08-08 10:05:36 INFO HikariPool-8 - Shutdown completed.
+2019-08-08 10:05:37 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 10:05:37 INFO No active profile set, falling back to default profiles: default
+2019-08-08 10:05:37 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 10:05:37 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 10:05:37 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 10:05:37 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 10:05:37 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-08 10:05:37 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 10:05:37 INFO Starting service [Tomcat]
+2019-08-08 10:05:37 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 10:05:37 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 10:05:37 INFO Root WebApplicationContext: initialization completed in 274 ms
+2019-08-08 10:05:37 INFO HikariPool-9 - Starting...
+2019-08-08 10:05:37 INFO HikariPool-9 - Start completed.
+2019-08-08 10:05:37 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 10:05:37 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 10:05:37 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:05:37 INFO LiveReload server is running on port 35729
+2019-08-08 10:05:37 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:05:37 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 10:05:37 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 10:05:37 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 10:05:38 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-08 10:05:38 INFO Started WebmobileSub2Application in 0.931 seconds (JVM running for 1622.346)
+2019-08-08 10:05:38 INFO Condition evaluation unchanged
+2019-08-08 10:06:27 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 10:06:27 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 10:06:27 INFO Completed initialization in 6 ms
+2019-08-08 10:06:27 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:06:27 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 10:06:27 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:06:52 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:06:52 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:18:54 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:18:54 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:20:20 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:20:20 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:24:42 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:24:42 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:25:04 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:25:04 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 10:44:30 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:44:30 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:44:30 INFO HikariPool-9 - Shutdown initiated...
+2019-08-08 10:44:30 INFO HikariPool-9 - Shutdown completed.
+2019-08-08 10:44:30 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 10:44:30 INFO No active profile set, falling back to default profiles: default
+2019-08-08 10:44:30 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 10:44:30 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 10:44:30 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 10:44:30 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 10:44:31 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-08 10:44:31 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 10:44:31 INFO Starting service [Tomcat]
+2019-08-08 10:44:31 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 10:44:31 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 10:44:31 INFO Root WebApplicationContext: initialization completed in 263 ms
+2019-08-08 10:44:31 INFO HikariPool-10 - Starting...
+2019-08-08 10:44:31 INFO HikariPool-10 - Start completed.
+2019-08-08 10:44:31 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 10:44:31 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 10:44:31 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 10:44:31 INFO LiveReload server is running on port 35729
+2019-08-08 10:44:31 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 10:44:31 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 10:44:31 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 10:44:31 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 10:44:31 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-08 10:44:31 INFO Started WebmobileSub2Application in 0.913 seconds (JVM running for 3955.831)
+2019-08-08 10:44:31 INFO Condition evaluation unchanged
+2019-08-08 10:49:03 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 10:49:03 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 10:49:03 INFO Completed initialization in 4 ms
+2019-08-08 10:49:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:49:03 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 10:49:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:49:15 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 10:49:15 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:12:39 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:12:39 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:14:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:26 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:26 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:28 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:28 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:29 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:29 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:29 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:29 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:29 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:29 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:30 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:30 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:30 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:30 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:31 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:31 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:35 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:35 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:52 INFO [#] [START] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:14:52 INFO [#] [ END ] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:15:43 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:15:43 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:16:06 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:16:06 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:16:08 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:16:08 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:16:20 INFO [#] [START] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-08 11:16:20 INFO [#] [ END ] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-08 11:16:20 INFO [#] [START] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:16:20 INFO [#] [ END ] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:18:16 INFO [#] [START] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:18:16 INFO [#] [ END ] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:19:36 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:19:36 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:21:47 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:21:47 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:23:01 INFO [#] [START] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:23:01 INFO [#] [ END ] - [ACCOUNT : member@naver.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:25:27 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:25:27 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:26:18 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:26:18 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:30:01 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:30:01 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:30:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:30:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:31:33 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:31:33 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:39:53 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 11:39:53 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 11:39:53 INFO HikariPool-10 - Shutdown initiated...
+2019-08-08 11:39:53 INFO HikariPool-10 - Shutdown completed.
+2019-08-08 11:39:53 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 11:39:53 INFO No active profile set, falling back to default profiles: default
+2019-08-08 11:39:53 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 11:39:54 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 11:39:54 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 11:39:54 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 11:39:54 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-08 11:39:54 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 11:39:54 INFO Starting service [Tomcat]
+2019-08-08 11:39:54 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 11:39:54 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 11:39:54 INFO Root WebApplicationContext: initialization completed in 307 ms
+2019-08-08 11:39:54 INFO HikariPool-11 - Starting...
+2019-08-08 11:39:54 INFO HikariPool-11 - Start completed.
+2019-08-08 11:39:54 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 11:39:54 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 11:39:54 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 11:39:54 INFO LiveReload server is running on port 35729
+2019-08-08 11:39:54 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 11:39:54 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 11:39:54 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 11:39:54 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 11:39:54 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-08 11:39:54 INFO Started WebmobileSub2Application in 0.95 seconds (JVM running for 7307.689)
+2019-08-08 11:39:54 INFO Condition evaluation unchanged
+2019-08-08 11:40:03 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 11:40:03 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 11:40:03 INFO Completed initialization in 5 ms
+2019-08-08 11:40:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:40:03 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 11:40:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:40:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:40:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 11:53:14 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:53:14 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:53:15 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:53:15 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:53:19 INFO [#] [START] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 11:53:19 INFO [#] [ END ] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:01:53 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 12:01:53 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 12:01:53 INFO HikariPool-11 - Shutdown initiated...
+2019-08-08 12:01:53 INFO HikariPool-11 - Shutdown completed.
+2019-08-08 12:01:54 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 12:01:54 INFO No active profile set, falling back to default profiles: default
+2019-08-08 12:01:54 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 12:01:54 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 12:01:54 INFO Finished Spring Data repository scanning in 14ms. Found 4 repository interfaces.
+2019-08-08 12:01:54 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 12:01:54 INFO Tomcat initialized with port(s): 8081 (https)
+2019-08-08 12:01:54 INFO Initializing ProtocolHandler ["https-jsse-nio-8081"]
+2019-08-08 12:01:54 INFO Starting service [Tomcat]
+2019-08-08 12:01:54 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 12:01:54 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 12:01:54 INFO Root WebApplicationContext: initialization completed in 262 ms
+2019-08-08 12:01:54 INFO HikariPool-12 - Starting...
+2019-08-08 12:01:54 INFO HikariPool-12 - Start completed.
+2019-08-08 12:01:54 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 12:01:54 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 12:01:54 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 12:01:54 INFO LiveReload server is running on port 35729
+2019-08-08 12:01:54 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 12:01:54 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 12:01:54 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 12:01:54 INFO Starting ProtocolHandler ["https-jsse-nio-8081"]
+2019-08-08 12:01:55 INFO Tomcat started on port(s): 8081 (https) with context path '/api/bears'
+2019-08-08 12:01:55 INFO Started WebmobileSub2Application in 0.908 seconds (JVM running for 8627.969)
+2019-08-08 12:01:55 INFO Condition evaluation unchanged
+2019-08-08 12:03:56 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 12:03:56 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 12:03:56 INFO Completed initialization in 4 ms
+2019-08-08 12:03:56 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:03:56 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 12:03:56 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:03:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:03:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:05:08 INFO [#] [START] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:05:08 INFO [#] [ END ] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:05:13 INFO [#] [START] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:05:13 INFO [#] [ END ] - [ACCOUNT : jae637@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:05:55 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:05:55 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:06:16 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:06:16 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:06:19 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:06:19 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:07:17 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 12:07:17 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 12:07:17 INFO HikariPool-12 - Shutdown initiated...
+2019-08-08 12:07:17 INFO HikariPool-12 - Shutdown completed.
+2019-08-08 12:07:17 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 12:07:17 INFO No active profile set, falling back to default profiles: default
+2019-08-08 12:07:17 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 12:07:17 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 12:07:17 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 12:07:17 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 12:07:17 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-08 12:07:17 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 12:07:17 INFO Starting service [Tomcat]
+2019-08-08 12:07:17 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 12:07:17 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 12:07:17 INFO Root WebApplicationContext: initialization completed in 256 ms
+2019-08-08 12:07:17 INFO HikariPool-13 - Starting...
+2019-08-08 12:07:17 INFO HikariPool-13 - Start completed.
+2019-08-08 12:07:17 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 12:07:17 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 12:07:17 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 12:07:17 INFO LiveReload server is running on port 35729
+2019-08-08 12:07:17 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 12:07:17 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 12:07:17 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 12:07:18 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 12:07:18 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-08 12:07:18 INFO Started WebmobileSub2Application in 0.896 seconds (JVM running for 8951.297)
+2019-08-08 12:07:18 INFO Condition evaluation unchanged
+2019-08-08 12:09:34 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 12:09:34 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 12:09:34 INFO Completed initialization in 5 ms
+2019-08-08 12:09:34 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:09:34 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 12:09:34 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:09:37 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:09:37 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:10:18 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:10:18 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:10:40 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:10:40 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:11:39 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:11:39 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:11:40 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 12:11:40 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 12:11:41 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 12:11:41 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 12:13:00 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:13:00 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:13:14 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 12:13:14 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 12:13:48 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:13:48 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:14:32 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:14:32 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:14:59 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:14:59 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:03 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:03 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:04 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:04 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:18 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:18 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:19 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:19 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:20 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:20 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:23 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:23 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:28 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:28 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:45 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:45 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:58 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:15:58 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:02 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:02 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:20 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:20 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:26 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:26 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:31 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:31 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:34 INFO [#] [START] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:34 INFO [#] [ END ] - [ACCOUNT :  | AUTH : ] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:42 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 12:16:42 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 12:16:42 INFO HikariPool-13 - Shutdown initiated...
+2019-08-08 12:16:42 INFO HikariPool-13 - Shutdown completed.
+2019-08-08 12:16:42 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 488 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 12:16:42 INFO No active profile set, falling back to default profiles: default
+2019-08-08 12:16:42 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 12:16:42 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 12:16:42 INFO Finished Spring Data repository scanning in 15ms. Found 4 repository interfaces.
+2019-08-08 12:16:42 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48379580] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 12:16:42 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-08 12:16:42 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 12:16:42 INFO Starting service [Tomcat]
+2019-08-08 12:16:42 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 12:16:42 INFO Initializing Spring embedded WebApplicationContext
+2019-08-08 12:16:42 INFO Root WebApplicationContext: initialization completed in 255 ms
+2019-08-08 12:16:42 INFO HikariPool-14 - Starting...
+2019-08-08 12:16:42 INFO HikariPool-14 - Start completed.
+2019-08-08 12:16:42 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-08 12:16:42 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-08 12:16:42 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 12:16:42 INFO LiveReload server is running on port 35729
+2019-08-08 12:16:42 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 12:16:42 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 12:16:42 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 12:16:42 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-08 12:16:43 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-08 12:16:43 INFO Started WebmobileSub2Application in 0.901 seconds (JVM running for 9516.214)
+2019-08-08 12:16:43 INFO Condition evaluation unchanged
+2019-08-08 12:16:49 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-08 12:16:49 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-08 12:16:49 INFO Completed initialization in 4 ms
+2019-08-08 12:16:49 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:16:49 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-08 12:16:49 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:17:22 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:17:22 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:18:47 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:18:47 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:18:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:18:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:17 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:17 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:19 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:19 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:25 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:25 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:26 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:26 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:28 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:28 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:28 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:28 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:35 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:35 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:40 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:19:40 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:01 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:01 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:22 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:22 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:23 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:23 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:24 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:24 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:25 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:25 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:26 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 12:53:26 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:52:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:52:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:52:08 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:52:08 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:52:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findPostByPostId()]
+2019-08-08 13:52:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findPostByPostId()]
+2019-08-08 13:52:13 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:52:13 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:52:16 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:52:16 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:52:20 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:52:20 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:46 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:46 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:47 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:47 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:48 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:48 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:48 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:48 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:53 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:53 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:54 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:54 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:55 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:55 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:55 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:55 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:56 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:56 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:56 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:56 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:53:58 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:58 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:59 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:59 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:59 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:53:59 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:00 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:00 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:00 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:00 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:01 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:01 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:02 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:02 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:02 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:02 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:06 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:06 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:07 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:07 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:07 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:07 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:13 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:13 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:28 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:28 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:28 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:28 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:54:29 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:54:29 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:55:18 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:55:18 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:55:18 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:55:18 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:56:07 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:07 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:11 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:11 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:50 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:56:50 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:56:50 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:56:50 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:56:53 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:53 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:54 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:54 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:58 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:58 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:58 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:56:58 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:00 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:00 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:01 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:01 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:30 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:30 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:33 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:33 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:34 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:57:34 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 13:57:35 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:35 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:37 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:37 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:39 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:39 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:51 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 13:57:51 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 13:57:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:57:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:58:12 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:58:12 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:58:25 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 13:58:25 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 13:58:31 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:58:31 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:58:32 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 13:58:32 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 13:58:34 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 13:58:34 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:00:04 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:00:04 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:00:06 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:00:06 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:01:22 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:01:22 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:01:24 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:01:24 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:01:25 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:01:25 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:01:27 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 14:01:27 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 14:01:33 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-08 14:01:33 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-08 14:01:33 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 14:01:33 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-08 14:02:05 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:05 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:05 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:02:05 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:02:06 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:06 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:07 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:07 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:07 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:02:07 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:02:08 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:08 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:09 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:09 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:02:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:02:10 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:10 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:11 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:02:11 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:10 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:10 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:03:10 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:03:12 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:12 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:13 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:13 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:13 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:13 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:15 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:15 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:15 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:15 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:15 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:15 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:16 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:03:16 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-08 14:03:17 INFO [#] [START] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:03:17 INFO [#] [ END ] - [ACCOUNT : test@naver.com | AUTH : 3] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-08 14:08:37 INFO Application shutdown requested.
+2019-08-08 14:08:37 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-08 14:08:37 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 14:08:37 INFO HikariPool-14 - Shutdown initiated...
+2019-08-08 14:08:37 INFO HikariPool-14 - Shutdown completed.
