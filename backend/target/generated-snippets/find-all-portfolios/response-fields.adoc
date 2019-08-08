@@ -1,0 +1,76 @@
+|===
+|Path|Type|Description
+
+|`+links[0].rel+`
+|`+String+`
+|포트폴리오 페이지 HATEOAS 관계명
+
+|`+links[0].href+`
+|`+String+`
+|포트폴리오 페이지 HATEOAS URI
+
+|`+content[0].portfolioId+`
+|`+Number+`
+|포트폴리오 Id
+
+|`+content[0].accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+content[0].accountName+`
+|`+String+`
+|작성자 이름
+
+|`+content[0].portfolioTitle+`
+|`+String+`
+|제목
+
+|`+content[0].portfolioContent+`
+|`+String+`
+|내용
+
+|`+content[0].portfolioCreatedAt+`
+|`+String+`
+|생성 시간
+
+|`+content[0].portfolioGiturl+`
+|`+String+`
+|Git repository 주소
+
+|`+content[0].portfolioViews+`
+|`+Number+`
+|조회수
+
+|`+content[0].portfolioThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|`+content[0].portfolioComments+`
+|`+Array+`
+|댓글 정보
+
+|`+content[0].links[0].rel+`
+|`+String+`
+|각 포트폴리오의 HATEOAS 관계명
+
+|`+content[0].links[0].href+`
+|`+String+`
+|각 포트폴리오의 HATEOAS URI
+
+|`+page.size+`
+|`+Number+`
+|한 페이지 내에 들어가는 포트폴리오 수
+
+|`+page.totalElements+`
+|`+Number+`
+|총 포트폴리오 수
+
+|`+page.totalPages+`
+|`+Number+`
+|총 페이지 수
+
+|`+page.number+`
+|`+Number+`
+|현재 페이지
+
+|===

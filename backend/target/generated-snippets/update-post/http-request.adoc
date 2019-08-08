@@ -13,7 +13,11 @@ accountEmail: test@email.com
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
+<<<<<<< HEAD
   "postCreatedAt" : "2019-08-08T09:32:10.593",
+=======
+  "postCreatedAt" : "2019-08-07T16:46:28.423",
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png"
 }

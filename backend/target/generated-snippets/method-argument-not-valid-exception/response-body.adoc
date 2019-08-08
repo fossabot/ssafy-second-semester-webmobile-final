@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "org.springframework.web.bind.MethodArgumentNotValidException",
+  "error message" : "Validation failed for argument [2] in public org.springframework.http.ResponseEntity<com.ssafy.vo.resource.PortfolioResource> com.ssafy.api.PortfolioRestController.createPortfolio(java.lang.String,int,com.ssafy.vo.Portfolio) throws java.lang.Exception: [Field error in object 'portfolio' on field 'portfolioTitle': rejected value [null]; codes [NotNull.portfolio.portfolioTitle,NotNull.portfolioTitle,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [portfolio.portfolioTitle,portfolioTitle]; arguments []; default message [portfolioTitle]]; default message [must not be null]] "
+}
+----

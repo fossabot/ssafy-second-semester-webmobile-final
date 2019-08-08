@@ -1,0 +1,52 @@
+|===
+|Path|Type|Description
+
+|`+links[0].rel+`
+|`+String+`
+|포트폴리오 HATEOAS 관계명
+
+|`+links[0].href+`
+|`+String+`
+|포트폴리오 HATEOAS URI
+
+|`+portfolioId+`
+|`+Number+`
+|포트폴리오 Id
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+portfolioTitle+`
+|`+String+`
+|제목
+
+|`+portfolioContent+`
+|`+String+`
+|내용
+
+|`+portfolioCreatedAt+`
+|`+String+`
+|생성 시간
+
+|`+portfolioGiturl+`
+|`+String+`
+|Git repository 주소
+
+|`+portfolioViews+`
+|`+Number+`
+|조회수
+
+|`+portfolioThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|`+portfolioComments+`
+|`+Array+`
+|포트폴리오 댓글 정보
+
+|===

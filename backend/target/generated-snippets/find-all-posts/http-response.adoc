@@ -1,22 +1,17 @@
 [source,http,options="nowrap"]
 ----
 HTTP/1.1 200 OK
+Content-Length: 681
 Content-Type: application/hal+json;charset=UTF-8
+<<<<<<< HEAD
 Content-Length: 3128
+=======
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
 
 {
   "links" : [ {
-    "rel" : "first",
-    "href" : "http://localhost:8080/posts/pages/1?page=0&size=6&sort=postCreatedAt,desc"
-  }, {
     "rel" : "self",
     "href" : "http://localhost:8080/posts/pages/1?page=0&size=6&sort=postCreatedAt,desc"
-  }, {
-    "rel" : "next",
-    "href" : "http://localhost:8080/posts/pages/1?page=1&size=6&sort=postCreatedAt,desc"
-  }, {
-    "rel" : "last",
-    "href" : "http://localhost:8080/posts/pages/1?page=1&size=6&sort=postCreatedAt,desc"
   } ],
   "content" : [ {
     "postId" : 9,
@@ -24,7 +19,11 @@ Content-Length: 3128
     "accountName" : "test name",
     "postTitle" : "포스트 제목",
     "postContent" : "포스트 내용",
+<<<<<<< HEAD
     "postCreatedAt" : "2019-08-08T09:32:10.695",
+=======
+    "postCreatedAt" : "2019-08-07T16:46:28.576",
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
     "postViews" : 0,
     "postThumbnailUrl" : "/image.png",
     "postComments" : [ ],
@@ -32,6 +31,7 @@ Content-Length: 3128
       "rel" : "self",
       "href" : "http://localhost:8080/posts/9"
     } ]
+<<<<<<< HEAD
   }, {
     "postId" : 7,
     "accountEmail" : "test@email.com",
@@ -102,11 +102,13 @@ Content-Length: 3128
       "rel" : "self",
       "href" : "http://localhost:8080/posts/3"
     } ]
+=======
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
   } ],
   "page" : {
     "size" : 6,
-    "totalElements" : 8,
-    "totalPages" : 2,
+    "totalElements" : 1,
+    "totalPages" : 1,
     "number" : 0
   }
 }

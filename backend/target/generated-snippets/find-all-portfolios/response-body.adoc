@@ -11,7 +11,11 @@
     "accountName" : "test name",
     "portfolioTitle" : "포트폴리오 제목",
     "portfolioContent" : "포트폴리오 내용",
+<<<<<<< HEAD
     "portfolioCreatedAt" : "2019-08-08T09:32:10.181",
+=======
+    "portfolioCreatedAt" : "2019-08-07T16:46:27.981",
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
     "portfolioGiturl" : "www.github.com/repository",
     "portfolioViews" : 0,
     "portfolioThumbnailUrl" : "/image.png",
@@ -20,6 +24,7 @@
       "rel" : "self",
       "href" : "http://localhost:8080/portfolios/5"
     } ]
+<<<<<<< HEAD
   }, {
     "portfolioId" : 4,
     "accountEmail" : "test@email.com",
@@ -92,10 +97,12 @@
       "rel" : "self",
       "href" : "http://localhost:8080/portfolios/1"
     } ]
+=======
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
   } ],
   "page" : {
     "size" : 6,
-    "totalElements" : 5,
+    "totalElements" : 1,
     "totalPages" : 1,
     "number" : 0
   }

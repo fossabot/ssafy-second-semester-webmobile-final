@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PortfolioRestControllerTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 6, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.367 s <<< FAILURE! - in com.ssafy.api.PortfolioRestControllerTests
 updatePortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.094 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
@@ -47,3 +48,6 @@ The following parts of the payload were not documented:
 }
 	at com.ssafy.api.PortfolioRestControllerTests.createPortfolio(PortfolioRestControllerTests.java:42)
 
+=======
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.352 s - in com.ssafy.api.PortfolioRestControllerTests
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf

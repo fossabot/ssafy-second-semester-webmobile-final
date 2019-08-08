@@ -23,6 +23,7 @@ public class PostRestControllerTests extends BaseControllerTests {
 	
 	@Before
 	public void setUp() {
+		postRepository.deleteAll();
 	}
 	
 	@Test
@@ -60,7 +61,8 @@ public class PostRestControllerTests extends BaseControllerTests {
 							fieldWithPath("postContent").description("내용"),
 							fieldWithPath("postCreatedAt").description("생성 시간"),
 							fieldWithPath("postViews").description("조회수"),
-							fieldWithPath("postThumbnailUrl").description("썸네일 이미지 경로")
+							fieldWithPath("postThumbnailUrl").description("썸네일 이미지 경로"),
+							fieldWithPath("postComments").description("포스트 댓글 정보")
 					)
 			))
 		;
@@ -108,7 +110,8 @@ public class PostRestControllerTests extends BaseControllerTests {
 						fieldWithPath("postContent").description("내용"),
 						fieldWithPath("postCreatedAt").description("생성 시간"),
 						fieldWithPath("postViews").description("조회수"),
-						fieldWithPath("postThumbnailUrl").description("썸네일 이미지 경로")
+						fieldWithPath("postThumbnailUrl").description("썸네일 이미지 경로"),
+						fieldWithPath("postComments").description("포스트 댓글 정보")
 				)
 			))
 		;

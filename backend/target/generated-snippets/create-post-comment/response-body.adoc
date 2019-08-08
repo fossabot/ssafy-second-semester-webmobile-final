@@ -5,7 +5,11 @@
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "댓글 내용",
+<<<<<<< HEAD
   "postCommentCreatedAt" : "2019-08-08T09:32:10.485",
+=======
+  "postCommentCreatedAt" : "2019-08-07T16:46:28.255",
+>>>>>>> ffaca430eca13fabb44a80148cf69e1a0e22b0bf
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/posts/1"

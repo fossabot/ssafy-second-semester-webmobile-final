@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "com.ssafy.exception.ParameterException",
+  "error message" : " '100' and '3' does not match each other. "
+}
+----

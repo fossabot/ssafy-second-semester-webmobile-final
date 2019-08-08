@@ -5,6 +5,6 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 24
 
 {
-  "countPosts" : 4
+  "countPosts" : 1
 }
 ----
