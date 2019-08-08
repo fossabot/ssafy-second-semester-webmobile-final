@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PortfolioRestControllerTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.407 s <<< FAILURE! - in com.ssafy.api.PortfolioRestControllerTests
-updatePortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.114 s  <<< ERROR!
+Tests run: 6, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.358 s <<< FAILURE! - in com.ssafy.api.PortfolioRestControllerTests
+updatePortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.086 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
 The following parts of the payload were not documented:
 {
@@ -10,7 +10,7 @@ The following parts of the payload were not documented:
 }
 	at com.ssafy.api.PortfolioRestControllerTests.updatePortfolio(PortfolioRestControllerTests.java:88)
 
-findAllPortfolios(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.174 s  <<< ERROR!
+findAllPortfolios(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.164 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
 The following parts of the payload were not documented:
 {
@@ -20,7 +20,7 @@ The following parts of the payload were not documented:
       "accountEmail" : "test@email.com",
       "accountName" : "test name",
       "portfolioCommentContent" : "댓글 내용",
-      "portfolioCommentCreatedAt" : "2019-08-08T09:25:14.346"
+      "portfolioCommentCreatedAt" : "2019-08-08T09:26:44.54"
     } ]
   }, {
     "portfolioComments" : [ {
@@ -28,7 +28,7 @@ The following parts of the payload were not documented:
       "accountEmail" : "test@email.com",
       "accountName" : "test name",
       "portfolioCommentContent" : "내용 수정",
-      "portfolioCommentCreatedAt" : "2019-08-08T09:25:14.13"
+      "portfolioCommentCreatedAt" : "2019-08-08T09:26:44.319"
     } ]
   } ]
 }
@@ -39,7 +39,7 @@ findPortfolioByPortfolioId(com.ssafy.api.PortfolioRestControllerTests)  Time ela
 org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [portfolioImages]
 	at com.ssafy.api.PortfolioRestControllerTests.findPortfolioByPortfolioId(PortfolioRestControllerTests.java:171)
 
-createPortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.032 s  <<< ERROR!
+createPortfolio(com.ssafy.api.PortfolioRestControllerTests)  Time elapsed: 0.03 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
 The following parts of the payload were not documented:
 {

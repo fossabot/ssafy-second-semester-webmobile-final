@@ -1,7 +1,7 @@
 [source,http,options="nowrap"]
 ----
 HTTP/1.1 201 Created
-Content-Length: 471
+Content-Length: 470
 Content-Type: application/hal+json;charset=UTF-8
 Location: http://localhost:8080/portfolios/3
 
@@ -10,7 +10,7 @@ Location: http://localhost:8080/portfolios/3
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "댓글 내용",
-  "portfolioCommentCreatedAt" : "2019-08-08T09:25:14.346",
+  "portfolioCommentCreatedAt" : "2019-08-08T09:26:44.54",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/portfolios/3"

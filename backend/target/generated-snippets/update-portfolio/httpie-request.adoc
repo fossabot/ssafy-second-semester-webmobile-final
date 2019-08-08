@@ -6,7 +6,7 @@ $ echo '{
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-08T09:25:14.383",
+  "portfolioCreatedAt" : "2019-08-08T09:26:44.576",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png"

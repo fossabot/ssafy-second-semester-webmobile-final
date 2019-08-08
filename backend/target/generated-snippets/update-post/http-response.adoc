@@ -1,8 +1,8 @@
 [source,http,options="nowrap"]
 ----
 HTTP/1.1 200 OK
+Content-Length: 460
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 459
 
 {
   "postId" : 5,
@@ -10,7 +10,7 @@ Content-Length: 459
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-08T09:25:14.95",
+  "postCreatedAt" : "2019-08-08T09:26:45.115",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],
