@@ -95,7 +95,7 @@ export default {
           console.log(res.status);
 
           if(res.status == 201){
-            let targetURI = "http://70.12.246.109:3000/send";
+            let targetURI = "https://70.12.246.109:3000/send";
 
             axios({
               url : targetURI,
