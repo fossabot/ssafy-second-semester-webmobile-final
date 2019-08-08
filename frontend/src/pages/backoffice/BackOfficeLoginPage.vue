@@ -35,22 +35,17 @@ export default {
 	},
 	methods : {
 		async adminLoginProcess() {
-			console.log(this.adminEmail);
-			console.log(this.adminPassword);
 			await this.logout()
-			console.log("로그아웃")
-
 			const res = await firebase.getLogin(this.adminEmail,this.adminPassword)
 
 			if(res!=null || res != undefined) {
-				console.log('로그인됐냐')
 				let token = await firebase.getToken(this.adminEmail)
 				sessionStorage.setItem('key',token)
 				this.setUser({data:res})
 				this.isLogin()
 				
 				if (this.accountAuth != "1") {
-					alert("당신은....멤버지...관리지가...아닙니다!!!!")
+					alert("관리자 권한이 없습니다.")
 					document.getElementById("header").style.removeProperty("display")
 					this.$router.push({name: 'HomePage'})
 				} else {
@@ -58,7 +53,7 @@ export default {
 				}
 
 			} else{
-				alert("당신은....멤버가...아닙니다!!!!")
+				alert("회원이 아닙니다.")
 				document.getElementById("header").style.removeProperty("display")
 				this.$router.push({name: 'HomePage'})
 			}

@@ -42,6 +42,7 @@ export default {
     }
   },
   async created() {
+    await mapState('account',['loginCheck','accountAuth'])
     await this.loadPortfolios(this.pageNo)
   }
 }
