@@ -1,6 +1,7 @@
 import axios from 'axios'
 import firebase from '../firebase/firebase'
 import store from '../../store/store'
+import https from 'https'
 
 // TODO : 예외 처리 달지 않은 상태  
 
@@ -75,6 +76,7 @@ export default {
           headers.accountAuth = LoginUserInfo.auth
         }
       })
+
     return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
                 .then((res) => {
                   this.setCookie("portfolios",res.data.content,1)

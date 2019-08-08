@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import firebase from '../apis/firebase/firebase'
 
+import TestPage from '../pages/TestPage.vue'
 
 import HomePage from '../pages/home/HomePage.vue'
 import PortfolioCreatePage from '../pages/portfolio/PortfolioCreatePage.vue'
@@ -106,5 +107,10 @@ export default new Router({
         }
       }  
     },
+    {
+      path: '/test',
+      name: TestPage,
+      component: TestPage
+    }
   ]
 })
