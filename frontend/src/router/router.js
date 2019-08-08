@@ -21,6 +21,7 @@ import NaverCallBack from '../components/widget/NaverCallBack.vue'
 import BackOfficeLoginPage from '@/pages/backoffice/BackOfficeLoginPage.vue'
 import BackOfficeMainPage from '@/pages/backoffice/BackOfficeMainPage.vue'
 
+import ErrorPage from '../pages/error/ErrorPage'
 
 Vue.use(Router)
 
@@ -106,6 +107,11 @@ export default new Router({
             })
         }
       }  
+    },
+    {
+      path: '*',
+      name: 'ErrorPage',
+      component: ErrorPage
     },
     {
       path: '/test',
