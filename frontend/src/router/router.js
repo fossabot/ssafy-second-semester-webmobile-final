@@ -86,7 +86,7 @@ export default new Router({
     {
       path: '/admin',
       name: 'BackOfficeLoginPage',
-      component: BackOfficeLoginPage
+      component: BackOfficeLoginPage,
     },
     {
       path : '/admin/main',
@@ -109,7 +109,7 @@ export default new Router({
     },
     {
       path: '/test',
-      name: TestPage,
+      name: 'TestPage',
       component: TestPage
     }
   ]
