@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.ssafy.api.PortfolioCommentRestControllerTests" time="5.776" tests="3" errors="2" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.ssafy.api.PortfolioCommentRestControllerTests" time="5.772" tests="3" errors="2" skipped="0" failures="1">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="KR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\MULTIC~1\AppData\Local\Temp\surefire2393068487038277364\surefirebooter1063717967618803151.jar C:\Users\multicampus\AppData\Local\Temp\surefire2393068487038277364 2019-08-08T09-28-53_037-jvmRun1 surefire7835337915236428224tmp surefire_06165478696257294971tmp"/>
+    <property name="sun.java.command" value="C:\Users\MULTIC~1\AppData\Local\Temp\surefire4736351849405350684\surefirebooter5962236202075803771.jar C:\Users\multicampus\AppData\Local\Temp\surefire4736351849405350684 2019-08-08T09-32-03_845-jvmRun1 surefire1865645387629886721tmp surefire_05792564115625047287tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\test-classes;C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter\2.1.6.RELEASE\spring-boot-starter-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot\2.1.6.RELEASE\spring-boot-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.1.6.RELEASE\spring-boot-autoconfigure-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-core\5.1.8.RELEASE\spring-core-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-jcl\5.1.8.RELEASE\spring-jcl-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.1.6.RELEASE\spring-boot-starter-aop-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-aop\5.1.8.RELEASE\spring-aop-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.1.6.RELEASE\spring-boot-starter-test-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-test\2.1.6.RELEASE\spring-boot-test-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.1.6.RELEASE\spring-boot-test-autoconfigure-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\multicampus\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\multicampus\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\multicampus\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\multicampus\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\multicampus\.m2\repository\org\assertj\assertj-core\3.11.1\assertj-core-3.11.1.jar;C:\Users\multicampus\.m2\repository\org\mockito\mockito-core\2.23.4\mockito-core-2.23.4.jar;C:\Users\multicampus\.m2\repository\net\bytebuddy\byte-buddy\1.9.13\byte-buddy-1.9.13.jar;C:\Users\multicampus\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.13\byte-buddy-agent-1.9.13.jar;C:\Users\multicampus\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;C:\Users\multicampus\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\multicampus\.m2\repository\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;C:\Users\multicampus\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\multicampus\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-test\5.1.8.RELEASE\spring-test-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\xmlunit\xmlunit-core\2.6.2\xmlunit-core-2.6.2.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-log4j2\2.1.6.RELEASE\spring-boot-starter-log4j2-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.11.2\log4j-slf4j-impl-2.11.2.jar;C:\Users\multicampus\.m2\repository\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;C:\Users\multicampus\.m2\repository\org\apache\logging\log4j\log4j-core\2.11.2\log4j-core-2.11.2.jar;C:\Users\multicampus\.m2\repository\org\apache\logging\log4j\log4j-jul\2.11.2\log4j-jul-2.11.2.jar;C:\Users\multicampus\.m2\repository\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.1.6.RELEASE\spring-boot-starter-web-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.1.6.RELEASE\spring-boot-starter-json-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.9\jackson-datatype-jdk8-2.9.9.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.9\jackson-datatype-jsr310-2.9.9.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.9\jackson-module-parameter-names-2.9.9.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.1.6.RELEASE\spring-boot-starter-tomcat-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.21\tomcat-embed-core-9.0.21.jar;C:\Users\multicampus\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.21\tomcat-embed-el-9.0.21.jar;C:\Users\multicampus\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.21\tomcat-embed-websocket-9.0.21.jar;C:\Users\multicampus\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.17.Final\hibernate-validator-6.0.17.Final.jar;C:\Users\multicampus\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\multicampus\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\classmate\1.4.0\classmate-1.4.0.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-web\5.1.8.RELEASE\spring-web-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-webmvc\5.1.8.RELEASE\spring-webmvc-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-expression\5.1.8.RELEASE\spring-expression-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\mybatis\spring\boot\mybatis-spring-boot-starter\2.0.1\mybatis-spring-boot-starter-2.0.1.jar;C:\Users\multicampus\.m2\repository\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\2.0.1\mybatis-spring-boot-autoconfigure-2.0.1.jar;C:\Users\multicampus\.m2\repository\org\mybatis\mybatis\3.5.1\mybatis-3.5.1.jar;C:\Users\multicampus\.m2\repository\org\mybatis\mybatis-spring\2.0.1\mybatis-spring-2.0.1.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\2.1.6.RELEASE\spring-boot-starter-thymeleaf-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.11.RELEASE\thymeleaf-spring5-3.0.11.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\thymeleaf\thymeleaf\3.0.11.RELEASE\thymeleaf-3.0.11.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-devtools\2.1.6.RELEASE\spring-boot-devtools-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\projectlombok\lombok\1.18.8\lombok-1.18.8.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.1.6.RELEASE\spring-boot-starter-jdbc-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\com\zaxxer\HikariCP\3.2.0\HikariCP-3.2.0.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-jdbc\5.1.8.RELEASE\spring-jdbc-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-tx\5.1.8.RELEASE\spring-tx-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.1.6.RELEASE\spring-boot-starter-data-jpa-2.1.6.RELEASE.jar;C:\Users\multicampus\.m2\repository\javax\transaction\javax.transaction-api\1.3\javax.transaction-api-1.3.jar;C:\Users\multicampus\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\multicampus\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\multicampus\.m2\repository\org\hibernate\hibernate-core\5.3.10.Final\hibernate-core-5.3.10.Final.jar;C:\Users\multicampus\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\multicampus\.m2\repository\org\javassist\javassist\3.23.2-GA\javassist-3.23.2-GA.jar;C:\Users\multicampus\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\multicampus\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\multicampus\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\multicampus\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.0.4.Final\hibernate-commons-annotations-5.0.4.Final.jar;C:\Users\multicampus\.m2\repository\org\springframework\data\spring-data-jpa\2.1.9.RELEASE\spring-data-jpa-2.1.9.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\data\spring-data-commons\2.1.9.RELEASE\spring-data-commons-2.1.9.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-orm\5.1.8.RELEASE\spring-orm-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-aspects\5.1.8.RELEASE\spring-aspects-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\mysql\mysql-connector-java\8.0.16\mysql-connector-java-8.0.16.jar;C:\Users\multicampus\.m2\repository\org\springframework\hateoas\spring-hateoas\0.25.1.RELEASE\spring-hateoas-0.25.1.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-beans\5.1.8.RELEASE\spring-beans-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\springframework\spring-context\5.1.8.RELEASE\spring-context-5.1.8.RELEASE.jar;C:\Users\multicampus\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.9\jackson-databind-2.9.9.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;C:\Users\multicampus\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.9\jackson-core-2.9.9.jar;C:\Users\multicampus\.m2\repository\org\springframework\restdocs\spring-restdocs-mockmvc\2.0.3.RELEASE\spring-restdocs-mockmvc-2.0.3.RELEASE.jar;C:\Users\multicampus\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\multicampus\.m2\repository\org\springframework\restdocs\spring-restdocs-core\2.0.3.RELEASE\spring-restdocs-core-2.0.3.RELEASE.jar;C:\Users\multicampus\.m2\repository\com\h2database\h2\1.4.199\h2-1.4.199.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\multicampus"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\MULTIC~1\AppData\Local\Temp\surefire2393068487038277364\surefirebooter1063717967618803151.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MULTIC~1\AppData\Local\Temp\surefire4736351849405350684\surefirebooter5962236202075803771.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\resources.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\rt.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\sunrsasign.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\jsse.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\jce.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\charsets.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\lib\jfr.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.212-1\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,17 +61,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="deletePortfolioComment" classname="com.ssafy.api.PortfolioCommentRestControllerTests" time="0.2">
+  <testcase name="deletePortfolioComment" classname="com.ssafy.api.PortfolioCommentRestControllerTests" time="0.199">
     <failure message="Status expected:&lt;204&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<204> but was:<400>
 	at com.ssafy.api.PortfolioCommentRestControllerTests.deletePortfolioComment(PortfolioCommentRestControllerTests.java:137)
 ]]></failure>
-    <system-out><![CDATA[2019-08-08 09:28:53 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.api.PortfolioCommentRestControllerTests], using SpringBootContextLoader
-2019-08-08 09:28:53 INFO Could not detect default resource locations for test class [com.ssafy.api.PortfolioCommentRestControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-08-08 09:28:53 INFO Could not detect default configuration classes for test class [com.ssafy.api.PortfolioCommentRestControllerTests]: PortfolioCommentRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-08-08 09:28:54 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.api.PortfolioCommentRestControllerTests
-2019-08-08 09:28:54 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-08-08 09:28:54 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e928fbf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@352ff4da, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3224a577, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2e32ccc5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@748741cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e44f2a5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@295cf707, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1130520d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5f77d0f9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@463fd068, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@895e367, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b266842]
-2019-08-08 09:28:54,342 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
+    <system-out><![CDATA[2019-08-08 09:32:04 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ssafy.api.PortfolioCommentRestControllerTests], using SpringBootContextLoader
+2019-08-08 09:32:04 INFO Could not detect default resource locations for test class [com.ssafy.api.PortfolioCommentRestControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-08-08 09:32:04 INFO Could not detect default configuration classes for test class [com.ssafy.api.PortfolioCommentRestControllerTests]: PortfolioCommentRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-08-08 09:32:04 INFO Found @SpringBootConfiguration com.ssafy.WebmobileSub2Application for test class com.ssafy.api.PortfolioCommentRestControllerTests
+2019-08-08 09:32:04 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-08-08 09:32:04 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e928fbf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@352ff4da, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3224a577, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2e32ccc5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@748741cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e44f2a5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@295cf707, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1130520d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5f77d0f9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@463fd068, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@895e367, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b266842]
+2019-08-08 09:32:05,098 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
  _____                  ______                       
 (_____)                (____  \                      
    _     ____   ____    ____)  )  ____   ____   ____ 
@@ -86,30 +86,30 @@
 | |___| |( (/ / | |_) )| | | || |_| || |_) )| || |( (/ /      | |   | || | | |( ( | || |
  \______| \____)|____/ |_|_|_| \___/ |____/ |_||_| \____)     |_|   |_||_| |_| \_||_||_|
                                                                                         
-2019-08-08 09:28:54 INFO Starting PortfolioCommentRestControllerTests on DESKTOP-KVCQHCD with PID 10908 (started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
-2019-08-08 09:28:54 INFO The following profiles are active: test
-2019-08-08 09:28:55 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
-2019-08-08 09:28:55 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-08-08 09:28:55 INFO Finished Spring Data repository scanning in 60ms. Found 4 repository interfaces.
-2019-08-08 09:28:55 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$35d95b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-08-08 09:28:55 INFO HikariPool-1 - Starting...
-2019-08-08 09:28:55 INFO HikariPool-1 - Start completed.
-2019-08-08 09:28:55 INFO HHH000204: Processing PersistenceUnitInfo [
+2019-08-08 09:32:05 INFO Starting PortfolioCommentRestControllerTests on DESKTOP-KVCQHCD with PID 5940 (started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-08 09:32:05 INFO The following profiles are active: test
+2019-08-08 09:32:05 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-08 09:32:05 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-08 09:32:05 INFO Finished Spring Data repository scanning in 70ms. Found 4 repository interfaces.
+2019-08-08 09:32:06 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$35d95b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-08 09:32:06 INFO HikariPool-1 - Starting...
+2019-08-08 09:32:06 INFO HikariPool-1 - Start completed.
+2019-08-08 09:32:06 INFO HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-08-08 09:28:56 INFO HHH000412: Hibernate Core {5.3.10.Final}
-2019-08-08 09:28:56 INFO HHH000206: hibernate.properties not found
-2019-08-08 09:28:56 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-08-08 09:28:56 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2019-08-08 09:28:57 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-08-08 09:28:58 INFO Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-08 09:28:58 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-08-08 09:28:58 INFO Adding welcome page: class path resource [static/index.html]
-2019-08-08 09:28:58 INFO Initializing Spring TestDispatcherServlet ''
-2019-08-08 09:28:58 INFO Initializing Servlet ''
-2019-08-08 09:28:58 INFO Completed initialization in 12 ms
-2019-08-08 09:28:58 INFO Started PortfolioCommentRestControllerTests in 4.679 seconds (JVM running for 5.6)
-2019-08-08 09:28:58 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-08 09:32:06 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-08 09:32:06 INFO HHH000206: hibernate.properties not found
+2019-08-08 09:32:06 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-08 09:32:07 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-08-08 09:32:07 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-08 09:32:08 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-08 09:32:09 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-08 09:32:09 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-08 09:32:09 INFO Initializing Spring TestDispatcherServlet ''
+2019-08-08 09:32:09 INFO Initializing Servlet ''
+2019-08-08 09:32:09 INFO Completed initialization in 13 ms
+2019-08-08 09:32:09 INFO Started PortfolioCommentRestControllerTests in 4.693 seconds (JVM running for 5.57)
+2019-08-08 09:32:09 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
 
 MockHttpServletRequest:
       HTTP Method = DELETE
@@ -186,19 +186,19 @@ MockHttpServletResponse:
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="updatePortfolioComment" classname="com.ssafy.api.PortfolioCommentRestControllerTests" time="0.207">
+  <testcase name="updatePortfolioComment" classname="com.ssafy.api.PortfolioCommentRestControllerTests" time="0.199">
     <error message="Fields with the following paths were not found in the payload: [portfolioId]" type="org.springframework.restdocs.snippet.SnippetException">org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [portfolioId]
 	at com.ssafy.api.PortfolioCommentRestControllerTests.updatePortfolioComment(PortfolioCommentRestControllerTests.java:94)
 </error>
-    <system-out><![CDATA[2019-08-08 09:28:59 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
-2019-08-08 09:28:59 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
+    <system-out><![CDATA[2019-08-08 09:32:09 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
+2019-08-08 09:32:09 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
 
 MockHttpServletRequest:
       HTTP Method = PUT
       Request URI = /portfolios/2/comments/2
        Parameters = {}
           Headers = [Content-Type:"application/json;charset=UTF-8", accountEmail:"test@email.com", accountAuth:"2"]
-             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:28:59.058"}
+             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:32:09.827"}
     Session Attrs = {}
 
 Handler:
@@ -225,7 +225,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/hal+json;charset=UTF-8"]
      Content type = application/hal+json;charset=UTF-8
-             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:28:59.058","links":[{"rel":"self","href":"http://localhost:8080/portfolios/2"},{"rel":"delete","href":"http://localhost:8080/portfolios/2"}]}
+             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:32:09.827","links":[{"rel":"self","href":"http://localhost:8080/portfolios/2"},{"rel":"delete","href":"http://localhost:8080/portfolios/2"}]}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -272,7 +272,7 @@ MockHttpServletRequest:
       Request URI = /portfolios/2/comments/2
        Parameters = {}
           Headers = [Content-Type:"application/json;charset=UTF-8", accountEmail:"test@email.com", accountAuth:"2"]
-             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:28:59.058"}
+             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:32:09.827"}
     Session Attrs = {}
 
 Handler:
@@ -299,18 +299,18 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/hal+json;charset=UTF-8"]
      Content type = application/hal+json;charset=UTF-8
-             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:28:59.058","links":[{"rel":"self","href":"http://localhost:8080/portfolios/2"},{"rel":"delete","href":"http://localhost:8080/portfolios/2"}]}
+             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:32:09.827","links":[{"rel":"self","href":"http://localhost:8080/portfolios/2"},{"rel":"delete","href":"http://localhost:8080/portfolios/2"}]}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
 ]]></system-out>
   </testcase>
-  <testcase name="createPortfolioComment" classname="com.ssafy.api.PortfolioCommentRestControllerTests" time="0.024">
+  <testcase name="createPortfolioComment" classname="com.ssafy.api.PortfolioCommentRestControllerTests" time="0.03">
     <error message="Fields with the following paths were not found in the payload: [portfolioId]" type="org.springframework.restdocs.snippet.SnippetException">org.springframework.restdocs.snippet.SnippetException: Fields with the following paths were not found in the payload: [portfolioId]
 	at com.ssafy.api.PortfolioCommentRestControllerTests.createPortfolioComment(PortfolioCommentRestControllerTests.java:48)
 </error>
-    <system-out><![CDATA[2019-08-08 09:28:59 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
-2019-08-08 09:28:59 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+    <system-out><![CDATA[2019-08-08 09:32:10 INFO [#] [START] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-08 09:32:10 INFO [#] [ END ] - [ACCOUNT : test@email.com | AUTH : 2] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -344,7 +344,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Location:"http://localhost:8080/portfolios/3", Content-Type:"application/hal+json;charset=UTF-8"]
      Content type = application/hal+json;charset=UTF-8
-             Body = {"portfolioCommentId":3,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"댓글 내용","portfolioCommentCreatedAt":"2019-08-08T09:28:59.27","links":[{"rel":"self","href":"http://localhost:8080/portfolios/3"},{"rel":"update","href":"http://localhost:8080/portfolios/3"},{"rel":"delete","href":"http://localhost:8080/portfolios/3"}]}
+             Body = {"portfolioCommentId":3,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"댓글 내용","portfolioCommentCreatedAt":"2019-08-08T09:32:10.033","links":[{"rel":"self","href":"http://localhost:8080/portfolios/3"},{"rel":"update","href":"http://localhost:8080/portfolios/3"},{"rel":"delete","href":"http://localhost:8080/portfolios/3"}]}
     Forwarded URL = null
    Redirected URL = http://localhost:8080/portfolios/3
           Cookies = []
@@ -391,7 +391,7 @@ MockHttpServletRequest:
       Request URI = /portfolios/2/comments/2
        Parameters = {}
           Headers = [Content-Type:"application/json;charset=UTF-8", accountEmail:"test@email.com", accountAuth:"2"]
-             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:28:59.058"}
+             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:32:09.827"}
     Session Attrs = {}
 
 Handler:
@@ -418,7 +418,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/hal+json;charset=UTF-8"]
      Content type = application/hal+json;charset=UTF-8
-             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:28:59.058","links":[{"rel":"self","href":"http://localhost:8080/portfolios/2"},{"rel":"delete","href":"http://localhost:8080/portfolios/2"}]}
+             Body = {"portfolioCommentId":2,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"내용 수정","portfolioCommentCreatedAt":"2019-08-08T09:32:09.827","links":[{"rel":"self","href":"http://localhost:8080/portfolios/2"},{"rel":"delete","href":"http://localhost:8080/portfolios/2"}]}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -455,7 +455,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Location:"http://localhost:8080/portfolios/3", Content-Type:"application/hal+json;charset=UTF-8"]
      Content type = application/hal+json;charset=UTF-8
-             Body = {"portfolioCommentId":3,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"댓글 내용","portfolioCommentCreatedAt":"2019-08-08T09:28:59.27","links":[{"rel":"self","href":"http://localhost:8080/portfolios/3"},{"rel":"update","href":"http://localhost:8080/portfolios/3"},{"rel":"delete","href":"http://localhost:8080/portfolios/3"}]}
+             Body = {"portfolioCommentId":3,"accountEmail":"test@email.com","accountName":"test name","portfolioCommentContent":"댓글 내용","portfolioCommentCreatedAt":"2019-08-08T09:32:10.033","links":[{"rel":"self","href":"http://localhost:8080/portfolios/3"},{"rel":"update","href":"http://localhost:8080/portfolios/3"},{"rel":"delete","href":"http://localhost:8080/portfolios/3"}]}
     Forwarded URL = null
    Redirected URL = http://localhost:8080/portfolios/3
           Cookies = []

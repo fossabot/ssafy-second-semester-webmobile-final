@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ssafy.api.PostRestControllerTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.185 s <<< FAILURE! - in com.ssafy.api.PostRestControllerTests
-updatePost(com.ssafy.api.PostRestControllerTests)  Time elapsed: 0.042 s  <<< ERROR!
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.17 s <<< FAILURE! - in com.ssafy.api.PostRestControllerTests
+updatePost(com.ssafy.api.PostRestControllerTests)  Time elapsed: 0.036 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
 The following parts of the payload were not documented:
 {
@@ -10,7 +10,7 @@ The following parts of the payload were not documented:
 }
 	at com.ssafy.api.PostRestControllerTests.updatePost(PostRestControllerTests.java:86)
 
-createPost(com.ssafy.api.PostRestControllerTests)  Time elapsed: 0.03 s  <<< ERROR!
+createPost(com.ssafy.api.PostRestControllerTests)  Time elapsed: 0.023 s  <<< ERROR!
 org.springframework.restdocs.snippet.SnippetException: 
 The following parts of the payload were not documented:
 {
