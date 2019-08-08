@@ -43,7 +43,26 @@ new Vue({
 		// Get Instance ID token. Initially this makes a network call, once retrieved
 		// subsequent calls to getToken will return from cache.
 		messaging.getToken().then((token) => {
+			console.log(token)
 			window.sessionStorage.setItem('firebaseToken', token);
+		}).catch((err) => {
+			console.log("token generated error", err);
+		})
+
+		let targetURI = "https://70.12.246.109:3000/send";
+		axios({
+			url : targetURI,
+			method : 'get',
+			params : {
+			token : window.sessionStorage.getItem('firebaseToken')
+			}
+		})
+		.then((res) => {
+			console.log("send message success")
+			console.log(res);
+		}).catch((error) => {
+			console.log("send message error")
+			console.log(error);
 		})
 	}
 }).$mount('#app')
