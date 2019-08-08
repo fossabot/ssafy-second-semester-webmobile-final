@@ -6,7 +6,7 @@
 			<th>계정</th>
 			<th>이름</th>
 			<th>등급</th>
-			<tr v-for = "(account,idx) in accounts" :key="idx"><!-- 첫번째 줄 시작 -->
+			<tr v-for = "(account,idx) in accountList" :key="idx"><!-- 첫번째 줄 시작 -->
 		  	<td>{{idx+1}}</td>
 		  	<td>{{account.email}}</td>
 		  	<td>{{account.name}}</td>
@@ -28,7 +28,7 @@ import firebase from '../../apis/firebase/firebase'
 export default {
 	name : 'ManageAccounts',
 	props: {
-		accounts: {type:Array}
+		accountList: {type:Array}
 	},
 
 	methods: {

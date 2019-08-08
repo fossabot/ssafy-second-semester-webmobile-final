@@ -341,8 +341,15 @@ export default {
   getPortfoliosCount() {
     return axios.get(`${portfolioUrl}/count`)
                 .then((res) => {                  
-                  console.log(res) 
+                  return res.data.countPortfolios
               })
+  },
 
-  }
+  getPostsCount() {
+    return axios.get(`${postUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPosts
+              })
+  },
+  
 }
