@@ -1,7 +1,6 @@
 import axios from 'axios'
 import firebase from '../firebase/firebase'
 import store from '../../store/store'
-import https from 'https'
 
 // TODO : 예외 처리 달지 않은 상태  
 
@@ -336,6 +335,21 @@ export default {
     var date = new Date()
     date.setTime(date.getTime() + exp*24*60*60*1000);
     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+  },
+  
+
+  getPortfoliosCount() {
+    return axios.get(`${portfolioUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPortfolios
+              })
+  },
+
+  getPostsCount() {
+    return axios.get(`${postUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPosts
+              })
   },
   
 }

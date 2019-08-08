@@ -81,6 +81,21 @@ export default {
       if(data!=null || data != undefined){
         let token = await firebase.getToken(email)
         sessionStorage.setItem('key',token)
+        console.log(data.ispush);
+        
+        if(data.ispush=="0"){
+          console.log("ispush 알림");
+          if(confirm("알림 설정 하시겠습니까?")==true){
+            //등록부분
+            
+            //firebase 수정부분 (1이 허용 2가 거절)
+            firebase.updateIsPush(sessionStorage.getItem('key'),1)
+            data.ispush="1"
+          }else{
+            firebase.updateIsPush(sessionStorage.getItem('key'),2)
+            data.ispush="2"
+          }
+        }
         this.setUser({data:data})
         this.isLogin()
         this.showModal=false
