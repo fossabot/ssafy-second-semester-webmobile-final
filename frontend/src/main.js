@@ -26,7 +26,9 @@ new Vue({
 			if(permission === 'granted'){
 				console.log('Notification permission granted');
 
-				messaging.getToken()
+				
+				
+				/*messaging.getToken()
 				.then((token)=>{
 					window.sessionStorage.setItem('firebaseToken', token);
 				})
@@ -47,7 +49,7 @@ new Vue({
 				})
 				.catch((err)=>{
 					console.log("subscribe error", err);
-				})
+				})*/
 
 			} else {
 				console.log('Unable to get permission to notify');
