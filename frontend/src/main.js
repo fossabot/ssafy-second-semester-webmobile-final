@@ -90,6 +90,5 @@ new Vue({
       console.log("send message error")
       console.log(error);
     })
->>>>>>> frontend_push
 	}
 }).$mount('#app')
