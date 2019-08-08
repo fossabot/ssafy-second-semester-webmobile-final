@@ -115,7 +115,7 @@ export default {
     portfolio.accountName = loginUser.accountName
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
                 .then((res) => {  
-                  return res.data
+                  return res
                 })
   },
 
