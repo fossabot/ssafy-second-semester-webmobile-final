@@ -77,12 +77,7 @@ export default {
         }
       })
 
-    const agent = new https.Agent({  
-      rejectUnauthorized: false
-    }) 
-    console.log(agent)
-    console.log(agent.rejectUnauthorized)
-    return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers, "httpsAgent": agent})
+    return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
                 .then((res) => {
                   this.setCookie("portfolios",res.data.content,1)
                   return res.data.content

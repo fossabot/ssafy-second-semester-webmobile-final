@@ -1,6 +1,5 @@
 <template>
   <div class="container mt-5 pt-5">
-    <button type="button" class="btn btn-sm btn-outline-dark d-block" @click="isAnother = !isAnother">Another view</button>
     <PortfolioDetail></PortfolioDetail>
     <div class="d-flex justify-content-center">
       <!-- 목록 -->

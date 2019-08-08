@@ -19,7 +19,7 @@
           <router-link :to="{ name: 'HomePage' }" class="nav-item nav-link h4">Home</router-link>
           <router-link :to="{ name: 'PortfolioListPage' }" class="nav-item nav-link h4">Portfolio</router-link>
           <router-link :to="{ name: 'PostListPage' }" class="nav-item nav-link h4">Post</router-link>
-          <router-link :to="{ name: '' }" class="nav-item nav-link h4">Repo</router-link>
+          <router-link :to="{ name: 'TestPage' }" class="nav-item nav-link h4">Test</router-link>
           <!-- <router-link :to="{ name: 'loginpage', params: {} }" class="nav-item nav-link h6">Login</router-link> -->
           <a v-if="!loginCheck" class="nav-item nav-link h6" @click="showModal = true" >Login</a>
           <!-- <a v-if="userlogin" class="nav-item nav-link h6" @click="logOut" >환영합니다 {{user.id}}님</a> -->
