@@ -1,11 +1,22 @@
 import axios from 'axios'
-import store from '../../store/store.js'
+import firebase from '../firebase/firebase'
+import store from '../../store/store'
 
 // TODO : 예외 처리 달지 않은 상태  
 
 let loginUser = store.state.account 
-const portfolioUrl = 'http://70.12.246.106:9090/api/bears/portfolios' 
-const postUrl = 'http://70.12.246.106:9090/api/bears/posts' 
+
+const getLoginUserInfo = async function() {
+  if (sessionStorage.getItem('key')) {
+    const LoginUserInfo = firebase.getInfo(sessionStorage.getItem('key'))
+    return LoginUserInfo
+  } else {
+    return false
+  }
+}
+
+const portfolioUrl = 'https://70.12.246.106:9090/api/bears/portfolios' 
+const postUrl = 'https://70.12.246.106:9090/api/bears/posts' 
 
 export default {
   // 이 함수는 근데 이미 account.js에 변수화 되어 있어서 vue 특성상 변수화 된 애를 쓰는게 편함 버리는 함수
@@ -44,15 +55,27 @@ export default {
   },
 
   // Portfolios CRUD
-  getPortfolios() {
+  getPortfolios() {    
     return axios.get(portfolioUrl)
                 .then((res) => {                  
                   return res.data.content 
               })
   },
 
-  loadPortfolios(pageNo) { // 6개씩
-    return axios.get(`${portfolioUrl}/pages/${pageNo}`)
+  async loadPortfolios(pageNo) { // 6개씩
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+    return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
                 .then((res) => {
                   this.setCookie("portfolios",res.data.content,1)
                   return res.data.content
@@ -60,8 +83,20 @@ export default {
   },
 
 
-  getPortfolio(portfolioId) {
-    return axios.get(`${portfolioUrl}/${portfolioId}`)
+  async getPortfolio(portfolioId) {
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+    return axios.get(`${portfolioUrl}/${portfolioId}`,{"headers": headers})
                 .then((res) => {                
                   return res.data
               })
@@ -75,11 +110,12 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
+    console.log(headers)
     portfolio.accountEmail = loginUser.accountEmail
     portfolio.accountName = loginUser.accountName
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
                 .then((res) => {  
-                  return res.data
+                  return res
                 })
   },
 

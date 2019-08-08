@@ -57,6 +57,8 @@ import mainServices from '../../apis/mainservice/mainServices'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
 
+import axios from 'axios' // 구현 함수 테스트 완료후 mainService.js에 통합하면서 지워야함.
+
 export default {
   name: 'PortfolioEdit',
   components: {
@@ -89,6 +91,28 @@ export default {
     async postPutPortfolio () { 
       if ( !this.$route.params.portfolioId ) { // 새로 만드는 경우
         await mainServices.postPortfolio(this.newPortfolio)
+        .then((res) => {
+          console.log(res.status);
+
+          if(res.status == 201){
+            let targetURI = "http://70.12.246.109:3000/send";
+
+            axios({
+              url : targetURI,
+              method : 'get',
+              params : {
+                token : window.sessionStorage.getItem('firebaseToken')
+              }
+            })
+            .then((res) => {
+              console.log("send message success")
+              console.log(res);
+            }).catch((error) => {
+              console.log("send message error")
+              console.log(error);
+            })
+          }
+        })
         this.$router.push({ name: 'PortfolioListPage'})
       } else { // 업데이트의 경우
         await mainServices.putPortfolio(this.newPortfolio)

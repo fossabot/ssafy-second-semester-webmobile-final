@@ -1,8 +1,7 @@
 <template>
   <div class="container mt-5 pt-5">
     <button type="button" class="btn btn-sm btn-outline-dark d-block" @click="isAnother = !isAnother">Another view</button>
-    <PortfolioDetail v-if="!isAnother"></PortfolioDetail>
-    <PortfolioDetailAnother v-else></PortfolioDetailAnother>
+    <PortfolioDetail></PortfolioDetail>
     <div class="d-flex justify-content-center">
       <!-- 목록 -->
       <router-link :to="{ name: 'PortfolioListPage'}" class="btn btn-outline-secondary mx-1">
@@ -26,7 +25,6 @@
 <script>
 import { mapState,mapActions } from 'vuex'
 import PortfolioDetail from '@/components/portfolio/PortfolioDetail'
-import PortfolioDetailAnother from '@/components/portfolio/PortfolioDetailAnother'
 import PortfolioCommentList from '@/components/portfolio/PortfolioCommentList'
 import mainServices from '../../apis/mainservice/mainServices'
 
@@ -35,12 +33,6 @@ export default {
   components: {
     PortfolioDetail,
     PortfolioCommentList,
-    PortfolioDetailAnother,
-  },
-  data() {
-    return {
-      isAnother: false
-    }
   },
   computed: {
     ...mapState('account',['loginCheck','accountAuth']),

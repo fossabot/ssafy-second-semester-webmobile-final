@@ -4,10 +4,10 @@
     <div id="list-demo">
       <button v-on:click="next">Next</button>
       <button v-on:click="previous">Previous</button>
-      <transition-group name="page" tag="p">
+      <transition name="page" tag="p">
         <div v-if="isTurn">{{ items[pageIndex] }}</div>
         <div v-if="isTurn">{{ items[pageIndex+1] }}</div>
-      </transition-group>
+      </transition>
     </div>
 
 
