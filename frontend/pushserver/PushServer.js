@@ -8,6 +8,8 @@ const express = require('express');
 const cors = require('cors');
 const {google} = require('googleapis');
 const admin = require('firebase-admin');
+const fs = require('fs');
+const https = require('https');
 const app = express();
 const serviceAccount = require('../ssafy-barebears-firebase-adminsdk-toal3-509eeb50b7.json');
 admin.initializeApp({
@@ -15,10 +17,15 @@ admin.initializeApp({
   databaseURL: "https://ssafy-barebears.firebaseio.com"
 });
 
+const sslOptions = {
+	key : fs.readFileSync('./private.pem'),
+	cert : fs.readFileSync('./public.pem')
+};
+
 app.use(cors());
 
-var server = app.listen(3000, function(){
-    console.log("Express server has started on port 3000")
+https.createServer(sslOptions, app).listen(3000, function(){
+	console.log("HTTPS  server is listening on port " + 3000);
 })
 
 app.get('/send', function(req, res){
