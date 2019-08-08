@@ -6,7 +6,7 @@
   "accountName" : "test name",
   "postTitle" : "포스트 제목",
   "postContent" : "포스트 내용",
-  "postCreatedAt" : "2019-08-06T17:27:39.056",
+  "postCreatedAt" : "2019-08-08T09:25:14.997",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png",
   "postComments" : [ ],

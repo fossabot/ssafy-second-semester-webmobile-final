@@ -3,7 +3,7 @@
 HTTP/1.1 201 Created
 Location: http://localhost:8080/portfolios/7
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 657
+Content-Length: 656
 
 {
   "portfolioId" : 7,
@@ -11,7 +11,7 @@ Content-Length: 657
   "accountName" : "test name",
   "portfolioTitle" : "포트폴리오 제목",
   "portfolioContent" : "포트폴리오 내용",
-  "portfolioCreatedAt" : "2019-08-06T17:27:38.725",
+  "portfolioCreatedAt" : "2019-08-08T09:25:14.72",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png",

@@ -2,7 +2,7 @@
 ----
 HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 557
+Content-Length: 556
 
 {
   "portfolioId" : 4,
@@ -10,7 +10,7 @@ Content-Length: 557
   "accountName" : "test name",
   "portfolioTitle" : "update title",
   "portfolioContent" : "update content",
-  "portfolioCreatedAt" : "2019-08-06T17:27:38.444",
+  "portfolioCreatedAt" : "2019-08-08T09:25:14.47",
   "portfolioGiturl" : "www.github.com/repository",
   "portfolioViews" : 0,
   "portfolioThumbnailUrl" : "/image.png",

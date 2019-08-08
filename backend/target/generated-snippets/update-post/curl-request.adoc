@@ -10,7 +10,7 @@ $ curl 'http://localhost:8080/posts/5' -i -X PUT \
   "accountName" : "test name",
   "postTitle" : "update title",
   "postContent" : "update content",
-  "postCreatedAt" : "2019-08-06T17:27:38.977",
+  "postCreatedAt" : "2019-08-08T09:25:14.941",
   "postViews" : 0,
   "postThumbnailUrl" : "/image.png"
 }'

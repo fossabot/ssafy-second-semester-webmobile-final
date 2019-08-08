@@ -9,7 +9,7 @@ Content-Length: 364
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-06T17:27:38.885",
+  "postCommentCreatedAt" : "2019-08-08T09:25:14.857",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/posts/2"
