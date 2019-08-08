@@ -4,6 +4,7 @@ const state = {
   accountEmail:"",
   accountName: "",
   accountAuth: "",
+  accountIsPush : "",
   loginCheck : false
 }
 
@@ -43,12 +44,14 @@ const mutations = {
       state.accountAuth=data.auth
       state.accountEmail=data.email
       state.accountName=data.name
+      state.accountIsPush = data.ispush
     }
   },
   setInit(state) {
     state.accountEmail= ""
     state.accountName= ""
     state.accountAuth= ""
+    state.accountIsPush = ""
     state.loginCheck=false
   },
   setSignUp(state, {loginId,loginName}) {

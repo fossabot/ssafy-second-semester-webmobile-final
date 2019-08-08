@@ -91,7 +91,8 @@ export default {
       email : email,
       gitlab_email : gitlabemail,
       name : name,
-      password : password
+      password : password,
+      ispush : "0"
     })
   },
 
@@ -105,6 +106,18 @@ export default {
     }).catch(function(){
       console.log("error");
       
+    })
+  },
+
+  //isPush 권한 수정
+  updateIsPush(token,ispush){
+    const accounts = firebase.firestore(app).collection("accounts")
+    return  accounts.doc(token).update({
+      ispush : ispush
+    }).then(function(){
+      console.log("success")
+    }).catch(function(){
+      console.log("error");
     })
   },
 

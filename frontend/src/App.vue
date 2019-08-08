@@ -13,6 +13,7 @@
 import Header from '@/components/common/Header.vue'
 import Esteregg from './pages/ee/Esteregg'
 import { mapState, mapActions,mapMutations } from 'vuex'
+import firebase from "@/apis/firebase/firebase"
 
 export default{
   name : 'App',
@@ -21,9 +22,14 @@ export default{
     Header
   },
   computed:{
-    ...mapState('account',['accountEmail','accountName','accountAuth'])
+    ...mapState('account',['accountEmail','accountName','accountAuth','accountIsPush'])
   },
   mounted() {
+  },
+  updated (){
+      console.log(
+      this.accountIsPush
+    )
   }
 }
 </script>
