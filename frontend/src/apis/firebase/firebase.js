@@ -106,5 +106,25 @@ export default {
       console.log("error");
       
     })
-  }
+  },
+
+  //Ranking
+  getRanking(){
+    const accounts = firebase.firestore(app).collection("ranking")
+    return accounts.get()
+                  .then((docSnapshots) => {
+                    return docSnapshots.docs.map((doc) => {
+                      let data = doc.data()
+                      return data
+                    })
+                  })
+  },
+
+  //post Ranking
+  postRanking(score){
+    const accounts = firebase.firestore(app).collection("ranking")
+    return accounts.add({
+      score : score,
+    })
+  },
 }
