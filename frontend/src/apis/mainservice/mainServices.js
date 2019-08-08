@@ -1,6 +1,7 @@
 import axios from 'axios'
 import firebase from '../firebase/firebase'
 import store from '../../store/store'
+import https from 'https'
 
 // TODO : 예외 처리 달지 않은 상태  
 
@@ -75,7 +76,13 @@ export default {
           headers.accountAuth = LoginUserInfo.auth
         }
       })
-    return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
+
+    const agent = new https.Agent({  
+      rejectUnauthorized: false
+    }) 
+    console.log(agent)
+    console.log(agent.rejectUnauthorized)
+    return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers, "httpsAgent": agent})
                 .then((res) => {
                   this.setCookie("portfolios",res.data.content,1)
                   return res.data.content
@@ -110,7 +117,7 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
-    console.log(headersssss)
+    console.log(headers)
     portfolio.accountEmail = loginUser.accountEmail
     portfolio.accountName = loginUser.accountName
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
