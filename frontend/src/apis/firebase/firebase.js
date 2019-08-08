@@ -110,7 +110,7 @@ export default {
 
   //Ranking
   getRanking(){
-    const accounts = firebase.firestore(app).collection("Ranking")
+    const accounts = firebase.firestore(app).collection("ranking")
     return accounts.get()
                   .then((docSnapshots) => {
                     return docSnapshots.docs.map((doc) => {

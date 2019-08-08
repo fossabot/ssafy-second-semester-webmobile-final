@@ -5,7 +5,7 @@
         같은 그림 찾기
         </div>
         <div class="col">
-            <a href="#" @click="logout">나가기</a>
+            <a href="#" @click="exit">나가기</a>
         </div>
     </div>
     <div class="row">
@@ -31,7 +31,12 @@ export default{
     },
     methods:{
         ...mapActions('account', ['isLogin','logout','getUser']),
-        
+        async exit(){
+            await this.logout()
+            // setTimeout(location.reload(),1000)
+            location.reload()
+            
+        }
         // 권한 업데이트 함수
         // async update(email,auth){
         //     let token=await firebase.getToken(email)

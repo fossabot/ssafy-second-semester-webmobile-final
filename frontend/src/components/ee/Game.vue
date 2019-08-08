@@ -74,7 +74,7 @@ export default{
             }
             return a;
         },
-        action(i){
+        async action(i){
             console.log(document.getElementById(i).getAttribute("src"));
             console.log(this.table[Math.floor(i/5)][i%5].imgSrc);
             
@@ -107,15 +107,29 @@ export default{
             }
             if(this.cur==10){
                 let c =this.count
-                firebase.postRanking(this.count).then((result)=>{
-                    firebase.getRanking().then((res)=>{
-                        for(let score in res){
-                            if(res[score]==c){
-                                alert("complete\n등수 :"+score+"\n클릭 횟수 : "+this.count)
-                            }
-                        }
-                    })
+                await firebase.postRanking(this.count)
+                let res = await firebase.getRanking()
+                console.log(res);
+                let arr =[]
+                for(let score in res){
+                    console.log(score)
+                    arr[score]=res[score].score
+                }
+                arr.sort(function(a,b){
+                    return a-b
                 })
+                console.log(arr);
+                
+                for(let i in arr){
+                    if(arr[i]==c){
+                        if(i==0){
+                            alert("complete\n축하합니다 1등 입니다.\n\n클릭 횟수 : "+this.count+"회\n\n ")
+                        }else {
+                            alert("complete\n등수 :"+((i*1)+1)+"등\n클릭 횟수 : "+this.count+"회\n1등과의 차이 : "+(c-arr[0])+"개")
+                        }
+                        break
+                    }
+                }
             }
         }
     }
