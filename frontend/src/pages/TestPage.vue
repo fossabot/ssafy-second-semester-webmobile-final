@@ -3,11 +3,13 @@
 </template>
 
 <script>
-import PortfolioDetailAnohter from '../components/portfolio/PortfolioDetailAnother'
+import PortfolioDetailAnother from '../components/portfolio/PortfolioDetailAnother'
 
 export default {
   name: 'TestPage',
-  components: PortfolioDetailAnohter
+  components: {
+    PortfolioDetailAnother,
+  }
 }
 </script>
 

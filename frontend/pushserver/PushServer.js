@@ -1,6 +1,5 @@
 /*
 메세지 푸시를 위한 node.js 서버
-http://localhost:8080/send로 메세지 푸시 가능.
 서버구동은 터미널에서 지금 경로에서 node PushServer.js 로 run
 */
 
@@ -42,20 +41,16 @@ app.get('/send', function(req, res){
 	res.header("Access-Control-Allow-Origin", "*");
   	res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
-	/*var registrationToken = req.query.token;*/
 	const topic = "Allusers"
 
 	var message = {
 		data : {
-			title: '저 왔어요 !!!',
+			title: '그만보내세요 !!!',
 	  		contents: '하이요!!'		
 		},
-		/*token: registrationToken*/
 		topic : topic
 	};
-
-	// Send a message to the device corresponding to the provided
-	// registration token.
+	
 	admin.messaging().send(message)
 	  .then((response) => {
 	    // Response is a message ID string.

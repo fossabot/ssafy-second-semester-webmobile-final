@@ -26,29 +26,6 @@ new Vue({
 			if(permission === 'granted'){
 				console.log('Notification permission granted');
 
-				messaging.getToken()
-				.then((token)=>{
-					window.sessionStorage.setItem('firebaseToken', token);
-				})
-				.catch((err)=>{
-					console.log("token get error");
-				})
-
-				let targetURL = "https://70.12.246.109:3000/subscribe";
-				axios({
-					url : targetURL,
-					method : 'get',
-					params : {
-						token : window.sessionStorage.getItem('firebaseToken')
-					}
-				})
-				.then((res)=>{
-					console.log("subscribe success", res);
-				})
-				.catch((err)=>{
-					console.log("subscribe error", err);
-				})
-
 			} else {
 				console.log('Unable to get permission to notify');
 			}
@@ -56,23 +33,13 @@ new Vue({
 
 		messaging.onMessage(function(payload){
 			console.log('onMessage from main.js', payload);
-			// var notification = new Notification(payload.data.title, payload.data.contents);
+			
 			var title = payload.data.title
 			var options = {
 				body : payload.data.contents
 			}
 			var notification = new Notification(title, options);
 		});
-
-		// Get Instance ID token. Ini`tially this makes a network call, once retrieved
-		// subsequent calls to getToken will return from cache.
-
-		/*messaging.getToken().then((token) => {
-			console.log(token);
-			window.sessionStorage.setItem('firebaseToken', token);
-		}).catch((err) => {
-			console.log("token err", err);
-		})*/
 
 		let targetURL = "https://70.12.246.109:3000/send";
 
