@@ -5,12 +5,13 @@
 				<li @click = "clickManage('accounts')">회원관리</li>
 				<li @click = "clickManage('postings')">게시글 수 조회</li>
 				<li @click = "clickManage('weblog')">웹로그</li>
+				<li @click="adminLogout">로그아웃</li>
 			</ul>
 		</nav>
 
 		<div id = "BackOfficeMainContents">
 			<div v-if = "accounts">
-				<ManageAccounts></ManageAccounts>
+				<ManageAccounts :accountList="accountList"></ManageAccounts>
 			</div>
 
 			<div v-else-if = "postings">
@@ -29,6 +30,9 @@
 import ManageAccounts from '@/components/backoffice/ManageAccounts.vue'
 import ManagePostings from '@/components/backoffice/ManagePostings.vue'
 import ManageWeblog from '@/components/backoffice/ManageWeblog.vue'
+import firebase from '../../apis/firebase/firebase'
+import {mapActions} from 'vuex'
+import { constants } from 'crypto';
 
 export default{
 	name : 'BackOfficeMainPage',
@@ -41,6 +45,7 @@ export default{
 
 	data() {
 		return {
+			accountList: [],
 			accounts : '',
 			postings : '',
 			weblog : '',
@@ -49,6 +54,10 @@ export default{
 	},
 
 	mounted () {
+		firebase.getAccounts()
+					.then((res) => {
+						this.accountList = res
+					})
 		this.accounts = true;
 		this.postings = false;
 		this.weblog = false;
@@ -83,6 +92,14 @@ export default{
 
 				return;
 			}
+		},
+
+		...mapActions('account',['logout']),
+
+		async adminLogout() {
+			await this.logout()
+			document.getElementById("header").style.removeProperty("display")
+			this.$router.push({ name: 'HomePage'})
 		}
 	}
 	

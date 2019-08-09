@@ -12,13 +12,25 @@
 	</div>
 </template>
 <script>
+import mainServices from '../../apis/mainservice/mainServices'
+
 export default{
 	name : 'ManagePostings',
 	data() {
 		return {
-			postingCounts : 302,
-			portfolioCounts : 359
+			postingCounts : "",
+			portfolioCounts : ""
 		}
+	},
+	async created() {
+		await mainServices.getPortfoliosCount()
+						  .then((portfoliosCount) => {
+							this.portfolioCounts = portfoliosCount
+						  })
+		await mainServices.getPostsCount()
+						  .then((postsCount) => {
+							  this.postingCounts = postsCount
+						  })
 	}
 }
 </script>

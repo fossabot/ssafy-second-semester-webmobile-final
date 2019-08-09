@@ -18,6 +18,17 @@ const actions = {
                   commit('setPortfolios', portfolios)
                 })
   },
+  loadPortfolios({commit}, pageNo) {
+    mainServices.loadPortfolios(pageNo)
+                .then((portfolios) => { 
+                  if (pageNo === 1) {
+                    commit('setPortfolios', portfolios)
+                  } else {
+                    commit('addPortfolios', portfolios)
+                  }
+                })
+  },
+
   getPortfolio({commit},portfolioId) {
     mainServices.getPortfolio(portfolioId) 
                 .then((portfolio) => {
@@ -30,6 +41,11 @@ const mutations = {
   setPortfolios(state, portfolios) {
     state.portfolios = portfolios
   },
+
+  addPortfolios(state, portfolios) {
+    state.portfolios = state.portfolios.concat(portfolios)
+  },
+
   setPortfolio(state, portfolio) {
     state.portfolio = portfolio
   },

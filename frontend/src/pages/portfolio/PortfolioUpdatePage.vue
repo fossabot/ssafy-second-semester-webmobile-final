@@ -1,29 +1,23 @@
 <template>
   <div class="container mt-5 pt-5">
-    <PortfolioEditComp></PortfolioEditComp>
+    <PortfolioEdit></PortfolioEdit>
   </div>
 </template>
 
 <script>
-import {mapState,mapActions} from 'vuex'
-import PortfolioEditComp from '../../components/portfolio/PortfolioEditComp'
+import {mapActions} from 'vuex'
+import PortfolioEdit from '../../components/portfolio/PortfolioEdit'
 
 export default {
   name: 'PortfolioUpdatePage',
   components: {
-    PortfolioEditComp,
-  },
-  computed: {
-    ...mapState('portfolio',['portfolio'])
+    PortfolioEdit,
   },
   methods: {
     ...mapActions('portfolio',['getPortfolio'])
   },
   async created() {
-    // await this.getPortfolio(this.$route.params.portfolioId)
-    
-    console.log("Update")        
-    console.log(this.portfolio)
+    await this.getPortfolio(this.$route.params.portfolioId) // methods는 created 될 때도 들어오지만 computed는 created 될 때 안들어 오는듯..
   }
 
 }
