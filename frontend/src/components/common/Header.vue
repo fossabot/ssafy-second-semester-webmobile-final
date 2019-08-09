@@ -95,7 +95,7 @@ export default {
               window.sessionStorage.setItem('firebaseToken', token);
             })
             .catch((err)=>{
-              console.log("token get error");ss
+              console.log("token get error");
             })
 
             let targetURL = "https://70.12.246.109:3000/subscribe";
