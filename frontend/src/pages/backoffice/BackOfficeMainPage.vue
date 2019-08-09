@@ -11,7 +11,7 @@
 
 		<div id = "BackOfficeMainContents">
 			<div v-if = "accounts">
-				<ManageAccounts :accounts="accounts"></ManageAccounts>
+				<ManageAccounts :accountList="accountList"></ManageAccounts>
 			</div>
 
 			<div v-else-if = "postings">
@@ -45,6 +45,7 @@ export default{
 
 	data() {
 		return {
+			accountList: [],
 			accounts : '',
 			postings : '',
 			weblog : '',
@@ -55,7 +56,7 @@ export default{
 	mounted () {
 		firebase.getAccounts()
 					.then((res) => {
-						this.accounts = res
+						this.accountList = res
 					})
 		this.accounts = true;
 		this.postings = false;

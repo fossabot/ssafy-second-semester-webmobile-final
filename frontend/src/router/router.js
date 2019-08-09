@@ -21,6 +21,7 @@ import NaverCallBack from '../components/widget/NaverCallBack.vue'
 import BackOfficeLoginPage from '@/pages/backoffice/BackOfficeLoginPage.vue'
 import BackOfficeMainPage from '@/pages/backoffice/BackOfficeMainPage.vue'
 
+import ErrorPage from '../pages/error/ErrorPage'
 
 Vue.use(Router)
 
@@ -86,7 +87,7 @@ export default new Router({
     {
       path: '/admin',
       name: 'BackOfficeLoginPage',
-      component: BackOfficeLoginPage
+      component: BackOfficeLoginPage,
     },
     {
       path : '/admin/main',
@@ -108,8 +109,13 @@ export default new Router({
       }  
     },
     {
+      path: '*',
+      name: 'ErrorPage',
+      component: ErrorPage
+    },
+    {
       path: '/test',
-      name: TestPage,
+      name: 'TestPage',
       component: TestPage
     }
   ]
