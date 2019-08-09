@@ -39,6 +39,7 @@
 import LoginModal from './LoginModal.vue'
 import { mapState, mapActions,mapMutations } from 'vuex'
 import firebase from "../../apis/firebase/firebase"
+import firebaseMessaging from 'firebase'
 
 export default {
   name: 'Header',
@@ -87,6 +88,30 @@ export default {
           console.log("ispush 알림");
           if(confirm("알림 설정 하시겠습니까?")==true){
             //등록부분
+            const messaging = firebaseMessaging.messaging();
+            
+            messaging.getToken()
+            .then((token)=>{
+              window.sessionStorage.setItem('firebaseToken', token);
+            })
+            .catch((err)=>{
+              console.log("token get error");
+            })
+
+            let targetURL = "https://70.12.246.109:3000/subscribe";
+            axios({
+              url : targetURL,
+              method : 'get',
+              params : {
+                token : window.sessionStorage.getItem('firebaseToken')
+              }
+            })
+            .then((res)=>{
+              console.log("subscribe success", res);
+            })
+            .catch((err)=>{
+              console.log("subscribe error", err);
+            })
             
             //firebase 수정부분 (1이 허용 2가 거절)
             firebase.updateIsPush(sessionStorage.getItem('key'),1)

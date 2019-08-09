@@ -45,7 +45,7 @@ app.get('/send', function(req, res){
 
 	var message = {
 		data : {
-			title: '저 왔어요 !!!',
+			title: '그만보내세요 !!!',
 	  		contents: '하이요!!'		
 		},
 		topic : topic
