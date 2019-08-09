@@ -6,6 +6,8 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
@@ -24,7 +26,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ssafy.auth.Auth;
 import com.ssafy.common.RoleType;
+import com.ssafy.exception.DataCreateException;
+import com.ssafy.exception.DataNotFoundException;
+import com.ssafy.exception.NoAuthenticationException;
+import com.ssafy.exception.ParameterException;
 import com.ssafy.service.PostCommentService;
+import com.ssafy.vo.Post;
 import com.ssafy.vo.PostComment;
 import com.ssafy.vo.resource.PostCommentResource;
 
@@ -38,12 +45,12 @@ public class PostCommentRestController {
 
 	@GetMapping(value = "/{postId}/comments/{postCommentId}")
 	public ResponseEntity<PostCommentResource> findPostCommentByPostCommentId(
-			@PathVariable final int postCommentId) throws Exception {
+			@PathVariable final long postCommentId) throws Exception {
 		
 		Optional<PostComment> postCommentOpt = postCommentService
 				.findPostCommentByPostCommentId(postCommentId);
 		if (!postCommentOpt.isPresent()) {
-			throw new Exception(); // NotFoundException
+			throw new DataNotFoundException(postCommentId);
 		}
 		
 		PostComment postComment = postCommentOpt.get();
@@ -56,18 +63,20 @@ public class PostCommentRestController {
 	public ResponseEntity<PostCommentResource> createPostComment(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int postId,
-			@RequestBody final PostComment postComment) throws Exception {
+			@PathVariable final long postId,
+			@Valid @RequestBody final PostComment postComment) throws Exception {
 		
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		postComment.setPostCommentId(0);
+		
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) { // 관리자가 아니라면,
 			if (!postComment.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 		
-		PostComment createdPostComment = postCommentService.savePostComment(postComment);
+		PostComment createdPostComment = postCommentService.savePostComment(postId,postComment);
 		if (createdPostComment == null) {  
-			throw new Exception(); // 업데이트 실패 Exception
+			throw new DataCreateException(postComment);
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PostRestController.class)
@@ -85,29 +94,30 @@ public class PostCommentRestController {
 	public ResponseEntity<PostCommentResource> updatePostComment(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int postCommentId,
-			@RequestBody final PostComment postComment) throws Exception {
+			@PathVariable final long postCommentId,
+			@Valid @RequestBody final PostComment postComment) throws Exception {
 
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!postComment.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 		
 		if (postCommentId != postComment.getPostCommentId()) {
-			throw new Exception(); // BadRequest Exception 
+			throw new ParameterException(postCommentId, postComment.getPostCommentId()); 
 		}
 
 		Optional<PostComment> postCommentOpt = postCommentService
 				.findPostCommentByPostCommentId(postCommentId);
 		if (!postCommentOpt.isPresent()) {
-			throw new Exception(); // NotFoundException
+			throw new DataNotFoundException(postCommentId);
 		}
 		
+		Post post = postCommentOpt.get().getPost();
 		PostComment updatedPostComment = postCommentService
-				.savePostComment(postComment);
+				.savePostComment(post.getPostId(),postComment);
 		if (updatedPostComment == null) {
-			throw new Exception(); // 업데이트 실패 Exception 
+			throw new DataCreateException(postComment); 
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PostRestController.class)
@@ -123,17 +133,15 @@ public class PostCommentRestController {
 	public ResponseEntity<?> deletePostCommentByPostCommentId(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int postCommentId) throws Exception {
+			@PathVariable final long postCommentId) throws Exception {
 
-		if (accountAuth > 1) { // 관리자가 아니라면,
-			Optional<PostComment> postCommentOpt = postCommentService
-					.findPostCommentByPostCommentId(postCommentId);
+		Optional<PostComment> postCommentOpt = postCommentService.findPostCommentByPostCommentId(postCommentId);
+		if(!postCommentOpt.get().getAccountEmail().equals(accountEmail)) {
+			throw new NoAuthenticationException(accountEmail);
+		}
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if(!postCommentOpt.isPresent()) {
-				throw new Exception(); // NotFoundException
-			}
-			
-			if(!postCommentOpt.get().getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new DataNotFoundException(postCommentId);
 			}
 		}
 		
@@ -142,10 +150,10 @@ public class PostCommentRestController {
 	}
 	
 	@GetMapping(value = "/{postId}/comments/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<HashMap<String, Integer>> countPostComments() {
+	public ResponseEntity<HashMap<String, Long>> countPostComments() {
 		
-		HashMap<String, Integer> countPostCommentsMap = new HashMap<>();
-		int countPostComments = postCommentService.countPostComments();
+		HashMap<String, Long> countPostCommentsMap = new HashMap<>();
+		long countPostComments = postCommentService.countPostComments();
 		countPostCommentsMap.put("countPostComments", countPostComments);
 		return ResponseEntity.ok(countPostCommentsMap);
 	}

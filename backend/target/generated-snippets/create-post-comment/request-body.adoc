@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "postCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용"
+}
+----

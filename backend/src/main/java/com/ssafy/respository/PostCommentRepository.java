@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ssafy.vo.PostComment;
 
 @Repository
-public interface PostCommentRepository extends JpaRepository<PostComment, Integer> {
+public interface PostCommentRepository extends JpaRepository<PostComment, Long> {
 	
 }

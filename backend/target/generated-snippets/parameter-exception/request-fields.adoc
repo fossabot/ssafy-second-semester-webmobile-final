@@ -1,0 +1,36 @@
+|===
+|Path|Type|Description
+
+|`+portfolioId+`
+|`+Number+`
+|포트폴리오 Id (Auto increase)
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+portfolioTitle+`
+|`+String+`
+|제목
+
+|`+portfolioContent+`
+|`+String+`
+|내용
+
+|`+portfolioGiturl+`
+|`+String+`
+|Git repository 주소
+
+|`+portfolioViews+`
+|`+Number+`
+|조회수 (0으로 자동 초기화)
+
+|`+portfolioThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|===

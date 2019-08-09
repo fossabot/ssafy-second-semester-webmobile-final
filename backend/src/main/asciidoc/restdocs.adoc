@@ -1,0 +1,150 @@
+= Bears Rest API Docs
+3조;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+[[overview]]
+== Overview
+
+[[overview-http-verbs]]
+=== HTTP verbs
+
+RESTful notes tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP verbs.
+
+|===
+| Verb | Usage
+
+| `GET`
+| 조회
+
+| `POST`
+| 생성
+
+| `PUT`
+| 수정
+
+| `DELETE`
+| 삭제
+|===
+
+[[overview-http-status-codes]]
+=== HTTP status codes
+
+RESTful notes tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP status codes.
+
+|===
+| Status code | Usage
+
+| `200 OK`
+| The request completed successfully
+
+| `201 Created`
+| A new resource has been created successfully. The resource's URI is available from the response's
+`Location` header
+
+| `204 No Content`
+| An update to an existing resource has been applied successfully
+
+| `400 Bad Request`
+| The request was malformed. The response body will include an error providing further information
+
+| `404 Not Found`
+| The requested resource did not exist
+|===
+
+[[Portfolio]]
+== Portfolio
+
+=== 생성
+operation::create-portfolio[snippets='http-request,request-fields,http-response,response-fields']
+
+=== 수정
+operation::update-portfolio[snippets='http-request,path-parameters,request-fields,http-response,response-fields']
+
+=== 페이지 단위 조회
+operation::find-all-portfolios[snippets='http-request,path-parameters,http-response,response-fields']
+
+=== 개별 조회
+operation::find-portfolio-by-portfolio-id[snippets='http-request,path-parameters,http-response,response-fields']
+
+=== 삭제
+operation::delete-portfolio[snippets='http-request,path-parameters,http-response']
+
+=== 개수
+operation::count-portfolios[snippets='http-request,http-response,response-fields']
+
+== PortfolioComment
+
+=== 생성
+operation::create-portfolio-comment[snippets='http-request,path-parameters,request-fields,http-response,response-fields']
+
+=== 수정
+operation::update-portfolio-comment[snippets='http-request,path-parameters,request-fields,http-response,response-fields']
+
+=== 삭제
+operation::delete-portfolio-comment[snippets='http-request,path-parameters,http-response']
+
+== Post
+
+=== 생성
+operation::create-post[snippets='http-request,request-fields,http-response,response-fields']
+
+=== 수정
+operation::update-post[snippets='http-request,path-parameters,request-fields,http-response,response-fields']
+
+=== 페이지 단위 조회
+operation::find-all-posts[snippets='http-request,path-parameters,http-response,response-fields']
+
+=== 개별 조회
+operation::find-post-by-post-id[snippets='http-request,path-parameters,http-response,response-fields']
+
+=== 삭제
+operation::delete-post[snippets='http-request,path-parameters,http-response']
+
+=== 개수
+operation::count-posts[snippets='http-request,http-response,response-fields']
+
+== PostComment
+
+=== 생성
+operation::create-post-comment[snippets='http-request,path-parameters,request-fields,http-response,response-fields']
+
+=== 수정
+operation::update-post-comment[snippets='http-request,path-parameters,request-fields,http-response,response-fields']
+
+=== 삭제
+operation::delete-post-comment[snippets='http-request,path-parameters,http-response']
+
+== Exception
+operation::data-not-found-exception[snippets='response-fields']
+
+=== DataCreateException
+* 데이터를 생성하지 못했을 때 발생하는 exception +
+
+operation::data-create-exception[snippets='http-response']
+
+=== DataNotFoundException
+* 찾는 데이터가 없을 때 발생하는 exception +
+
+operation::data-not-found-exception[snippets='http-response']
+
+=== NoAuthenticationException
+* request header에 auth정보가 없는 경우 발생하는 exception +
+
+operation::no-authentication-exception[snippets='http-response']
+
+=== ParameterException
+* URI에 있는 Id와 Body에 있는 Id가 다를 때 발생하는 exception +
+
+operation::parameter-exception[snippets='http-response']
+
+=== MethodArgumentNotValidException
+* Not null 필드에 null 값이 들어있는 경우 발생하는 exception +
+
+operation::method-argument-not-valid-exception[snippets='http-response']

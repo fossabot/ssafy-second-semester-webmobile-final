@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/portfolios/1/comments/1' -i -X DELETE \
+    -H 'accountAuth: 1' \
+    -H 'accountEmail: test@email.com'
+----

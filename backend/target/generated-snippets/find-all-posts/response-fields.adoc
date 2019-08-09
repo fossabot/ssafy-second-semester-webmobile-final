@@ -1,0 +1,72 @@
+|===
+|Path|Type|Description
+
+|`+links[0].rel+`
+|`+String+`
+|포스트 페이지 HATEOAS 관계명
+
+|`+links[0].href+`
+|`+String+`
+|포스트 페이지 HATEOAS URI
+
+|`+content[0].postId+`
+|`+Number+`
+|포스트 Id
+
+|`+content[0].accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+content[0].accountName+`
+|`+String+`
+|작성자 이름
+
+|`+content[0].postTitle+`
+|`+String+`
+|제목
+
+|`+content[0].postContent+`
+|`+String+`
+|내용
+
+|`+content[0].postCreatedAt+`
+|`+String+`
+|생성 시간
+
+|`+content[0].postViews+`
+|`+Number+`
+|조회수
+
+|`+content[0].postThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|`+content[0].postComments+`
+|`+Array+`
+|댓글 정보
+
+|`+content[0].links[0].rel+`
+|`+String+`
+|각 포스트의 HATEOAS 관계명
+
+|`+content[0].links[0].href+`
+|`+String+`
+|각 포스트의 HATEOAS URI
+
+|`+page.size+`
+|`+Number+`
+|한 페이지 내에 들어가는 포스트 수
+
+|`+page.totalElements+`
+|`+Number+`
+|총 포스트 수
+
+|`+page.totalPages+`
+|`+Number+`
+|총 페이지 수
+
+|`+page.number+`
+|`+Number+`
+|현재 페이지
+
+|===

@@ -1,0 +1,32 @@
+|===
+|Path|Type|Description
+
+|`+links[0].rel+`
+|`+String+`
+|포스트 댓글 HATEOAS 관계명
+
+|`+links[0].href+`
+|`+String+`
+|포스트 댓글 HATEOAS URI
+
+|`+postCommentId+`
+|`+Number+`
+|포스트 댓글 Id
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+postCommentContent+`
+|`+String+`
+|댓글 내용
+
+|`+postCommentCreatedAt+`
+|`+String+`
+|생성 시간
+
+|===

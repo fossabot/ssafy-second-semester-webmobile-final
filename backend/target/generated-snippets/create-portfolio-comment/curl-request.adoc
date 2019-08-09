@@ -1,0 +1,13 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/portfolios/3/comments' -i -X POST \
+    -H 'accountAuth: 2' \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'accountEmail: test@email.com' \
+    -d '{
+  "portfolioCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용"
+}'
+----

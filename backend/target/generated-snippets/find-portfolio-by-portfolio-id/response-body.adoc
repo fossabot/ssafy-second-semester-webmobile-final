@@ -1,0 +1,19 @@
+[source,options="nowrap"]
+----
+{
+  "portfolioId" : 6,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioTitle" : "포트폴리오 제목",
+  "portfolioContent" : "포트폴리오 내용",
+  "portfolioCreatedAt" : "2019-08-08T14:57:02.443",
+  "portfolioGiturl" : "www.github.com/repository",
+  "portfolioViews" : 1,
+  "portfolioThumbnailUrl" : "/image.png",
+  "portfolioComments" : [ ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/6"
+  } ]
+}
+----

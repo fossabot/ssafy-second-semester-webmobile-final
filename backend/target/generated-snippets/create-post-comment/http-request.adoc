@@ -1,0 +1,16 @@
+[source,http,options="nowrap"]
+----
+POST /posts/1/comments HTTP/1.1
+Content-Length: 140
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
+
+{
+  "postCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용"
+}
+----

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ssafy.vo.PortfolioComment;
 
 @Repository
-public interface PortfolioCommentRepository extends JpaRepository<PortfolioComment, Integer> {
+public interface PortfolioCommentRepository extends JpaRepository<PortfolioComment, Long> {
 
 }

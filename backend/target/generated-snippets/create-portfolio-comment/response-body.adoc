@@ -1,0 +1,20 @@
+[source,options="nowrap"]
+----
+{
+  "portfolioCommentId" : 3,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용",
+  "portfolioCommentCreatedAt" : "2019-08-08T14:57:02.245",
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/portfolios/3"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/portfolios/3"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/3"
+  } ]
+}
+----

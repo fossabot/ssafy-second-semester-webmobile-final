@@ -1,0 +1,16 @@
+[source,http,options="nowrap"]
+----
+POST /portfolios/3/comments HTTP/1.1
+accountAuth: 2
+Content-Length: 150
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
+
+{
+  "portfolioCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용"
+}
+----

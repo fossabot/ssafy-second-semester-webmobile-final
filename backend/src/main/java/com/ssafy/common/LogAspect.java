@@ -31,7 +31,11 @@ public class LogAspect {
 
 		String accountInfo = "";
 
-		if (request.getHeaderNames() == null || request.getHeader("accountEmail") == null || request.getHeader("accountAuth") == null) {
+		if (request.getHeaderNames() == null ||
+			request.getHeader("accountEmail") == null ||
+			request.getHeader("accountAuth") == null ||
+			request.getHeader("accountEmail").equals("") ||
+			request.getHeader("accountAuth").equals("")) {
 			accountInfo += "********* ANONYMOUS ********";
 		} else {
 			accountInfo += request.getHeader("accountEmail") + " | AUTH : " + request.getHeader("accountAuth");

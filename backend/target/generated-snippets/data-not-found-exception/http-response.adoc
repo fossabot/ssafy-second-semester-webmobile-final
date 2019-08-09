@@ -1,0 +1,13 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 400 Bad Request
+Content-Length: 160
+Content-Type: application/json;charset=UTF-8
+
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "com.ssafy.exception.DataNotFoundException",
+  "error message" : " '100' is not found. "
+}
+----

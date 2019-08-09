@@ -1,0 +1,25 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Content-Type: application/hal+json;charset=UTF-8
+Location: http://localhost:8080/posts/1
+Content-Length: 441
+
+{
+  "postCommentId" : 1,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용",
+  "postCommentCreatedAt" : "2019-08-08T14:57:02.587",
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/1"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/posts/1"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/posts/1"
+  } ]
+}
+----

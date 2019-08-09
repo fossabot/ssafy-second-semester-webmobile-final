@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -36,6 +38,10 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ssafy.auth.Auth;
 import com.ssafy.common.RoleType;
+import com.ssafy.exception.DataCreateException;
+import com.ssafy.exception.DataNotFoundException;
+import com.ssafy.exception.NoAuthenticationException;
+import com.ssafy.exception.ParameterException;
 import com.ssafy.respository.PostRepository;
 import com.ssafy.service.PostService;
 import com.ssafy.vo.Post;
@@ -64,7 +70,7 @@ public class PostRestController {
 	@Autowired
 	PostService postService;
 
-	@GetMapping(value = "/page/{pageNo}")
+	@GetMapping(value = "/pages/{pageNo}")
 	public ResponseEntity<PagedResources<PostResource>> findAllPosts(
 			@PathVariable final int pageNo,
 			PagedResourcesAssembler<Post> assembler) {
@@ -78,11 +84,11 @@ public class PostRestController {
 
 	@GetMapping(value = "/{postId}")
 	public ResponseEntity<PostResource> findPostByPostId(
-			@PathVariable final int postId) throws Exception {
+			@PathVariable final long postId) throws Exception {
 		
 		Optional<Post> postOpt = postService.findPostByPostId(postId);
 		if (!postOpt.isPresent()) {
-			throw new Exception(); // NotFoundException
+			throw new DataNotFoundException(postId);
 		}
 		
 		Post post = postOpt.get();
@@ -95,23 +101,27 @@ public class PostRestController {
 	public ResponseEntity<PostResource> createPost(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@RequestBody final Post post) throws Exception {
+			@Valid @RequestBody final Post post) throws Exception {
 		
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		post.setPostId(0);
+		
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) {
 			if (!post.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
 		
 		Post createdPost = postService.savePost(post);
 		if (createdPost == null) {
-			throw new Exception(); // 업데이트 실패 Exception
+			throw new DataCreateException(post); 
 		}
 		
 		ControllerLinkBuilder selfLinkBuilder = linkTo(PortfolioRestController.class).slash(createdPost.getPostId());
         URI createdUri = selfLinkBuilder.toUri();
 		
 		PostResource postResource = new PostResource(createdPost);
+		postResource.add(selfLinkBuilder.withRel("update"));
+		postResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.created(createdUri).body(postResource);
 	}
 
@@ -120,30 +130,35 @@ public class PostRestController {
 	public ResponseEntity<PostResource> updatePost(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
 			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int postId,
-			@RequestBody final Post post) throws Exception {
+			@PathVariable final long postId,
+			@Valid @RequestBody final Post post) throws Exception {
 
-		if (accountAuth > 1) { // 관리자가 아니라면,
+		
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) { 
 			if (!post.getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail); 
 			}
 		}
 		
 		if (postId != post.getPostId()) {
-			throw new Exception(); // BadRequest Exception 
+			throw new ParameterException(postId, post.getPostId()); 
 		}
 
 		Optional<Post> postOpt = postService.findPostByPostId(postId);
 		if (!postOpt.isPresent()) {
-			throw new Exception(); // NotFoundException
+			throw new DataNotFoundException(postId);
 		}
 		
 		Post updatedPost = postService.savePost(post);
 		if (updatedPost == null) {
-			throw new Exception(); // 업데이트 실패 Exception 
+			throw new DataCreateException(post); 
 		}
 		
+		ControllerLinkBuilder selfLinkBuilder = linkTo(PostRestController.class)
+				.slash(post.getPostId());
+		
 		PostResource postResource = new PostResource(updatedPost);
+		postResource.add(selfLinkBuilder.withRel("delete"));
 		return ResponseEntity.ok(postResource);
 	}
 
@@ -151,30 +166,28 @@ public class PostRestController {
 	@DeleteMapping(value = "/{postId}")
 	public ResponseEntity<?> deletePostByPostId(
 			@RequestHeader(value = "accountEmail") final String accountEmail,
-			@RequestHeader(value = "accountAuth") final int accountAuth,
-			@PathVariable final int postId) throws Exception {
+			@RequestHeader(value = "accountAuth") final long accountAuth,
+			@PathVariable final long postId) throws Exception {
 		
-		if (accountAuth > 1) { // 관리자가 아니라면,
-			Optional<Post> postOpt = postService
-					.findPostByPostId(postId);
-			if(!postOpt.isPresent()) {
-				throw new Exception(); // NotFoundException
-			}
-			
+		Optional<Post> postOpt = postService.findPostByPostId(postId);
+		if(!postOpt.isPresent()) {
+			throw new DataNotFoundException(postId);
+		}
+		if (accountAuth > RoleType.SUPERVISOR.getRoleType()) { // 관리자가 아니라면,
 			if(!postOpt.get().getAccountEmail().equals(accountEmail)) {
-				throw new Exception(); // 권한없음 Exception
+				throw new NoAuthenticationException(accountEmail);
 			}
 		}
-		
+			
 		postService.deletePostByPostId(postId);
 		return ResponseEntity.noContent().build();
 	}
 	
 	@GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<HashMap<String, Integer>> countPosts() {
+	public ResponseEntity<HashMap<String, Long>> countPosts() {
 		
-		HashMap<String, Integer> countPostsMap = new HashMap<>();
-		int countPosts = postService.countPosts();
+		HashMap<String, Long> countPostsMap = new HashMap<>();
+		long countPosts = postService.countPosts();
 		countPostsMap.put("countPosts", countPosts);
 		return ResponseEntity.ok(countPostsMap);
 	}

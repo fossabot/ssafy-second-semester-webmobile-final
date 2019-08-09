@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+DELETE /portfolios/1/comments/1 HTTP/1.1
+accountAuth: 1
+Host: localhost:8080
+accountEmail: test@email.com
+
+----

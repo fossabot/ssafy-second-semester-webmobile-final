@@ -1,0 +1,20 @@
+[source,http,options="nowrap"]
+----
+PUT /portfolios/100 HTTP/1.1
+accountAuth: 1
+Content-Length: 313
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080
+accountEmail: test@email.com
+
+{
+  "portfolioId" : 3,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioTitle" : "포트폴리오 제목",
+  "portfolioContent" : "포트폴리오 내용",
+  "portfolioGiturl" : "www.github.com/repository",
+  "portfolioViews" : 0,
+  "portfolioThumbnailUrl" : "/image.png"
+}
+----

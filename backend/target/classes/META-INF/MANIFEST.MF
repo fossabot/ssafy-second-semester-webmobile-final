@@ -3,7 +3,7 @@ Implementation-Title: webmobile-final
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: multicampus
 Implementation-Vendor-Id: com.ssafy
-Build-Jdk: 1.8.0_181
+Build-Jdk: 1.8.0_212-1-ojdkbuild
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/webmobile-final
 Created-By: Maven Integration for Eclipse

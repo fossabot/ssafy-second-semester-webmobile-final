@@ -1,0 +1,32 @@
+|===
+|Path|Type|Description
+
+|`+postId+`
+|`+Number+`
+|포스트 Id (Auto increase)
+
+|`+accountEmail+`
+|`+String+`
+|작성자 Email
+
+|`+accountName+`
+|`+String+`
+|작성자 이름
+
+|`+postTitle+`
+|`+String+`
+|제목
+
+|`+postContent+`
+|`+String+`
+|내용
+
+|`+postViews+`
+|`+Number+`
+|조회수 (0으로 자동 초기화)
+
+|`+postThumbnailUrl+`
+|`+String+`
+|썸네일 이미지 경로
+
+|===

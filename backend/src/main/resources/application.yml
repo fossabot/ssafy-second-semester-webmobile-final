@@ -1,10 +1,22 @@
 server: 
   port: 9090
-  servlet:    context-path: /api/bears
+  
+  ssl: 
+   key-store: classpath:icebear.p12
+   key-store-password: manager
+   key-store-type: PKCS12
+   key-alias: icebear
+   enabled: true
+   
+ # http2:
+  #  enabled: true
 
-database: mysql
+  servlet:     context-path: /api/bears
 
-spring:
+spring: 
+  banner: 
+    location: classpath:/banner.txt
+      
   ## MULTIPART (MultipartProperties)
   # Enable multipart uploads
   servlet: 
@@ -15,8 +27,12 @@ spring:
       max-file-size: 200MB
       max-request-size: 215MB
       
+  resources: 
+    add-mappings: false
   mvc: 
     dispatch-options-request: true
+    throw-exception-if-no-handler-found: true
+    
  
   # MySQL 서버 데이터베이스 지정
   datasource: 
@@ -27,6 +43,9 @@ spring:
     #password: ssafy
     initialization-mode: always
   
+  jackson:
+    default-property-inclusion: NON_NULL
+   
   # JPA
   jpa: 
     hibernate:
@@ -49,6 +68,5 @@ spring:
   thymeleaf: 
     prefix: classpath:/static/
   
-
 # logback Setting
 # logging.config=classpath:logback/logback-spring.xml

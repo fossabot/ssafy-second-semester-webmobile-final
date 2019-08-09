@@ -1,0 +1,17 @@
+[source,http,options="nowrap"]
+----
+PUT /portfolios/2/comments/2 HTTP/1.1
+accountAuth: 2
+Content-Type: application/json;charset=UTF-8
+Content-Length: 210
+Host: localhost:8080
+accountEmail: test@email.com
+
+{
+  "portfolioCommentId" : 2,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "내용 수정",
+  "portfolioCommentCreatedAt" : "2019-08-08T14:57:02.078"
+}
+----

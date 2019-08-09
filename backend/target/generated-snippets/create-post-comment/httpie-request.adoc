@@ -1,0 +1,12 @@
+[source,bash]
+----
+$ echo '{
+  "postCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용"
+}' | http POST 'http://localhost:8080/posts/1/comments' \
+    'accountAuth:2' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'accountEmail:test@email.com'
+----

@@ -1,0 +1,8 @@
+.+/posts/pages/{pageNo}+
+|===
+|Parameter|Description
+
+|`+pageNo+`
+|요청할 페이지 숫자
+
+|===

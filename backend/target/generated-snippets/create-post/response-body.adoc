@@ -1,0 +1,24 @@
+[source,options="nowrap"]
+----
+{
+  "postId" : 7,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "포스트 제목",
+  "postContent" : "포스트 내용",
+  "postCreatedAt" : "2019-08-08T14:57:02.784",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png",
+  "postComments" : [ ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/7"
+  }, {
+    "rel" : "update",
+    "href" : "http://localhost:8080/portfolios/7"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/portfolios/7"
+  } ]
+}
+----

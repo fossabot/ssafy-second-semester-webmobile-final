@@ -1,0 +1,11 @@
+.+/posts/{postId}/comments/{postCommentId}+
+|===
+|Parameter|Description
+
+|`+postId+`
+|댓글을 쓴 포스트 Id
+
+|`+postCommentId+`
+|삭제할 포스트 댓글 Id
+
+|===

@@ -25,7 +25,7 @@ public class PortfolioServiceImpl implements PortfolioService {
 
 	@Override
 	@Transactional
-	public Optional<Portfolio> findPortfolioByPortfolioId(final int portfolioId) {
+	public Optional<Portfolio> findPortfolioByPortfolioId(final long portfolioId) {
 		portfolioRepository.updatePortfolioViewsByPortfolioId(portfolioId);
 		return portfolioRepository.findById(portfolioId);
 	}
@@ -37,13 +37,13 @@ public class PortfolioServiceImpl implements PortfolioService {
 	}
 
 	@Override
-	public void deletePortfolioByPortfolioId(final int portfolioId) {
+	public void deletePortfolioByPortfolioId(final long portfolioId) {
 		portfolioRepository.deleteById(portfolioId);
 	}
 	
 	@Override
-	public int countPortfolios() {
-		return (int) portfolioRepository.count();
+	public long countPortfolios() {
+		return portfolioRepository.count();
 	}
 
 }

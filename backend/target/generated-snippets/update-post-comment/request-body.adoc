@@ -1,0 +1,10 @@
+[source,options="nowrap"]
+----
+{
+  "postCommentId" : 2,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "내용 수정",
+  "postCommentCreatedAt" : "2019-08-08T14:57:02.622"
+}
+----

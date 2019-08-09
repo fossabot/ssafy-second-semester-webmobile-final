@@ -1,0 +1,13 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/posts/1/comments' -i -X POST \
+    -H 'accountAuth: 2' \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'accountEmail: test@email.com' \
+    -d '{
+  "postCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postCommentContent" : "댓글 내용"
+}'
+----

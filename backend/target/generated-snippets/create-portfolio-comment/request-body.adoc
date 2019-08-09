@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "portfolioCommentId" : 0,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "portfolioCommentContent" : "댓글 내용"
+}
+----

@@ -8,6 +8,8 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import com.ssafy.exception.NoAuthenticationException;
+
 @Component
 public class HttpInterceptor extends HandlerInterceptorAdapter {
 
@@ -23,9 +25,9 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 			}else{ 			   // Method에 설정된 최소 권한이 있으면 (1:SUPERVISOR, 2:MEMBER, 3:VISITOR),
 				int minimumAuth = auth.minimum().getRoleType();  // Method의 최소 권한
 				int requestAuth = requestAuthToInteger(request); // 사용자의 권한
-				
+
 				if(requestAuth > minimumAuth) {					 // 권한이 충족되지 않으면,
-					return false;
+					throw new NoAuthenticationException(request.getHeader("accountEmail"));
 				}
 				
 				return true;

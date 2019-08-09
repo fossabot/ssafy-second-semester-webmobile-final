@@ -1,0 +1,8 @@
+.+/portfolios/{portfolioId}/comments+
+|===
+|Parameter|Description
+
+|`+portfolioId+`
+|댓글을 쓸 포트폴리오 Id
+
+|===

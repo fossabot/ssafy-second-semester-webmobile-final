@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "code" : "400",
+  "status" : "Bad Request",
+  "error type" : "com.ssafy.exception.DataNotFoundException",
+  "error message" : " '100' is not found. "
+}
+----

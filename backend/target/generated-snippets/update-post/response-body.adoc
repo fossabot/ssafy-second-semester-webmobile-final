@@ -1,0 +1,21 @@
+[source,options="nowrap"]
+----
+{
+  "postId" : 5,
+  "accountEmail" : "test@email.com",
+  "accountName" : "test name",
+  "postTitle" : "update title",
+  "postContent" : "update content",
+  "postCreatedAt" : "2019-08-08T14:57:02.73",
+  "postViews" : 0,
+  "postThumbnailUrl" : "/image.png",
+  "postComments" : [ ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "http://localhost:8080/posts/5"
+  }, {
+    "rel" : "delete",
+    "href" : "http://localhost:8080/posts/5"
+  } ]
+}
+----

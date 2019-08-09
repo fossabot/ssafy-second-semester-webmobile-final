@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ http DELETE 'http://localhost:8080/portfolios/9' \
+    'accountAuth:1' \
+    'accountEmail:test@email.com'
+----
