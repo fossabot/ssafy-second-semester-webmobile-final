@@ -66,6 +66,11 @@ export default {
     this.getUser({key:sessionStorage.getItem('key')})
     this.isLogin()
     console.log(this.loginCheck); // 이거 왜 다르져
+    console.log(window.location.href);
+    let hr = window.location.href.split("/")[0]+"//"+window.location.href.split("/")[2]
+    
+    this.naverLogin.callbackUrl=hr+"/callback"
+
   },
   updated(){
     this.naverLogin.init()
