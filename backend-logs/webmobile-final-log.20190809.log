@@ -1,0 +1,345 @@
+2019-08-12 11:26:30 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2944 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-12 11:26:30 INFO No active profile set, falling back to default profiles: default
+2019-08-12 11:26:30 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-12 11:26:30 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-12 11:26:30 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-12 11:26:30 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 11:26:30 INFO Finished Spring Data repository scanning in 44ms. Found 4 repository interfaces.
+2019-08-12 11:26:30 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$565a9d82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 11:26:31 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-12 11:26:31 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-12 11:26:31 INFO Starting service [Tomcat]
+2019-08-12 11:26:31 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 11:26:31 INFO Initializing Spring embedded WebApplicationContext
+2019-08-12 11:26:31 INFO Root WebApplicationContext: initialization completed in 998 ms
+2019-08-12 11:26:31 INFO HikariPool-1 - Starting...
+2019-08-12 11:26:31 INFO HikariPool-1 - Start completed.
+2019-08-12 11:26:31 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-12 11:26:31 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-12 11:26:31 INFO HHH000206: hibernate.properties not found
+2019-08-12 11:26:31 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-12 11:26:31 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-12 11:26:32 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-12 11:26:32 INFO LiveReload server is running on port 35729
+2019-08-12 11:26:32 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 11:26:32 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-12 11:26:32 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-12 11:26:32 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-12 11:26:33 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-12 11:26:33 INFO Started WebmobileSub2Application in 3.321 seconds (JVM running for 4.714)
+2019-08-12 11:27:40 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 11:27:40 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-12 11:27:40 INFO Completed initialization in 5 ms
+2019-08-12 11:27:40 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:27:40 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-12 11:27:40 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:56:40 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-12 11:56:40 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-12 11:56:42 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:56:42 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:56:45 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 11:56:45 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 11:56:49 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:56:49 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:56:52 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 11:56:52 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 11:57:15 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:57:15 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:57:31 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:57:31 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:58:51 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 11:58:51 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 11:58:52 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:58:52 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:58:56 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:58:56 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 11:59:00 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 11:59:00 INFO [#] [ END ] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 12:53:28 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-12 12:53:28 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-12 12:53:28 INFO HikariPool-1 - Shutdown initiated...
+2019-08-12 12:53:28 INFO HikariPool-1 - Shutdown completed.
+2019-08-12 12:53:28 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2944 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-12 12:53:28 INFO No active profile set, falling back to default profiles: default
+2019-08-12 12:53:29 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-12 12:53:29 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 12:53:29 INFO Finished Spring Data repository scanning in 17ms. Found 4 repository interfaces.
+2019-08-12 12:53:29 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$565a9d82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 12:53:29 INFO Tomcat initialized with port(s): 9090 (http)
+2019-08-12 12:53:29 INFO Initializing ProtocolHandler ["http-nio-9090"]
+2019-08-12 12:53:29 INFO Starting service [Tomcat]
+2019-08-12 12:53:29 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 12:53:29 INFO Initializing Spring embedded WebApplicationContext
+2019-08-12 12:53:29 INFO Root WebApplicationContext: initialization completed in 310 ms
+2019-08-12 12:53:29 INFO HikariPool-2 - Starting...
+2019-08-12 12:53:29 INFO HikariPool-2 - Start completed.
+2019-08-12 12:53:29 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-12 12:53:29 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-12 12:53:29 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-12 12:53:29 INFO LiveReload server is running on port 35729
+2019-08-12 12:53:29 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 12:53:29 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-12 12:53:29 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-12 12:53:29 INFO Starting ProtocolHandler ["http-nio-9090"]
+2019-08-12 12:53:29 INFO Tomcat started on port(s): 9090 (http) with context path '/api/bears'
+2019-08-12 12:53:29 INFO Started WebmobileSub2Application in 0.757 seconds (JVM running for 5221.099)
+2019-08-12 12:53:29 INFO Condition evaluation unchanged
+2019-08-12 12:53:38 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 12:53:38 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-12 12:53:38 INFO Completed initialization in 5 ms
+2019-08-12 12:53:38 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:53:38 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:53:38 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:53:38 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-12 12:53:38 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:55:02 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:55:02 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:55:02 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:55:02 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:55:24 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:55:24 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:55:24 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:55:24 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:57:58 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:57:58 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:58:02 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:58:02 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:58:02 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:58:02 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:59:35 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:59:35 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 12:59:36 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 12:59:36 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:00:42 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:00:42 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:00:54 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:00:54 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:03:39 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:03:39 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:03:42 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:03:42 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:03:42 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:03:42 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:05:03 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:05:03 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:07:42 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:07:42 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:08:16 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:08:16 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:10:29 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:10:29 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:10:43 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:10:43 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:14:03 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:14:03 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:14:04 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:14:04 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:15:05 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:15:05 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:15:06 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:15:06 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:16:36 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:16:36 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:16:36 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:16:36 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:22:52 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:22:52 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:01 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:23:01 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:23:01 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:01 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:19 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:19 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:37 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:37 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:41 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:23:41 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:23:42 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:42 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:52 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:23:52 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:04 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:24:04 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:24:05 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:05 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:16 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:16 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:30 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:30 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:33 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:24:33 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:24:34 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:24:34 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:25:44 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:25:44 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:26:31 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:26:31 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:26:35 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:26:35 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:26:35 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:26:35 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:26:48 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:26:48 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:29:46 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:29:46 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:29:49 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:29:49 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:29:49 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:29:49 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:30:00 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:30:00 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:30:53 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:30:53 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:30:56 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:30:56 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (POST) : createPortfolio()]
+2019-08-12 13:30:56 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:30:56 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 13:31:08 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:31:08 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:31:11 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:31:11 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:31:11 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:31:11 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:34:55 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:34:55 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:35:55 INFO Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:415) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:294) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_212-1-ojdkbuild]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_212-1-ojdkbuild]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_212-1-ojdkbuild]
+2019-08-12 13:36:54 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:36:54 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:36:54 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:36:54 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:36:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:36:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:37:54 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:37:54 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:39:03 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:39:03 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:39:34 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:39:34 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:39:34 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:39:34 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:40:01 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:40:01 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (POST) : createPortfolioComment()]
+2019-08-12 13:40:01 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:40:01 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:21 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:21 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:21 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:21 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:27 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
+2019-08-12 13:41:27 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (PUT) : updatePortfolioComment()]
+2019-08-12 13:41:28 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:28 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:34 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:34 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:34 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:34 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:35 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:35 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:35 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:35 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:35 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:35 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioCommentRestController | [METHOD (DELETE) : deletePortfolioCommentByPortfolioCommentId()]
+2019-08-12 13:41:36 INFO [#] [START] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:41:36 INFO [#] [ END ] - [ACCOUNT : abc1@abc.com | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:44:09 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:44:09 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:44:16 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:44:16 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:45:21 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:45:22 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:47:27 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 13:47:28 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 14:04:13 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-12 14:04:13 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-12 14:04:13 INFO HikariPool-2 - Shutdown initiated...
+2019-08-12 14:04:13 INFO HikariPool-2 - Shutdown completed.
+2019-08-12 14:04:13 INFO Starting WebmobileSub2Application on DESKTOP-KVCQHCD with PID 2944 (C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend\target\classes started by multicampus in C:\Users\multicampus\Documents\Workspace_ssafy2\webmobile-final\backend)
+2019-08-12 14:04:13 INFO No active profile set, falling back to default profiles: default
+2019-08-12 14:04:13 WARN No MyBatis mapper was found in '[com.ssafy]' package. Please check your configuration.
+2019-08-12 14:04:13 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-12 14:04:13 INFO Finished Spring Data repository scanning in 16ms. Found 4 repository interfaces.
+2019-08-12 14:04:13 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$565a9d82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-12 14:04:14 INFO Tomcat initialized with port(s): 9090 (https)
+2019-08-12 14:04:14 INFO Initializing ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-12 14:04:14 INFO Starting service [Tomcat]
+2019-08-12 14:04:14 INFO Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 14:04:14 INFO Initializing Spring embedded WebApplicationContext
+2019-08-12 14:04:14 INFO Root WebApplicationContext: initialization completed in 328 ms
+2019-08-12 14:04:14 INFO HikariPool-3 - Starting...
+2019-08-12 14:04:14 INFO HikariPool-3 - Start completed.
+2019-08-12 14:04:14 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-12 14:04:14 INFO HHH000400: Using dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+2019-08-12 14:04:14 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-12 14:04:14 INFO LiveReload server is running on port 35729
+2019-08-12 14:04:14 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 14:04:14 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-12 14:04:14 INFO Adding welcome page: class path resource [static/index.html]
+2019-08-12 14:04:14 INFO Starting ProtocolHandler ["https-jsse-nio-9090"]
+2019-08-12 14:04:14 INFO Tomcat started on port(s): 9090 (https) with context path '/api/bears'
+2019-08-12 14:04:14 INFO Started WebmobileSub2Application in 1.075 seconds (JVM running for 9466.29)
+2019-08-12 14:04:14 INFO Condition evaluation unchanged
+2019-08-12 14:10:57 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 14:10:57 INFO Initializing Servlet 'dispatcherServlet'
+2019-08-12 14:10:57 INFO Completed initialization in 4 ms
+2019-08-12 14:10:57 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:10:57 INFO HHH000397: Using ASTQueryTranslatorFactory
+2019-08-12 14:10:57 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:10:58 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:10:58 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:11:01 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:11:01 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:11:04 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:11:04 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:11:07 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 14:11:07 INFO [#] [ END ] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 14:11:19 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:11:19 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:11:19 ERROR Table 'ssafy.portfolios' doesn't exist
+2019-08-12 14:11:19 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet]
+2019-08-12 14:11:40 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PostRestController | [METHOD (GET) : findAll()]
+2019-08-12 14:11:40 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:11:40 ERROR Table 'ssafy.posts' doesn't exist
+2019-08-12 14:11:40 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet]
+2019-08-12 14:12:06 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findPortfolioByPortfolioId()]
+2019-08-12 14:12:06 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:12:06 ERROR Table 'ssafy.portfolios' doesn't exist
+2019-08-12 14:12:06 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement]
+2019-08-12 14:12:10 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:12:10 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:12:10 ERROR Table 'ssafy.portfolios' doesn't exist
+2019-08-12 14:12:10 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet]
+2019-08-12 14:12:19 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:12:19 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:12:19 ERROR Table 'ssafy.portfolios' doesn't exist
+2019-08-12 14:12:19 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet]
+2019-08-12 14:12:50 INFO [#] [START] - [ACCOUNT : ********* ANONYMOUS ********] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:12:50 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:12:50 ERROR Table 'ssafy.portfolios' doesn't exist
+2019-08-12 14:12:50 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet]
+2019-08-12 14:13:12 INFO [#] [START] - [ACCOUNT : ksj0206@uos.ac.kr | AUTH : 1] / [LOCATION : com.ssafy.api.PortfolioRestController | [METHOD (GET) : findAllPortfolios()]
+2019-08-12 14:13:12 WARN SQL Error: 1146, SQLState: 42S02
+2019-08-12 14:13:12 ERROR Table 'ssafy.portfolios' doesn't exist
+2019-08-12 14:13:12 WARN Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet]
+2019-08-12 14:13:25 INFO Application shutdown requested.
+2019-08-12 14:13:25 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-12 14:13:25 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-12 14:13:25 INFO HikariPool-3 - Shutdown initiated...
+2019-08-12 14:13:25 INFO HikariPool-3 - Shutdown completed.
