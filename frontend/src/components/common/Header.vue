@@ -19,7 +19,7 @@
           <router-link :to="{ name: 'HomePage' }" class="nav-item nav-link h4">Home</router-link>
           <router-link :to="{ name: 'PortfolioListPage' }" class="nav-item nav-link h4">Portfolio</router-link>
           <router-link :to="{ name: 'PostListPage' }" class="nav-item nav-link h4">Post</router-link>
-          <router-link :to="{ name: 'RestDocsPage' }" class="nav-item nav-link h4">RestDocs</router-link>
+          <a href="/restdocs.html" target="_blank" class="nav-item nav-link h4">RestDocs</a>
           <!-- <router-link :to="{ name: 'loginpage', params: {} }" class="nav-item nav-link h6">Login</router-link> -->
           <a v-if="!loginCheck" class="nav-item nav-link h6" @click="showModal = true" >Login</a>
           <!-- <a v-if="userlogin" class="nav-item nav-link h6" @click="logOut" >환영합니다 {{user.id}}님</a> -->
