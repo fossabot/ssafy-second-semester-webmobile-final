@@ -34,6 +34,7 @@
 
 <script>
 import mainServices from '../../apis/mainservice/mainServices'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
 
