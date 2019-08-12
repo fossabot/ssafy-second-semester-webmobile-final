@@ -111,7 +111,6 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
-    console.log(headers)
     portfolio.accountEmail = loginUser.accountEmail
     portfolio.accountName = loginUser.accountName
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
@@ -351,5 +350,11 @@ export default {
                   return res.data.countPosts
               })
   },
-  
+ 
+  getRestDocs() {
+    return axios.get('https://70.12.246.106:9090/api/bears/restdocs')
+                .then((res) => {
+                  return res
+                })
+  }
 }
