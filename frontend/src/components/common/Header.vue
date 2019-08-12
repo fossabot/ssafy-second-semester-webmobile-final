@@ -19,7 +19,7 @@
           <router-link :to="{ name: 'HomePage' }" class="nav-item nav-link h4">Home</router-link>
           <router-link :to="{ name: 'PortfolioListPage' }" class="nav-item nav-link h4">Portfolio</router-link>
           <router-link :to="{ name: 'PostListPage' }" class="nav-item nav-link h4">Post</router-link>
-          <router-link :to="{ name: 'RestDocsPage' }" class="nav-item nav-link h4">RestDocs</router-link>
+          <a href="/restdocs.html" target="_blank" class="nav-item nav-link h4">RestDocs</a>
           <!-- <router-link :to="{ name: 'loginpage', params: {} }" class="nav-item nav-link h6">Login</router-link> -->
           <a v-if="!loginCheck" class="nav-item nav-link h6" @click="showModal = true" >Login</a>
           <!-- <a v-if="userlogin" class="nav-item nav-link h6" @click="logOut" >환영합니다 {{user.id}}님</a> -->
@@ -40,12 +40,15 @@ import LoginModal from './LoginModal.vue'
 import { mapState, mapActions,mapMutations } from 'vuex'
 import firebase from "../../apis/firebase/firebase"
 import firebaseMessaging from 'firebase'
+import axios from 'axios'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 
 export default {
   name: 'Header',
   components :{
     LoginModal
   },
+
   data () {
     return {
       categories : ['homepage','portfoliolistpage','postlistpage','loginpage','signuppage'],
@@ -59,71 +62,80 @@ export default {
       userlogin:false
     }
   },
+
   computed : {
     ...mapState('account',['accountEmail','accountName','accountAuth','loginCheck'])
   },
+
   created() {
     this.getUser({key:sessionStorage.getItem('key')})
     this.isLogin()
     console.log(this.loginCheck); // 이거 왜 다르져
+    let hr = window.location.href.split("/")[0]+"//"+window.location.href.split("/")[2]
+    
+    this.naverLogin.callbackUrl=hr+"/callback"
+    console.log(hr+"/callback");
+
   },
+
   updated(){
     this.naverLogin.init()
   },
   methods: {
     ...mapActions('account', ['isLogin','logout','getUser']),
     ...mapMutations('account', ['setUser','setInit']),
+
     close(){
       // 정상 종료
       this.showModal =false
     },
+
     async signIn(email,password){
       let data = await firebase.getLogin(email,password)
-      if(data!=null || data != undefined){
-        let token = await firebase.getToken(email)
-        sessionStorage.setItem('key',token)
-        console.log(data.ispush);
-        
-        if(data.ispush=="0"){
-          console.log("ispush 알림");
-          if(confirm("알림 설정 하시겠습니까?")==true){
-            //등록부분
-            const messaging = firebaseMessaging.messaging();
-            
-            messaging.getToken()
-            .then((token)=>{
-              window.sessionStorage.setItem('firebaseToken', token);
-            })
-            .catch((err)=>{
-              console.log("token get error");
-            })
 
-            let targetURL = "https://70.12.246.109:3000/subscribe";
-            axios({
-              url : targetURL,
-              method : 'get',
-              params : {
-                token : window.sessionStorage.getItem('firebaseToken')
-              }
-            })
-            .then((res)=>{
-              console.log("subscribe success", res);
-            })
-            .catch((err)=>{
-              console.log("subscribe error", err);
-            })
+      if(data!=null || data != undefined){
+        let token = await firebase.getToken(email) // userToken
+        sessionStorage.setItem('key',token)
+
+        Notification.requestPermission()
+        .then((permission) => {
+          if(permission === 'granted'){
+            console.log(data.ispush);
+            //푸쉬알람에 대한 토큰이 없는경우 Subscribe
+            if(data.ispush === '0'){
+              const accountAuth = data.auth;
+              
+              pushAlarm.refreshToken();
+
+              setTimeout(function(){
+                firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));  
+              }, 1000);
+              
+
+              setTimeout(function(){
+                pushAlarm.pushAlarmSubscribe(accountAuth);
+              }, 1000);
+            }
+          } else { // permission === denied or default
+            //푸쉬알람에 대한 토큰이 있는경우 firestore account의 isPush 토큰값을 삭제
             
-            //firebase 수정부분 (1이 허용 2가 거절)
-            firebase.updateIsPush(sessionStorage.getItem('key'),1)
-            data.ispush="1"
-          }else{
-            firebase.updateIsPush(sessionStorage.getItem('key'),2)
-            data.ispush="2"
+            if(data.ispush != '0'){
+              const accountAuth = data.auth;
+              const fcmToken = data.ispush;
+
+              // pushAlarm.pushAlarmUnSubscribe(accountAuth, fcmToken);
+              firebase.updateIsPush(token, "0");
+            }
           }
-        }
+        })
+        .catch((err) => {
+          console.log("Notification requestPermission error is occured", err)
+        })
+
         this.setUser({data:data})
         this.isLogin()
         this.showModal=false
+
       }else{
         alert("아이디 비밀번호를 확인하세요.")
       }

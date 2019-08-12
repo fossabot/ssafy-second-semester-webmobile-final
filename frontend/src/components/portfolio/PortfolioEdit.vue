@@ -54,6 +54,8 @@
 
 <script>
 import mainServices from '../../apis/mainservice/mainServices'
+import {mapState} from 'vuex'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
 
@@ -75,7 +77,8 @@ export default {
     },    
     compiledMarkdown: function () {
       return marked(this.newPortfolio.portfolioContent, { sanitize: true })
-    }
+    },
+    ...mapState('account',['accountAuth'])
   },
 
   methods: {
@@ -92,27 +95,13 @@ export default {
       if ( !this.$route.params.portfolioId ) { // 새로 만드는 경우
         await mainServices.postPortfolio(this.newPortfolio)
         .then((res) => {
-          console.log(res.status);
-
           if(res.status == 201){
-            let targetURI = "https://70.12.246.109:3000/send";
-
-            axios({
-              url : targetURI,
-              method : 'get',
-              params : {
-                token : window.sessionStorage.getItem('firebaseToken')
-              }
-            })
-            .then((res) => {
-              console.log("send message success")
-              console.log(res);
-            }).catch((error) => {
-              console.log("send message error")
-              console.log(error);
-            })
+            pushAlarm.pushAlarmSend('portfolio', '');
           }
+        }).catch((error)=>{
+          console.log('portfolio post error', error);
         })
+
         this.$router.push({ name: 'PortfolioListPage'})
       } else { // 업데이트의 경우
         await mainServices.putPortfolio(this.newPortfolio)

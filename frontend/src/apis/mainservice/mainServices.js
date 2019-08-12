@@ -163,7 +163,7 @@ export default {
     }
     return axios.post(`${portfolioUrl}/${portfolioId}/comments`,  portfolioComment, { "headers": headers })
                 .then((res) => {
-                  return res.data
+                  return res
                 })
   }, 
   
@@ -350,11 +350,4 @@ export default {
                   return res.data.countPosts
               })
   },
- 
-  getRestDocs() {
-    return axios.get('https://70.12.246.106:9090/api/bears/restdocs')
-                .then((res) => {
-                  return res
-                })
-  }
 }

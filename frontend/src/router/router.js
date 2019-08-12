@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import firebase from '../apis/firebase/firebase'
 
-import RestDocsPage from '../pages/restdocs/RestDocsPage'
 import HomePage from '../pages/home/HomePage.vue'
 import PortfolioCreatePage from '../pages/portfolio/PortfolioCreatePage.vue'
 import PortfolioListPage from '../pages/portfolio/PortfolioListPage.vue'
@@ -112,10 +111,5 @@ export default new Router({
       name: 'ErrorPage',
       component: ErrorPage
     },
-    {
-      path: '/restdocs',
-      name: 'RestDocsPage',
-      component: RestDocsPage
-    }
   ]
 })
