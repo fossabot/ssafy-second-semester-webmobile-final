@@ -34,6 +34,7 @@
 
 <script>
 import mainServices from '../../apis/mainservice/mainServices'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 import Imgur from '../common/Imgur'
 import Title from '../common/Title'
 
@@ -69,6 +70,14 @@ export default {
     async postPutPost () { 
       if ( !this.$route.params.postId ) { // 새로 만드는 경우
         await mainServices.postPost(this.newPost)
+        .then((res) => {
+          if(res.status == 201){
+            pushAlarm.pushAlarmSend('post', '');
+          }
+        }).catch((error)=>{
+          console.log('post posting error', error);
+        })
+
         this.$router.push({ name: 'PostListPage'})
       } else { // 업데이트의 경우
         await mainServices.putPost(this.newPost)

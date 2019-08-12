@@ -15,8 +15,8 @@ const getLoginUserInfo = async function() {
   }
 }
 
-const portfolioUrl = 'http://70.12.246.106:9090/api/bears/portfolios' 
-const postUrl = 'http://70.12.246.106:9090/api/bears/posts' 
+const portfolioUrl = 'https://70.12.246.106:9090/api/bears/portfolios' 
+const postUrl = 'https://70.12.246.106:9090/api/bears/posts' 
 
 export default {
   // 이 함수는 근데 이미 account.js에 변수화 되어 있어서 vue 특성상 변수화 된 애를 쓰는게 편함 버리는 함수
@@ -204,6 +204,27 @@ export default {
               })
   },
 
+  async loadPosts(pageNo) { // 6개씩
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+
+    return axios.get(`${postUrl}/pages/${pageNo}`,{"headers": headers})
+                .then((res) => {
+                  this.setCookie("posts",res.data.content,1)
+                  return res.data.content
+                })
+  },
+
   getPost(postId) {
     return axios.get(`${postUrl}/${postId}`)
                 .then((res) => {                
@@ -223,7 +244,7 @@ export default {
     post.accountName = loginUser.accountName
     return axios.post(postUrl, post, { "headers": headers })          
                 .then((res) => {                  
-                  return res.data
+                  return res
                 })
   },
 
@@ -269,7 +290,7 @@ export default {
     }
     return axios.post(`${postUrl}/${postId}/comments`,  postComment, { "headers": headers })
                 .then((res) => {
-                  return res.data
+                  return res
                 })
   }, 
   
