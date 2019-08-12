@@ -10,6 +10,7 @@
 <script>
 import {mapState, mapActions, mapMutations} from 'vuex'
 import mainServices from '@/apis/mainservice/mainServices.js'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 
 export default {
   name: 'PortfolioCommentCreate',
@@ -26,6 +27,15 @@ export default {
     ...mapActions('portfolio',['getPortfolio']),
     async postPortfolioComment() {
       await mainServices.postPortfolioComment(this.portfolio.portfolioId, this.portfolioCommentContent)
+      .then((res)=>{
+        if(res.status == 201){
+          pushAlarm.pushAlarmSend('portfolioComment', this.portfolio.portfolioId);
+        }
+      })
+      .catch((error)=>{
+
+      })
+
       await this.getPortfolio(this.portfolio.portfolioId)
       this.portfolioCommentContent = ''
       this.example = 'Enter Comment'
