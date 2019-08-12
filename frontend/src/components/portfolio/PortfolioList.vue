@@ -9,10 +9,12 @@
         <!-- Card Body -->
         <div class="card-body">
           <h5 class="card-title card-text-ellipsis">{{ portfolio.portfolioTitle }}</h5>
-          <p class="card-text card-text-ellipsis" style="color: gray">{{ portfolio.portfolioContent }}</p>
+          <p class="card-text card-text-ellipsis" style="color: gray;">by {{ portfolio.accountName }}</p>
           <!-- Buttons -->
           <div class="row justify-content-end">
             <!-- 더 보기 -->
+            <i class="far fa-eye py-2" style="color: rgb(100,100,100)"></i> &nbsp; 
+            <span class="py-1" style="color: rgb(100,100,100)">{{ portfolio.portfolioViews}} </span> &nbsp;
             <router-link :to="{ name: 'PortfolioDetailPage', params: { portfolioId: portfolio.portfolioId }}" class="btn btn-sm btn-outline-info mx-1">
               <i class="fas fa-plus"></i>
             </router-link>

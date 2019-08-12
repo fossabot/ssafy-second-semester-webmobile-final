@@ -204,6 +204,27 @@ export default {
               })
   },
 
+  async loadPosts(pageNo) { // 6개씩
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+
+    return axios.get(`${postUrl}/pages/${pageNo}`,{"headers": headers})
+                .then((res) => {
+                  this.setCookie("posts",res.data.content,1)
+                  return res.data.content
+                })
+  },
+
   getPost(postId) {
     return axios.get(`${postUrl}/${postId}`)
                 .then((res) => {                
