@@ -35,10 +35,8 @@ export default {
   computed: {
     ...mapState('post', ['posts']),
   },mounted() {
-    const target = document.querySelector('.scrolling-wrapper');
-    // listen on the whole document; you could restrict this to an element though
-    document.addEventListener('wheel', function(event) {
-      target.scrollLeft += event.deltaY;
+    document.querySelector('.scrolling-wrapper').addEventListener('wheel', function(event) {
+      document.querySelector('.scrolling-wrapper').scrollLeft += event.deltaY;
     });
   }
 }
