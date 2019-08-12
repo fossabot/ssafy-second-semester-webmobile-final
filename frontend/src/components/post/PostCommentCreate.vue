@@ -10,6 +10,7 @@
 <script>
 import {mapState, mapActions, mapMutations} from 'vuex'
 import mainServices from '@/apis/mainservice/mainServices.js'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 
 export default {
   name: 'PostCommentCreate',
