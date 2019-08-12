@@ -1,11 +1,22 @@
 import axios from 'axios'
-import store from '../../store/store.js'
+import firebase from '../firebase/firebase'
+import store from '../../store/store'
 
 // TODO : 예외 처리 달지 않은 상태  
 
 let loginUser = store.state.account 
-const portfolioUrl = "http://70.12.246.106:9090/api/bears/portfolios"  
 
+const getLoginUserInfo = async function() {
+  if (sessionStorage.getItem('key')) {
+    const LoginUserInfo = firebase.getInfo(sessionStorage.getItem('key'))
+    return LoginUserInfo
+  } else {
+    return false
+  }
+}
+
+const portfolioUrl = 'https://70.12.246.106:9090/api/bears/portfolios' 
+const postUrl = 'https://70.12.246.106:9090/api/bears/posts' 
 
 export default {
   // 이 함수는 근데 이미 account.js에 변수화 되어 있어서 vue 특성상 변수화 된 애를 쓰는게 편함 버리는 함수
@@ -44,15 +55,49 @@ export default {
   },
 
   // Portfolios CRUD
-  getPortfolios() {
+  getPortfolios() {    
     return axios.get(portfolioUrl)
                 .then((res) => {                  
                   return res.data.content 
               })
   },
 
-  getPortfolio(portfolioId) {
-    return axios.get(`${portfolioUrl}/${portfolioId}`)
+  async loadPortfolios(pageNo) { // 6개씩
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+
+    return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
+                .then((res) => {
+                  this.setCookie("portfolios",res.data.content,1)
+                  return res.data.content
+                })
+  },
+
+
+  async getPortfolio(portfolioId) {
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+    return axios.get(`${portfolioUrl}/${portfolioId}`,{"headers": headers})
                 .then((res) => {                
                   return res.data
               })
@@ -66,11 +111,12 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
+    console.log(headers)
     portfolio.accountEmail = loginUser.accountEmail
     portfolio.accountName = loginUser.accountName
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
-                .then((res) => {                  
-                  return res.data
+                .then((res) => {  
+                  return res
                 })
   },
 
@@ -146,5 +192,164 @@ export default {
                 .then((res) => {
                   return res.data
                 })
-  }
+  },
+  
+
+  // Posts CRUD
+  
+  getPosts() {
+    return axios.get(postUrl)
+                .then((res) => {           
+                  this.setCookie("posts",res.data.content,1)       
+                  return res.data.content 
+              })
+  },
+
+  getPost(postId) {
+    return axios.get(`${postUrl}/${postId}`)
+                .then((res) => {                
+                  return res.data
+              })
+  },
+
+  postPost(post) { 
+    // 새 글 작성은 작성자 체크 할 필요 없이 바로 현재 로그인 유저로 작성하면 된다. 애초에 로그인한 유저에게만 포스트 버튼이 보이므로
+    // but 만일을 위해 여기도 로그인 안했을시를 분기해서 에러 핸들링하자.. 나중에^^
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    post.accountEmail = loginUser.accountEmail
+    post.accountName = loginUser.accountName
+    return axios.post(postUrl, post, { "headers": headers })          
+                .then((res) => {                  
+                  return res.data
+                })
+  },
+
+  putPost(post) {
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    post.accountEmail = loginUser.accountEmail
+    post.accountName = loginUser.accountName
+    return axios.put(`${postUrl}/${post.postId}`,post,{ "headers": headers })
+                .then((res) => {                  
+                  return res.data
+              })
+  },
+
+  deletePost(postId) {
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.delete(`${postUrl}/${postId}`,{ "headers": headers })
+                .then((res) => {                  
+                  return res.data
+              })
+  },
+
+  // Post Comment CRUD
+  
+  postPostComment(postId, postCommentContent) {
+    const postComment = {
+      "postId": postId,
+      "accountEmail": loginUser.accountEmail,
+      "accountName": loginUser.accountName,
+      "postCommentContent": postCommentContent,
+    }
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.post(`${postUrl}/${postId}/comments`,  postComment, { "headers": headers })
+                .then((res) => {
+                  return res.data
+                })
+  }, 
+  
+  
+  
+  putPostComment(postId, postComment) {
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.put(`${postUrl}/${postId}/comments/${postComment.postCommentId}`, postComment, { "headers": headers })
+    .then((res) => {
+      return res.data
+    })
+  },
+  
+  deletePostComment(postId, postCommentId) {
+    const headers = {
+      "Content-Type": "application/json",
+      "accountEmail": loginUser.accountEmail,
+      "accountAuth": loginUser.accountAuth
+    }
+    return axios.delete(`${postUrl}/${postId}/comments/${postCommentId}`, { "headers": headers })
+    .then((res) => {
+      return res.data
+    })
+  },
+  // 기타
+  parsePortfolio(portfolioContent) {
+    let contents_start = []
+    let contents_end = []
+    let contents = []
+    let images_start = []
+    let images_end = []
+    let images = []
+    
+    let i = 0
+    while (i<portfolioContent.length) {
+      if (portfolioContent.slice(i,i+5) === "![img") {
+        contents_end.push(i)
+        images_start.push(i+7)  
+        i += 5
+        while (portfolioContent[i] != ')') {
+          i++
+        }
+        images_end.push(i)
+        contents_start.push(i+1)
+      }
+      i++
+    }
+    contents_end.push(portfolioContent.length -1)
+  
+    for (var j=0;j<contents_start.length;j++) {
+      contents.push(portfolioContent.slice(contents_start[j],contents_end[j+1]))
+      images.push(portfolioContent.slice([images_start[j]],images_end[j]))
+    }
+    return {contents,images}
+  },
+  
+  setCookie(name, value, exp) {
+    var date = new Date()
+    date.setTime(date.getTime() + exp*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+  },
+  
+
+  getPortfoliosCount() {
+    return axios.get(`${portfolioUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPortfolios
+              })
+  },
+
+  getPostsCount() {
+    return axios.get(`${postUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPosts
+              })
+  },
+  
 }

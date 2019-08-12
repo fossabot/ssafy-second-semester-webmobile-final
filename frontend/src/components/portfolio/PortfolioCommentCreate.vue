@@ -12,7 +12,7 @@ import {mapState, mapActions, mapMutations} from 'vuex'
 import mainServices from '@/apis/mainservice/mainServices.js'
 
 export default {
-  name: 'PortfolioCommentCreateComp',
+  name: 'PortfolioCommentCreate',
   computed: {
     ...mapState('portfolio',['portfolio']),
   },

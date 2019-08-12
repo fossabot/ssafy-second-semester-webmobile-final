@@ -2,17 +2,17 @@
   <!-- Card List -->
   <div class="scrolling-wrapper my-5">
     <!-- Card -->
-    <div v-for="portfolio in portfolios" class="card mx-3" style="width: 15rem;">
+    <div v-for="post in posts" class="card mx-3" style="width: 15rem;">
       <!-- Card Image -->
-      <img :src="portfolio.portfolioThumbnailUrl ? portfolio.portfolioThumbnailUrl : 'https://source.unsplash.com/random/500x500'" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
+      <img :src="post.postThumbnailUrl ? post.postThumbnailUrl : 'https://source.unsplash.com/random/500x500'" class="card-img-top" style="width: 100%; height: 15rem" alt="...">
       <!-- Card Body -->
       <div class="card-body">
-        <h5 class="card-title">{{ portfolio.portfolioTitle }}</h5>
-        <p class="card-text card-text-ellipsis" style="color: gray">{{ portfolio.portfolioContent }}</p>
+        <h5 class="card-title card-text-ellipsis">{{ post.postTitle }}</h5>
+        <p class="card-text card-text-ellipsis" style="color: gray">{{ post.postContent }}</p>
         <!-- Buttons -->
         <div class="row justify-content-end">
           <!-- 더 보기 -->
-          <router-link :to="{ name: 'PortfolioDetailPage', params: { portfolioId: portfolio.portfolioId }}" class="btn btn-sm btn-outline-info mx-1">
+          <router-link :to="{ name: 'PostDetailPage', params: { postId: post.postId }}" class="btn btn-sm btn-outline-info mx-1">
             <i class="fas fa-plus"></i>
           </router-link>
         </div>        
@@ -25,9 +25,9 @@
 import { mapState } from 'vuex'
 
 export default {
-  name: 'PortfolioListComp',
+  name: 'PostList',
   computed: {
-    ...mapState('portfolio', ['portfolios']),
+    ...mapState('post', ['posts']),
   },
 }
 </script>

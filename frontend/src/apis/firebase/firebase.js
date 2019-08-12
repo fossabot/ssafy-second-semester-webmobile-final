@@ -1,4 +1,5 @@
 import firebase from 'firebase/app'
+import 'firebase/messaging'
 import 'firebase/firestore'
 import 'firebase/auth'
 
@@ -18,34 +19,6 @@ let app = firebase.initializeApp(config)
 firebase.firestore().settings({
   cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED
 });
-
-firebase.firestore().enablePersistence()
-  .catch(function(err) {
-    if (err.code == 'failed-precondition') {
-      // Multiple tabs open, persistence can only be enabled
-      // in one tab at a a time.
-      // ...
-    } else if (err.code == 'unimplemented') {
-      // The current browser does not support all of the
-      // features required to enable persistence
-      // ...
-    }
-  });
-
-firebase.firestore().disableNetwork()
-  .then(function() {
-    // Do offline actions
-    // ...
-    console.log("offline test");    
-  });
-
-firebase.firestore().enableNetwork()
-  .then(function() {
-    // Do online actions
-    // ...
-    console.log("online test");
-  });
-
 
 export default {
   getAccounts(){
@@ -118,7 +91,52 @@ export default {
       email : email,
       gitlab_email : gitlabemail,
       name : name,
-      password : password
+      password : password,
+      ispush : "0"
     })
-  }
+  },
+
+  //권한 수정
+  updateAuth(token,auth){
+    const accounts = firebase.firestore(app).collection("accounts")
+    return  accounts.doc(token).update({
+      auth : auth
+    }).then(function(){
+      alert('권한이 성공적으로 수정되었습니다.')
+    }).catch(function(){
+      alert('권한이 수정되지 않았습니다.')
+    })
+  },
+
+  //isPush 권한 수정
+  updateIsPush(token,ispush){
+    const accounts = firebase.firestore(app).collection("accounts")
+    return  accounts.doc(token).update({
+      ispush : ispush
+    }).then(function(){
+      console.log("success")
+    }).catch(function(){
+      console.log("error");
+    })
+  },
+
+  //Ranking
+  getRanking(){
+    const accounts = firebase.firestore(app).collection("ranking")
+    return accounts.get()
+                  .then((docSnapshots) => {
+                    return docSnapshots.docs.map((doc) => {
+                      let data = doc.data()
+                      return data
+                    })
+                  })
+  },
+
+  //post Ranking
+  postRanking(score){
+    const accounts = firebase.firestore(app).collection("ranking")
+    return accounts.add({
+      score : score,
+    })
+  },
 }

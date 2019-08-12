@@ -1,28 +1,49 @@
-import axios from 'axios'
+import mainServices from '@/apis/mainservice/mainServices.js'
 
 const state = {
-  default: null,  
+  posts: [],
+  post: {},
 }
 
 const getters = {
-  defaultGetter(state, getter) {
-    return state.default ? state.default.length : 0
+  totalComments(state) {
+    return state.post.postComments ? state.post.postComment.length : 0
   }
 }
 
 const actions = {
-  defaultAction( { state, commit, getters }, payload ) {
-    console.log(state.default)
-    commit('setDefault',{default: "Hello World"})
-    console.log(getters.defaultGetter)
-    
-  }
+  getPosts({commit}) {
+    mainServices.getPosts()
+                .then((posts) => {
+                  commit('setPosts', posts)
+                })
+  },
+  getPost({commit},postId) {
+    mainServices.getPost(postId) 
+                .then((post) => {
+                  commit('setPost',post)
+                })
+  },
 }
 
 const mutations = {
-  setDefault(state,payload) {
-    state.default = payload.default
-  }
+  setPosts(state, posts) {
+    state.posts = posts
+  },
+  setPost(state, post) {
+    state.post = post
+  },
+
+  setNewPost(state) { 
+    state.post = {
+      accountEmail: "",
+      accountName: "",
+      postTitle: "",
+      postContent: "",
+      postThumbnailUrl: "",
+    }
+  },
+
 }
 
 export default {
