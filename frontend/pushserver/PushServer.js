@@ -27,15 +27,15 @@ const sslOptions = {
 
 app.use(cors());
 
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-// https.createServer(sslOptions, app).listen(3000, function(){
-// 	console.log("HTTPS  server is listening on port " + 3000);
-// })
-
-http.createServer(app).listen(3000, function(){
-	console.log("Http server is listening on port " + 3000);
+https.createServer(sslOptions, app).listen(3000, function(){
+	console.log("HTTPS  server is listening on port " + 3000);
 })
+
+// http.createServer(app).listen(3000, function(){
+// 	console.log("Http server is listening on port " + 3000);
+// })
 
 
 /* mapping controller methods list */
@@ -78,6 +78,8 @@ app.get('/subscribe', function(req, res){
 	} else if(accountAuth === '2' || accountAuth === '3' || accountAuth === '4'){
 		subscribeToAllusers(registrationToken);
 	}
+
+	res.send();
 })
 
 app.get('/unsubscribe', function(req, res){
@@ -94,6 +96,8 @@ app.get('/unsubscribe', function(req, res){
 	} else if(accountAuth === '2' || accountAuth === '3' || accountAuth === '4'){
 		unsubscribeFromAllusers(userToken);
 	}
+
+	res.send();
 })
 
 function sendPushAboutPost(){

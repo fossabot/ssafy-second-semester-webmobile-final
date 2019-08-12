@@ -11,7 +11,7 @@ const messaging = firebase.messaging();
 
 export default {
 	pushAlarmSubscribe(accountAuth){
-		const targetURL = "http://70.12.246.109:3000/subscribe"
+		const targetURL = "https://70.12.246.109:3000/subscribe"
 		
 		console.log("subscribe");
 		axios.get(targetURL, {
@@ -30,7 +30,7 @@ export default {
 	},
 
 	pushAlarmUnSubscribe(accountAuth, userToken){
-		const targetURL = "http://70.12.246.109:3000/unsubscribe"
+		const targetURL = "https://70.12.246.109:3000/unsubscribe"
 		
 		console.log('unsub ', userToken);
 		axios.get(targetURL, {
@@ -48,7 +48,7 @@ export default {
 	},
 
 	pushAlarmSend(topic, boardId){
-		const targetURL = "http://70.12.246.109:3000/send";
+		const targetURL = "https://70.12.246.109:3000/send";
 
 		axios.get(targetURL, {
 			params : {
