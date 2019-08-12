@@ -7,8 +7,6 @@ import axios from 'axios'
 import firebase from 'firebase'
 import VueFullPage from 'vue-fullpage.js'
 
-window.$ = window.jQuery = require('jquery');
-
 Vue.use(VueFullPage);
 
 Vue.config.productionTip = false;

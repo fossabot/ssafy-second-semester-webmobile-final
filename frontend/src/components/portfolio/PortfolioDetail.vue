@@ -34,20 +34,6 @@
       </div>
     </div>
 
-    <div>
-      <div id="flipbook">
-        <div class="hard"> Turn.js </div>
-        <div class="hard"></div>
-        <div> Page 1 </div>
-        <div> Page 2 </div>
-        <div> Page 3 </div>
-        <div> Page 4 </div>
-        <div class="hard"></div>
-        <div class="hard"></div>
-      </div>
-    </div>
-
-
   </div>
 </template>
 
@@ -64,13 +50,6 @@ export default {
     return {
       contentsIndex: 0
     }
-  },
-  mounted() {
-    $("#flipbook").turn({
-		  width: 400,
-		  height: 300,
-		  autoCenter: true
-	  });
   },
   computed: {
     parsedPortfolio: {
