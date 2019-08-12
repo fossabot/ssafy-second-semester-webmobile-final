@@ -224,7 +224,7 @@ export default {
     post.accountName = loginUser.accountName
     return axios.post(postUrl, post, { "headers": headers })          
                 .then((res) => {                  
-                  return res.data
+                  return res
                 })
   },
 
@@ -270,7 +270,7 @@ export default {
     }
     return axios.post(`${postUrl}/${postId}/comments`,  postComment, { "headers": headers })
                 .then((res) => {
-                  return res.data
+                  return res
                 })
   }, 
   

@@ -117,6 +117,7 @@ export default {
             if(data.ispush != '0'){
               const accountAuth = data.auth;
               const fcmToken = data.ispush;
+              data.ispush = "0";
 
               // pushAlarm.pushAlarmUnSubscribe(accountAuth, fcmToken);
               firebase.updateIsPush(token, "0");
