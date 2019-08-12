@@ -1,6 +1,6 @@
 <template>
   <!-- Card List -->
-  <div class="scrolling-wrapper my-5">
+  <div class="scrolling-wrapper my-5" >
     <!-- Card -->
     <div v-for="post in posts" class="card mx-3" style="width: 15rem;">
       <!-- Card Image -->
@@ -28,7 +28,13 @@ export default {
   name: 'PostList',
   computed: {
     ...mapState('post', ['posts']),
-  },
+  },mounted() {
+    const target = document.querySelector('.scrolling-wrapper');
+    // listen on the whole document; you could restrict this to an element though
+    document.addEventListener('wheel', function(event) {
+      target.scrollLeft += event.deltaY;
+    });
+  }
 }
 </script>
 
