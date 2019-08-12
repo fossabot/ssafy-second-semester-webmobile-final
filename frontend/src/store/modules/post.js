@@ -18,6 +18,16 @@ const actions = {
                   commit('setPosts', posts)
                 })
   },
+  loadPosts({commit}, pageNo) {
+    mainServices.loadPosts(pageNo)
+                .then((posts) => { 
+                  if (pageNo === 1) {
+                    commit('setPosts', posts)
+                  } else {
+                    commit('addPosts', posts)
+                  }
+                })
+  },
   getPost({commit},postId) {
     mainServices.getPost(postId) 
                 .then((post) => {
@@ -33,7 +43,9 @@ const mutations = {
   setPost(state, post) {
     state.post = post
   },
-
+  addPosts(state, posts) {
+    state.posts = state.posts.concat(posts)
+  },
   setNewPost(state) { 
     state.post = {
       accountEmail: "",
