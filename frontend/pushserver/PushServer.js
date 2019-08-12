@@ -178,7 +178,7 @@ function sendPushAboutPortfolioComment(portfolioId){
 	var message = {
 		data : {
 			title: 'New PortfolioComment :)',
-	  		contents: portfolioId + '번 포트폴리오에 새로운 글이 등록되었습니다.'		
+	  		contents: portfolioId + '번 포트폴리오에 새로운 댓글이 등록되었습니다.'		
 		},
 		topic : topic
 	};
