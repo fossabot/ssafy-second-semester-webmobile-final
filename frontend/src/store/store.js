@@ -22,7 +22,12 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    toggleLoading(state) {
+      state.isLoaded = SVGComponentTransferFunctionElement
+    }
 
   },
 
+  actions: {
+  }
 })

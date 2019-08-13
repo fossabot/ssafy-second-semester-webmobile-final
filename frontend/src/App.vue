@@ -26,10 +26,7 @@ export default{
   },
   mounted() {
   },
-  updated (){
-    //   console.log(
-    //   this.accountIsPush
-    // )
+  updated() {
   }
 }
 </script>
