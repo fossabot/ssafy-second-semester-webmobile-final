@@ -31,6 +31,7 @@ export default{
     components : {
     },
     computed : {
+        ...mapState('account',['accountName'])
     },
     created(){
         let srcarr = []
@@ -107,7 +108,7 @@ export default{
             }
             if(this.cur==10){
                 let c =this.count
-                await firebase.postRanking(this.count)
+                await firebase.postRanking(this.count,this.accountName)
                 let res = await firebase.getRanking()
                 console.log(res);
                 let arr =[]
@@ -119,16 +120,17 @@ export default{
                     return a-b
                 })
                 console.log(arr);
-                
+                let str =""
                 for(let i in arr){
                     if(arr[i]==c){
                         if(i==0){
                             alert("complete\n축하합니다 1등 입니다.\n\n클릭 횟수 : "+this.count+"회\n\n ")
                         }else {
-                            alert("complete\n등수 :"+((i*1)+1)+"등\n클릭 횟수 : "+this.count+"회\n1등과의 차이 : "+(c-arr[0])+"개")
+                            alert("complete\n등수 :"+((i*1)+1)+"등\n클릭 횟수 : "+this.count+"회\n\n"+str)
                         }
                         break
                     }
+                    str += ((1*i)+1)+"등 :"+arr[i]+"개\n"
                 }
             }
         }

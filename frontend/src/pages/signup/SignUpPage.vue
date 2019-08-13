@@ -113,6 +113,8 @@ export default {
           this.account.account_password,
           this.account.account_gitlab_email,
           this.account.account_name)
+
+        await firebase.postAuth(this.account.account_email,this.account.account_password)
           
         alert("회원가입을 완료합니다")
         this.$router.push("/")
