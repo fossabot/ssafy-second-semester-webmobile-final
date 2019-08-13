@@ -21,7 +21,7 @@
         </div>        
       </div>
     </div>
-    <button type="button" class="btn btn-outline-secondary border-0 align-top" @click="$emit('addPosts')" style="margin-top: 180px">
+    <button v-if="totalPostPages != 1 && pageNo < totalPostPages" type="button" class="btn btn-outline-secondary border-0 align-top" @click="$emit('addPosts')" style="margin-top: 180px">
       <i class="fas fa-plus-circle fa-5x"></i>
     </button>
   </div>
@@ -32,8 +32,11 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'PostList',
+  props: {
+    pageNo: {type: Number}
+  },
   computed: {
-    ...mapState('post', ['posts']),
+    ...mapState('post', ['posts','totalPostPages']),
   },mounted() {
     document.querySelector('.scrolling-wrapper').addEventListener('wheel', function(event) {
       document.querySelector('.scrolling-wrapper').scrollLeft += event.deltaY;

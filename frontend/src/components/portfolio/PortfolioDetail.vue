@@ -37,8 +37,6 @@ export default {
       isFlipped2: false,
       zflip: 0,
       pageIndex: 0
-
-
     }
   },
   computed: { 

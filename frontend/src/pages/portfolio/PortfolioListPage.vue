@@ -5,7 +5,7 @@
       새 포트폴리오 작성&nbsp; <i class="fas fa-pen"></i>
     </router-link>
     <PortfolioList class="container"></PortfolioList>
-    <div v-if="isMore" class="row justify-content-center">
+    <div v-if="totalPortfolioPages != 1 && pageNo < totalPortfolioPages" class="row justify-content-center">
       <button type="button" class="btn btn-outline-success my-3" @click="addPortfolios">
         <i class="fas fa-plus"></i> 포트폴리오 더보기
       </button>
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-// TODO : 다 불러오면 더보기 버튼 사라지게 만드는 기능 구현
 import {mapState, mapActions} from 'vuex'
 import Title from '@/components/common/Title'
 import PortfolioList from '@/components/portfolio/PortfolioList'
@@ -24,7 +23,6 @@ export default {
   data() {
     return {
       pageNo : 1,
-      isMore: true,
     }
   },
   components: {
@@ -33,6 +31,7 @@ export default {
   },
   computed: {
     ...mapState('account',['loginCheck','accountAuth']),
+    ...mapState('portfolio',['totalPortfolioPages'])
   },
   methods: {
     ...mapActions('portfolio', ['loadPortfolios']),
