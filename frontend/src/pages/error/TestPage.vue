@@ -1,20 +1,19 @@
 <template>
   <div class="container my-5 py-5 row justify-content-center">
     <div class="scene scene--page" :style="{'z-index': zflip}">
-      <div class="page__face" style="color: black">{{ pages[pageIndex-3] }}</div>
+      <div class="page__face" style="color: black">{{ images[pageIndex-1] }}</div>
       <div class="page" :class="{ 'is-flipped': isFlipped }">
-        <div class="page__face page__face--front" @click="goPrev">{{ pages[pageIndex-1] }}</div>
-        <div class="page__face page__face--back">{{ pages[pageIndex-2] }}</div>
+        <div class="page__face page__face--front" @click="goPrev">{{ images[pageIndex] }}</div>
+        <div class="page__face page__face--back">{{ contents[pageIndex-1] }}</div>
       </div>
     </div>
     <div class="scene scene--page2">
-      <div class="page__face" style="color: black">{{ pages[pageIndex+2] }}</div>
+      <div class="page__face" style="color: black">{{ contents[pageIndex+1] }}</div>
       <div class="page2" :class="{ 'is-flipped': isFlipped2 }">
-        <div class="page2__face page2__face--front" @click="goNext">{{ pages[pageIndex] }}</div>
-        <div class="page2__face page2__face--back">{{ pages[pageIndex+1] }}</div>
+        <div class="page2__face page2__face--front" @click="goNext">{{ contents[pageIndex] }}</div>
+        <div class="page2__face page2__face--back">{{ images[pageIndex+1] }}</div>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -26,33 +25,34 @@ export default {
       isFlipped: false,
       isFlipped2: false,
       zflip: 0,
-      pages: [-1,0,1,2,3,4,5,6,7,8,9,10,11,12],
-      pageIndex: 3
+      images:['image1','image2','image3','image4','image5'],
+      contents: ['content1','content2','content3','content4','content5'],
+      pageIndex: 0
     }
   },
   methods: {
     goPrev() {
-      if (this.pageIndex == 3) {
+      if (this.pageIndex == 0) {
         alert('첫 페이지 입니다.')
       } else {
         this.zflip = 5
         this.isFlipped = true
         setTimeout(function () {
           this.isFlipped = false
-          this.pageIndex -= 2
+          this.pageIndex -= 1
           this.zflip = 0
         }.bind(this), 1000);
       }
     },
     goNext() {
-      if (this.pageIndex == this.pages.length-1) {
+      if (this.pageIndex == this.images.length-1) {
         alert('마지막 페이지 입니다.')
       } else {
 
         this.isFlipped2 = true
         setTimeout(function () {
           this.isFlipped2 = false
-          this.pageIndex += 2
+          this.pageIndex += 1
         }.bind(this), 1000);
       }
     }
