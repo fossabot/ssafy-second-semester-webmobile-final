@@ -98,33 +98,24 @@ export default {
         sessionStorage.setItem('key',token)
 
         Notification.requestPermission()
-        .then((permission) => {
+        .then(async function(permission) {
           if(permission === 'granted'){
             console.log(data.ispush);
             //푸쉬알람에 대한 토큰이 없는경우 Subscribe
             if(data.ispush === '0'){
               const accountAuth = data.auth;
               
-              pushAlarm.refreshToken();
-
-              setTimeout(function(){
-                firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));  
-              }, 1000);
-              
-
-              setTimeout(function(){
-                pushAlarm.pushAlarmSubscribe(accountAuth);
-              }, 1000);
+              await pushAlarm.refreshToken(); // firebase.getToken()
+              await firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));
+              await pushAlaem.pushAlarmSubscribe(accountAuth);
             }
           } else { // permission === denied or default
             //푸쉬알람에 대한 토큰이 있는경우 firestore account의 isPush 토큰값을 삭제
             
             if(data.ispush != '0'){
-              const accountAuth = data.auth;
-              const fcmToken = data.ispush;
+              
               data.ispush = "0";
 
-              // pushAlarm.pushAlarmUnSubscribe(accountAuth, fcmToken);
               firebase.updateIsPush(token, "0");
             }
           }
