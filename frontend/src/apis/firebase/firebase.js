@@ -133,10 +133,17 @@ export default {
   },
 
   //post Ranking
-  postRanking(score){
+  postRanking(score,name){
     const accounts = firebase.firestore(app).collection("ranking")
     return accounts.add({
       score : score,
+      name : name
     })
   },
+
+  postAuth(email,password){
+    firebase.auth().createUserWithEmailAndPassword(email,password).catch(function(error){
+
+    })
+  }
 }

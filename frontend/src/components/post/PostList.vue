@@ -47,6 +47,7 @@ export default {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  direction: horizontal;
   width: 80%;
   height: 450px;
 }

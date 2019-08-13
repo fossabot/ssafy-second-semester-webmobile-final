@@ -150,5 +150,8 @@ nav.navbar-light {
   background : white;
 }
 
+a {
+  cursor: pointer;
+}
 
 </style>
