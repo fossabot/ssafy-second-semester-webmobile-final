@@ -19,7 +19,6 @@ export default {
 
   data () {
     return {
-     
       options : {
       	licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         sectionsColor: ['dark', 'dark', 'dark','dark']
@@ -28,28 +27,10 @@ export default {
   },
   components: {
     Carousel,
-	Introduction,
-	PortfolioIntro
+    Introduction,
+    PortfolioIntro
   },
   mounted() {
-    /*if(Notification.permission === "default"){
-       알람 허용 여부를 물어봄
-      swRegistration.pushManager.getSubscription()
-
-      return;
-    }
-
-    if(Notification.permission === "granted"){
-      알람 허용 상태
-
-      return;
-    }
-
-    if(Notification.permission === "denied"){
-      알람 거부 상태
-
-      return;
-    }*/
   }
 }
 
