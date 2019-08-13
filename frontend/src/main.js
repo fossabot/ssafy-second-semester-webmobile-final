@@ -5,8 +5,8 @@ import store from './store/store.js'
 import './registerServiceWorker'
 import axios from 'axios'
 import firebase from 'firebase'
-
 import VueFullPage from 'vue-fullpage.js'
+
 Vue.use(VueFullPage);
 
 Vue.config.productionTip = false;

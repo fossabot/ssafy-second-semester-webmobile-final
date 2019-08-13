@@ -21,12 +21,16 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
 import mainServices from '../../apis/mainservice/mainServices'
 import {mapState} from 'vuex'
+import turn from '../../apis/turn/turn.min.js'
+
+
 
 export default {
   name: 'PortfolioDetail',
