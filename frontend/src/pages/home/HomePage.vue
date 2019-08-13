@@ -2,7 +2,7 @@
   <div> 
     <div v-show="$store.state.isLoaded" class="container-fluid px-0">
       <full-page ref="fullpage" :options = "options" id = "fullpage">
-        <Carousel class = "mt-5"></Carousel>
+        <Carousel class = "mt-3"></Carousel>
         <Introduction class = "mt-5"></Introduction>
         <PortfolioIntro class = "mt-5"></PortfolioIntro>
       </full-page>
