@@ -3,10 +3,10 @@
     <!-- <modal v-if="showModal" @close="showModal = false"> -->
     <LoginModal :showModal="showModal" @signIn="signIn" @close="close" :naverLogin="naverLogin"></LoginModal>
     <div class="container-fluid px-0">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 250)">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="text-align-middle">
         <router-link :to="{ name: 'HomePage' }" class="navbar navbar-brand  d-inline-flex">
-          <i class="fas fa-paw fa-3x"></i>
+          <i class="fas fa-paw fa-2x"></i>
            <h2 class="d-inline ml-3 mb-0 text-align-middle"> Bare Bears</h2>
         </router-link>
       </div>
