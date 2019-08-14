@@ -1,13 +1,14 @@
 <template>
   <div class ="container">
     <h1 class="mt-3">{{ portfolio.portfolioTitle }}</h1>
+    <p class="lead" style="color: gray">authored by {{ portfolio.accountName }} </p>
     <div class="container row justify-content-center">
       <div class="scene row justify-content-end align-items-center" style="z-index: 5">
         <!-- cover -->
-        <div class="page__face"><img :src="images[pageIndex-1]" style="max-width: 100%; max-height: 100%"/></div>
+        <div class="page__face"><img :src="images[pageIndex-1]" class="py-3" style="max-width: 80%; max-height: 80%"/></div>
         <!-- cover end --> 
         <div class="page row justify-content-end align-items-center mx-0" :class="{ 'is-flipped': isFlipped }">
-          <div class="page__face page__face--front" @click="goPrev"><img :src="images[pageIndex]" style="max-width: 100%; max-height: 100%"/></div>
+          <div class="page__face page__face--front" @click="goPrev"><img :src="images[pageIndex]" class="py-3" style="max-width: 80%; max-height: 80%"/></div>
           <div class="page__face page__face--back"><div v-html="previousContent" ></div></div>
         </div>
       </div>
@@ -17,7 +18,7 @@
         <!-- cover end-->
         <div class="page2 row align-items-center mx-0" :class="{ 'is-flipped': isFlipped2 }">
           <div class="page2__face page2__face--front" @click="goNext"><div v-html="currentContent"></div></div>
-          <div class="page2__face page2__face--back"><img :src="images[pageIndex+1]" style="max-width: 100%; max-height: 100%"/></div>
+          <div class="page2__face page2__face--back"><img :src="images[pageIndex+1]"  class="py-3" style="max-width: 80%; max-height: 80%"/></div>
         </div>
       </div>
     </div>
@@ -45,8 +46,12 @@ export default {
   },
   computed: { 
     images: {
-      get: function () {     
-        return mainServices.parsePortfolio(this.$store.state.portfolio.portfolio.portfolioContent).images;
+      get: function () {
+        const images = mainServices.parsePortfolio(this.$store.state.portfolio.portfolio.portfolioContent).images 
+        if (!images) {
+          images = ['https://source.unsplash.com/random']
+        }
+        return images;
       },
       set: function (newValue) {
       }

@@ -2,7 +2,6 @@ import axios from 'axios'
 import firebase from '../firebase/firebase'
 import store from '../../store/store'
 
-// TODO : 예외 처리 달지 않은 상태  
 
 let loginUser = store.state.account 
 
@@ -60,6 +59,13 @@ export default {
                 .then((res) => {                  
                   return res.data.countPortfolios
               })
+  },
+
+  async getPortfoliosBest() {
+    return axios.get(`${portfolioUrl}/best`)  
+                .then((res) => {
+                  return res.data.content
+                })
   },
 
   async loadPortfolios(pageNo) { // 6개씩
@@ -203,6 +209,13 @@ export default {
               })
   },
 
+  async getPostsBest() {
+    return axios.get(`${postUrl}/best`)
+                .then((res) => {
+                  return res.data.content
+                })
+  },
+  
   async loadPosts(pageNo) { // 6개씩
     const headers = {
       "Content-Type": "application/json",
@@ -359,6 +372,7 @@ export default {
       contents.push(portfolioContent.slice(contents_start[j],contents_end[j+1]))
       images.push(portfolioContent.slice([images_start[j]],images_end[j]))
     }
+
     return {contents,images}
   },
   

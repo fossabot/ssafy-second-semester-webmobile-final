@@ -1,6 +1,6 @@
 <template>
   <div class="containter mt-5 pt-5">
-    <Title title="posts"></Title>
+    <Title title="posts" class="mt-3"></Title>
     <router-link v-if="loginCheck && accountAuth != 3" :to="{ name: 'PostCreatePage'}" class="btn btn-sm btn-outline-info border-0">
       새 포스트 작성&nbsp; <i class="fas fa-pen"></i>
     </router-link>

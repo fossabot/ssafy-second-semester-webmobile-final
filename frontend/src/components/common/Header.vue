@@ -3,8 +3,7 @@
     <!-- <modal v-if="showModal" @close="showModal = false"> -->
     <LoginModal :showModal="showModal" @signIn="signIn" @close="close" :naverLogin="naverLogin"></LoginModal>
     <div class="container-fluid px-0">
-      
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 250)">
       <div class="text-align-middle">
         <router-link :to="{ name: 'HomePage' }" class="navbar navbar-brand  d-inline-flex">
           <i class="fas fa-paw fa-3x"></i>
