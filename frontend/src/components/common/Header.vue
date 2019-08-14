@@ -106,7 +106,7 @@ export default {
               
               await pushAlarm.refreshToken(); // firebase.getToken()
               await firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));
-              await pushAlaem.pushAlarmSubscribe(accountAuth);
+              await pushAlarm.pushAlarmSubscribe(accountAuth);
             }
           } else { // permission === denied or default
             //푸쉬알람에 대한 토큰이 있는경우 firestore account의 isPush 토큰값을 삭제
