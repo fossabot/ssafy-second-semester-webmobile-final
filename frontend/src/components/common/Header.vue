@@ -3,8 +3,7 @@
     <!-- <modal v-if="showModal" @close="showModal = false"> -->
     <LoginModal :showModal="showModal" @signIn="signIn" @close="close" :naverLogin="naverLogin"></LoginModal>
     <div class="container-fluid px-0">
-      
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 250)">
       <div class="text-align-middle">
         <router-link :to="{ name: 'HomePage' }" class="navbar navbar-brand  d-inline-flex">
           <i class="fas fa-paw fa-3x"></i>
@@ -98,33 +97,24 @@ export default {
         sessionStorage.setItem('key',token)
 
         Notification.requestPermission()
-        .then((permission) => {
+        .then(async function(permission) {
           if(permission === 'granted'){
             console.log(data.ispush);
             //푸쉬알람에 대한 토큰이 없는경우 Subscribe
             if(data.ispush === '0'){
               const accountAuth = data.auth;
               
-              pushAlarm.refreshToken();
-
-              setTimeout(function(){
-                firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));  
-              }, 1000);
-              
-
-              setTimeout(function(){
-                pushAlarm.pushAlarmSubscribe(accountAuth);
-              }, 1000);
+              await pushAlarm.refreshToken(); // firebase.getToken()
+              await firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));
+              await pushAlaem.pushAlarmSubscribe(accountAuth);
             }
           } else { // permission === denied or default
             //푸쉬알람에 대한 토큰이 있는경우 firestore account의 isPush 토큰값을 삭제
             
             if(data.ispush != '0'){
-              const accountAuth = data.auth;
-              const fcmToken = data.ispush;
+              
               data.ispush = "0";
 
-              // pushAlarm.pushAlarmUnSubscribe(accountAuth, fcmToken);
               firebase.updateIsPush(token, "0");
             }
           }

@@ -2,18 +2,17 @@
   <div class="flip-card rounded border-0" :style="{ width:width,height:height }" >
     <div class="flip-card-inner">
       <div class="flip-card-front rounded">
-        <img :src="imgsrc" alt="Avatar" style="width:100%; height:100%" class="rounded">
+        <img :src="imgsrc" alt="Avatar" style="width:100%; height:100%; background-color: beige" class="rounded">
       </div>
       <div class="flip-card-back rounded" style="width:100%; height:100%">
         <div class="card" style="width:100%; height:100%">
           <div class="card-body">
             <h5 class="card-title" style="color:black">{{ title }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ content }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">by {{ content }}</h6>
             <hr>
             <p class="card-text" style="color: black">{{ body }}</p>
             <div>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <a target="_blank" :href="cardLink" class="card-link">게시글 보러가기</a>
             </div>
           </div>
         </div>
@@ -31,7 +30,8 @@ export default {
     title: {type:String},
     content: {type:String},
     body: {type:String},
-    imgsrc: {type:String}
+    imgsrc: {type:String},
+    cardLink: {type:String}
   }
 
 }

@@ -1,6 +1,6 @@
 <template>     
   <div class="imagebody rounded">
-    <img :src="imgSrc" alt="Avatar" class="image rounded" style="width:100%">
+    <img :src="imgSrc" alt="Avatar" class="image rounded" style=" height:100%">
     <div class="middle">
       <div class="text">
         <font size="6">{{ title }}</font>
