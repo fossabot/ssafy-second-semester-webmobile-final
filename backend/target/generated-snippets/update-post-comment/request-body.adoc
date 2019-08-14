@@ -5,6 +5,6 @@
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "postCommentContent" : "내용 수정",
-  "postCommentCreatedAt" : "2019-08-08T14:57:02.622"
+  "postCommentCreatedAt" : "2019-08-14T12:45:05.312"
 }
 ----

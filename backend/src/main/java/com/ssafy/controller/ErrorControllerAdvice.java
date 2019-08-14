@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -30,7 +31,6 @@ public class ErrorControllerAdvice {
 	@ExceptionHandler(value = {
 			MethodArgumentNotValidException.class,
 			NoSuchElementException.class, 
-			NoHandlerFoundException.class,
 			DataNotFoundException.class,
 			NoAuthenticationException.class,
 			ParameterException.class, 
@@ -43,5 +43,15 @@ public class ErrorControllerAdvice {
 		map.put("error message", ex.getMessage());
 		return ResponseEntity.badRequest().body(map);
 	}
-
+	
+	@ExceptionHandler(value = NoHandlerFoundException.class)
+	public ResponseEntity<Map<String, Object>> handleNoHandlerFoundException(Exception ex) {
+		LinkedHashMap<String, Object> map = new LinkedHashMap<String, Object>();
+		map.put("code", "404");
+		map.put("status", "Not Found");
+		map.put("error type", ex.getClass());
+		map.put("error message", ex.getMessage());
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(map);
+	}
+	
 }

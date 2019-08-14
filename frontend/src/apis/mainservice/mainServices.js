@@ -2,7 +2,6 @@ import axios from 'axios'
 import firebase from '../firebase/firebase'
 import store from '../../store/store'
 
-// TODO : 예외 처리 달지 않은 상태  
 
 let loginUser = store.state.account 
 
@@ -55,11 +54,18 @@ export default {
   },
 
   // Portfolios CRUD
-  getPortfolios() {    
-    return axios.get(portfolioUrl)
+  getPortfoliosCount() {
+    return axios.get(`${portfolioUrl}/count`)
                 .then((res) => {                  
-                  return res.data.content 
+                  return res.data.countPortfolios
               })
+  },
+
+  async getPortfoliosBest() {
+    return axios.get(`${portfolioUrl}/best`)  
+                .then((res) => {
+                  return res.data.content
+                })
   },
 
   async loadPortfolios(pageNo) { // 6개씩
@@ -79,7 +85,7 @@ export default {
     return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
                 .then((res) => {
                   this.setCookie("portfolios",res.data.content,1)
-                  return res.data.content
+                  return res.data
                 })
   },
 
@@ -195,15 +201,21 @@ export default {
   
 
   // Posts CRUD
-  
-  getPosts() {
-    return axios.get(postUrl)
-                .then((res) => {           
-                  this.setCookie("posts",res.data.content,1)       
-                  return res.data.content 
+
+  getPostsCount() {
+    return axios.get(`${postUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPosts
               })
   },
 
+  async getPostsBest() {
+    return axios.get(`${postUrl}/best`)
+                .then((res) => {
+                  return res.data.content
+                })
+  },
+  
   async loadPosts(pageNo) { // 6개씩
     const headers = {
       "Content-Type": "application/json",
@@ -221,12 +233,24 @@ export default {
     return axios.get(`${postUrl}/pages/${pageNo}`,{"headers": headers})
                 .then((res) => {
                   this.setCookie("posts",res.data.content,1)
-                  return res.data.content
+                  return res.data
                 })
   },
 
-  getPost(postId) {
-    return axios.get(`${postUrl}/${postId}`)
+  async getPost(postId) {
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+    return axios.get(`${postUrl}/${postId}`,{"headers": headers})
                 .then((res) => {                
                   return res.data
               })
@@ -348,6 +372,7 @@ export default {
       contents.push(portfolioContent.slice(contents_start[j],contents_end[j+1]))
       images.push(portfolioContent.slice([images_start[j]],images_end[j]))
     }
+
     return {contents,images}
   },
   
@@ -355,20 +380,5 @@ export default {
     var date = new Date()
     date.setTime(date.getTime() + exp*24*60*60*1000);
     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-  },
-  
-
-  getPortfoliosCount() {
-    return axios.get(`${portfolioUrl}/count`)
-                .then((res) => {                  
-                  return res.data.countPortfolios
-              })
-  },
-
-  getPostsCount() {
-    return axios.get(`${postUrl}/count`)
-                .then((res) => {                  
-                  return res.data.countPosts
-              })
   },
 }

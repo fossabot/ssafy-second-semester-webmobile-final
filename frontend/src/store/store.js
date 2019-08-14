@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
 
   state: {
-
+    isLoaded: false
   },
 
   getters: {
@@ -22,7 +22,12 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    toggleLoading(state) {
+      state.isLoaded = SVGComponentTransferFunctionElement
+    }
 
   },
 
+  actions: {
+  }
 })

@@ -34,7 +34,7 @@ import lombok.ToString;
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
 @Getter @Setter @ToString(exclude = "postComments")
-public class Post {
+public class Post implements Comparable<Post> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -89,5 +89,10 @@ public class Post {
 	public void setPostComments(List<PostComment> newPostComments) {
 		this.postComments.clear();
 		this.postComments.addAll(newPostComments);
+	}
+
+	@Override
+	public int compareTo(Post o) {
+		return (int) (o.postViews - postViews);
 	}
 }

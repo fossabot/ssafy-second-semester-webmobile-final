@@ -34,7 +34,7 @@ import lombok.ToString;
 @NoArgsConstructor @AllArgsConstructor
 @DynamicInsert @DynamicUpdate
 @Getter @Setter @ToString(exclude = "portfolioComments")
-public class Portfolio {
+public class Portfolio implements Comparable<Portfolio> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -92,5 +92,10 @@ public class Portfolio {
 	public void setPortfolioComments(List<PortfolioComment> newPortfolioComments) {
 		this.portfolioComments.clear();
 		this.portfolioComments.addAll(newPortfolioComments);
+	}
+
+	@Override
+	public int compareTo(Portfolio o) {
+		return (int) (o.portfolioViews - portfolioViews);
 	}
 }

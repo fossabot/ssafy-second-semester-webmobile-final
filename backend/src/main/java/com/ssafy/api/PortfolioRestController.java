@@ -3,6 +3,7 @@ package com.ssafy.api;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 import java.net.URI;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +43,6 @@ import com.ssafy.exception.DataCreateException;
 import com.ssafy.exception.DataNotFoundException;
 import com.ssafy.exception.NoAuthenticationException;
 import com.ssafy.exception.ParameterException;
-import com.ssafy.respository.PortfolioRepository;
 import com.ssafy.service.PortfolioService;
 import com.ssafy.vo.Portfolio;
 import com.ssafy.vo.resource.PortfolioResource;
@@ -51,23 +51,6 @@ import com.ssafy.vo.resource.PortfolioResource;
 @RestController
 @RequestMapping(value = "/portfolios", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
 public class PortfolioRestController {
-
-	//-- 삭제 될 값
-	@Autowired
-	PortfolioRepository portfoliosRepository;
-	
-	@GetMapping
-	public ResponseEntity<Resources<PortfolioResource>> findAll() {
-		List<PortfolioResource> portfolios = portfoliosRepository.findAll().stream().map(PortfolioResource::new)
-				.collect(Collectors.toList());
-		Resources<PortfolioResource> resources = new Resources<>(portfolios);
-		// HATEOAS
-		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
-		resources.add(new Link(uriString, "self"));
-		return ResponseEntity.ok(resources);
-
-	}
-	//--
 
 	@Autowired
 	PortfolioService portfolioService;
@@ -83,6 +66,22 @@ public class PortfolioRestController {
 		PagedResources<PortfolioResource> pagedPortfoliosResources = assembler
 				.toResource(portfolios,	e -> new PortfolioResource(e));
 		return ResponseEntity.ok(pagedPortfoliosResources);
+	}
+	
+	@GetMapping(value = "/best")
+	public ResponseEntity<Resources<PortfolioResource>> bestPortfolios() {
+		List<Portfolio> allPortfolios = portfolioService.findAll();
+		Collections.sort(allPortfolios);
+		allPortfolios = allPortfolios.subList(0, 3);
+		
+		List<PortfolioResource> portfolios = allPortfolios.stream().map(PortfolioResource::new)
+				.collect(Collectors.toList());
+		Resources<PortfolioResource> resources = new Resources<>(portfolios);
+		// HATEOAS
+		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
+		resources.add(new Link(uriString, "self"));
+		return ResponseEntity.ok(resources);
+
 	}
 
 	@GetMapping("/{portfolioId}")

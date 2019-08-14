@@ -3,6 +3,8 @@ import mainServices from '@/apis/mainservice/mainServices.js'
 const state = {
   portfolios: [],
   portfolio: {},
+  totalPortfolioPages: 0
+  
 }
 
 const getters = {
@@ -20,9 +22,11 @@ const actions = {
   },
   loadPortfolios({commit}, pageNo) {
     mainServices.loadPortfolios(pageNo)
-                .then((portfolios) => { 
+                .then((res) => {
+                  const portfolios = res.content 
                   if (pageNo === 1) {
                     commit('setPortfolios', portfolios)
+                    commit('setTotalPortfolioPages',res.page.totalPages)
                   } else {
                     commit('addPortfolios', portfolios)
                   }
@@ -61,6 +65,10 @@ const mutations = {
       portfolioImages: [],
     }
   },
+
+  setTotalPortfolioPages(state, pages) {
+    state.totalPortfolioPages = pages
+  }
 
 }
 
