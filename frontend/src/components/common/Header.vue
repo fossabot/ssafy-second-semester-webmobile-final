@@ -107,7 +107,7 @@ export default {
               
               await pushAlarm.refreshToken(); // firebase.getToken()
               await firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));
-              await pushAlaem.pushAlarmSubscribe(accountAuth);
+              await pushAlarm.pushAlarmSubscribe(accountAuth);
             }
           } else { // permission === denied or default
             //푸쉬알람에 대한 토큰이 있는경우 firestore account의 isPush 토큰값을 삭제
@@ -123,6 +123,25 @@ export default {
         .catch((err) => {
           console.log("Notification requestPermission error is occured", err)
         })
+
+        // Notification.requestPermission()
+        // .then((permission) => {
+        //   if(permission === 'granted'){
+        //     console.log(data.ispush);
+
+        //     if(data.ispush === '0'){
+        //       const accountAuth = data.auth;
+
+        //       pushAlarm.refreshToken();
+        //       setTimeout(function(){
+        //         firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));
+        //       }, 1000);
+        //       setTimeout(function(){
+        //         pushAlarm.pushAlarmSubscribe(accountAuth);
+        //       })
+        //     }
+        //   }
+        // })
 
         this.setUser({data:data})
         this.isLogin()

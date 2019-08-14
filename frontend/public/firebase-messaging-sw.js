@@ -25,7 +25,8 @@ messaging.setBackgroundMessageHandler(function(payload){
 
 	const title = payload.data.title; //푸시 메세지 제목
 	const options = {
-		body : payload.data.contents // 푸시 메세지 내용
+		body : payload.data.contents, // 푸시 메세지 내용
+		image : payload.data.image
 	};
 
 	return self.registration.showNotification(title, options);
