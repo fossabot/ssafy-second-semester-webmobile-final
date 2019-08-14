@@ -1,5 +1,6 @@
 package com.ssafy.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -22,7 +23,12 @@ public class PostServiceImpl implements PostService {
 	public Page<Post> findAllPosts(final Pageable pageable) {
 		return postRespository.findAll(pageable);
 	}
-
+	
+	@Override
+	public List<Post> findAll() {
+		return postRespository.findAll();
+	}
+	
 	@Override
 	@Transactional
 	public Optional<Post> findPostByPostId(final long postId) {

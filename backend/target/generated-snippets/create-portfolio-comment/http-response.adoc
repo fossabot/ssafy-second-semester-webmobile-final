@@ -10,7 +10,7 @@ Location: http://localhost:8080/portfolios/3
   "accountEmail" : "test@email.com",
   "accountName" : "test name",
   "portfolioCommentContent" : "댓글 내용",
-  "portfolioCommentCreatedAt" : "2019-08-08T14:57:02.245",
+  "portfolioCommentCreatedAt" : "2019-08-14T12:45:04.977",
   "links" : [ {
     "rel" : "self",
     "href" : "http://localhost:8080/portfolios/3"

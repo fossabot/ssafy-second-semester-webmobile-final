@@ -3,6 +3,7 @@ package com.ssafy.api;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 import java.net.URI;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +43,6 @@ import com.ssafy.exception.DataCreateException;
 import com.ssafy.exception.DataNotFoundException;
 import com.ssafy.exception.NoAuthenticationException;
 import com.ssafy.exception.ParameterException;
-import com.ssafy.respository.PostRepository;
 import com.ssafy.service.PostService;
 import com.ssafy.vo.Post;
 import com.ssafy.vo.resource.PostResource;
@@ -51,21 +51,6 @@ import com.ssafy.vo.resource.PostResource;
 @RestController
 @RequestMapping(value = "/posts", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
 public class PostRestController {
-
-	//-지울것
-	@Autowired
-	PostRepository postRepository;
-	@GetMapping(value = "")
-	public ResponseEntity<Resources<PostResource>> findAll() {
-		List<PostResource> posts = postRepository.findAll().stream().map(PostResource::new)
-				.collect(Collectors.toList());
-
-		Resources<PostResource> postsResources = new Resources<>(posts);
-		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
-		postsResources.add(new Link(uriString, "self"));
-		return ResponseEntity.ok(postsResources);
-	}
-	//-
 	
 	@Autowired
 	PostService postService;
@@ -80,6 +65,21 @@ public class PostRestController {
 		PagedResources<PostResource> pagedPostResources = assembler
 				.toResource(posts, e -> new PostResource(e));
 		return ResponseEntity.ok(pagedPostResources);
+	}
+	
+	@GetMapping(value = "/best")
+	public ResponseEntity<Resources<PostResource>> bestPosts() {
+		List<Post> allPosts = postService.findAll();
+		Collections.sort(allPosts);
+		allPosts = allPosts.subList(0, 3);
+		
+		List<PostResource> posts = allPosts.stream().map(PostResource::new)
+				.collect(Collectors.toList());
+		
+		Resources<PostResource> postsResources = new Resources<>(posts);
+		String uriString = ServletUriComponentsBuilder.fromCurrentRequest().build().toUriString();
+		postsResources.add(new Link(uriString, "self"));
+		return ResponseEntity.ok(postsResources);
 	}
 
 	@GetMapping(value = "/{postId}")

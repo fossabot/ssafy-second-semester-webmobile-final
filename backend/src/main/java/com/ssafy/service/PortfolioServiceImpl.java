@@ -1,5 +1,6 @@
 package com.ssafy.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssafy.respository.PortfolioRepository;
 import com.ssafy.vo.Portfolio;
+import com.ssafy.vo.Post;
 
 @Service
 public class PortfolioServiceImpl implements PortfolioService {
@@ -22,7 +24,12 @@ public class PortfolioServiceImpl implements PortfolioService {
 	public Page<Portfolio> findAllPortfolios(final Pageable pageable) {
 		return portfolioRepository.findAll(pageable);
 	}
-
+	
+	@Override
+	public List<Portfolio> findAll() {
+		return portfolioRepository.findAll();
+	}
+	
 	@Override
 	@Transactional
 	public Optional<Portfolio> findPortfolioByPortfolioId(final long portfolioId) {
