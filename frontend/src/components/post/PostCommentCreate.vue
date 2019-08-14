@@ -10,6 +10,7 @@
 <script>
 import {mapState, mapActions, mapMutations} from 'vuex'
 import mainServices from '@/apis/mainservice/mainServices.js'
+import pushAlarm from '@/apis/pushalarm/pushAlarm.js'
 
 export default {
   name: 'PostCommentCreate',
@@ -26,6 +27,13 @@ export default {
     ...mapActions('post',['getPost']),
     async postPostComment() {
       await mainServices.postPostComment(this.post.postId, this.postCommentContent)
+      .then((res) => {
+          if(res.status == 201){
+            pushAlarm.pushAlarmSend('postComment', this.post.postId);
+          }
+        }).catch((error)=>{
+          console.log('postComment post error', error);
+        })
       await this.getPost(this.post.postId)
       this.postCommentContent = ''
       this.example = 'Enter Comment'

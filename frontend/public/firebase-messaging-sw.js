@@ -21,6 +21,8 @@ firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload){
+	console.log("message from sw.js", payload);
+
 	const title = payload.data.title; //푸시 메세지 제목
 	const options = {
 		body : payload.data.contents // 푸시 메세지 내용

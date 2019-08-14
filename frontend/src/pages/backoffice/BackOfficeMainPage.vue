@@ -108,7 +108,7 @@ export default{
 <style>
 div#BackOfficeMainContainer{
 	width : 100%;
-	height : 100%;
+	height : 1000px;
 }
 ul#BackOfficeNavigationMenuList{
 	padding : 0px;
