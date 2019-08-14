@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div>
-      <img src="https://i.imgur.com/lnb5dMm.gif" style="width: 40%; position:absolute; top:2%; left: 29%;">
+      <img src="https://media1.tenor.com/images/2bf5e7237248ae65f31c85eba6ce3539/tenor.gif?itemid=13956215" style="width: 20%; position:absolute; top:45%; left: 38%;">
       <transition
         @before-enter="grizzlyBounce"
         @enter="enter"

@@ -11,7 +11,7 @@
 			<div class="col-6 mr-0 mt-3">
 				<ImageOverlay title="Title"
 			                body="What is all of it for?"
-			                imgSrc="https://picsum.photos/555/500">            
+			                imgSrc="https://i.imgur.com/qvyCoLr.png">            
 			  </ImageOverlay>
 			</div>
 		</div>
