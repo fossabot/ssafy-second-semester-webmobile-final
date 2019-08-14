@@ -2,7 +2,7 @@
   <div class="flip-card rounded border-0" :style="{ width:width,height:height }" >
     <div class="flip-card-inner">
       <div class="flip-card-front rounded">
-        <img :src="imgsrc" alt="Avatar" style="width:100%; height:100%; background-color: lightsteelblue" class="rounded">
+        <img :src="imgsrc" alt="Avatar" style="width:100%; height:100%; background-color: beige" class="rounded">
       </div>
       <div class="flip-card-back rounded" style="width:100%; height:100%">
         <div class="card" style="width:100%; height:100%">

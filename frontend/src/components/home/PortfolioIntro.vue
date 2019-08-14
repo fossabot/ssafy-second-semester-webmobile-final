@@ -1,13 +1,13 @@
 <template>
 	<div class="container my-5 py-5 section">
 		<div style="height: 4%"></div>
-		<Title title="Our Works"></Title>
+		<Title title="Our Works" class="mt-4"></Title>
 		<!-- Cards -->
 		<div class="row" style="height: 70%">
 		  <div class="col-4">
 		    <Poster class="my-4"
 		            width="100%"
-		            height="50%"
+		            height="45%"
 		            :title="postsBest.postTitle"
 		            :content="postsBest.accountName"
 		            :body="postsBest.postContent"
@@ -16,7 +16,7 @@
 		    
 		    <Poster class="my-4"
 						width="100%"
-		        		height="50%"
+		        		height="45%"
 						:title="postsSecond.postTitle"
 						:content="postsSecond.accountName"
 						:body="postsSecond.postContent"
@@ -25,7 +25,7 @@
 		  </div>
 		  <div class="col-8 mt-4">
 			<Poster width="100%"
-					height="110%"
+					height="100%"
 					:title="portfoliosBest.portfolioTitle"
 					:content="portfoliosBest.accountName"
 					:body="portfoliosBest.portfolioContent"
