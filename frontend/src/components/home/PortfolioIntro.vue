@@ -39,11 +39,6 @@ import Poster from '@/components/home/Poster.vue'
 
 export default {
 	name : 'PortfolioIntro',
-	data() {
-		return {
-
-		}
-	},
 	components : {
 		Title,
 		Poster
