@@ -9,7 +9,7 @@
     <!-- Comment edit mode -->
     <div v-else class="form-group row justify-content-center">
       {{ postComment.accountName}} /&nbsp;
-      <input type="text" class="form-control form-control-sm col-lg-11 col-md-10 col-sm-10 col-9" v-model="postComment.postCommentContent">
+      <input type="text" class="form-control form-control-sm col-lg-10 col-md-10 col-sm-9 col-9" v-model="postComment.postCommentContent">
       <button @click="putPostComment" class="btn btn-sm btn-outline-primary ml-1 border-0"><i class="fas fa-comment"></i></button>
     </div>    
   </div>
