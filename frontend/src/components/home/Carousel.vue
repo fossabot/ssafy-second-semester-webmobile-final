@@ -1,28 +1,28 @@
 <template>
-  <div class="container-fluid px-0 section">
+  <div class="container-fluid px-0 section" style="height: 100%">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://source.unsplash.com/random/1600x770" class="d-block w-100" alt="...">
+      <div class="carousel-inner" style="height: 100%">
+        <div class="carousel-item active" style="height: 100%">
+          <img src="https://source.unsplash.com/random/1600x780" class="d-block w-100" style="height: 100%" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://source.unsplash.com/user/erondu/1600x770" class="d-block w-100" alt="...">
+        <div class="carousel-item" style="height: 100%">
+          <img src="https://source.unsplash.com/user/erondu/1600x780" class="d-block w-100" style="height: 100%" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://source.unsplash.com/collection/190727/1600x770" class="d-block w-100" alt="...">
+        <div class="carousel-item" style="height: 100%">
+          <img src="https://source.unsplash.com/collection/190727/1600x780" class="d-block w-100" style="height: 100%" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

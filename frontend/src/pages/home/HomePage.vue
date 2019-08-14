@@ -1,17 +1,25 @@
 <template>
-<div class="container-fluid px-0">
-  <full-page ref="fullpage" :option = "options" id = "fullpage">
-	 	<Carousel class = "mt-5"></Carousel>
-	 	<Introduction class = "mt-5"></Introduction>
-	 	<PortfolioIntro class = "mt-5"></PortfolioIntro>
-	</full-page>
-</div>
+  <div> 
+    <div v-show="$store.state.isLoaded" class="container-fluid px-0">
+      <full-page ref="fullpage" :options = "options" id = "fullpage">
+        <Carousel class = "mt-3"></Carousel>
+        <Introduction class = "mt-5"></Introduction>
+        <PortfolioIntro class = "mt-5"></PortfolioIntro>
+      </full-page>
+    </div>
+    <div v-show="!$store.state.isLoaded">
+      <Loading></Loading>
+    </div>
+  </div>
+
+  
 </template>
 
 <script>
 import Carousel from '@/components/home/Carousel.vue'
 import Introduction from '@/components/home/Introduction.vue'
 import PortfolioIntro from '@/components/home/PortfolioIntro.vue'
+import Loading from '@/components/common/Loading.vue'
 
 
 export default {
@@ -19,7 +27,6 @@ export default {
 
   data () {
     return {
-     
       options : {
       	licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         sectionsColor: ['dark', 'dark', 'dark','dark']
@@ -28,28 +35,18 @@ export default {
   },
   components: {
     Carousel,
-	Introduction,
-	PortfolioIntro
+    Introduction,
+    PortfolioIntro,
+    Loading
   },
   mounted() {
-    /*if(Notification.permission === "default"){
-       알람 허용 여부를 물어봄
-      swRegistration.pushManager.getSubscription()
-
-      return;
+    if (! this.$store.state.isLoaded) {
+      document.getElementById("header").style.display = 'none'
+      setTimeout(function () {
+        this.$store.commit('toggleLoading')
+        document.getElementById("header").style.removeProperty("display")
+      }.bind(this), 3400);
     }
-
-    if(Notification.permission === "granted"){
-      알람 허용 상태
-
-      return;
-    }
-
-    if(Notification.permission === "denied"){
-      알람 거부 상태
-
-      return;
-    }*/
   }
 }
 

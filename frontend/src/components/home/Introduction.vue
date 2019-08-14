@@ -1,13 +1,14 @@
 <template>
 	<div class="container py-5 my-5 section">
+		<div style="height: 10%"></div>
 		<Title title="Who we are"></Title>
 		<!-- Description -->
-		<div class="row">
+		<div class="row mt-3">
 			<div class="col-6" style="height:300px;">
 				<h1>Here We are</h1>
 				<p> There's nothing to say specially </p>
 			</div>
-			<div class="col-6 mr-0">
+			<div class="col-6 mr-0 mt-3">
 				<ImageOverlay title="Title"
 			                body="What is all of it for?"
 			                imgSrc="https://picsum.photos/555/500">            

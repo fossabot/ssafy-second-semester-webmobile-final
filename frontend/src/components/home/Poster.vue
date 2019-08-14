@@ -2,10 +2,10 @@
   <div class="flip-card rounded border-0" :style="{ width:width,height:height }" >
     <div class="flip-card-inner">
       <div class="flip-card-front rounded">
-        <img :src="imgsrc" alt="Avatar" :style="{ width:width,height:height }" class="rounded">
+        <img :src="imgsrc" alt="Avatar" style="width:100%; height:100%" class="rounded">
       </div>
-      <div class="flip-card-back rounded" :style="{ width:width,height:height }">
-        <div class="card" :style="{ width:width, height: height}">
+      <div class="flip-card-back rounded" style="width:100%; height:100%">
+        <div class="card" style="width:100%; height:100%">
           <div class="card-body">
             <h5 class="card-title" style="color:black">{{ title }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ content }}</h6>

@@ -3,6 +3,7 @@ import mainServices from '@/apis/mainservice/mainServices.js'
 const state = {
   posts: [],
   post: {},
+  totalPostPages: 0
 }
 
 const getters = {
@@ -16,6 +17,18 @@ const actions = {
     mainServices.getPosts()
                 .then((posts) => {
                   commit('setPosts', posts)
+                })
+  },
+  loadPosts({commit}, pageNo) {
+    mainServices.loadPosts(pageNo)
+                .then((res) => {
+                  const posts = res.content 
+                  if (pageNo === 1) {
+                    commit('setPosts', posts)
+                    commit('setTotalPostPages',res.page.totalPages)
+                  } else {
+                    commit('addPosts', posts)
+                  }
                 })
   },
   getPost({commit},postId) {
@@ -33,7 +46,9 @@ const mutations = {
   setPost(state, post) {
     state.post = post
   },
-
+  addPosts(state, posts) {
+    state.posts = state.posts.concat(posts)
+  },
   setNewPost(state) { 
     state.post = {
       accountEmail: "",
@@ -44,6 +59,9 @@ const mutations = {
     }
   },
 
+  setTotalPostPages(state, pages) {
+    state.totalPostPages = pages
+  }
 }
 
 export default {

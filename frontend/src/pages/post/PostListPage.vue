@@ -4,7 +4,7 @@
     <router-link v-if="loginCheck && accountAuth != 3" :to="{ name: 'PostCreatePage'}" class="btn btn-sm btn-outline-info border-0">
       새 포스트 작성&nbsp; <i class="fas fa-pen"></i>
     </router-link>
-    <PostList class="container"></PostList>
+    <PostList @addPosts="addPosts" :pageNo="pageNo" class="container"></PostList>
   </div>
 </template>
 
@@ -15,6 +15,12 @@ import PostList from '@/components/post/PostList'
 
 export default {
   name: 'PostListPage',
+  data() {
+    return {
+      pageNo: 1,
+      isMore: true
+    }
+  },
   components: {
     Title,
     PostList,
@@ -23,10 +29,15 @@ export default {
     ...mapState('account',['loginCheck','accountAuth'])
   },
   methods: {
-    ...mapActions('post', ['getPosts'])
+    ...mapActions('post', ['loadPosts']),
+    async addPosts() {
+      this.pageNo += 1
+      await this.loadPosts(this.pageNo)
+    }
   },
-  created() {
-    this.getPosts()
+  async created() {
+    await mapState('account',['loginCheck', 'accountAuth'])
+    await this.loadPosts(this.pageNo)
   }
 }
 </script>

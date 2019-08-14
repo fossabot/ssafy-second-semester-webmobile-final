@@ -55,10 +55,10 @@ export default {
   },
 
   // Portfolios CRUD
-  getPortfolios() {    
-    return axios.get(portfolioUrl)
+  getPortfoliosCount() {
+    return axios.get(`${portfolioUrl}/count`)
                 .then((res) => {                  
-                  return res.data.content 
+                  return res.data.countPortfolios
               })
   },
 
@@ -79,7 +79,7 @@ export default {
     return axios.get(`${portfolioUrl}/pages/${pageNo}`,{"headers": headers})
                 .then((res) => {
                   this.setCookie("portfolios",res.data.content,1)
-                  return res.data.content
+                  return res.data
                 })
   },
 
@@ -111,7 +111,6 @@ export default {
       "accountEmail": loginUser.accountEmail,
       "accountAuth": loginUser.accountAuth
     }
-    console.log(headers)
     portfolio.accountEmail = loginUser.accountEmail
     portfolio.accountName = loginUser.accountName
     return axios.post(portfolioUrl, portfolio, { "headers": headers })          
@@ -164,7 +163,7 @@ export default {
     }
     return axios.post(`${portfolioUrl}/${portfolioId}/comments`,  portfolioComment, { "headers": headers })
                 .then((res) => {
-                  return res.data
+                  return res
                 })
   }, 
   
@@ -196,17 +195,49 @@ export default {
   
 
   // Posts CRUD
-  
-  getPosts() {
-    return axios.get(postUrl)
-                .then((res) => {           
-                  this.setCookie("posts",res.data.content,1)       
-                  return res.data.content 
+
+  getPostsCount() {
+    return axios.get(`${postUrl}/count`)
+                .then((res) => {                  
+                  return res.data.countPosts
               })
   },
 
-  getPost(postId) {
-    return axios.get(`${postUrl}/${postId}`)
+  async loadPosts(pageNo) { // 6개씩
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+
+    return axios.get(`${postUrl}/pages/${pageNo}`,{"headers": headers})
+                .then((res) => {
+                  this.setCookie("posts",res.data.content,1)
+                  return res.data
+                })
+  },
+
+  async getPost(postId) {
+    const headers = {
+      "Content-Type": "application/json",
+      accountEmail: "",
+      accountAuth: "" 
+    }
+    await getLoginUserInfo()
+      .then((LoginUserInfo) => {
+        if (LoginUserInfo) {
+          headers.accountEmail = LoginUserInfo.email
+          headers.accountAuth = LoginUserInfo.auth
+        }
+      })
+    return axios.get(`${postUrl}/${postId}`,{"headers": headers})
                 .then((res) => {                
                   return res.data
               })
@@ -224,7 +255,7 @@ export default {
     post.accountName = loginUser.accountName
     return axios.post(postUrl, post, { "headers": headers })          
                 .then((res) => {                  
-                  return res.data
+                  return res
                 })
   },
 
@@ -270,7 +301,7 @@ export default {
     }
     return axios.post(`${postUrl}/${postId}/comments`,  postComment, { "headers": headers })
                 .then((res) => {
-                  return res.data
+                  return res
                 })
   }, 
   
@@ -336,20 +367,4 @@ export default {
     date.setTime(date.getTime() + exp*24*60*60*1000);
     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
   },
-  
-
-  getPortfoliosCount() {
-    return axios.get(`${portfolioUrl}/count`)
-                .then((res) => {                  
-                  return res.data.countPortfolios
-              })
-  },
-
-  getPostsCount() {
-    return axios.get(`${postUrl}/count`)
-                .then((res) => {                  
-                  return res.data.countPosts
-              })
-  },
-  
 }

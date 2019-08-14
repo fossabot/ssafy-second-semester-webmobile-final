@@ -26,10 +26,7 @@ export default{
   },
   mounted() {
   },
-  updated (){
-      console.log(
-      this.accountIsPush
-    )
+  updated() {
   }
 }
 </script>
@@ -40,6 +37,5 @@ export default{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height : 754px;
 }
 </style>

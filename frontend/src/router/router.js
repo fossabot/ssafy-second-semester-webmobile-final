@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import firebase from '../apis/firebase/firebase'
 
-import TestPage from '../pages/TestPage.vue'
-
 import HomePage from '../pages/home/HomePage.vue'
 import PortfolioCreatePage from '../pages/portfolio/PortfolioCreatePage.vue'
 import PortfolioListPage from '../pages/portfolio/PortfolioListPage.vue'
@@ -22,6 +20,7 @@ import BackOfficeLoginPage from '@/pages/backoffice/BackOfficeLoginPage.vue'
 import BackOfficeMainPage from '@/pages/backoffice/BackOfficeMainPage.vue'
 
 import ErrorPage from '../pages/error/ErrorPage'
+import TestPage from '../pages/error/TestPage'
 
 Vue.use(Router)
 
@@ -117,6 +116,6 @@ export default new Router({
       path: '/test',
       name: 'TestPage',
       component: TestPage
-    }
+    },
   ]
 })

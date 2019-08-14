@@ -1,6 +1,6 @@
 <template>
   <!-- Card List -->
-  <div class="scrolling-wrapper my-5">
+  <div class="scrolling-wrapper mt-5" >
     <!-- Card -->
     <div v-for="post in posts" class="card mx-3" style="width: 15rem;">
       <!-- Card Image -->
@@ -8,16 +8,22 @@
       <!-- Card Body -->
       <div class="card-body">
         <h5 class="card-title card-text-ellipsis">{{ post.postTitle }}</h5>
-        <p class="card-text card-text-ellipsis" style="color: gray">{{ post.postContent }}</p>
+        <p class="card-text card-text-ellipsis" style="color: gray">by {{ post.accountName }}</p>
+        <p class="card-text card-text-ellipsis" style="color: rgb(150,150,150)">{{ post.postContent }}</p>
         <!-- Buttons -->
         <div class="row justify-content-end">
           <!-- 더 보기 -->
+          <i class="far fa-eye py-2" style="color: rgb(100,100,100)"></i> &nbsp; 
+          <span class="py-1" style="color: rgb(100,100,100)">{{ post.postViews}} </span> &nbsp;
           <router-link :to="{ name: 'PostDetailPage', params: { postId: post.postId }}" class="btn btn-sm btn-outline-info mx-1">
             <i class="fas fa-plus"></i>
           </router-link>
         </div>        
       </div>
     </div>
+    <button v-if="totalPostPages != 1 && pageNo < totalPostPages" type="button" class="btn btn-outline-secondary border-0 align-top" @click="$emit('addPosts')" style="margin-top: 180px">
+      <i class="fas fa-plus-circle fa-5x"></i>
+    </button>
   </div>
 </template>
 
@@ -26,9 +32,16 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'PostList',
-  computed: {
-    ...mapState('post', ['posts']),
+  props: {
+    pageNo: {type: Number}
   },
+  computed: {
+    ...mapState('post', ['posts','totalPostPages']),
+  },mounted() {
+    document.querySelector('.scrolling-wrapper').addEventListener('wheel', function(event) {
+      document.querySelector('.scrolling-wrapper').scrollLeft += event.deltaY;
+    });
+  }
 }
 </script>
 
@@ -37,8 +50,9 @@ export default {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  direction: horizontal;
   width: 80%;
-  height: 420px;
+  height: 450px;
 }
 
 .scrolling-wrapper::-webkit-scrollbar {
