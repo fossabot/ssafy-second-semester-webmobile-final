@@ -45,8 +45,12 @@ export default {
   },
   computed: { 
     images: {
-      get: function () {     
-        return mainServices.parsePortfolio(this.$store.state.portfolio.portfolio.portfolioContent).images;
+      get: function () {
+        const images = mainServices.parsePortfolio(this.$store.state.portfolio.portfolio.portfolioContent).images 
+        if (!images) {
+          images = ['https://source.unsplash.com/random']
+        }
+        return images;
       },
       set: function (newValue) {
       }
