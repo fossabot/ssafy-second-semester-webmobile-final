@@ -1,9 +1,14 @@
-> # READ ME
+## Bare Bears Blog Project
 
-## Tools
+> Client
+> : Vue.js, Vuex, Vue-router
 
+> Backend
+> : SpringBoot, MySQL, Node.js, Firebase
 
+> Deploy
+> : https://ssafy-barebears.firebaseapp.com/
 
+> Rest API Docs
+> : https://ssafy-barebears.firebaseapp.com/restdocs.html
 
-
-## Some Conventions
