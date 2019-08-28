@@ -106,7 +106,8 @@ function sendPushAboutPost(){
 	var message = {
 		data : {
 			title: 'New Post :)',
-	  		contents: '포스트에 새로운 글이 등록되었습니다.'		
+	  		contents: '포스트에 새로운 글이 등록되었습니다.',
+	  		image : '/img/icons/IceBear.png'	
 		},
 		topic : topic
 	};
@@ -131,7 +132,8 @@ function sendPushAboutPortfolio(){
 	var message = {
 		data : {
 			title: 'New Portfolio :)',
-	  		contents: '포트폴리오에 새로운 글이 등록되었습니다.'		
+	  		contents: '포트폴리오에 새로운 글이 등록되었습니다.',
+	  		image : '/img/icons/IceBear.png'		
 		},
 		topic : topic
 	};
@@ -154,7 +156,8 @@ function sendPushAboutPostComment(postId){
 	var message = {
 		data : {
 			title: 'New PostComment :)',
-	  		contents: postId + '번 포스트에 새로운 댓글이 등록되었습니다.'		
+	  		contents: postId + '번 포스트에 새로운 댓글이 등록되었습니다.',
+	  		image : '/img/icons/IceBear.png'		
 		},
 		topic : topic
 	};
@@ -178,7 +181,8 @@ function sendPushAboutPortfolioComment(portfolioId){
 	var message = {
 		data : {
 			title: 'New PortfolioComment :)',
-	  		contents: portfolioId + '번 포트폴리오에 새로운 댓글이 등록되었습니다.'		
+	  		contents: portfolioId + '번 포트폴리오에 새로운 댓글이 등록되었습니다.',
+	  		image : '/img/icons/IceBear.png'		
 		},
 		topic : topic
 	};

@@ -123,6 +123,25 @@ export default {
           console.log("Notification requestPermission error is occured", err)
         })
 
+        // Notification.requestPermission()
+        // .then((permission) => {
+        //   if(permission === 'granted'){
+        //     console.log(data.ispush);
+
+        //     if(data.ispush === '0'){
+        //       const accountAuth = data.auth;
+
+        //       pushAlarm.refreshToken();
+        //       setTimeout(function(){
+        //         firebase.updateIsPush(token, window.sessionStorage.getItem('firebaseToken'));
+        //       }, 1000);
+        //       setTimeout(function(){
+        //         pushAlarm.pushAlarmSubscribe(accountAuth);
+        //       })
+        //     }
+        //   }
+        // })
+
         this.setUser({data:data})
         this.isLogin()
         this.showModal=false

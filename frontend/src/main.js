@@ -25,7 +25,8 @@ new Vue({
 			
 			var title = payload.data.title
 			var options = {
-				body : payload.data.contents
+				body : payload.data.contents,
+				image : payload.data.image
 			}
 			var notification = new Notification(title, options);
 		});
