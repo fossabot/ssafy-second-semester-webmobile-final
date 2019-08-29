@@ -36,7 +36,8 @@ spring:
  
   # MySQL 서버 데이터베이스 지정
   datasource: 
-    url: jdbc:mysql://70.12.246.106:3306/ssafy?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://70.12.246.33:3306/ssafy?serverTimezone=Asia/Seoul
+    #url: jdbc:mysql://70.12.246.106:3306/ssafy?serverTimezone=Asia/Seoul
     #url: jdbc:mysql://70.12.246.64:3306/ssafy?serverTimezone=UTC
     username: root
     password: manager

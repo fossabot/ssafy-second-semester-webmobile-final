@@ -14,8 +14,8 @@ const getLoginUserInfo = async function() {
   }
 }
 
-const portfolioUrl = 'https://70.12.246.106:9090/api/bears/portfolios' 
-const postUrl = 'https://70.12.246.106:9090/api/bears/posts' 
+const portfolioUrl = 'https://70.12.246.33:9090/api/bears/portfolios' 
+const postUrl = 'https://70.12.246.33:9090/api/bears/posts' 
 
 export default {
   isLogin() {
