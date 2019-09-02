@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'Loading',
+  name: 'Loading', 
   data() {
     return {
       icebearShow: false,

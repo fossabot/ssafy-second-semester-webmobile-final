@@ -66,7 +66,9 @@ app.get('/send', function(req, res){
 
 app.get('/subscribe', function(req, res){
 	res.header("Access-Control-Allow-Origin", "*");
-  	res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	  
+	console.log(req)
 
 	var registrationToken = req.query.token;
 	var accountAuth = req.query.accountAuth; // 1,2,3,4 구분

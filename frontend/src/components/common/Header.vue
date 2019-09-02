@@ -112,6 +112,8 @@ export default {
             //푸쉬알람에 대한 토큰이 있는경우 firestore account의 isPush 토큰값을 삭제
             
             if(data.ispush != '0'){
+
+              console.log("isPush updated")
               
               data.ispush = "0";
 
