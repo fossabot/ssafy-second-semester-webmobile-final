@@ -1,15 +1,31 @@
-## Bare Bears Blog Project
-- [프로젝트 소개](https://github.com/GimunLee/ssafy-second-semester-webmobile-final/tree/master/documents#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EA%B0%9C)
-- Client 
-  - Vue.js, Vuex, Vue-router
+## [Bare Bears] Responsive Blog Web Service
+- Deploy  : https://ssafy-barebears.firebaseapp.com/
+  
+  **※ But Only Front-end**
+  
+- Rest API Docs : https://ssafy-barebears.firebaseapp.com/restdocs.html
 
-- Backend
-  - SpringBoot, MySQL, Node.js, Firebase
+- Demo Video Link : https://www.youtube.com/watch?v=QdFMwUeUesQ&feature=youtu.be
 
-- Deploy
-  - https://ssafy-barebears.firebaseapp.com/ ※ But Only Front-end...
-
-- Rest API Docs
-  - https://ssafy-barebears.firebaseapp.com/restdocs.html
 <br>
+
+<img src="./resources/readme-01.png">
+
+<img src="./resources/readme-02.png">
+
+<img src="./resources/readme-03.png">
+
+<img src="./resources/readme-04.png">
+
+<img src="./resources/readme-05.png">
+
+<img src="./resources/readme-06.png">
+
+<img src="./resources/readme-07.png">
+
+<img src="./resources/readme-08.png">
+
+<img src="./resources/readme-09.png">
+
+---
 
