@@ -1,8 +1,0 @@
-|===
-|Path|Type|Description
-
-|`+countPortfolios+`
-|`+Number+`
-|포트폴리오 총 개수
-
-|===

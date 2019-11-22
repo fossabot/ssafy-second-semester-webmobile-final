@@ -1,8 +1,0 @@
-.+/portfolios/{portfolioId}+
-|===
-|Parameter|Description
-
-|`+portfolioId+`
-|삭제할 포트폴리오 Id
-
-|===

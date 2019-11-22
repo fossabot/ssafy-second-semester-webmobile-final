@@ -1,8 +1,0 @@
-|===
-|Path|Type|Description
-
-|`+countPosts+`
-|`+Number+`
-|포스트 총 개수
-
-|===

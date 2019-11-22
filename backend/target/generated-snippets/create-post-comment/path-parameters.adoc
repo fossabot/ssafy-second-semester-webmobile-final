@@ -1,8 +1,0 @@
-.+/posts/{postId}/comments+
-|===
-|Parameter|Description
-
-|`+postId+`
-|댓글을 쓸 포스트 Id
-
-|===
