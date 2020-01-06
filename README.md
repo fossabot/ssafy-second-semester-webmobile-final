@@ -1,4 +1,6 @@
 ## [Bare Bears] Responsive Blog Web Service
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGimunLee%2Fssafy-second-semester-webmobile-final.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FGimunLee%2Fssafy-second-semester-webmobile-final?ref=badge_shield)
+
 - Deploy  : https://ssafy-barebears.firebaseapp.com/
   
   **※ But Only Front-end**
@@ -29,3 +31,7 @@
 
 ---
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGimunLee%2Fssafy-second-semester-webmobile-final.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FGimunLee%2Fssafy-second-semester-webmobile-final?ref=badge_large)
